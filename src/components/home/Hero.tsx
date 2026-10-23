@@ -1,68 +1,105 @@
 
 export default function Hero() {
   return (
-    <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 md:grid-cols-2 md:py-24">
-      <div>
-        <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-[#e4ad3e]">
-          Ayurveda wellness in your hands
-        </p>
+    <section className="relative isolate overflow-hidden bg-[#21452B]">
+      {/* Decorative background details */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full border border-[#EFE9C5]/10 sm:h-[420px] sm:w-[420px]"
+      />
 
-        <h1 className="max-w-2xl font-serif text-5xl leading-[1.1] tracking-tight text-[#f8f4e9] sm:text-6xl lg:text-7xl">
-          Restore your natural{" "}
-          <span className="italic text-[#e4ad3e]">balance.</span>
-        </h1>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-8 -top-12 h-64 w-64 rounded-full border border-dashed border-[#DFC24D]/20 sm:h-[340px] sm:w-[340px]"
+      />
 
-        <p className="mt-6 max-w-xl text-sm leading-7 text-[#d4dfd6] sm:text-base">
-          Renew your energy with traditional Ayurveda treatments, personal
-          consultations and restorative retreats. Discover simple rituals
-          that bring balance into your everyday life.
-        </p>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 left-0 h-1/2 w-full bg-gradient-to-t from-[#2F5D39]/40 to-transparent"
+      />
 
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href="#learn"
-            className="rounded-full bg-[#e4ad3e] px-6 py-4 text-sm font-semibold text-[#193b30] transition hover:-translate-y-1 hover:bg-[#f2c76e]"
-          >
-            Take the free dosha quiz ↗
-          </a>
+      <div className="relative mx-auto max-w-7xl px-5 py-20 sm:py-28 lg:py-32">
+        <div className="max-w-5xl">
+          {/* Eyebrow */}
+          <div className="mb-8 flex items-center gap-4">
+            <span className="h-px w-10 bg-[#DFC24D]" />
 
-          <a
-            href="#booking"
-            className="rounded-full border border-white/40 px-6 py-4 text-sm transition hover:border-[#e4ad3e] hover:bg-white/5"
-          >
-            Book a treatment →
-          </a>
-        </div>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#DFC24D] sm:text-xs">
+              Ayurveda wellness in your hands
+            </p>
+          </div>
 
-        <p className="mt-8 text-xs tracking-wide text-[#c1d0c4]">
-          ✳ Traditional wisdom · Personal care · Everyday balance
-        </p>
-      </div>
+          {/* Main heading */}
+          <h1 className="max-w-5xl font-serif text-5xl font-normal leading-[1.08] tracking-[-0.04em] text-[#EFE9C5] sm:text-6xl md:text-7xl lg:text-[88px]">
+            Restore your natural
+            <span className="mt-2 block italic text-[#DFC24D]">
+              balance.
+            </span>
+          </h1>
 
-      <div className="relative mx-auto flex h-[340px] w-full max-w-lg items-center justify-center overflow-hidden rounded-t-[48%] rounded-b-3xl border border-white/10 bg-gradient-to-br from-[#526e50] via-[#294d3b] to-[#142f24] sm:h-[400px]">
-        <div className="absolute h-56 w-56 rounded-full bg-[#e7bd68] shadow-[0_0_90px_rgba(231,189,104,0.25)]" />
-
-        <div className="absolute h-72 w-72 rounded-full border border-[#f4e0aa]/50" />
-        <div className="absolute h-[340px] w-[340px] rounded-full border border-dashed border-[#f4e0aa]/30" />
-
-        <div className="absolute left-[20%] top-[25%] -rotate-45 text-8xl text-[#bdc79a]">
-          ❧
-        </div>
-        <div className="absolute right-[18%] top-[40%] rotate-45 text-8xl text-[#829b72]">
-          ❧
-        </div>
-
-        <div className="absolute bottom-7 left-7 text-[#fff8e8]">
-          <p className="text-[9px] uppercase tracking-[0.25em] text-[#e4ad3e]">
-            Your wellness journey
+          {/* Description */}
+          <p className="mt-8 max-w-2xl text-sm leading-8 text-[#EFE9C5]/80 sm:text-base sm:leading-9">
+            Renew your energy with traditional Ayurveda treatments, personal
+            consultations and restorative retreats. Discover simple rituals
+            that bring balance into your everyday life.
           </p>
-          <p className="mt-1 font-serif text-2xl">Begin with balance.</p>
+
+          {/* Actions */}
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a
+              href="#learn"
+              className="group inline-flex min-h-14 items-center justify-center gap-4 rounded-full bg-[#DFC24D] px-7 py-4 text-sm font-semibold text-[#21452B] transition duration-300 hover:-translate-y-1 hover:bg-[#EFE9C5]"
+            >
+              Take the free dosha quiz
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                ↗
+              </span>
+            </a>
+
+            <a
+              href="#booking"
+              className="inline-flex min-h-14 items-center justify-center gap-4 rounded-full border border-[#EFE9C5]/30 px-7 py-4 text-sm font-medium text-[#EFE9C5] transition duration-300 hover:border-[#DFC24D] hover:bg-[#EFE9C5]/5"
+            >
+              Book a treatment
+              <span className="text-[#DFC24D]">→</span>
+            </a>
+          </div>
+
+          {/* Brand statement */}
+          <div className="mt-12 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-[#EFE9C5]/15 pt-6 text-[10px] uppercase tracking-[0.16em] text-[#EFE9C5]/65 sm:text-xs">
+            <span className="flex items-center gap-2">
+              <span className="text-[#DFC24D]">✳</span>
+              Traditional wisdom
+            </span>
+
+            <span className="hidden h-1 w-1 rounded-full bg-[#DFC24D]/70 sm:block" />
+
+            <span>Personal care</span>
+
+            <span className="hidden h-1 w-1 rounded-full bg-[#DFC24D]/70 sm:block" />
+
+            <span>Everyday balance</span>
+          </div>
         </div>
 
-        <div className="absolute bottom-7 right-7 grid h-12 w-12 place-items-center rounded-full border border-white/50 font-serif text-xl">
+        {/* Small botanical signature */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-12 right-8 hidden select-none font-serif text-[180px] italic leading-none text-[#EFE9C5]/[0.06] lg:block xl:right-16 xl:text-[240px]"
+        >
           P
         </div>
+
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute right-16 top-16 hidden text-4xl text-[#DFC24D]/40 lg:block xl:right-28"
+        >
+          ✳
+        </div>
       </div>
+
+      {/* Gold transition into the next section */}
+      <div className="h-px bg-gradient-to-r from-transparent via-[#DFC24D]/50 to-transparent" />
     </section>
   );
 }

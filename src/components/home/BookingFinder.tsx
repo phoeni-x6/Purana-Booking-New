@@ -7,12 +7,12 @@ export default function BookingFinder() {
   const [location, setLocation] = useState("Steinberg am See");
   const [guestType, setGuestType] = useState("Chalet guest");
   const [message, setMessage] = useState(
-    "You will see all treatments and retreats in Steinberg am See for chalet guests."
+    "Choose your location and guest type to explore your Ayurveda experience."
   );
 
   function handleFind() {
     setMessage(
-      `You will see all treatments and retreats in ${location} for ${
+      `Explore treatments and retreats in ${location} for ${
         guestType === "Chalet guest" ? "chalet guests" : "external guests"
       }.`
     );
@@ -23,106 +23,252 @@ export default function BookingFinder() {
     });
   }
 
+  const locations = [
+    {
+      name: "Steinberg am See",
+      subtitle: "Lakeside wellness",
+      icon: "⌂",
+    },
+    {
+      name: "Marktredwitz",
+      subtitle: "Personal care",
+      icon: "✳",
+    },
+  ];
+
+  const guests = [
+    {
+      name: "Chalet guest",
+      subtitle: "Staying at the resort",
+      icon: "⌂",
+    },
+    {
+      name: "External guest",
+      subtitle: "Visiting for treatment",
+      icon: "♡",
+    },
+  ];
+
   const optionClass = (selected: boolean) =>
-    `flex h-14 w-full items-center rounded-xl border px-4 text-left text-sm transition ${
+    `group flex min-h-[100px] w-full items-center gap-3 rounded-2xl border p-3 text-left transition-all duration-300 sm:p-4 ${
       selected
-        ? "border-[#193b30] bg-[#193b30] font-semibold text-white"
-        : "border-[#ded4c3] bg-[#faf7f1] text-[#193b30] hover:border-[#193b30]"
+        ? "border-[#2F5D39] bg-[#2F5D39] text-[#EFE9C5] shadow-md shadow-[#21452B]/10"
+        : "border-[#D8D0A9]/80 bg-[#F8F5E8] text-[#533E23] hover:border-[#2F5D39]/60 hover:bg-[#EFE9C5]/50"
     }`;
 
   return (
     <section
       id="booking"
-      className="rounded-2xl bg-white p-6 shadow-[0_20px_60px_rgba(20,45,30,0.12)] sm:p-8"
+      className="relative overflow-hidden rounded-3xl border border-[#D8D0A9]/70 bg-white shadow-[0_24px_70px_rgba(33,69,43,0.12)]"
     >
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#a36b17]">
-        Book a treatment
-      </p>
+      {/* Decorative brand accent */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-16 -top-20 h-48 w-48 rounded-full border border-[#DFC24D]/30"
+      />
 
-      <h2 className="mt-2 font-serif text-3xl text-[#10291f] sm:text-[30px]">
-        Which treatment location would you like to visit?
-      </h2>
+      <div className="relative p-6 sm:p-8 lg:p-10">
+        {/* Header */}
+        <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
+          <div>
+            <div className="mb-4 flex items-center gap-3">
+              <span className="h-px w-8 bg-[#C14C38]" />
+              <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#C14C38] sm:text-xs">
+                Your wellness journey
+              </p>
+            </div>
 
-      <div className="mt-7 grid items-end gap-4 md:grid-cols-[1.7fr_1.7fr_1fr]">
-        {/* Location selection */}
-        <div>
-          <p className="mb-3 text-xs uppercase tracking-[0.15em] text-[#64746b]">
-            1 · Location
-          </p>
+            <h2 className="max-w-2xl font-serif text-3xl leading-tight text-[#21452B] sm:text-4xl">
+              Find your place to{" "}
+              <span className="italic text-[#2F5D39]">restore.</span>
+            </h2>
 
-          <div className="grid grid-cols-2 gap-3">
-            {["Steinberg am See", "Marktredwitz"].map((place) => (
-              <button
-                key={place}
-                type="button"
-                aria-pressed={location === place}
-                onClick={() => {
-                  setLocation(place);
-                  setMessage("");
-                }}
-                className={optionClass(location === place)}
-              >
-                {place}
-              </button>
-            ))}
+            <p className="mt-3 max-w-xl text-sm leading-7 text-[#6B705C]">
+              Tell us where you would like to visit and we'll guide you to the
+              right Ayurveda experience.
+            </p>
+          </div>
+
+          <div className="hidden h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#D8D0A9] bg-[#EFE9C5]/50 font-serif text-2xl text-[#2F5D39] sm:flex">
+            ✳
           </div>
         </div>
 
-        {/* Guest type selection */}
-        <div>
-          <p className="mb-3 text-xs uppercase tracking-[0.15em] text-[#64746b]">
-            2 · Guest type
-          </p>
+        {/* Selection steps */}
+        <div className="mt-8 grid gap-7 lg:grid-cols-2">
+          {/* Location */}
+          <div>
+            <div className="mb-4 flex items-center gap-3">
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-[#EFE9C5] font-serif text-sm text-[#21452B]">
+                01
+              </span>
 
-          <div className="grid grid-cols-2 gap-3">
-            {["Chalet guest", "External guest"].map((guest) => (
-              <button
-                key={guest}
-                type="button"
-                aria-pressed={guestType === guest}
-                onClick={() => {
-                  setGuestType(guest);
-                  setMessage("");
-                }}
-                className={optionClass(guestType === guest)}
-              >
-                {guest}
-              </button>
-            ))}
+              <div>
+                <p className="text-sm font-semibold text-[#21452B]">
+                  Choose your location
+                </p>
+                <p className="text-xs text-[#6B705C]">
+                  Where would you like to visit?
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {locations.map((place) => {
+                const selected = location === place.name;
+
+                return (
+                  <button
+                    key={place.name}
+                    type="button"
+                    aria-pressed={selected}
+                    onClick={() => {
+                      setLocation(place.name);
+                      setMessage("");
+                    }}
+                    className={optionClass(selected)}
+                  >
+                    <span
+                      className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl font-serif text-xl transition ${
+                        selected
+                          ? "bg-[#EFE9C5]/15 text-[#DFC24D]"
+                          : "bg-[#EFE9C5] text-[#2F5D39]"
+                      }`}
+                    >
+                      {place.icon}
+                    </span>
+
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-sm font-semibold leading-5">
+                        {place.name}
+                      </span>
+                      <span
+                        className={`mt-1 block text-xs ${
+                          selected ? "text-[#EFE9C5]/70" : "text-[#6B705C]"
+                        }`}
+                      >
+                        {place.subtitle}
+                      </span>
+                    </span>
+
+                    <span
+                      className={`grid h-5 w-5 shrink-0 place-items-center rounded-full border text-[10px] ${
+                        selected
+                          ? "border-[#DFC24D] bg-[#DFC24D] text-[#21452B]"
+                          : "border-[#D8D0A9] text-transparent"
+                      }`}
+                    >
+                      ✓
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Guest type */}
+          <div>
+            <div className="mb-4 flex items-center gap-3">
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-[#EFE9C5] font-serif text-sm text-[#21452B]">
+                02
+              </span>
+
+              <div>
+                <p className="text-sm font-semibold text-[#21452B]">
+                  Tell us about your visit
+                </p>
+                <p className="text-xs text-[#6B705C]">
+                  Which guest category applies to you?
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {guests.map((guest) => {
+                const selected = guestType === guest.name;
+
+                return (
+                  <button
+                    key={guest.name}
+                    type="button"
+                    aria-pressed={selected}
+                    onClick={() => {
+                      setGuestType(guest.name);
+                      setMessage("");
+                    }}
+                    className={optionClass(selected)}
+                  >
+                    <span
+                      className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl font-serif text-xl transition ${
+                        selected
+                          ? "bg-[#EFE9C5]/15 text-[#DFC24D]"
+                          : "bg-[#EFE9C5] text-[#2F5D39]"
+                      }`}
+                    >
+                      {guest.icon}
+                    </span>
+
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-sm font-semibold">
+                        {guest.name}
+                      </span>
+                      <span
+                        className={`mt-1 block text-xs ${
+                          selected ? "text-[#EFE9C5]/70" : "text-[#6B705C]"
+                        }`}
+                      >
+                        {guest.subtitle}
+                      </span>
+                    </span>
+
+                    <span
+                      className={`grid h-5 w-5 shrink-0 place-items-center rounded-full border text-[10px] ${
+                        selected
+                          ? "border-[#DFC24D] bg-[#DFC24D] text-[#21452B]"
+                          : "border-[#D8D0A9] text-transparent"
+                      }`}
+                    >
+                      ✓
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
 
-        {/* Find button */}
-        <button
-          type="button"
-          onClick={handleFind}
-          className="flex h-14 items-center justify-center gap-3 rounded-xl bg-[#193b30] px-5 text-sm font-semibold text-white transition hover:bg-[#294b3d]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="17"
-            height="17"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
+        {/* Bottom action area */}
+        <div className="mt-8 flex flex-col gap-4 border-t border-[#D8D0A9]/60 pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-start gap-3">
+            <span className="mt-0.5 text-lg text-[#C14C38]">✳</span>
+
+            <div>
+              <p className="text-sm font-semibold text-[#21452B]">
+                Your experience, your way.
+              </p>
+              <p className="mt-1 text-xs leading-5 text-[#6B705C]">
+                {message ||
+                  `${location} · ${
+                    guestType === "Chalet guest"
+                      ? "Chalet guest"
+                      : "External guest"
+                  }`}
+              </p>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={handleFind}
+            className="group inline-flex min-h-14 shrink-0 items-center justify-center gap-4 rounded-full bg-[#C14C38] px-7 py-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#A63C2C]"
           >
-            <circle cx="11" cy="11" r="7" />
-            <path d="m20 20-4-4" />
-          </svg>
-          Find
-        </button>
+            Find my experience
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </button>
+        </div>
       </div>
-
-      <p aria-live="polite" className="mt-6 text-xs leading-5 text-[#64746b]">
-        {message ||
-          `You will see all treatments and retreats in ${location} for ${
-            guestType === "Chalet guest" ? "chalet guests" : "external guests"
-          }.`}
-      </p>
     </section>
   );
 }

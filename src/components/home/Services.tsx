@@ -48,13 +48,15 @@ export default function Services() {
   return (
     <section className="mx-auto max-w-7xl px-5 py-20 md:py-28">
       <div className="mb-10 max-w-2xl">
-        <p className="mb-3 text-xs uppercase tracking-[0.22em] text-[#a36b17]">
+        <p className="mb-3 text-xs uppercase tracking-[0.22em] text-[#C14C38]">
           Everything Ayurveda in one place
         </p>
-        <h2 className="font-serif text-4xl leading-tight sm:text-5xl">
+
+        <h2 className="font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
           A little more balance, in every part of life.
         </h2>
-        <p className="mt-4 max-w-xl text-sm leading-7 text-[#64746b]">
+
+        <p className="mt-4 max-w-xl text-sm leading-7 text-[#6B705C]">
           Find your own path to wellbeing with thoughtful care, traditional
           knowledge and experiences designed around you.
         </p>
@@ -65,28 +67,29 @@ export default function Services() {
           <a
             href={service.href}
             key={service.number}
-            className="group rounded-2xl border border-[#e8e0d3] bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-[#d9b66e] hover:shadow-xl"
+            className="group rounded-2xl border border-[#D8D0A9]/70 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-[#DFC24D] hover:shadow-xl"
           >
             <div className="flex items-center justify-between">
-              <span className="grid h-11 w-11 place-items-center rounded-full border border-[#dce3d8] text-xl text-[#193b30]">
+              <span className="grid h-11 w-11 place-items-center rounded-full border border-[#D8D0A9] bg-[#EFE9C5]/50 text-xl text-[#2F5D39]">
                 {service.icon}
               </span>
-              <span className="text-xs tracking-widest text-[#a9aa9e]">
+
+              <span className="text-xs tracking-widest text-[#6B705C]/60">
                 {service.number}
               </span>
             </div>
 
-            <h3 className="mt-6 font-serif text-2xl">
+            <h3 className="mt-6 font-serif text-2xl text-[#21452B]">
               {service.title}
             </h3>
 
-            <p className="mt-2 min-h-12 text-sm leading-6 text-[#64746b]">
+            <p className="mt-2 min-h-12 text-sm leading-6 text-[#6B705C]">
               {service.text}
             </p>
 
-            <div className="mt-5 flex justify-between text-xs font-semibold">
+            <div className="mt-5 flex justify-between text-xs font-semibold text-[#533E23]">
               Explore service
-              <span className="text-lg text-[#b17a20] transition group-hover:translate-x-1">
+              <span className="text-lg text-[#C14C38] transition group-hover:translate-x-1">
                 ↗
               </span>
             </div>

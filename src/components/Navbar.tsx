@@ -28,26 +28,26 @@ const dropdowns = {
     },
   ],
   online: [
+{
+  title: "Online consultation",
+  description: "45 min with Lakshani or Dr. Ishanka",
+  href: "/online",
+},
     {
-      title: "Online consultation",
-      description: "45 min with Lakshani or Dr. Ishanka",
-      href: "/#online",
-    },
+  title: "Gentle Reset",
+  description: "4 days at home · €119",
+  href: "/online/gentle-reset",
+},
     {
-      title: "Gentle Reset",
-      description: "4 days at home · €119",
-      href: "/#online",
-    },
-    {
-      title: "Seasonal Reset",
-      description: "7 days, one edition per season · €229",
-      href: "/#online",
-    },
-    {
-      title: "Deep Reset",
-      description: "4 or 7 days with more 1:1 time",
-      href: "/#online",
-    },
+  title: "Seasonal Reset",
+  description: "A 7-day seasonal programme with two consultations and personal support",
+  href: "/online/seasonal-reset",
+},
+  {
+  title: "Deep Reset",
+  description: "More personal guidance with additional consultations",
+  href: "/online/deep-reset",
+},
     {
       title: "E-books",
       description: "Detox and seasonal guides · from €14.90",
@@ -58,7 +58,7 @@ const dropdowns = {
     {
       title: "Blog",
       description: "Articles, recipes and rituals",
-      href: "/#learn",
+      href: "/learn/blog",
     },
     {
       title: "Free dosha quiz",
@@ -233,7 +233,7 @@ export default function Navbar() {
 
             {/* Membership */}
             <a
-              href="/#membership"
+              href="/membership"
               onClick={closeMenus}
               className="whitespace-nowrap transition hover:text-[#e4ad3e]"
             >

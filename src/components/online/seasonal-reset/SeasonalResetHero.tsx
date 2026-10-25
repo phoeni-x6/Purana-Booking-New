@@ -1,90 +1,185 @@
 
 export default function SeasonalResetHero() {
+  const features = [
+    "7 days",
+    "2 personal consultations",
+    "Chat included",
+    "4 seasonal editions",
+    "German or English",
+  ];
+
   return (
-    <section className="bg-[#1D3B30] text-[#F4EFE5]">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:py-20 lg:grid-cols-[1.35fr_0.65fr] lg:items-start lg:gap-16 lg:py-20">
+    <section className="relative overflow-hidden bg-[#21452B] text-[#F8F5E8]">
+      {/* Decorative background */}
+      <div className="pointer-events-none absolute -right-32 -top-36 h-[420px] w-[420px] rounded-full border border-[#DFC24D]/15" />
+      <div className="pointer-events-none absolute -right-20 -top-24 h-[320px] w-[320px] rounded-full border border-[#DFC24D]/20" />
+      <div className="pointer-events-none absolute -bottom-40 -left-32 h-[420px] w-[420px] rounded-full bg-[#2F5D39]/60 blur-3xl" />
+
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20 lg:py-24">
         {/* Hero content */}
         <div>
-          <p className="text-sm leading-6">
+          <div className="mb-8 flex flex-wrap items-center gap-2 text-sm text-[#EFE9C5]/80">
             <a
               href="/#online"
-              className="underline underline-offset-4 transition hover:text-[#E4AD3E]"
+              className="transition-colors hover:text-[#DFC24D]"
             >
               Online &amp; at home
             </a>
-            <span className="mx-2">/</span>
-            <span>Seasonal Reset</span>
-          </p>
+            <span className="text-[#DFC24D]">/</span>
+            <span className="text-[#DFC24D]">Seasonal Reset</span>
+          </div>
 
-          <h1 className="mt-5 font-serif text-4xl leading-tight sm:text-5xl lg:text-6xl">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#DFC24D]/35 bg-white/[0.05] px-4 py-2 text-xs font-medium tracking-[0.14em] text-[#DFC24D]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#DFC24D]" />
+            LIVE IN HARMONY WITH THE SEASONS
+          </div>
+
+          <h1 className="max-w-2xl font-serif text-5xl leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
             Seasonal Reset
+            <span className="mt-2 block font-normal italic text-[#DFC24D]">
+              Find your natural rhythm.
+            </span>
           </h1>
 
-          <div className="mt-5 flex flex-wrap gap-2">
-            {[
-              "7 days",
-              "2 personal consultations",
-              "Chat included",
-              "4 seasonal editions",
-              "German or English",
-            ].map((item) => (
+          <p className="mt-7 max-w-2xl text-base leading-8 text-[#F8F5E8]/85 sm:text-lg">
+            Seven days to rebalance and renew your energy with the season —
+            with a consultation at the start and at the end, and Lakshani
+            by your side all week.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-2.5">
+            {features.map((item) => (
               <span
                 key={item}
-                className="rounded-full border border-white/40 px-3 py-2 text-xs sm:text-sm"
+                className="rounded-full border border-white/20 bg-white/[0.04] px-4 py-2.5 text-xs text-[#F8F5E8]/90 transition-colors hover:border-[#DFC24D]/60 sm:text-sm"
               >
                 {item}
               </span>
             ))}
           </div>
 
-          <p className="mt-5 max-w-2xl text-base leading-7 text-white/90 sm:text-lg">
-            Seven days to rebalance and renew your energy with the season —
-            with a consultation at the start and at the end, and Lakshani
-            by your side all week.
-          </p>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="#booking"
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-7 py-4 text-sm font-semibold text-[#21452B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#EFE9C5]"
+            >
+              Begin your seasonal reset
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <span className="text-sm text-[#F8F5E8]/65">
+              Personal guidance, all week
+            </span>
+          </div>
         </div>
 
         {/* Booking card */}
-        <aside className="rounded-3xl bg-white p-5 text-[#142F27] sm:p-7">
-          <div className="flex min-h-40 flex-col items-center justify-center rounded-2xl bg-[#CBD4C4] px-4 py-8 text-center">
-            <button
-              type="button"
-              aria-label="Play introduction video"
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1D3B30] text-white transition hover:bg-[#315344]"
-            >
-              <span className="ml-1 text-lg" aria-hidden="true">
-                ▶
-              </span>
-            </button>
+        <div className="relative mx-auto w-full max-w-md">
+          <div className="absolute -inset-3 rounded-[32px] border border-[#DFC24D]/20" />
 
-            <p className="mt-3 text-xs">
-              Welcome from Lakshani · 2 min
+          <aside className="relative overflow-hidden rounded-[28px] bg-[#F8F5E8] p-5 text-[#263A2B] shadow-2xl shadow-black/20 sm:p-7">
+            <div className="mb-5 flex items-center justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#6B705C]">
+                  Your programme
+                </p>
+
+                <h2 className="mt-1 font-serif text-2xl text-[#21452B]">
+                  The Seasonal Reset
+                </h2>
+              </div>
+
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#DFC24D]/70 bg-[#EFE9C5] text-xl text-[#21452B]">
+                ✳
+              </div>
+            </div>
+
+            <div className="rounded-[20px] bg-[#E8E8D7] p-5 sm:p-6">
+              <div className="flex aspect-[4/3] flex-col items-center justify-center rounded-[15px] border border-[#21452B]/10 bg-[#D9DDCB] px-4 text-center">
+                <button
+                  type="button"
+                  aria-label="Play introduction video from Lakshani"
+                  className="group flex h-16 w-16 items-center justify-center rounded-full bg-[#21452B] text-xl text-[#DFC24D] shadow-lg transition duration-300 hover:scale-105 hover:bg-[#2F5D39]"
+                >
+                  <span className="translate-x-0.5">▶</span>
+                </button>
+
+                <p className="mt-4 font-serif text-lg text-[#21452B]">
+                  A welcome from Lakshani
+                </p>
+
+                <p className="mt-1 text-xs text-[#52665C]">
+                  Meet your guide · 2 min
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 flex items-end justify-between gap-4">
+              <div>
+                <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#6B705C]">
+                  Programme price
+                </p>
+
+                <p className="mt-1 font-serif text-5xl text-[#21452B]">
+                  €229
+                </p>
+              </div>
+
+              <span className="mb-1 rounded-full border border-[#D8D0A9] bg-white/70 px-3 py-2 text-xs font-medium text-[#52665C]">
+                7-day programme
+              </span>
+            </div>
+
+            <div className="my-5 h-px bg-[#D8D0A9]" />
+
+            <div className="space-y-3 text-sm text-[#52665C]">
+              <div className="flex items-center gap-3">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#E8E8D7] text-[#2F5D39]">
+                  ✓
+                </span>
+                2 personal consultations
+              </div>
+
+              <div className="flex items-center gap-3">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#E8E8D7] text-[#2F5D39]">
+                  ✓
+                </span>
+                Personal chat support
+              </div>
+
+              <div className="flex items-center gap-3">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#E8E8D7] text-[#2F5D39]">
+                  ✓
+                </span>
+                Four seasonal editions
+              </div>
+            </div>
+
+            <a
+              href="#booking"
+              className="mt-7 flex w-full items-center justify-center gap-3 rounded-full bg-[#21452B] px-6 py-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#2F5D39]"
+            >
+              Book your Seasonal Reset
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <p className="mt-4 text-center text-xs leading-6 text-[#6B705C]">
+              Members save 5%, Premium members 10%.{" "}
+              <a
+                href="/#membership"
+                className="font-semibold text-[#21452B] underline decoration-[#DFC24D] underline-offset-4 transition-colors hover:text-[#C14C38]"
+              >
+                Explore membership
+              </a>
+            </p>
+          </aside>
+
+          <div className="absolute -bottom-5 -right-3 hidden rounded-2xl border border-[#DFC24D]/40 bg-[#F8F5E8] px-5 py-3 shadow-lg sm:block">
+            <p className="font-serif text-lg text-[#21452B]">
+              A new season. A fresh balance.
             </p>
           </div>
-
-          <p className="mt-5 font-serif text-3xl sm:text-4xl">€229</p>
-
-          <p className="mt-3 text-xs leading-5 text-[#52665C]">
-            per season · 7 days · 2 consultations · chat
-          </p>
-
-          <a
-            href="#booking"
-            className="mt-4 flex w-full items-center justify-center rounded-full bg-[#1D3B30] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[#315344]"
-          >
-            Book now
-          </a>
-
-          <p className="mt-4 text-xs leading-5 text-[#52665C]">
-            Members save 5%, Premium members 10%.{" "}
-            <a
-              href="/#membership"
-              className="underline underline-offset-2 hover:text-[#9A6115]"
-            >
-              Membership
-            </a>
-          </p>
-        </aside>
+        </div>
       </div>
     </section>
   );

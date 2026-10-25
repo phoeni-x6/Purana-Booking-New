@@ -5,7 +5,7 @@ const footerGroups = [
     links: [
       ["Our locations", "#locations"],
       ["Online consultation", "#online"],
-      ["Retreats", "#retreats"],
+      ["Ayurveda retreats", "#retreats"],
       ["Membership", "#membership"],
       ["Learn & journal", "#learn"],
     ],
@@ -22,54 +22,114 @@ const footerGroups = [
     title: "Information",
     links: [
       ["About Purana", "#about"],
-      ["Privacy policy", "#privacy"],
-      ["Terms & conditions", "#terms"],
-      ["Legal notice", "#legal"],
+      ["Privacy policy", "/privacy"],
+      ["Terms & conditions", "/terms"],
+      ["Legal notice", "/legal"],
     ],
+  },
+];
+
+const socialLinks = [
+  {
+    label: "Instagram",
+    short: "ig",
+    href: "#",
+  },
+  {
+    label: "Facebook",
+    short: "f",
+    href: "#",
+  },
+  {
+    label: "YouTube",
+    short: "▶",
+    href: "#",
   },
 ];
 
 export default function Footer() {
   return (
-    <footer id="about" className="bg-[#10291f] text-white">
-      <div className="mx-auto max-w-7xl px-5 pt-14">
-        <div className="grid gap-10 pb-12 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <a href="#" className="font-serif text-2xl tracking-wide">
-              PURANA <span className="text-[#e4ad3e]">AYURVEDA</span>
+    <footer
+      id="about"
+      className="relative overflow-hidden bg-[#21452B] text-[#F8F5E8]"
+    >
+      {/* Decorative background details */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full border border-[#DFC24D]/10"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full border border-[#DFC24D]/10"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-[#2F5D39]/40 blur-3xl"
+      />
+
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+        {/* Main footer */}
+        <div className="grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-10 lg:py-20">
+          {/* Brand column */}
+          <div className="max-w-sm">
+            <a
+              href="/"
+              aria-label="Purana Ayurveda home"
+              className="group inline-flex flex-col"
+            >
+              <span className="font-serif text-3xl tracking-[0.12em] text-[#F8F5E8] transition-colors group-hover:text-[#DFC24D]">
+                PURANA
+              </span>
+              <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.38em] text-[#DFC24D]">
+                Ayurveda & Wellness
+              </span>
             </a>
 
-            <p className="mt-4 text-sm leading-7 text-[#b9c9bd]">
-              Wellness rooted in tradition.
-              <br />
-              Care designed for real life.
+            <p className="mt-6 max-w-xs text-sm leading-7 text-[#D5DFD3]">
+              Wellness rooted in tradition. Care designed for real life.
+              Discover a more balanced way to live through the wisdom of
+              Ayurveda.
             </p>
 
-            <div className="mt-5 flex gap-3">
-              {["ig", "f", "▶"].map((social) => (
-                <a
-                  key={social}
-                  href="#about"
-                  className="grid h-9 w-9 place-items-center rounded-full border border-[#446252] text-xs transition hover:border-[#e4ad3e] hover:text-[#e4ad3e]"
-                >
-                  {social}
-                </a>
-              ))}
+            {/* Social links */}
+            <div className="mt-7">
+              <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#DFC24D]">
+                Follow our journey
+              </p>
+
+              <div className="flex gap-3">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    aria-label={social.label}
+                    className="grid h-10 w-10 place-items-center rounded-full border border-[#F8F5E8]/20 bg-[#F8F5E8]/5 text-sm text-[#F8F5E8] transition-all duration-300 hover:-translate-y-1 hover:border-[#DFC24D] hover:bg-[#DFC24D] hover:text-[#21452B]"
+                  >
+                    {social.short}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
+          {/* Footer link groups */}
           {footerGroups.map((group) => (
             <div key={group.title}>
-              <h3 className="mb-4 text-sm font-semibold">{group.title}</h3>
+              <h3 className="mb-5 font-serif text-lg text-[#F8F5E8]">
+                {group.title}
+              </h3>
 
-              <ul className="space-y-3">
+              <div className="mb-5 h-px w-10 bg-[#DFC24D]" />
+
+              <ul className="space-y-3.5">
                 {group.links.map(([label, href]) => (
                   <li key={label}>
                     <a
                       href={href}
-                      className="text-xs text-[#c2d0c5] transition hover:text-[#e4ad3e]"
+                      className="group inline-flex items-center gap-2 text-sm text-[#D5DFD3] transition-colors duration-200 hover:text-[#DFC24D]"
                     >
-                      {label}
+                      <span className="h-1 w-1 rounded-full bg-[#DFC24D]/60 transition-all duration-200 group-hover:scale-150 group-hover:bg-[#DFC24D]" />
+                      <span>{label}</span>
                     </a>
                   </li>
                 ))}
@@ -78,11 +138,31 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col justify-between gap-3 border-t border-[#355143] py-5 text-xs text-[#aebfb3] sm:flex-row">
-          <p>© 2026 Purana Ayurveda. All rights reserved.</p>
+        {/* Wellness statement */}
+        <div className="border-t border-[#F8F5E8]/15 py-7">
+          <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+            <p className="font-serif text-base italic text-[#F8F5E8]/90">
+              "A journey back to balance, naturally."
+            </p>
+
+            <a
+              href="#top"
+              className="inline-flex items-center gap-2 text-xs font-medium text-[#DFC24D] transition-colors hover:text-[#F8F5E8]"
+            >
+              Back to top
+              <span aria-hidden="true" className="text-base">
+                ↑
+              </span>
+            </a>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="flex flex-col justify-between gap-3 border-t border-[#F8F5E8]/10 py-5 text-xs text-[#B9C9BD] sm:flex-row sm:items-center">
           <p>
-            Made with care <span className="text-[#e4ad3e]">✳</span>
+            © {new Date().getFullYear()} Purana Ayurveda. All rights reserved.
           </p>
+
         </div>
       </div>
     </footer>

@@ -8,12 +8,12 @@ const menus = {
     {
       title: "Steinberg am See",
       description: "Treatments, day retreats and private chalet retreats",
-      href: "/#locations",
+      href: "/retreats/steinberg-am-see",
     },
     {
       title: "Marktredwitz",
       description: "Personal Ayurveda care",
-      href: "/#locations",
+      href: "/retreats/marktredwitz",
     },
     {
       title: "Retreats in Germany",

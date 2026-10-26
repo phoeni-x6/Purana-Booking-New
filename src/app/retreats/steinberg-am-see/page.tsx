@@ -183,6 +183,62 @@ export default function SteinbergAmSeePage() {
 
       <SteinbergTreatments />
 
+      {/* CHALET INFORMATION */}
+<section className="px-6 py-16 sm:px-10 sm:py-20 lg:px-14">
+  <div className="mx-auto max-w-[var(--container-width)]">
+    <div className="relative overflow-hidden rounded-[var(--radius-xl)] bg-[var(--forest-dark)] text-[var(--cream)]">
+      {/* Decorative details */}
+      <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full border border-white/10" />
+      <div className="pointer-events-none absolute -right-8 -top-8 h-48 w-48 rounded-full border border-[var(--gold)]/25" />
+
+      <div className="relative grid items-center gap-8 p-7 sm:p-10 lg:grid-cols-[1fr_auto] lg:gap-12 lg:p-14">
+        <div className="max-w-2xl">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.23em] text-[var(--gold)]">
+            Extend your Ayurveda experience
+          </p>
+
+          <h2 className="font-[var(--font-heading)] text-3xl font-normal leading-tight text-[var(--cream)] sm:text-4xl lg:text-5xl">
+            Discover our chalet
+          </h2>
+
+          <p className="mt-5 max-w-xl text-sm leading-7 text-[var(--cream)]/80 sm:text-base">
+            Looking for a peaceful place to stay during your Ayurveda
+            journey? Discover our chalet, explore the accommodation
+            details and find out more about the facilities and your stay.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[var(--cream)]/75">
+            <span className="flex items-center gap-2">
+              <span className="text-[var(--gold)]">✳</span>
+              Relaxation
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-[var(--gold)]">✳</span>
+              Comfortable accommodation
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-[var(--gold)]">✳</span>
+              More information about your stay
+            </span>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3 sm:flex-row lg:min-w-56 lg:flex-col">
+          <a
+            href="/chalets"
+            className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[var(--gold)] px-7 py-3 text-sm font-semibold text-[var(--forest-dark)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--surface-dark)] hover:text-[var(--forest-dark)]"
+          >
+            View chalet infos
+            <span aria-hidden="true">→</span>
+          </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* Ayurveda retreats without accommodation */}
       <section
         id="retreats"
@@ -586,6 +642,8 @@ export default function SteinbergAmSeePage() {
           </p>
         </div>
       </section>
+
+
 
       {/* Online Ayurveda offers */}
       <section

@@ -44,7 +44,7 @@ export default function FloatingActions() {
           </p>
 
           <a
-            href="#learn"
+            href="/en/dosha-quiz"
             onClick={() => setShowQuiz(false)}
             className="mt-5 inline-flex rounded-full bg-[#2F5D39] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#21452B]"
           >

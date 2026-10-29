@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
-
+import DoshaQuizPopup from "@/components/dosha-quiz/DoshaQuizPopup";
 export const metadata: Metadata = {
   title: "Purana Ayurveda",
   description:
@@ -21,7 +21,7 @@ export default function RootLayout({
         <Navbar />
 
         <main>{children}</main>
-
+ <DoshaQuizPopup />
         <Footer />
       </body>
     </html>

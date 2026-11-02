@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const menus = {
   treatments: [
@@ -47,11 +48,11 @@ const menus = {
       description: "Extended personal guidance",
       href: "/online/deep-reset",
     },
-    {
-      title: "E-books",
-      description: "Detox and seasonal guides",
-      href: "/#online",
-    },
+   {
+  title: "E-books",
+  description: "Detox and seasonal guides",
+  href: "/online/ebooks",
+},
   ],
   learn: [
     {
@@ -64,16 +65,16 @@ const menus = {
       description: "Discover your constitution",
       href: "/#learn",
     },
+   {
+  title: "Podcast",
+  description: "Talk with Lakshani",
+  href: "/learn/podcast",
+},
     {
-      title: "Podcast",
-      description: "Talk with Lakshani",
-      href: "/#learn",
-    },
-    {
-      title: "Member seminars",
-      description: "Live online sessions",
-      href: "/#learn",
-    },
+  title: "Member seminars",
+  description: "Live online sessions",
+  href: "/learn/member-seminars",
+},
   ],
 };
 
@@ -105,8 +106,8 @@ export default function Navbar() {
         }
 
         .purana-utility-bar {
-          background: #21452B;
-          color: #EFE9C5;
+          background: var(--forest-dark);
+          color: var(--cream);
         }
 
         .purana-utility-inner {
@@ -140,15 +141,15 @@ export default function Navbar() {
         }
 
         .purana-utility-links a:hover {
-          color: #DFC24D;
+          color: var(--gold);
         }
 
         .purana-nav-shell {
           position: relative;
           width: 100%;
-          background: #F8F5E8;
-          color: #21452B;
-          border-bottom: 1px solid #D8D0A9;
+          background: var(--surface);
+          color: var(--forest-dark);
+          border-bottom: 1px solid var(--border);
           box-shadow: 0 3px 12px rgba(33,69,43,.05);
         }
 
@@ -187,10 +188,10 @@ export default function Navbar() {
           justify-content: center;
           width: 42px;
           height: 42px;
-          border: 1px solid #D8D0A9;
+          border: 1px solid var(--border);
           border-radius: 50%;
           background: transparent;
-          color: #21452B;
+          color: var(--forest-dark);
           font-size: 21px;
           cursor: pointer;
         }
@@ -210,11 +211,11 @@ export default function Navbar() {
           align-items: center;
           justify-content: center;
           gap: 7px;
-          padding: 12px 11px;
+          padding: 12px 10px;
           border: 0;
           border-radius: 999px;
           background: transparent;
-          color: #21452B;
+          color: var(--forest-dark);
           font-family: inherit;
           font-size: 13px;
           line-height: 1.4;
@@ -227,8 +228,8 @@ export default function Navbar() {
         .purana-nav-link:hover,
         .purana-dropdown-trigger:hover,
         .purana-dropdown-trigger.is-open {
-          background: #EFE9C5;
-          color: #C14C38;
+          background: var(--cream);
+          color: var(--terracotta);
         }
 
         .purana-dropdown {
@@ -243,15 +244,15 @@ export default function Navbar() {
           z-index: 1100;
           width: 310px;
           padding: 12px;
-          border: 1px solid #D8D0A9;
+          border: 1px solid var(--border);
           border-radius: 16px;
-          background: #fff;
+          background: white;
           box-shadow: 0 18px 40px rgba(33,69,43,.14);
         }
 
         .purana-dropdown-heading {
           padding: 8px 10px 10px;
-          color: #C14C38;
+          color: var(--terracotta);
           font-size: 10px;
           font-weight: 700;
           letter-spacing: .16em;
@@ -267,12 +268,12 @@ export default function Navbar() {
         }
 
         .purana-dropdown-item:hover {
-          background: #F8F5E8;
+          background: var(--surface);
         }
 
         .purana-dropdown-item strong {
           display: block;
-          color: #21452B;
+          color: var(--forest-dark);
           font-size: 13px;
           font-weight: 600;
         }
@@ -280,7 +281,7 @@ export default function Navbar() {
         .purana-dropdown-item span {
           display: block;
           margin-top: 4px;
-          color: #6B705C;
+          color: var(--text-muted);
           font-size: 11px;
           line-height: 1.6;
         }
@@ -295,33 +296,78 @@ export default function Navbar() {
         }
 
         .purana-language a {
-          color: #6B705C;
+          color: var(--text-muted);
           text-decoration: none;
         }
 
-        .purana-book-button {
-          display: inline-flex;
+        .purana-language a:hover {
+          color: var(--terracotta);
+        }
+
+        /* Authentication links */
+
+        .purana-auth-links {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          margin-left: 5px;
           flex: 0 0 auto;
+        }
+
+        .purana-login-button {
+          display: inline-flex;
           align-items: center;
           justify-content: center;
-          gap: 8px;
-          padding: 13px 19px;
+          min-height: 42px;
+          padding: 10px 15px;
+          border: 1px solid transparent;
           border-radius: 999px;
-          background: #2F5D39;
-          color: #EFE9C5;
+          background: transparent;
+          color: var(--forest-dark);
           font-size: 13px;
           font-weight: 600;
           text-decoration: none;
           white-space: nowrap;
-          transition: background .2s;
+          transition: all .2s;
         }
 
-        .purana-book-button:hover {
-          background: #21452B;
+        .purana-login-button:hover {
+          border-color: var(--border);
+          background: var(--cream);
+          color: var(--terracotta);
         }
 
-        .purana-book-button span {
-          color: #DFC24D;
+        .purana-signup-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
+          min-height: 44px;
+          padding: 11px 20px;
+          border: 1px solid var(--gold);
+          border-radius: 999px;
+          background: var(--gold);
+          color: var(--forest-dark);
+          font-size: 13px;
+          font-weight: 700;
+          text-decoration: none;
+          white-space: nowrap;
+          transition: all .25s;
+        }
+
+        .purana-signup-button:hover {
+          border-color: var(--terracotta);
+          background: var(--terracotta);
+          color: white;
+          transform: translateY(-1px);
+        }
+
+        .purana-signup-button span {
+          transition: transform .2s;
+        }
+
+        .purana-signup-button:hover span {
+          transform: translateX(3px);
         }
 
         @media (min-width: 768px) {
@@ -336,7 +382,7 @@ export default function Navbar() {
 
         @media (max-width: 1100px) and (min-width: 768px) {
           .purana-nav-inner {
-            gap: 8px;
+            gap: 7px;
             padding-left: 14px;
             padding-right: 14px;
           }
@@ -353,14 +399,24 @@ export default function Navbar() {
             gap: 4px;
           }
 
-          .purana-book-button {
-            padding: 11px 12px;
-            font-size: 11px;
-          }
-
           .purana-language {
             padding: 0 4px;
             gap: 4px;
+          }
+
+          .purana-auth-links {
+            gap: 3px;
+            margin-left: 0;
+          }
+
+          .purana-login-button {
+            padding: 9px 9px;
+            font-size: 11px;
+          }
+
+          .purana-signup-button {
+            padding: 10px 12px;
+            font-size: 11px;
           }
         }
 
@@ -394,8 +450,8 @@ export default function Navbar() {
             justify-content: flex-start;
             gap: 3px;
             padding: 14px 18px 20px;
-            border-top: 1px solid #D8D0A9;
-            background: #F8F5E8;
+            border-top: 1px solid var(--border);
+            background: var(--surface);
             box-shadow: 0 15px 25px rgba(33,69,43,.12);
           }
 
@@ -429,9 +485,20 @@ export default function Navbar() {
             padding: 12px 14px;
           }
 
-          .purana-book-button {
-            margin-top: 5px;
-            min-height: 45px;
+          .purana-auth-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 8px 0 0;
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
+          }
+
+          .purana-login-button,
+          .purana-signup-button {
+            width: 100%;
+            min-height: 46px;
+            justify-content: center;
           }
 
           .purana-utility-inner {
@@ -464,13 +531,14 @@ export default function Navbar() {
         }
       `}</style>
 
-      {/* Sticky wrapper keeps both bars together */}
       <div className="purana-sticky-wrapper">
         {/* Utility bar */}
         <div className="purana-utility-bar">
           <div className="purana-utility-inner">
             <p>
-              <span style={{ color: "#DFC24D", marginRight: 8 }}>✳</span>
+              <span style={{ color: "var(--gold)", marginRight: 8 }}>
+                ✳
+              </span>
               Traditional wisdom. Personal wellbeing.
             </p>
 
@@ -485,15 +553,17 @@ export default function Navbar() {
         {/* Main navigation */}
         <header className="purana-nav-shell">
           <div className="purana-nav-inner">
-            <a
+            {/* Logo */}
+            <Link
               href="/"
               className="purana-logo"
               aria-label="Purana Ayurveda home"
               onClick={closeMenus}
             >
               <img src="/images/logo.png" alt="Purana Ayurveda" />
-            </a>
+            </Link>
 
+            {/* Mobile menu button */}
             <button
               type="button"
               className="purana-menu-toggle"
@@ -514,14 +584,15 @@ export default function Navbar() {
                 mobileOpen ? "is-mobile-open" : ""
               }`}
             >
-              <a
+              <Link
                 href="/"
                 className="purana-nav-link"
                 onClick={closeMenus}
               >
                 Home
-              </a>
+              </Link>
 
+              {/* Dropdown menus */}
               {(Object.keys(menus) as MenuName[]).map((name) => (
                 <div className="purana-dropdown" key={name}>
                   <button
@@ -532,7 +603,7 @@ export default function Navbar() {
                     aria-expanded={openMenu === name}
                     onClick={() =>
                       setOpenMenu((current) =>
-                        current === name ? null : name
+                        current === name ? null : name,
                       )
                     }
                   >
@@ -549,7 +620,7 @@ export default function Navbar() {
                       </div>
 
                       {menus[name].map((item) => (
-                        <a
+                        <Link
                           href={item.href}
                           key={item.title}
                           className="purana-dropdown-item"
@@ -557,42 +628,57 @@ export default function Navbar() {
                         >
                           <strong>{item.title}</strong>
                           <span>{item.description}</span>
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
                 </div>
               ))}
 
-              <a
+              <Link
                 href="/membership"
                 className="purana-nav-link"
                 onClick={closeMenus}
               >
                 Membership
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/#about"
                 className="purana-nav-link"
                 onClick={closeMenus}
               >
                 About
-              </a>
+              </Link>
 
+              {/* Language */}
               <div className="purana-language">
                 <strong>EN</strong>
-                <span style={{ color: "#D8D0A9" }}>|</span>
-                <a href="/de">DE</a>
+                <span style={{ color: "var(--border)" }}>|</span>
+                <Link href="/de" onClick={closeMenus}>
+                  DE
+                </Link>
               </div>
 
-              <a
-                href="/#booking"
-                className="purana-book-button"
-                onClick={closeMenus}
-              >
-                Book now <span>→</span>
-              </a>
+              {/* Login and Sign up */}
+              <div className="purana-auth-links">
+                <Link
+                  href="/login"
+                  className="purana-login-button"
+                  onClick={closeMenus}
+                >
+                  Login
+                </Link>
+
+                <Link
+                  href="/signup"
+                  className="purana-signup-button"
+                  onClick={closeMenus}
+                >
+                  Sign up
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
             </nav>
           </div>
         </header>

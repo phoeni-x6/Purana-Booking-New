@@ -21,11 +21,7 @@ const menus = {
       description: "Private and group retreats",
       href: "/retreats/germany",
     },
-    {
-      title: "Retreats in Sri Lanka",
-      description: "Ayurveda and Panchakarma",
-      href: "/retreats/sri-lanka",
-    },
+    
   ],
   online: [
     {
@@ -560,7 +556,7 @@ export default function Navbar() {
               aria-label="Purana Ayurveda home"
               onClick={closeMenus}
             >
-              <img src="/images/logo.png" alt="Purana Ayurveda" />
+              <img src="/images/purana_logo.webp" alt="Purana Ayurveda" />
             </Link>
 
             {/* Mobile menu button */}

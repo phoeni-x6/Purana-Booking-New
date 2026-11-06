@@ -120,7 +120,7 @@ return (
         <div className="relative overflow-hidden rounded-[28px] bg-[#F8F5E8] p-3 shadow-2xl shadow-black/20 sm:p-4">
           <div className="relative min-h-[350px] overflow-hidden rounded-[22px] bg-[#D9D1B9] sm:min-h-[430px]">
             <img
-              src="/images/steinberg/steinberg-hero.jpg"
+              src="/images/steinberg_hero.webp"
               alt="Peaceful natural surroundings at the Ayurveda destination in Steinberg am See"
               className="absolute inset-0 h-full w-full object-cover"
             />

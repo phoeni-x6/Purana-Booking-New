@@ -10,7 +10,7 @@ const retreatPackages = [
     steps: [
       {
         label: "Visit 1",
-        description: "Consultation (45 min) + short treatment (30 min)",
+        description: "Consultation (45 min) + short treatments (30 min)",
       },
       {
         label: "Visit 2",
@@ -32,7 +32,7 @@ const retreatPackages = [
     steps: [
       {
         label: "Visit 1",
-        description: "Consultation (45 min) + short treatment (30 min)",
+        description: "Consultation (45 min) + short treatments (30 min)",
       },
       {
         label: "Visit 2",
@@ -44,7 +44,7 @@ const retreatPackages = [
       },
       {
         label: "Visit 4",
-        description: "1 hour treatment",
+        description: "1 hour treatments",
       },
     ],
     features: [
@@ -65,7 +65,7 @@ const miniRetreats = [
       {
         label: "DAY 01",
         title: "Arrive & unwind",
-        description: "Personal consultation and a 30-minute treatment.",
+        description: "Personal consultation and a 30-minute treatments.",
       },
       {
         label: "DAY 02",
@@ -92,7 +92,7 @@ const miniRetreats = [
       {
         label: "DAY 01",
         title: "Arrive & unwind",
-        description: "Personal consultation and a 30-minute treatment.",
+        description: "Personal consultation and a 30-minute treatments.",
       },
       {
         label: "DAY 02",
@@ -104,7 +104,7 @@ const miniRetreats = [
         label: "DAY 03",
         title: "Make space for yourself",
         description:
-          "Optional morning yoga, a one-hour Ayurveda treatment, and optional evening meditation.",
+          "Optional morning yoga, a one-hour Ayurveda treatments, and optional evening meditation.",
       },
       {
         label: "DAY 04",

@@ -60,7 +60,7 @@ const menus = {
     {
       title: "Free dosha quiz",
       description: "Discover your constitution",
-      href: "/#learn",
+      href: "/en/dosha-quiz",
     },
     {
       title: "Podcast",
@@ -668,7 +668,7 @@ export default function Navbar() {
               aria-label="Purana Ayurveda home"
               onClick={closeMenus}
             >
-              <img src="/images/logo.png" alt="Purana Ayurveda" />
+              <img src="https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/purana_logo.webp" alt="Purana Ayurveda" />
             </Link>
 
               {/* Mobile menu button */}

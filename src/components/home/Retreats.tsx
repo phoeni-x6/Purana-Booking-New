@@ -20,7 +20,7 @@ const retreats = [
       "Traditional Panchakarma at our Ayurveda centre in Sri Lanka, and retreats organised by our team.",
     image: "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Retreats/SriLanka/retreat_srilanka.jpg",
     imageText: "Traditional Ayurveda in Sri Lanka",
-    href: "/retreats/sri-lanka",
+    href: "/retreats/germany",
     linkText: "Discover Sri Lanka",
   },
 ];

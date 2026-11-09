@@ -20,7 +20,7 @@ const locations = [
     category: "PERSONAL CARE",
     description:
       "Ayurveda treatments in partnership with a local physiotherapy practice, with personal attention at every visit.",
-    image: "/images/marktredwitz.jpg",
+    image: "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Marktredwitz/ayurveda_marktredwitz_header.jpg",
     number: "02",
     tagline: "Feel cared for.",
     features: [

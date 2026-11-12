@@ -5,7 +5,7 @@ const locations = [
     category: "THE LAKESIDE EXPERIENCE",
     description:
       "Individual treatments, private mini retreats and restorative stays in a peaceful lakeside setting.",
-    image: "/images/steinberg.jpg",
+    image: "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Steinberg/steinberg.jfif",
     number: "01",
     tagline: "Slow down. Reconnect.",
     features: [
@@ -13,14 +13,14 @@ const locations = [
       "Private mini retreats",
       "A relaxing natural setting",
     ],
-    href: "#booking",
+    href: "/retreats/steinberg-am-see",
   },
   {
     name: "Marktredwitz",
     category: "PERSONAL CARE",
     description:
       "Ayurveda treatments in partnership with a local physiotherapy practice, with personal attention at every visit.",
-    image: "/images/marktredwitz.jpg",
+    image: "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Marktredwitz/ayurveda_marktredwitz_header.jpg",
     number: "02",
     tagline: "Feel cared for.",
     features: [
@@ -28,7 +28,7 @@ const locations = [
       "Partner-led care",
       "Convenient local treatments",
     ],
-    href: "#booking",
+    href: "/retreats/marktredwitz",
   },
 ];
 

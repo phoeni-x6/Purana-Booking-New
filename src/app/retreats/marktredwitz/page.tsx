@@ -71,7 +71,7 @@ export default function MarktredwitzPage() {
 
             <div className="relative aspect-[4/5] overflow-hidden rounded-[var(--radius-xl)] bg-[var(--forest)]">
               <Image
-                src="/images/marktredwitz/partner-practice.jpg"
+                src="https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Marktredwitz/Marktredwitz.jpg"
                 alt="Zentrum für Therapie Bogisch, partner location in Marktredwitz"
                 fill
                 priority

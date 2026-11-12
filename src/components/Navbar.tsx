@@ -23,11 +23,7 @@ const menus = {
       description: "Private and group retreats",
       href: "/retreats/germany",
     },
-    {
-      title: "Retreats in Sri Lanka",
-      description: "Ayurveda and Panchakarma",
-      href: "/retreats/sri-lanka",
-    },
+    
   ],
   online: [
     {
@@ -65,7 +61,7 @@ const menus = {
     {
       title: "Free dosha quiz",
       description: "Discover your constitution",
-      href: "/#learn",
+      href: "/en/dosha-quiz",
     },
     {
       title: "Podcast",
@@ -666,17 +662,18 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Main navigation */}
-          <header className="purana-nav-shell">
-            <div className="purana-nav-inner">
-              <Link
-                  href="/"
-                  className="purana-logo"
-                  aria-label="Purana Ayurveda home"
-                  onClick={closeMenus}
-              >
-                <img src="/images/logo.png" alt="Purana Ayurveda" />
-              </Link>
+        {/* Main navigation */}
+        <header className="purana-nav-shell">
+          <div className="purana-nav-inner">
+            {/* Logo */}
+            <Link
+              href="/"
+              className="purana-logo"
+              aria-label="Purana Ayurveda home"
+              onClick={closeMenus}
+            >
+              <img src="https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/purana_logo.webp" alt="Purana Ayurveda" />
+            </Link>
 
               {/* Mobile menu button */}
               <button

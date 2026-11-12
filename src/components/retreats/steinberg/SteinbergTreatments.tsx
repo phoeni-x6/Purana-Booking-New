@@ -50,7 +50,6 @@ export default function SteinbergTreatments() {
             <TreatmentCard
               key={treatment.name}
               {...treatment}
-              bookingUrl="#contact"
             />
           ))}
         </div>

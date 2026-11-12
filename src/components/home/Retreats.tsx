@@ -1,11 +1,14 @@
 
+import Image from "next/image";
+import Link from "next/link";
+
 const retreats = [
   {
     location: "GERMANY",
     title: "Retreats in Germany",
     description:
       "From private mini retreats at the Chalet Resort Steinberg am See to group retreats with yoga, treatments and meditation — Rasayana, detox and renewal retreats across Germany.",
-    style: "from-[#EFE9C5] to-[#A8B99A]",
+    image: "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Retreats/Germany/germany_retreats.webp",
     imageText: "A peaceful retreat in Germany",
     href: "/retreats/germany",
     linkText: "Discover retreats in Germany",
@@ -15,9 +18,9 @@ const retreats = [
     title: "Retreats & Panchakarma in Sri Lanka",
     description:
       "Traditional Panchakarma at our Ayurveda centre in Sri Lanka, and retreats organised by our team.",
-    style: "from-[#DFC24D]/60 to-[#2F5D39]/70",
+    image: "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Retreats/SriLanka/retreat_srilanka.jpg",
     imageText: "Traditional Ayurveda in Sri Lanka",
-    href: "/retreats/sri-lanka",
+    href: "/retreats/germany",
     linkText: "Discover Sri Lanka",
   },
 ];
@@ -44,21 +47,31 @@ export default function Retreats() {
             key={retreat.location}
             className="overflow-hidden rounded-3xl border border-[#D8D0A9]/60 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
-            <div
-              className={`relative flex h-56 items-center justify-center overflow-hidden bg-gradient-to-br ${retreat.style}`}
-            >
-              <div className="absolute h-36 w-36 rounded-full border border-[#EFE9C5]/70" />
-              <div className="absolute h-48 w-48 rounded-full border border-dashed border-[#EFE9C5]/60" />
+            {/* Retreat image */}
+            <div className="group relative h-64 overflow-hidden sm:h-72">
+              <Image
+                src={retreat.image}
+                alt={retreat.imageText}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
 
-              <span className="relative z-10 max-w-xs px-5 text-center font-serif text-2xl text-[#21452B]">
-                {retreat.imageText}
-              </span>
+              {/* Image overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#21452B]/75 via-[#21452B]/10 to-transparent" />
 
-              <span className="absolute bottom-5 left-5 text-[10px] tracking-[0.2em] text-[#21452B]">
-                {retreat.location}
-              </span>
+              <div className="absolute bottom-6 left-6 right-6">
+                <span className="mb-3 block text-[10px] font-semibold tracking-[0.2em] text-[#DFC24D]">
+                  {retreat.location}
+                </span>
+
+                <p className="font-serif text-2xl text-white sm:text-3xl">
+                  {retreat.imageText}
+                </p>
+              </div>
             </div>
 
+            {/* Retreat details */}
             <div className="p-7 sm:p-8">
               <h3 className="font-serif text-3xl text-[#21452B]">
                 {retreat.title}
@@ -68,12 +81,15 @@ export default function Retreats() {
                 {retreat.description}
               </p>
 
-              <a
+              <Link
                 href={retreat.href}
-                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#2F5D39] hover:text-[#C14C38]"
+                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#2F5D39] transition hover:text-[#C14C38]"
               >
-                {retreat.linkText} <span>→</span>
-              </a>
+                {retreat.linkText}
+                <span className="transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
             </div>
           </article>
         ))}

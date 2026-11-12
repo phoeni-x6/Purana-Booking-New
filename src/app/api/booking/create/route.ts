@@ -186,8 +186,7 @@ export async function POST(request: NextRequest) {
                 p_allergies: body.allergies || null,
                 p_medical_notes: body.medical || null,
                 p_guest_notes: body.notes || null,
-                p_payment_method: body.payment || "location",
-            },
+                p_payment_method: "location",            },
         );
 
         if (error) {

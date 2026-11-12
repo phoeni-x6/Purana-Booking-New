@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
 const menus = {
@@ -90,6 +91,7 @@ const menuLabels: Record<MenuName, string> = {
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<MenuName | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const router = useRouter();
 
   // Authentication state
   const [userName, setUserName] = useState<string | null>(null);
@@ -189,8 +191,10 @@ export default function Navbar() {
     }
 
     setUserName(null);
-    setSigningOut(false);
     closeMenus();
+
+    router.replace("/");
+    router.refresh();
   }
 
   return (

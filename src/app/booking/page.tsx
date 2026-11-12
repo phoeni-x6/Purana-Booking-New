@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -9,7 +9,6 @@ import {
   CalendarDays,
   Check,
   Clock3,
-  CreditCard,
   Leaf,
   Mail,
   MapPin,
@@ -117,8 +116,7 @@ export default function BookingPage() {
   const [therapistId, setTherapistId] = useState("any");
   const [selectedTime, setSelectedTime] = useState("");
 
-  // Payment
-  const [payment, setPayment] = useState("card");
+  // Terms
   const [acceptedTerms, setAcceptedTerms] = useState(false);
 
   // Submission
@@ -240,9 +238,7 @@ export default function BookingPage() {
 
           // Only use the URL to identify a treatment.
           // Price and duration always come from the database.
-          setTreatmentId(
-              matching?.treatment_id ?? loaded[0].treatment_id,
-          );
+          setTreatmentId(matching?.treatment_id ?? loaded[0].treatment_id);
         }
       } catch (err) {
         if (active) {
@@ -483,7 +479,7 @@ export default function BookingPage() {
           allergies: details.allergies,
           medical: details.medical,
           notes: details.notes,
-          payment,
+          payment: "location",
         }),
       });
 
@@ -579,6 +575,10 @@ export default function BookingPage() {
 
               <p className="text-sm text-[#6B705C]">
                 Therapist: {selectedSlot?.therapist_name}
+              </p>
+
+              <p className="text-sm text-[#6B705C]">
+                Payment: Pay at Location
               </p>
 
               <p className="break-all text-xs text-[#8B8778]">
@@ -775,7 +775,7 @@ export default function BookingPage() {
                   {step === 3 &&
                       "Tell us a little about yourself so we can prepare for your visit."}
                   {step === 4 &&
-                      "Choose how you would like to pay for your booking."}
+                      "Review your booking and confirm your payment arrangement."}
                 </p>
               </div>
 
@@ -1252,80 +1252,33 @@ export default function BookingPage() {
                       </p>
                     </div>
 
+                    {/* Fixed payment method */}
                     <div>
                       <label className={labelClass}>Payment method</label>
 
-                      <div className="space-y-3">
-                        {[
-                          {
-                            id: "card",
-                            title: "Card Payment",
-                            description: "Pay securely by card",
-                            icon: CreditCard,
-                          },
-                          {
-                            id: "paypal",
-                            title: "PayPal",
-                            description: "Pay using your PayPal account",
-                            icon: CreditCard,
-                          },
-                          {
-                            id: "location",
-                            title: "Pay at Location",
-                            description: "Pay at Purana Ayurveda",
-                            icon: MapPin,
-                          },
-                        ].map((method) => {
-                          const Icon = method.icon;
+                      <div className="rounded-xl border border-[#2F5D39] bg-[#2F5D39]/5 p-5">
+                        <div className="flex items-start gap-3">
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#2F5D39] text-white">
+                            <MapPin size={19} />
+                          </div>
 
-                          return (
-                              <button
-                                  type="button"
-                                  key={method.id}
-                                  onClick={() => setPayment(method.id)}
-                                  className={`flex w-full items-center justify-between rounded-xl border p-4 text-left transition ${
-                                      payment === method.id
-                                          ? "border-[#2F5D39] bg-[#2F5D39]/5"
-                                          : "border-[#EAE6DF] hover:border-[#2F5D39]/50"
-                                  }`}
-                              >
-                          <span className="flex items-center gap-3">
-                            <Icon
-                                size={19}
-                                className="text-[#2F5D39]"
-                            />
+                          <div>
+                            <p className="text-sm font-semibold text-[#533E23]">
+                              Pay at Location
+                            </p>
 
-                            <span>
-                              <span className="block text-sm font-semibold text-[#533E23]">
-                                {method.title}
-                              </span>
+                            <p className="mt-1 text-xs leading-5 text-[#8B8778]">
+                              Payment will be collected at Purana Ayurveda
+                              during your visit. No online payment is required
+                              when submitting this booking request.
+                            </p>
+                          </div>
 
-                              <span className="mt-1 block text-xs text-[#A49B8C]">
-                                {method.description}
-                              </span>
-                            </span>
-                          </span>
-
-                                <span
-                                    className={`flex h-5 w-5 items-center justify-center rounded-full border ${
-                                        payment === method.id
-                                            ? "border-[#2F5D39] bg-[#2F5D39]"
-                                            : "border-[#D8D0A9]"
-                                    }`}
-                                >
-                            {payment === method.id && (
-                                <Check size={12} className="text-white" />
-                            )}
-                          </span>
-                              </button>
-                          );
-                        })}
+                          <div className="ml-auto flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#2F5D39] bg-[#2F5D39]">
+                            <Check size={12} className="text-white" />
+                          </div>
+                        </div>
                       </div>
-
-                      <p className="mt-3 text-xs leading-5 text-[#A49B8C]">
-                        Selecting card or PayPal records your preferred
-                        payment method. Payment is not collected online yet.
-                      </p>
                     </div>
 
                     <label className="flex cursor-pointer items-start gap-3">

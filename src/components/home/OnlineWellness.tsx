@@ -3,130 +3,153 @@ export default function OnlineWellness() {
   return (
     <section
       id="online"
-      className="mx-auto grid max-w-7xl scroll-mt-24 overflow-hidden rounded-[28px] border border-[#D8D0A9]/30 bg-[#21452B] text-[#EFE9C5] md:grid-cols-5"
+      className="relative isolate mx-auto max-w-7xl scroll-mt-24 overflow-hidden rounded-[28px] bg-[#EFE9C5] text-[#533E23] shadow-[0_24px_70px_rgba(83,62,35,0.10)]"
     >
-      {/* Decorative visual panel */}
-      <div className="group relative flex min-h-[320px] items-center justify-center overflow-hidden bg-gradient-to-br from-[#533E23] via-[#2F5D39] to-[#21452B] md:col-span-2 md:min-h-full">
-        {/* Decorative circles */}
-        <div
-          aria-hidden="true"
-          className="absolute h-48 w-48 rounded-full border border-[#DFC24D]/50 transition-transform duration-700 group-hover:scale-110 sm:h-56 sm:w-56"
+      {/* Background image */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src="https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/img2.jfif"
+          alt="Peaceful spa and wellness treatment setting"
+          className="h-full w-full object-cover object-center"
         />
 
-        <div
-          aria-hidden="true"
-          className="absolute h-60 w-60 rounded-full border border-dashed border-[#DFC24D]/30 transition-transform duration-1000 group-hover:rotate-12 sm:h-72 sm:w-72"
-        />
+        {/* Fade image into warm cream */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#533E23]/10 via-[#EFE9C5]/55 to-[#EFE9C5]" />
 
-        <div
-          aria-hidden="true"
-          className="absolute h-72 w-72 rounded-full border border-white/10 sm:h-96 sm:w-96"
-        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#EFE9C5] via-[#EFE9C5]/20 to-transparent md:bg-gradient-to-r md:from-transparent md:via-[#EFE9C5]/45 md:to-[#EFE9C5]" />
 
-        {/* Decorative centre */}
-        <div className="relative z-10 flex flex-col items-center px-6 text-center">
-          <span className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-[#DFC24D]">
-            PURANA WELLNESS
-          </span>
-
-          <h3 className="font-serif text-4xl leading-tight text-[#EFE9C5] sm:text-5xl">
-            Online
-            <br />
-            <span className="italic">Ayurveda care.</span>
-          </h3>
-
-          <span className="mt-6 h-px w-14 bg-[#DFC24D]" />
-
-          <p className="mt-5 max-w-[220px] text-xs leading-6 text-[#EFE9C5]/75">
-            Traditional wisdom, personalised guidance, wherever you are.
-          </p>
-        </div>
-
-        {/* Decorative symbol */}
-        <span
-          aria-hidden="true"
-          className="absolute bottom-4 right-6 font-serif text-7xl text-white/[0.07] sm:text-8xl"
-        >
-          ❋
-        </span>
-
-        <span
-          aria-hidden="true"
-          className="absolute left-6 top-6 text-xl text-[#DFC24D]/80"
-        >
-          ✳
-        </span>
+        {/* Warm image tint */}
+        <div className="absolute inset-0 bg-[#DFC24D]/10 mix-blend-soft-light" />
       </div>
 
-      {/* Main content */}
-      <div className="flex flex-col justify-center p-7 sm:p-10 md:col-span-3 md:p-12 lg:p-14">
-        <div className="mb-5 flex items-center gap-3">
-          <span className="h-px w-8 bg-[#DFC24D]" />
+      {/* Decorative details */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-24 -top-28 h-80 w-80 rounded-full border border-[#2F5D39]/15"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-12 -top-16 h-56 w-56 rounded-full border border-[#2F5D39]/10"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-8 right-10 font-serif text-8xl text-[#533E23]/[0.05]"
+      >
+        ❋
+      </div>
 
-          <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#DFC24D] sm:text-xs">
-            Online, wherever you are
-          </p>
-        </div>
+      {/* Main layout */}
+      <div className="relative grid min-h-[620px] items-center md:grid-cols-5 lg:min-h-[650px]">
 
-        <h2 className="max-w-2xl font-serif text-3xl leading-tight tracking-tight text-[#EFE9C5] sm:text-4xl lg:text-5xl">
-          Online consultation
-          <span className="block italic text-[#DFC24D]">
-            &amp; Ayurveda detox at home
-          </span>
-        </h2>
-
-        <p className="mt-6 max-w-xl text-sm leading-7 text-[#EFE9C5]/80">
-          Connect with Lakshani for a 45-minute online consultation in German
-          or English, or consult Dr. Ishanka, an Ayurvedic doctor (BAMS) in
-          Sri Lanka, in English. Explore guided Reset at Home programmes
-          designed to support your personal wellness journey.
-        </p>
-
-        {/* Service highlights */}
-        <div className="mt-7 grid gap-3 sm:grid-cols-2">
-          <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-            <span className="text-lg text-[#DFC24D]">◷</span>
-
-            <p className="mt-3 text-sm font-semibold text-[#EFE9C5]">
-              45-minute consultations
-            </p>
-
-            <p className="mt-1 text-xs leading-5 text-[#EFE9C5]/60">
-              Personal guidance online
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-            <span className="text-lg text-[#DFC24D]">✳</span>
-
-            <p className="mt-3 text-sm font-semibold text-[#EFE9C5]">
-              Reset at Home
-            </p>
-
-            <p className="mt-1 text-xs leading-5 text-[#EFE9C5]/60">
-              Guided wellness programmes
-            </p>
-          </div>
-        </div>
-
-        {/* Call to action */}
-        <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-          <a
-            href="#booking"
-            className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-6 py-4 text-sm font-semibold text-[#21452B] transition duration-300 hover:bg-[#EFE9C5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#21452B]"
-          >
-            Discover online offers
-            <span
-              aria-hidden="true"
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            >
-              →
+        {/* Image-side visual space */}
+        <div className="relative min-h-[260px] md:col-span-2 md:min-h-[620px] lg:min-h-[650px]">
+          <div className="absolute left-6 top-7 flex items-center gap-2 md:left-8 md:top-9">
+            <span className="h-px w-7 bg-[#DFC24D]" />
+            <span className="text-[9px] font-semibold uppercase tracking-[0.25em] text-[#EFE9C5] drop-shadow-md">
+              PURANA WELLNESS
             </span>
-          </a>
+          </div>
 
-          <span className="text-xs leading-6 text-[#EFE9C5]/65">
-            German &amp; English consultations
+          <div className="absolute bottom-7 left-6 md:bottom-10 md:left-8">
+            <p className="font-serif text-3xl italic text-white drop-shadow-lg sm:text-4xl">
+              A little space
+              <br />
+              for yourself.
+            </p>
+            <span className="mt-4 block h-px w-12 bg-[#DFC24D]" />
+          </div>
+
+          <span className="absolute right-7 top-8 text-2xl text-[#DFC24D]">
+            ✳
           </span>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 px-6 pb-9 pt-4 sm:px-10 md:col-span-3 md:py-14 md:pl-5 md:pr-12 lg:py-16 lg:pr-16">
+
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-8 bg-[#2F5D39]" />
+            <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#2F5D39] sm:text-xs">
+              Online, wherever you are
+            </p>
+          </div>
+
+          <h2 className="max-w-2xl font-serif text-3xl leading-[1.15] tracking-tight text-[#533E23] sm:text-4xl lg:text-5xl">
+            Your path to balance,
+            <span className="mt-1 block italic text-[#2F5D39]">
+              wherever life takes you.
+            </span>
+          </h2>
+
+          <p className="mt-6 max-w-xl text-sm leading-7 text-[#6B705C]">
+            Connect with Lakshani for a 45-minute online consultation in
+            German or English, or consult Dr. Ishanka, an Ayurvedic doctor
+            (BAMS) in Sri Lanka, in English. Explore guided Reset at Home
+            programmes designed to support your personal wellness journey.
+          </p>
+
+          {/* Service cards */}
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+
+            {/* Consultation card - Brown */}
+            <div className="group relative overflow-hidden rounded-2xl border border-[#533E23]/10 bg-[#533E23] p-5 text-[#EFE9C5] shadow-[0_10px_25px_rgba(83,62,35,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(83,62,35,0.20)]">
+              <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full border border-[#DFC24D]/20 transition-transform duration-500 group-hover:scale-125" />
+
+              <div className="relative flex items-center justify-between">
+                <span className="text-2xl text-[#DFC24D]">◷</span>
+                <span className="text-[9px] tracking-widest text-[#EFE9C5]/40">
+                  01
+                </span>
+              </div>
+
+              <p className="relative mt-6 text-sm font-semibold">
+                Online consultations
+              </p>
+              <p className="relative mt-1 text-xs leading-5 text-[#EFE9C5]/65">
+                45-minute personalised guidance
+              </p>
+
+              <span className="relative mt-5 block h-px w-8 bg-[#DFC24D] transition-all duration-300 group-hover:w-14" />
+            </div>
+
+            {/* Reset at Home card - Forest green */}
+            <div className="group relative overflow-hidden rounded-2xl border border-[#2F5D39]/20 bg-[#2F5D39] p-5 text-[#EFE9C5] shadow-[0_10px_25px_rgba(47,93,57,0.14)] transition duration-300 hover:-translate-y-1 hover:bg-[#21452B] hover:shadow-[0_16px_35px_rgba(47,93,57,0.22)]">
+              <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full border border-[#DFC24D]/25 transition-transform duration-500 group-hover:scale-125" />
+
+              <div className="relative flex items-center justify-between">
+                <span className="text-2xl text-[#DFC24D]">✳</span>
+                <span className="text-[9px] tracking-widest text-[#EFE9C5]/50">
+                  02
+                </span>
+              </div>
+
+              <p className="relative mt-6 text-sm font-semibold">
+                Reset at Home
+              </p>
+              <p className="relative mt-1 text-xs leading-5 text-[#EFE9C5]/75">
+                Guided wellness programmes
+              </p>
+
+              <span className="relative mt-5 block h-px w-8 bg-[#DFC24D] transition-all duration-300 group-hover:w-14" />
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <a
+              href="#booking"
+              className="group inline-flex min-h-12 items-center justify-center gap-4 rounded-full bg-[#2F5D39] px-6 py-3 text-xs font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#21452B] hover:shadow-lg"
+            >
+              Discover online offers
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </a>
+
+            <span className="text-xs text-[#6B705C]">
+              German &amp; English consultations
+            </span>
+          </div>
         </div>
       </div>
     </section>

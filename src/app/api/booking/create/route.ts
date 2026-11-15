@@ -1,51 +1,19 @@
+
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 
 export const dynamic = "force-dynamic";
 
-const TIME_ZONE = "Europe/Berlin";
-
-function berlinTimeToUtc(date: string, time: string): Date {
-    const [year, month, day] = date.split("-").map(Number);
-    const [hours, minutes] = time.split(":").map(Number);
-
-    const targetUtc = Date.UTC(year, month - 1, day, hours, minutes);
-
-    const formatter = new Intl.DateTimeFormat("en-GB", {
-        timeZone: TIME_ZONE,
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        hourCycle: "h23",
-    });
-
-    let result = targetUtc;
-
-    for (let i = 0; i < 3; i++) {
-        const parts = formatter.formatToParts(new Date(result));
-        const values = Object.fromEntries(
-            parts.map((part) => [part.type, part.value]),
-        );
-
-        const representedUtc = Date.UTC(
-            Number(values.year),
-            Number(values.month) - 1,
-            Number(values.day),
-            Number(values.hour),
-            Number(values.minute),
-        );
-
-        result += targetUtc - representedUtc;
-    }
-
-    return new Date(result);
-}
-
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
+
+        if (!body || typeof body !== "object" || Array.isArray(body)) {
+            return NextResponse.json(
+                { error: "Invalid booking request." },
+                { status: 400 },
+            );
+        }
 
         const requiredFields = [
             "treatmentId",
@@ -72,6 +40,7 @@ export async function POST(request: NextRequest) {
             }
         }
 
+        // Validate date and time formats.
         if (
             !/^\d{4}-\d{2}-\d{2}$/.test(body.date) ||
             !/^\d{2}:\d{2}$/.test(body.time) ||
@@ -83,6 +52,32 @@ export async function POST(request: NextRequest) {
             );
         }
 
+        // Validate that the date actually exists.
+        const [year, month, day] = body.date.split("-").map(Number);
+        const parsedDate = new Date(Date.UTC(year, month - 1, day));
+
+        if (
+            parsedDate.getUTCFullYear() !== year ||
+            parsedDate.getUTCMonth() !== month - 1 ||
+            parsedDate.getUTCDate() !== day
+        ) {
+            return NextResponse.json(
+                { error: "Please select a valid booking date." },
+                { status: 400 },
+            );
+        }
+
+        // Validate time.
+        const [hours, minutes] = body.time.split(":").map(Number);
+
+        if (hours > 23 || minutes > 59) {
+            return NextResponse.json(
+                { error: "Please select a valid booking time." },
+                { status: 400 },
+            );
+        }
+
+        // Validate guest type.
         if (!["chalet", "external"].includes(body.guestType)) {
             return NextResponse.json(
                 { error: "Invalid guest type." },
@@ -92,117 +87,49 @@ export async function POST(request: NextRequest) {
 
         const supabase = await createClient();
 
-        // Get the real treatment duration from the database.
-        const { data: treatment, error: treatmentError } = await supabase
-            .from("treatments")
-            .select("id, duration_minutes")
-            .eq("id", body.treatmentId)
-            .eq("active", true)
-            .eq("available_for_booking", true)
-            .single();
-
-        if (treatmentError || !treatment) {
-            return NextResponse.json(
-                { error: "This treatment is no longer available." },
-                { status: 400 },
-            );
-        }
-
-        const startAt = berlinTimeToUtc(body.date, body.time);
-        const endAt = new Date(
-            startAt.getTime() + treatment.duration_minutes * 60 * 1000,
-        );
-
-        // Check existing pending and confirmed bookings.
-        const { data: existingBookings, error: bookingsError } =
-            await supabase
-                .from("bookings")
-                .select("id")
-                .eq("therapist_id", body.therapistId)
-                .in("status", ["pending", "confirmed"])
-                .lt("start_at", endAt.toISOString())
-                .gt("end_at", startAt.toISOString())
-                .limit(1);
-
-        if (bookingsError) {
-            console.error("Booking conflict check error:", bookingsError);
-
-            return NextResponse.json(
-                { error: "Unable to verify therapist availability." },
-                { status: 500 },
-            );
-        }
-
-        if (existingBookings && existingBookings.length > 0) {
-            return NextResponse.json(
-                {
-                    error: "This time slot has just been booked. Please select another time.",
-                },
-                { status: 409 },
-            );
-        }
-
-        // Check manually blocked periods.
-        const { data: blockedTimes, error: blockedError } = await supabase
-            .from("therapist_blocked_times")
-            .select("id")
-            .eq("therapist_id", body.therapistId)
-            .lt("start_at", endAt.toISOString())
-            .gt("end_at", startAt.toISOString())
-            .limit(1);
-
-        if (blockedError) {
-            console.error("Blocked time check error:", blockedError);
-
-            return NextResponse.json(
-                { error: "Unable to verify therapist availability." },
-                { status: 500 },
-            );
-        }
-
-        if (blockedTimes && blockedTimes.length > 0) {
-            return NextResponse.json(
-                {
-                    error: "This therapist is unavailable during that time. Please select another time.",
-                },
-                { status: 409 },
-            );
-        }
-
-        // Create the booking using your existing database function.
+        // Create the booking through the database function.
+        // The function handles treatment validation, therapist validation,
+        // working hours, booking conflicts, blocked periods and guest creation.
         const { data, error } = await supabase.rpc(
-            "create_booking_request",
+            "create_booking_request_with_reference",
             {
                 p_treatment_id: body.treatmentId,
                 p_therapist_id: body.therapistId,
                 p_booking_date: body.date,
                 p_start_time: body.time,
                 p_guest_type: body.guestType,
-                p_first_name: body.firstName,
-                p_last_name: body.lastName,
-                p_email: body.email,
-                p_phone: body.phone,
+                p_first_name: body.firstName.trim(),
+                p_last_name: body.lastName.trim(),
+                p_email: body.email.trim(),
+                p_phone: body.phone.trim(),
                 p_preferred_language: body.language,
                 p_allergies: body.allergies || null,
                 p_medical_notes: body.medical || null,
                 p_guest_notes: body.notes || null,
-                p_payment_method: "location",            },
+                p_payment_method: "location",
+            },
         );
 
         if (error) {
             console.error("Booking creation error:", error);
 
+            const isConflict =
+                /booked|overlap|unavailable|blocked|time slot|working hours/i.test(
+                    error.message,
+                );
+
             return NextResponse.json(
-                { error: error.message || "Unable to create your booking." },
-                { status: 400 },
+                {
+                    error: isConflict
+                        ? error.message
+                        : "Unable to create your booking. Please check your details and try again.",
+                },
+                { status: isConflict ? 409 : 400 },
             );
         }
 
         return NextResponse.json(
-            {
-                success: true,
-                bookingId: data,
-            },
+            { success: true, bookingReference: data },
             { status: 201 },
         );
     } catch (error) {

@@ -485,11 +485,22 @@ export default function BookingPage() {
 
       const result = await response.json();
 
+      console.log("Booking API response:", result);
+
       if (!response.ok) {
         throw new Error(result.error || "Unable to create booking.");
       }
 
-      setBookingId(result.bookingId);
+      // Validate and store the reference returned by the API.
+      const reference = result.bookingReference;
+
+      if (typeof reference !== "string" || !reference.trim()) {
+        throw new Error(
+            "The booking was created, but the booking reference was not returned. Please contact Purana Ayurveda.",
+        );
+      }
+
+      setBookingId(reference.trim());
       setSubmitted(true);
 
       window.scrollTo({
@@ -581,9 +592,15 @@ export default function BookingPage() {
                 Payment: Pay at Location
               </p>
 
-              <p className="break-all text-xs text-[#8B8778]">
-                Booking reference: {bookingId}
-              </p>
+              <div className="border-t border-[#D8D0A9] pt-3">
+                <p className="text-xs font-medium uppercase tracking-wider text-[#8B8778]">
+                  Booking reference
+                </p>
+
+                <p className="mt-1 break-all text-lg font-bold tracking-wide text-[#21452B]">
+                  {bookingId}
+                </p>
+              </div>
             </div>
 
             <Link
@@ -633,7 +650,6 @@ export default function BookingPage() {
   return (
       <main className="min-h-screen bg-[#EFE9C5] px-4 py-10 sm:px-6 lg:py-14">
         <div className="mx-auto max-w-[1010px]">
-
           {/* Progress */}
           <div className="mb-10 flex items-center justify-center">
             <div className="flex w-full max-w-[720px] items-center">
@@ -682,7 +698,6 @@ export default function BookingPage() {
           </div>
 
           <div className="grid overflow-hidden rounded-[24px] bg-white shadow-[0_20px_60px_rgba(33,69,43,0.09)] lg:grid-cols-[0.78fr_1.22fr]">
-
             {/* Left summary panel */}
             <aside className="bg-[#2F5D39] p-7 text-white sm:p-9 lg:p-10">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DFC24D] text-[#533E23]">

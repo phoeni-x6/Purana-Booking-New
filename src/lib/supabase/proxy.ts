@@ -33,33 +33,11 @@ export async function updateSession(request: NextRequest) {
         }
     );
 
-    // Refresh and verify the user's authentication.
-    const { data, error } = await supabase.auth.getClaims();
+    // Refresh and maintain the user's authentication session.
+    await supabase.auth.getClaims();
 
-    // Protect the booking page and its subroutes.
-    const isBookingPage =
-        request.nextUrl.pathname === "/booking" ||
-        request.nextUrl.pathname.startsWith("/booking/");
-
-    if (isBookingPage && (error || !data?.claims)) {
-        const loginUrl = request.nextUrl.clone();
-
-        loginUrl.pathname = "/login";
-        loginUrl.search = "";
-        loginUrl.searchParams.set(
-            "next",
-            request.nextUrl.pathname + request.nextUrl.search
-        );
-
-        const redirectResponse = NextResponse.redirect(loginUrl);
-
-        // Preserve Supabase session cookies.
-        response.cookies.getAll().forEach((cookie) => {
-            redirectResponse.cookies.set(cookie);
-        });
-
-        return redirectResponse;
-    }
+    // No login redirect here.
+    // Public booking pages must be accessible without authentication.
 
     return response;
 }

@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
       new URL(
         "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/**",
       ),
+      new URL("https://images.unsplash.com/**"),
     ],
   },
 };

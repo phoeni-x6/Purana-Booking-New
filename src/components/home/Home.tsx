@@ -1,5 +1,4 @@
 
-
 import Hero from "./Hero";
 import BookingFinder from "./BookingFinder";
 import Services from "./Services";
@@ -13,18 +12,17 @@ import FloatingActions from "./FloatingActions";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f5f0e7] text-[#193b30]">
-      
-
-      
-
-      <div className="bg-[#193b30]">
+      {/* Hero */}
+      <div className="relative z-0 bg-[#193b30]">
         <Hero />
       </div>
 
-      <div className="relative z-10 mx-auto -mt-12 max-w-7xl px-5">
+      {/* Full-width booking section */}
+      <div className="relative z-10 -mt-12 w-full">
         <BookingFinder />
       </div>
 
+      {/* Homepage sections */}
       <Services />
       <Locations />
       <OnlineWellness />
@@ -32,7 +30,7 @@ export default function Home() {
       <FeatureCards />
       <Membership />
 
-     
+      {/* Floating actions */}
       <FloatingActions />
     </main>
   );

@@ -14,8 +14,8 @@ export default function OnlineConsultationPage() {
       <OnlineHero />
       <ConsultationSection />
       <DetoxProgrammes />
-      <EbooksSection />
-      <MembershipBanner />
+  
+      
       <HowItWorks />
     </main>
   );

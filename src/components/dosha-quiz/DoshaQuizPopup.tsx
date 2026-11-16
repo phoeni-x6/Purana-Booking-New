@@ -19,7 +19,6 @@ export default function DoshaQuizPopup() {
   }, []);
 
   useEffect(() => {
-    let timer: ReturnType<typeof setTimeout> | undefined;
     let opened = false;
 
     try {
@@ -27,16 +26,6 @@ export default function DoshaQuizPopup() {
     } catch {
       // Continue without session storage.
     }
-
-    const openPopup = () => {
-      if (opened) return;
-
-      opened = true;
-      setIsOpen(true);
-
-      window.removeEventListener("scroll", handleScroll);
-      if (timer) clearTimeout(timer);
-    };
 
     const handleScroll = () => {
       const scrollableHeight =
@@ -50,11 +39,20 @@ export default function DoshaQuizPopup() {
       if (scrollPercentage >= 50) openPopup();
     };
 
-    timer = setTimeout(openPopup, 10000);
+    const openPopup = () => {
+      if (opened) return;
+
+      opened = true;
+      setIsOpen(true);
+
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+    const timer = setTimeout(openPopup, 10000);
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      if (timer) clearTimeout(timer);
+      clearTimeout(timer);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);

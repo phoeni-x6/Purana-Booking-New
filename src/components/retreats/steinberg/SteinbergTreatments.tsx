@@ -141,7 +141,7 @@ export default function SteinbergTreatments() {
               <h3 className="mt-5 font-serif text-3xl leading-tight sm:text-4xl">
                 Not sure where to begin?
                 <span className="block italic text-[#DFC24D]">
-                  Let's find your treatment.
+                  Let&apos;s find your treatment.
                 </span>
               </h3>
 

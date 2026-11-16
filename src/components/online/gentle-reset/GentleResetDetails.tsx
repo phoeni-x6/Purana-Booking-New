@@ -171,7 +171,7 @@ export default function GentleResetDetails() {
                   </svg>
                 </span>
                 <p className="text-xs leading-5 text-[#6B705C]">
-                  You don't need to change everything at once. The focus
+                  You don&apos;t need to change everything at once. The focus
                   is on small, guided steps that fit into your routine.
                 </p>
               </div>

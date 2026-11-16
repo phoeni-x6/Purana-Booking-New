@@ -171,7 +171,7 @@ export default function SignupPage() {
                   Verification email sent
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-[var(--text-muted)]">
-                  We've sent a verification link to{" "}
+                  We&apos;ve sent a verification link to{" "}
                   <strong className="text-[var(--forest-dark)]">
                     {formData.email}
                   </strong>

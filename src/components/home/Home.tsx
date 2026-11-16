@@ -28,7 +28,7 @@ export default function Home() {
       <OnlineWellness />
       <Retreats />
       <FeatureCards />
-      <Membership />
+      
 
       {/* Floating actions */}
       <FloatingActions />

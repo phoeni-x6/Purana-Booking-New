@@ -47,6 +47,8 @@ const socialLinks = [
   },
 ];
 
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer
@@ -72,7 +74,7 @@ export default function Footer() {
         <div className="grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-10 lg:py-20">
           {/* Brand column */}
           <div className="max-w-sm">
-            <a
+            <Link
               href="/"
               aria-label="Purana Ayurveda home"
               className="group inline-flex flex-col"
@@ -83,7 +85,7 @@ export default function Footer() {
               <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.38em] text-[#DFC24D]">
                 Ayurveda & Wellness
               </span>
-            </a>
+            </Link>
 
             <p className="mt-6 max-w-xs text-sm leading-7 text-[#D5DFD3]">
               Wellness rooted in tradition. Care designed for real life.
@@ -142,7 +144,7 @@ export default function Footer() {
         <div className="border-t border-[#F8F5E8]/15 py-7">
           <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
             <p className="font-serif text-base italic text-[#F8F5E8]/90">
-              "A journey back to balance, naturally."
+              &ldquo;A journey back to balance, naturally.&rdquo;
             </p>
 
             <a

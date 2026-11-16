@@ -1,6 +1,7 @@
 
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import SeasonalResetHero from "@/components/online/seasonal-reset/SeasonalResetHero";
 import SeasonalResetDetails from "@/components/online/seasonal-reset/SeasonalResetDetails";
@@ -593,12 +594,12 @@ export default function SeasonalResetPage() {
                 <span aria-hidden="true">→</span>
               </a>
 
-              <a
+              <Link
                 href="/#membership"
                 className="inline-flex items-center justify-center rounded-full border border-white/25 px-8 py-4 text-sm font-medium text-white transition-colors hover:border-[#DFC24D] hover:text-[#DFC24D]"
               >
                 Explore membership
-              </a>
+              </Link>
             </div>
           </div>
         </div>

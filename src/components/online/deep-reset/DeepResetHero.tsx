@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function DeepResetHero() {
   return (
     <section className="relative overflow-hidden bg-[#21452B] text-[#F8F5E8]">
@@ -91,13 +93,13 @@ export default function DeepResetHero() {
                 </div>
               </div>
 
-              <a
+              <Link
                 href="/#membership"
                 className="mt-5 inline-flex items-center gap-2 text-sm text-[#F8F5E8] underline decoration-[#DFC24D]/70 underline-offset-4 transition-colors hover:text-[#DFC24D]"
               >
                 Become a member or upgrade
                 <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -44,7 +44,7 @@ const menus = {
     {
       title: "Deep Reset",
       description: "Extended personal guidance",
-      href: "/online/deep-reset",
+      href: "/online",
     },
     {
       title: "E-books",
@@ -655,8 +655,8 @@ export default function Navbar() {
               </p>
 
               <div className="purana-utility-links">
-                <a href="/#vouchers">Gift vouchers</a>
-                <a href="/#shop">Nivartana shop</a>
+                <Link href="/#vouchers">Gift vouchers</Link>
+                <Link href="/#shop">Nivartana shop</Link>
                 <a href="https://wa.me/">WhatsApp ↗</a>
               </div>
             </div>
@@ -747,16 +747,16 @@ export default function Navbar() {
                     </div>
                 ))}
 
-                <Link
+              { /* <Link
                     href="/membership"
                     className="purana-nav-link"
                     onClick={closeMenus}
                 >
                   Membership
-                </Link>
+                </Link> */ }
 
                 <Link
-                    href="/#about"
+                    href="/about"
                     className="purana-nav-link"
                     onClick={closeMenus}
                 >

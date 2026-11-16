@@ -143,52 +143,7 @@ export default function SteinbergHero() {
             </div>
           </div>
 
-          {/* Visual introduction */}
-          <div className="relative mx-auto w-full max-w-lg">
-            <div className="absolute -inset-3 rounded-[32px] border border-[#DFC24D]/50" />
-
-            <div className="relative overflow-hidden rounded-[28px] border border-white/60 bg-[#F8F5E8]/80 p-3 shadow-2xl shadow-[#21452B]/15 backdrop-blur-sm sm:p-4">
-              <div className="relative min-h-[350px] overflow-hidden rounded-[22px] bg-[#D9D1B9] sm:min-h-[430px]">
-                <img
-                  src="/images/steinberg_hero.webp"
-                  alt="Peaceful natural surroundings at the Ayurveda destination in Steinberg am See"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#172F23]/85 via-[#172F23]/10 to-transparent" />
-
-                <div className="absolute left-5 top-5 rounded-full border border-white/40 bg-[#21452B]/65 px-4 py-2 backdrop-blur-sm">
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
-                    Purana Ayurveda
-                  </span>
-                </div>
-
-                <div className="absolute inset-x-5 bottom-5 text-white sm:inset-x-7 sm:bottom-7">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#DFC24D]">
-                    A moment for yourself
-                  </p>
-
-                  <h2 className="mt-3 max-w-sm font-serif text-3xl leading-tight sm:text-4xl">
-                    Slow down.
-                    <span className="block text-[#DFC24D]">
-                      Feel renewed.
-                    </span>
-                  </h2>
-
-                  <p className="mt-3 max-w-sm text-xs leading-6 text-white/85 sm:text-sm">
-                    Individual treatments, thoughtful rituals and time to
-                    reconnect with yourself.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="absolute -bottom-5 -left-2 hidden rounded-2xl border border-[#DFC24D]/50 bg-[#F8F5E8] px-5 py-3 shadow-lg sm:block">
-              <p className="font-serif text-lg text-[#21452B]">
-                Your time. Your rhythm.
-              </p>
-            </div>
-          </div>
+          
         </div>
       </div>
 

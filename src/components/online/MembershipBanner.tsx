@@ -1,4 +1,6 @@
 
+import Link from "next/link";
+
 export default function MembershipBanner() {
   return (
     <section className="relative overflow-hidden bg-[#F8F5E8] px-5 pb-16 sm:pb-20 lg:px-8">
@@ -76,7 +78,7 @@ export default function MembershipBanner() {
 
             {/* Call to action */}
             <div className="relative flex shrink-0 flex-col gap-3 lg:w-[240px]">
-              <a
+              <Link
                 href="/#membership"
                 className="group flex items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-6 py-4 text-center text-sm font-semibold text-[#21452B] transition duration-300 hover:bg-[#E9D477]"
               >
@@ -90,7 +92,7 @@ export default function MembershipBanner() {
                 >
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
-              </a>
+              </Link>
 
               <p className="text-center text-xs leading-5 text-white/55">
                 Choose the membership that suits your journey.

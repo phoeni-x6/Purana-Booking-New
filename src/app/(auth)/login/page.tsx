@@ -79,7 +79,7 @@ export default function LoginPage() {
           image="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85"
           footer={
             <p className="text-center text-sm text-[var(--text-muted)]">
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <Link
                   href="/signup"
                   className="font-semibold text-[var(--forest)] transition hover:text-[var(--terracotta)]"

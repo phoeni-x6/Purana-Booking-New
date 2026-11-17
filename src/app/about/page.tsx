@@ -4,60 +4,60 @@ import Link from "next/link";
 const team = [
   {
     name: "Sarojani Perera",
-    role: "Ayurvedic Cuisine",
+    role: "Ayurvedische Küche",
     image:
       "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=85",
     description:
-      "The heart and soul of our Ayurvedic kitchen is Sarojani Perera, affectionately known as “Amma”. Since childhood, she has placed great importance on nourishing her family with fresh, balanced and wholesome meals.",
+      "Das Herz und die Seele unserer ayurvedischen Küche ist Sarojani Perera, liebevoll „Amma“ genannt. Schon seit ihrer Kindheit legt sie großen Wert darauf, ihre Familie mit frischen, ausgewogenen und vollwertigen Mahlzeiten zu versorgen.",
     details:
-      "In Sri Lanka, knowledge about food and nutrition has traditionally been passed down through generations. Understanding warming and cooling foods, as well as their effects on digestion and balance, also plays an important role in her cooking.",
+      "In Sri Lanka wird Wissen über Ernährung und Lebensmittel traditionell von Generation zu Generation weitergegeben. Das Verständnis für wärmende und kühlende Lebensmittel sowie deren Wirkung auf Verdauung und Gleichgewicht spielt auch in ihrer Küche eine wichtige Rolle.",
     closing:
-      "With years of experience, dedication and love, she prepares Ayurvedic meals that nourish the body and mind and support the wellbeing of our guests.",
+      "Mit langjähriger Erfahrung, Hingabe und Liebe bereitet sie ayurvedische Mahlzeiten zu, die Körper und Geist nähren und das Wohlbefinden unserer Gäste unterstützen.",
   },
   {
     name: "Liyaniya Kumarage Pearl Perera",
-    role: "Music, Meditation & Sound",
+    role: "Musik, Meditation & Klang",
     image:
       "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=85",
     description:
-      "An important part of our retreats is the power of music, meditation and sound healing. This tradition has been passed down through generations in our family.",
+      "Ein wichtiger Bestandteil unserer Retreats ist die Kraft von Musik, Meditation und Klangheilung. Diese Tradition wird in unserer Familie seit Generationen weitergegeben.",
     details:
-      "Using the Indian harmonium, he accompanies meditation sessions, mantra circles and sound healing experiences, creating a space for peace, mindfulness and inner balance.",
+      "Mit dem indischen Harmonium begleitet er Meditationseinheiten, Mantra-Kreise und Klangheilungserlebnisse und schafft so einen Raum für Ruhe, Achtsamkeit und innere Balance.",
     closing:
-      "His music helps our guests calm their minds and connect deeply with themselves – an essential part of the Purana Ayurveda retreat experience.",
+      "Seine Musik hilft unseren Gästen, zur Ruhe zu kommen und eine tiefere Verbindung zu sich selbst aufzubauen – ein wesentlicher Bestandteil des Retreat-Erlebnisses bei Purana Ayurveda.",
   },
   {
     name: "Chaminda Perera",
-    role: "Yoga Teacher",
+    role: "Yogalehrer",
     image:
       "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=900&q=85",
     description:
-      "Born in Sri Lanka, Chaminda Perera was introduced to meditation and martial arts at an early age. A health challenge in 2012 led him to deepen his journey into yoga.",
+      "Chaminda Perera wurde in Sri Lanka geboren und kam schon früh mit Meditation und Kampfkunst in Berührung. Eine gesundheitliche Herausforderung im Jahr 2012 führte ihn dazu, seinen Weg zum Yoga zu vertiefen.",
     details:
-      "In 2021, he completed a 1,750-hour training programme at the Isha Yoga Center in India and became a certified Isha Hatha Yoga teacher.",
+      "Im Jahr 2021 schloss er am Isha Yoga Center in Indien ein Ausbildungsprogramm mit 1.750 Stunden ab und wurde zertifizierter Isha-Hatha-Yogalehrer.",
     closing:
-      "At Purana Ayurveda, he teaches traditional Hatha Yoga with clarity, mindfulness and dedication – offering a holistic path towards health, balance and inner growth.",
+      "Bei Purana Ayurveda unterrichtet er traditionelles Hatha-Yoga mit Klarheit, Achtsamkeit und Hingabe – als ganzheitlichen Weg zu Gesundheit, Balance und innerem Wachstum.",
   },
 ];
 
 const values = [
   {
     number: "01",
-    title: "Authentic Tradition",
+    title: "Authentische Tradition",
     description:
-      "Rooted in the centuries-old healing traditions of Sri Lanka and the wisdom passed down by our ancestors.",
+      "Verwurzelt in den jahrhundertealten Heiltraditionen Sri Lankas und dem Wissen, das von unseren Vorfahren weitergegeben wurde.",
   },
   {
     number: "02",
-    title: "Natural Wellbeing",
+    title: "Natürliches Wohlbefinden",
     description:
-      "Natural ingredients, mindful nutrition and conscious daily routines to support a healthier lifestyle.",
+      "Natürliche Zutaten, bewusste Ernährung und achtsame Alltagsroutinen für einen gesünderen Lebensstil.",
   },
   {
     number: "03",
-    title: "Holistic Balance",
+    title: "Ganzheitliche Balance",
     description:
-      "Understanding the body, mind and soul as one, and living in harmony with nature.",
+      "Körper, Geist und Seele als Einheit verstehen und im Einklang mit der Natur leben.",
   },
 ];
 
@@ -104,7 +104,7 @@ function TeamCard({
       </div>
 
       <div className="flex flex-col justify-center p-7 sm:p-9 lg:p-11">
-        <SectionLabel>Our Team</SectionLabel>
+        <SectionLabel>Unser Team</SectionLabel>
 
         <h3 className="font-serif text-3xl leading-tight text-[#21452B] sm:text-4xl">
           {person.name}
@@ -164,32 +164,32 @@ export default function AboutPage() {
           <div className="max-w-3xl">
             <div className="mb-8 flex items-center gap-2 text-sm text-[#6B705C]">
               <Link href="/" className="transition hover:text-[#2F5D39]">
-                Home
+                Startseite
               </Link>
               <span className="text-[#C19A35]">/</span>
               <span className="font-medium text-[#2F5D39]">
-                About Us
+                Über uns
               </span>
             </div>
 
             <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-[#2F5D39]/15 bg-[#F8F5E8]/80 px-4 py-2.5 text-[10px] font-semibold tracking-[0.18em] text-[#2F5D39] shadow-sm backdrop-blur-sm sm:text-xs">
               <span className="h-2 w-2 rounded-full bg-[#C19A35]" />
-              OUR STORY · OUR ROOTS
+              UNSERE GESCHICHTE · UNSERE WURZELN
             </div>
 
             <h1 className="font-serif text-5xl leading-[1.08] tracking-tight text-[#21452B] sm:text-6xl lg:text-7xl">
-              Timeless Wisdom.
+              Zeitlose Weisheit.
               <span className="mt-3 block font-normal italic text-[#A47D32]">
-                Reimagined.
+                Neu interpretiert.
               </span>
             </h1>
 
             <div className="mt-8 h-px w-20 bg-[#DFC24D]" />
 
             <p className="mt-8 max-w-xl text-base leading-8 text-[#52665C] sm:text-lg">
-              Discover the people, traditions and beliefs behind Purana
-              Ayurveda. Rooted in Sri Lanka, inspired by nature and created
-              for a conscious modern lifestyle.
+              Entdecken Sie die Menschen, Traditionen und Überzeugungen
+              hinter Purana Ayurveda. Verwurzelt in Sri Lanka, inspiriert von
+              der Natur und geschaffen für einen bewussten modernen Lebensstil.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -197,7 +197,7 @@ export default function AboutPage() {
                 href="#unsere-geschichte"
                 className="group inline-flex items-center gap-3 rounded-full bg-[#2F5D39] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#21452B]/10 transition hover:-translate-y-1 hover:bg-[#21452B]"
               >
-                Our Story
+                Unsere Geschichte
                 <span className="transition-transform group-hover:translate-x-1">
                   →
                 </span>
@@ -207,7 +207,7 @@ export default function AboutPage() {
                 href="#unser-team"
                 className="inline-flex items-center gap-3 rounded-full border border-[#2F5D39]/25 bg-[#F8F5E8]/70 px-7 py-4 text-sm font-semibold text-[#21452B] backdrop-blur-sm transition hover:border-[#DFC24D] hover:bg-[#EFE9C5]"
               >
-                Meet Our Team
+                Lernen Sie unser Team kennen
               </a>
             </div>
 
@@ -215,10 +215,10 @@ export default function AboutPage() {
               <span className="font-serif text-3xl text-[#A47D32]">2024</span>
               <div>
                 <p className="font-serif text-base text-[#21452B]">
-                  Founded with a meaningful vision
+                  Gegründet mit einer bedeutungsvollen Vision
                 </p>
                 <p className="mt-1 text-xs text-[#6B705C]">
-                  Sri Lankan Ayurvedic traditions for modern living
+                  Ayurvedische Traditionen Sri Lankas für das moderne Leben
                 </p>
               </div>
             </div>
@@ -247,7 +247,7 @@ export default function AboutPage() {
             <div className="absolute -bottom-7 -right-3 max-w-[230px] rounded-[22px] border border-[#DFC24D]/50 bg-[#F8F5E8] p-5 shadow-xl sm:-right-8">
               <p className="font-serif text-3xl text-[#21452B]">Sri Lanka</p>
               <p className="mt-2 text-xs leading-5 text-[#6B705C]">
-                Our home. Our roots. Our inspiration.
+                Unsere Heimat. Unsere Wurzeln. Unsere Inspiration.
               </p>
             </div>
 
@@ -255,12 +255,12 @@ export default function AboutPage() {
           </div>
 
           <div className="pt-5 lg:pt-0">
-            <SectionLabel>About Purana Ayurveda</SectionLabel>
+            <SectionLabel>Über Purana Ayurveda</SectionLabel>
 
             <h2 className="font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-              A Connection Between
+              Eine Verbindung zwischen
               <span className="block font-normal italic text-[#A47D32]">
-                Tradition and Modernity.
+                Tradition und Moderne.
               </span>
             </h2>
 
@@ -268,36 +268,38 @@ export default function AboutPage() {
 
             <div className="mt-7 space-y-5 text-sm leading-8 text-[#52665C] sm:text-base">
               <p>
-                Founded in 2024, Purana Ayurveda brings together authentic
-                Ayurvedic traditions and a modern, conscious lifestyle. Our
-                aim is to make the essence of holistic wellbeing accessible
-                and practical for everyday life.
+                Purana Ayurveda wurde 2024 gegründet und verbindet
+                authentische ayurvedische Traditionen mit einem modernen,
+                bewussten Lebensstil. Unser Ziel ist es, die Essenz des
+                ganzheitlichen Wohlbefindens zugänglich zu machen und
+                alltagstauglich zu vermitteln.
               </p>
 
               <p>
-                As a sister company of Nivartana, a brand known for its
-                high-quality spices and handcrafted products from Sri Lanka,
-                we bring the deep cultural wisdom of Ayurveda into modern
-                living.
+                Als Schwesterunternehmen von Nivartana, einer Marke, die für
+                hochwertige Gewürze und handgefertigte Produkte aus Sri Lanka
+                bekannt ist, bringen wir das tief verwurzelte kulturelle
+                Wissen des Ayurveda in das moderne Leben.
               </p>
 
               <p>
-                Rooted in the centuries-old healing traditions of Sri Lanka,
-                we see Ayurveda not simply as a philosophy, but as a living
-                practice. At its heart are natural ingredients, mindful
-                routines and a sustainable balance between body, mind and
-                soul.
+                Verwurzelt in den jahrhundertealten Heiltraditionen Sri Lankas
+                verstehen wir Ayurveda nicht nur als Philosophie, sondern
+                als lebendige Praxis. Im Mittelpunkt stehen natürliche
+                Zutaten, achtsame Routinen und ein nachhaltiges Gleichgewicht
+                zwischen Körper, Geist und Seele.
               </p>
 
               <p>
-                Our goal is to accompany people on their personal journeys
-                towards greater clarity, vitality and inner harmony – gently,
-                naturally and meaningfully.
+                Unser Ziel ist es, Menschen auf ihrem persönlichen Weg zu
+                mehr Klarheit, Vitalität und innerer Harmonie zu begleiten –
+                sanft, natürlich und mit Sinn.
               </p>
             </div>
 
             <p className="mt-8 border-l-2 border-[#DFC24D] pl-5 font-serif text-xl italic leading-relaxed text-[#21452B] sm:text-2xl">
-              Purana Ayurveda — timeless wisdom, reimagined for modern living.
+              Purana Ayurveda – zeitlose Weisheit, neu interpretiert für das
+              moderne Leben.
             </p>
 
             <div className="mt-9">
@@ -307,7 +309,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-[#2F5D39] underline decoration-[#DFC24D] underline-offset-4 transition hover:text-[#C14C38]"
               >
-                Discover Nivartana
+                Nivartana entdecken
                 <span aria-hidden="true">↗</span>
               </Link>
             </div>
@@ -319,9 +321,9 @@ export default function AboutPage() {
       <section className="border-y border-[#D8D0A9]/70 bg-[#EFE9C5]/50 px-5 py-16 sm:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-12 max-w-2xl text-center">
-            <SectionLabel>What Defines Us</SectionLabel>
+            <SectionLabel>Was uns auszeichnet</SectionLabel>
             <h2 className="font-serif text-3xl text-[#21452B] sm:text-4xl">
-              Ayurveda as a Way of Life.
+              Ayurveda als Lebensweise.
             </h2>
           </div>
 
@@ -355,19 +357,19 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-14 grid items-end gap-8 lg:grid-cols-[1fr_0.7fr]">
             <div>
-              <SectionLabel>Our Founder</SectionLabel>
+              <SectionLabel>Unsere Gründerin</SectionLabel>
 
               <h2 className="max-w-2xl font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-                A Personal Journey,
+                Eine persönliche Reise,
                 <span className="block font-normal italic text-[#A47D32]">
-                  A Legacy Across Generations.
+                  ein Vermächtnis über Generationen.
                 </span>
               </h2>
             </div>
 
             <p className="max-w-md text-sm leading-7 text-[#6B705C] lg:justify-self-end">
-              Meet Lakshani Perera – the woman behind Purana Ayurveda and
-              Nivartana, and the person who brings our philosophy to life.
+              Lernen Sie Lakshani Perera kennen – die Frau hinter Purana
+              Ayurveda und Nivartana, die unsere Philosophie mit Leben füllt.
             </p>
           </div>
 
@@ -387,65 +389,68 @@ export default function AboutPage() {
                   Lakshani Perera
                 </p>
                 <p className="mt-2 text-sm text-white/85">
-                  Founder of Purana Ayurveda &amp; Nivartana
+                  Gründerin von Purana Ayurveda &amp; Nivartana
                 </p>
               </div>
             </div>
 
             <div className="p-7 sm:p-10 lg:p-14">
-              <SectionLabel>My Story</SectionLabel>
+              <SectionLabel>Meine Geschichte</SectionLabel>
 
               <h3 className="font-serif text-3xl text-[#21452B] sm:text-4xl">
-                Meet Our Founder
+                Lernen Sie unsere Gründerin kennen
               </h3>
 
               <div className="mt-6 flex flex-wrap gap-2">
                 <span className="rounded-full border border-[#2F5D39]/15 bg-[#EFE9C5]/60 px-3 py-2 text-xs text-[#52665C]">
-                  Certified Ayurvedic Nutrition Consultant
+                  Zertifizierte Ayurveda-Ernährungsberaterin
                 </span>
                 <span className="rounded-full border border-[#2F5D39]/15 bg-[#EFE9C5]/60 px-3 py-2 text-xs text-[#52665C]">
-                  Ayurvedic Consultant
+                  Ayurveda-Beraterin
                 </span>
               </div>
 
               <div className="mt-7 space-y-5 text-sm leading-8 text-[#52665C] sm:text-base">
                 <p>
-                  Growing up in Sri Lanka, I was introduced to the traditional
-                  healing practices of our culture from an early age. My
-                  great-grandfather was an indigenous healer who passed his
-                  knowledge down through generations and preserved it in
-                  handwritten records. This heritage and the stories of my
-                  family continue to accompany me today.
+                  Ich bin in Sri Lanka aufgewachsen und kam schon früh mit
+                  den traditionellen Heilpraktiken unserer Kultur in
+                  Berührung. Mein Urgroßvater war ein traditioneller Heiler,
+                  der sein Wissen über Generationen hinweg weitergab und
+                  es in handgeschriebenen Aufzeichnungen bewahrte. Dieses
+                  Erbe und die Geschichten meiner Familie begleiten mich
+                  bis heute.
                 </p>
 
                 <p>
-                  My journey into Ayurveda, however, did not begin straight
-                  away. It was through personal experiences – overcoming
-                  severe allergies and digestive problems, as well as
-                  witnessing how natural remedies helped others regain their
-                  wellbeing – that I developed a deep interest in this
-                  ancient wisdom.
+                  Mein Weg zum Ayurveda begann jedoch nicht sofort. Durch
+                  persönliche Erfahrungen – die Überwindung starker Allergien
+                  und Verdauungsbeschwerden sowie die Beobachtung, wie
+                  natürliche Heilmittel anderen Menschen zu mehr Wohlbefinden
+                  verhalfen – entwickelte ich ein tiefes Interesse an dieser
+                  jahrtausendealten Weisheit.
                 </p>
 
                 <p>
-                  These experiences moved me so deeply that in 2021 I made
-                  the conscious decision to leave my previous educational
-                  path and study Ayurveda. Today, I feel grateful to share
-                  this knowledge and support people on their journeys towards
-                  better health and wellbeing.
+                  Diese Erfahrungen haben mich so sehr bewegt, dass ich mich
+                  2021 bewusst dazu entschied, meinen bisherigen Bildungsweg
+                  zu verlassen und Ayurveda zu studieren. Heute bin ich
+                  dankbar, dieses Wissen weitergeben und Menschen auf ihrem
+                  Weg zu mehr Gesundheit und Wohlbefinden unterstützen zu
+                  dürfen.
                 </p>
 
                 <p>
-                  I believe that true balance comes when the body, mind and
-                  soul are in harmony with nature. This belief continues to
-                  shape my work and my approach to Ayurveda.
+                  Ich glaube daran, dass wahre Balance entsteht, wenn Körper,
+                  Geist und Seele im Einklang mit der Natur sind. Dieser
+                  Überzeugung prägt bis heute meine Arbeit und meinen
+                  persönlichen Zugang zum Ayurveda.
                 </p>
               </div>
 
               <div className="mt-8 border-t border-[#D8D0A9] pt-7">
                 <p className="font-serif text-xl italic text-[#21452B]">
-                  “True balance begins when the body, mind and soul are in
-                  harmony with nature.”
+                  „Wahre Balance beginnt, wenn Körper, Geist und Seele im
+                  Einklang mit der Natur sind.“
                 </p>
 
                 <div className="mt-7 flex flex-wrap items-center justify-between gap-4">
@@ -454,12 +459,12 @@ export default function AboutPage() {
                       Lakshani Perera
                     </p>
                     <p className="mt-1 text-xs text-[#8A8065]">
-                      Founder of Purana Ayurveda
+                      Gründerin von Purana Ayurveda
                     </p>
                   </div>
 
                   <span className="rounded-full border border-[#D8D0A9] bg-[#EFE9C5]/60 px-4 py-2 text-xs text-[#52665C]">
-                    German &amp; English
+                    Deutsch &amp; Englisch
                   </span>
                 </div>
               </div>
@@ -475,18 +480,19 @@ export default function AboutPage() {
       >
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-14 max-w-2xl text-center">
-            <SectionLabel>The People Behind Purana</SectionLabel>
+            <SectionLabel>Die Menschen hinter Purana</SectionLabel>
 
             <h2 className="font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-              A Team United
+              Ein Team, verbunden
               <span className="block font-normal italic text-[#A47D32]">
-                by Tradition.
+                durch Tradition.
               </span>
             </h2>
 
             <p className="mt-6 text-sm leading-7 text-[#6B705C] sm:text-base">
-              Behind Purana Ayurveda is a family that shares its knowledge,
-              experience and passion for holistic wellbeing.
+              Hinter Purana Ayurveda steht eine Familie, die ihr Wissen,
+              ihre Erfahrung und ihre Leidenschaft für ganzheitliches
+              Wohlbefinden miteinander teilt.
             </p>
           </div>
 
@@ -507,9 +513,9 @@ export default function AboutPage() {
 
         <div className="mx-auto max-w-7xl">
           <div className="mb-14 text-center">
-            <SectionLabel>What We Stand For</SectionLabel>
+            <SectionLabel>Wofür wir stehen</SectionLabel>
             <h2 className="font-serif text-4xl text-[#21452B] sm:text-5xl">
-              Our Vision &amp; Mission
+              Unsere Vision &amp; Mission
             </h2>
           </div>
 
@@ -518,21 +524,22 @@ export default function AboutPage() {
               <div className="pointer-events-none absolute -right-12 -top-12 h-48 w-48 rounded-full border border-[#DFC24D]/40" />
 
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#A47D32]">
-                01 · Our Vision
+                01 · Unsere Vision
               </span>
 
               <h3 className="mt-6 font-serif text-3xl text-[#21452B] sm:text-4xl">
-                A World in Balance.
+                Eine Welt im Gleichgewicht.
               </h3>
 
               <div className="mt-6 h-px w-14 bg-[#DFC24D]" />
 
               <p className="mt-7 text-sm leading-8 text-[#52665C] sm:text-base">
-                We envision a world where ancient wisdom and modern living
-                come together to restore balance and vitality. By reconnecting
-                with the timeless healing power of nature, we hope to create
-                a future where holistic wellbeing is accessible to everyone
-                and harmony between people and nature is restored.
+                Wir stellen uns eine Welt vor, in der altes Wissen und modernes
+                Leben zusammenfinden, um Balance und Vitalität zu fördern.
+                Indem wir uns wieder mit der zeitlosen Heilkraft der Natur
+                verbinden, möchten wir eine Zukunft gestalten, in der
+                ganzheitliches Wohlbefinden für alle zugänglich ist und
+                die Harmonie zwischen Mensch und Natur wiederhergestellt wird.
               </p>
 
               <div className="mt-10 font-serif text-5xl italic text-[#DFC24D]">
@@ -546,32 +553,33 @@ export default function AboutPage() {
 
               <div className="relative">
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#DFC24D]">
-                  02 · Our Mission
+                  02 · Unsere Mission
                 </span>
 
                 <h3 className="mt-6 font-serif text-3xl text-[#F8F5E8] sm:text-4xl">
-                  Preserving Wisdom. Inspiring Wellbeing.
+                  Wissen bewahren. Wohlbefinden fördern.
                 </h3>
 
                 <div className="mt-6 h-px w-14 bg-[#DFC24D]" />
 
                 <p className="mt-7 text-sm leading-8 text-[#F8F5E8]/80 sm:text-base">
-                  Our mission is to promote holistic wellbeing by preserving
-                  and sharing the timeless wisdom of Ayurveda. Rooted in the
-                  ancient traditions of Sri Lanka, we support people in
-                  finding harmony between mind, body and soul through natural
-                  and sustainable practices.
+                  Unsere Mission ist es, ganzheitliches Wohlbefinden zu
+                  fördern, indem wir die zeitlose Weisheit des Ayurveda
+                  bewahren und weitergeben. Verwurzelt in den alten Traditionen
+                  Sri Lankas unterstützen wir Menschen dabei, durch natürliche
+                  und nachhaltige Praktiken Harmonie zwischen Körper, Geist
+                  und Seele zu finden.
                 </p>
 
                 <p className="mt-5 text-sm leading-8 text-[#F8F5E8]/80 sm:text-base">
-                  Through authentic products, knowledge and mindful
-                  experiences, we create a deeper connection with nature
-                  and accompany people on their journey towards lasting
-                  health and vitality.
+                  Mit authentischen Produkten, wertvollem Wissen und
+                  achtsamen Erlebnissen schaffen wir eine tiefere Verbindung
+                  zur Natur und begleiten Menschen auf ihrem Weg zu
+                  langfristiger Gesundheit und Vitalität.
                 </p>
 
                 <div className="mt-8 font-serif text-5xl italic text-[#DFC24D]">
-                  Live Naturally
+                  Natürlich leben
                 </div>
               </div>
             </article>

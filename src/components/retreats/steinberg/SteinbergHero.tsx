@@ -10,7 +10,7 @@ export default function SteinbergHero() {
 
   return (
     <section className="relative isolate overflow-hidden bg-[#f5f0e7] text-[#21452B]">
-      {/* Full background image */}
+      {/* Hintergrundbild */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-30 bg-cover bg-center"
@@ -19,7 +19,7 @@ export default function SteinbergHero() {
         }}
       />
 
-      {/* Warm cream fade, matching the homepage hero */}
+      {/* Warmer cremefarbener Farbverlauf */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-20"
@@ -29,13 +29,13 @@ export default function SteinbergHero() {
         }}
       />
 
-      {/* Bottom cream fade */}
+      {/* Cremefarbener Verlauf am unteren Rand */}
       <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[#f5f0e7]/90 via-[#f5f0e7]/30 to-transparent"
       />
 
-      {/* Decorative details */}
+      {/* Dekorative Elemente */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-32 -top-32 -z-10 h-[420px] w-[420px] rounded-full border border-[#2F5D39]/15"
@@ -51,17 +51,17 @@ export default function SteinbergHero() {
 
       <div className="relative mx-auto max-w-7xl px-5 pb-12 pt-16 sm:px-8 sm:pt-24 lg:pb-16 lg:pt-28">
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
-          {/* Main content */}
+          {/* Hauptinhalt */}
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-[#2F5D39]/20 bg-[#F8F5E8]/75 px-4 py-2 backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-[#C14C38]" />
               <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#2F5D39]">
-                Your Ayurveda destination
+                Ihr Ayurveda-Ort zum Wohlfühlen
               </span>
             </div>
 
             <p className="mt-8 text-xs font-semibold uppercase tracking-[0.24em] text-[#9A8050]">
-              Location · Bavaria, Germany
+              Standort · Bayern, Deutschland
             </p>
 
             <h1 className="mt-4 max-w-3xl font-serif text-4xl leading-[1.12] tracking-tight text-[#21452B] sm:text-5xl lg:text-6xl xl:text-7xl">
@@ -72,21 +72,22 @@ export default function SteinbergHero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-sm leading-7 text-[#533E23]/85 sm:text-base sm:leading-8">
-              Choose an individual treatment, an Ayurveda retreat over
-              several visits, or a private mini retreat with a stay at our
-              Chalet Resort. Find the right way to slow down, reconnect and
-              make time for yourself.
+              Wählen Sie eine individuelle Behandlung, ein Ayurveda-Retreat
+              mit mehreren Terminen oder ein privates Mini-Retreat mit
+              Übernachtung in unserem Chalet Resort. Finden Sie Ihren
+              persönlichen Weg, zur Ruhe zu kommen, neue Kraft zu schöpfen
+              und sich bewusst Zeit für sich selbst zu nehmen.
             </p>
 
-            {/* Guest selector */}
+            {/* Auswahl des Gästetyps */}
             <div className="mt-8">
               <p className="text-xs font-semibold text-[#533E23]">
-                I am a...
+                Ich bin ...
               </p>
 
               <div
                 className="mt-3 flex flex-wrap gap-3"
-                aria-label="Choose your guest type"
+                aria-label="Wählen Sie Ihren Gästetyp"
               >
                 <button
                   type="button"
@@ -98,7 +99,7 @@ export default function SteinbergHero() {
                       : "border-[#21452B]/25 bg-[#F8F5E8]/65 text-[#21452B] hover:border-[#21452B] hover:bg-[#EFE9C5]"
                   }`}
                 >
-                  External guest
+                  Externer Gast
                 </button>
 
                 <button
@@ -111,24 +112,24 @@ export default function SteinbergHero() {
                       : "border-[#21452B]/25 bg-[#F8F5E8]/65 text-[#21452B] hover:border-[#21452B] hover:bg-[#EFE9C5]"
                   }`}
                 >
-                  Chalet guest
+                  Chalet-Gast
                 </button>
               </div>
 
               <p className="mt-3 max-w-lg text-xs leading-5 text-[#533E23]/70">
                 {guestType === "external"
-                  ? "Explore treatments and retreats available to all guests."
-                  : "Staying at the Chalet Resort? Explore treatments and private retreats during your stay."}
+                  ? "Entdecken Sie unsere Behandlungen und Retreats – offen für alle Gäste."
+                  : "Sie übernachten im Chalet Resort? Entdecken Sie wohltuende Behandlungen und private Retreats während Ihres Aufenthalts."}
               </p>
             </div>
 
-            {/* CTA buttons */}
+            {/* Aktionsbuttons */}
             <div className="mt-9 flex flex-wrap gap-3">
               <a
                 href="#individual-treatments"
                 className="group inline-flex items-center gap-3 rounded-full bg-[#21452B] px-6 py-4 text-sm font-semibold text-[#F8F5E8] shadow-lg shadow-[#21452B]/15 transition-all hover:-translate-y-0.5 hover:bg-[#2F5D39]"
               >
-                Explore treatments
+                Behandlungen entdecken
                 <span className="transition-transform group-hover:translate-x-1">
                   →
                 </span>
@@ -138,19 +139,17 @@ export default function SteinbergHero() {
                 href="#retreats"
                 className="inline-flex items-center rounded-full border border-[#21452B]/30 bg-[#F8F5E8]/50 px-6 py-4 text-sm font-semibold text-[#21452B] backdrop-blur-sm transition-colors hover:border-[#21452B] hover:bg-[#EFE9C5]"
               >
-                Discover retreats
+                Retreats entdecken
               </a>
             </div>
           </div>
-
-          
         </div>
       </div>
 
-      {/* Section navigation */}
+      {/* Abschnittsnavigation */}
       <div className="relative mt-12 border-t border-[#21452B]/15 bg-[#f5f0e7]/70 backdrop-blur-sm">
         <nav
-          aria-label="Explore Steinberg treatments"
+          aria-label="Ayurveda-Angebote in Steinberg entdecken"
           className="mx-auto flex max-w-7xl gap-6 overflow-x-auto px-5 py-5 text-xs sm:px-8 sm:text-sm"
         >
           <a
@@ -158,7 +157,7 @@ export default function SteinbergHero() {
             className="shrink-0 text-[#533E23]/80 transition-colors hover:text-[#21452B]"
           >
             <span className="mr-2 text-[#C14C38]">01</span>
-            Individual treatments
+            Individuelle Behandlungen
           </a>
 
           <a
@@ -166,7 +165,7 @@ export default function SteinbergHero() {
             className="shrink-0 text-[#533E23]/80 transition-colors hover:text-[#21452B]"
           >
             <span className="mr-2 text-[#C14C38]">02</span>
-            Ayurveda retreats
+            Ayurveda-Retreats
           </a>
 
           <a
@@ -174,7 +173,7 @@ export default function SteinbergHero() {
             className="shrink-0 text-[#533E23]/80 transition-colors hover:text-[#21452B]"
           >
             <span className="mr-2 text-[#C14C38]">03</span>
-            Mini retreats with stay
+            Mini-Retreats mit Übernachtung
           </a>
 
           <a
@@ -182,7 +181,7 @@ export default function SteinbergHero() {
             className="shrink-0 text-[#533E23]/80 transition-colors hover:text-[#21452B]"
           >
             <span className="mr-2 text-[#C14C38]">04</span>
-            Online & at home
+            Online & für zu Hause
           </a>
         </nav>
       </div>

@@ -49,12 +49,12 @@ export default function LoginPage() {
 
         if (message.includes("email not confirmed")) {
           setError(
-              "Please verify your email address before signing in. Check your inbox for the verification link."
+              "Bitte bestätigen Sie zuerst Ihre E-Mail-Adresse, bevor Sie sich anmelden. Prüfen Sie Ihren Posteingang auf den Bestätigungslink."
           );
         } else if (
             message.includes("invalid login credentials")
         ) {
-          setError("Incorrect email or password. Please try again.");
+          setError("E-Mail-Adresse oder Passwort ist falsch. Bitte versuchen Sie es erneut.");
         } else {
           setError(loginError.message);
         }
@@ -65,7 +65,7 @@ export default function LoginPage() {
       router.replace("/");
       router.refresh();
     } catch {
-      setError("Something went wrong. Please try again.");
+      setError("Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.");
     } finally {
       setLoading(false);
     }
@@ -73,18 +73,18 @@ export default function LoginPage() {
 
   return (
       <AuthLayout
-          eyebrow="Welcome back"
-          title="Sign in to your account"
-          description="Continue your wellness journey with Purana Ayurveda. Your personal wellness space is waiting for you."
+          eyebrow="Willkommen zurück"
+          title="Bei Ihrem Konto anmelden"
+          description="Setzen Sie Ihre Reise zu mehr Wohlbefinden mit Purana Ayurveda fort. Ihr persönlicher Wohlfühlbereich erwartet Sie."
           image="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85"
           footer={
             <p className="text-center text-sm text-[var(--text-muted)]">
-              Don&apos;t have an account?{" "}
+              Sie haben noch kein Konto?{" "}
               <Link
                   href="/signup"
                   className="font-semibold text-[var(--forest)] transition hover:text-[var(--terracotta)]"
               >
-                Create an account
+                Konto erstellen
               </Link>
             </p>
           }
@@ -96,7 +96,7 @@ export default function LoginPage() {
                 htmlFor="email"
                 className="mb-2 block text-sm font-semibold text-[var(--forest-dark)]"
             >
-              Email Address
+              E-Mail-Adresse
             </label>
 
             <div className="relative">
@@ -109,7 +109,7 @@ export default function LoginPage() {
                   id="email"
                   type="email"
                   autoComplete="email"
-                  placeholder="you@example.com"
+                  placeholder="sie@beispiel.de"
                   value={formData.email}
                   onChange={(e) =>
                       setFormData({
@@ -131,14 +131,14 @@ export default function LoginPage() {
                   htmlFor="password"
                   className="text-sm font-semibold text-[var(--forest-dark)]"
               >
-                Password
+                Passwort
               </label>
 
               <Link
                   href="/forgot-password"
                   className="text-xs font-semibold text-[var(--forest)] hover:text-[var(--terracotta)]"
               >
-                Forgot password?
+                Passwort vergessen?
               </Link>
             </div>
 
@@ -152,7 +152,7 @@ export default function LoginPage() {
                   id="password"
                   type={showPassword ? "text" : "password"}
                   autoComplete="current-password"
-                  placeholder="Enter your password"
+                  placeholder="Geben Sie Ihr Passwort ein"
                   value={formData.password}
                   onChange={(e) =>
                       setFormData({
@@ -168,7 +168,7 @@ export default function LoginPage() {
               <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  aria-label={showPassword ? "Hide password" : "Show password"}
+                  aria-label={showPassword ? "Passwort verbergen" : "Passwort anzeigen"}
                   className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--text-muted)] transition hover:text-[var(--forest)]"
               >
                 {showPassword ? (
@@ -195,7 +195,7 @@ export default function LoginPage() {
             />
 
             <span className="text-sm text-[var(--text-muted)]">
-            Remember me
+            Angemeldet bleiben
           </span>
           </label>
 
@@ -216,7 +216,7 @@ export default function LoginPage() {
               className="group flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-[var(--forest-dark)] px-6 py-4 text-sm font-semibold text-white shadow-lg shadow-[var(--forest-dark)]/10 transition hover:-translate-y-0.5 hover:bg-[var(--forest)] hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
           >
             <LogIn size={18} />
-            {loading ? "Signing in..." : "Sign in"}
+            {loading ? "Anmeldung läuft..." : "Anmelden"}
 
             {!loading && (
                 <span className="transition-transform group-hover:translate-x-1">

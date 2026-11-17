@@ -1,38 +1,38 @@
 
 const suitability = [
-  "You feel the change of season in your energy, sleep or mood",
-  "You did a Gentle Reset and want to go deeper",
-  "You want a yearly rhythm: one reset each season",
-  "You like personal support during the week",
-  "You can take 45–60 minutes a day",
+  "Sie bemerken den Jahreszeitenwechsel an Ihrer Energie, Ihrem Schlaf oder Ihrer Stimmung",
+  "Sie haben bereits einen sanften Neustart gemacht und möchten tiefer in den Ayurveda eintauchen",
+  "Sie wünschen sich einen Jahresrhythmus mit einer Auszeit zu jeder Jahreszeit",
+  "Sie schätzen persönliche Unterstützung während des gesamten Programms",
+  "Sie können sich täglich 45–60 Minuten Zeit nehmen",
 ];
 
 const benefits = [
   {
     number: "01",
     symbol: "✳",
-    title: "In tune with the season",
+    title: "Im Einklang mit den Jahreszeiten",
     description:
-      "Food, routine and rituals change with spring, summer, autumn and winter.",
+      "Ernährung, Routinen und Rituale passen sich an Frühling, Sommer, Herbst und Winter an.",
   },
   {
     number: "02",
     symbol: "✧",
-    title: "Two consultations",
+    title: "Zwei persönliche Beratungen",
     description:
-      "A personal plan at the start and a review at the end.",
+      "Ein individueller Plan zu Beginn und ein gemeinsames Rückblickgespräch zum Abschluss.",
   },
   {
     number: "03",
     symbol: "♡",
-    title: "Support all week",
-    description: "Chat with Lakshani in your portal.",
+    title: "Begleitung die ganze Woche",
+    description: "Schreiben Sie Lakshani direkt über Ihr persönliches Portal.",
   },
   {
     number: "04",
     symbol: "❋",
-    title: "A plan to continue",
-    description: "You finish with your next 4 weeks mapped out.",
+    title: "Ein Plan für die Zeit danach",
+    description: "Zum Abschluss haben Sie einen klaren Plan für die nächsten vier Wochen.",
   },
 ];
 
@@ -49,17 +49,18 @@ export default function SeasonalResetDetails() {
           <div className="inline-flex items-center gap-2 rounded-full border border-[#D8D0A9] bg-white/60 px-4 py-2">
             <span className="h-1.5 w-1.5 rounded-full bg-[#C14C38]" />
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6B705C]">
-              Who it is for
+              Für wen ist das Programm geeignet?
             </p>
           </div>
 
           <h2 className="mt-6 max-w-lg font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-            Is this the right reset for you?
+            Ist dieser Neustart das Richtige für Sie?
           </h2>
 
           <p className="mt-5 max-w-lg text-sm leading-7 text-[#6B705C] sm:text-base">
-            A little more guidance, a deeper seasonal rhythm, and support
-            to help you build habits that fit your everyday life.
+            Mehr persönliche Begleitung, ein intensiverer Rhythmus im Einklang
+            mit den Jahreszeiten und Unterstützung beim Aufbau von Gewohnheiten,
+            die zu Ihrem Alltag passen.
           </p>
 
           <ul className="mt-8 space-y-4">
@@ -84,8 +85,9 @@ export default function SeasonalResetDetails() {
               ✧
             </span>
             <p className="text-sm leading-6 text-[#52665C]">
-              The Seasonal Reset is designed for people who want to make
-              self-care a regular part of their changing seasons.
+              Der saisonale Neustart richtet sich an Menschen, die
+              Selbstfürsorge zu einem festen Bestandteil ihres Lebens im
+              Wandel der Jahreszeiten machen möchten.
             </p>
           </div>
         </div>
@@ -95,17 +97,18 @@ export default function SeasonalResetDetails() {
           <div className="inline-flex items-center gap-2 rounded-full border border-[#D8D0A9] bg-white/60 px-4 py-2">
             <span className="h-1.5 w-1.5 rounded-full bg-[#DFC24D]" />
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6B705C]">
-              Why it works
+              Was das Programm besonders macht
             </p>
           </div>
 
           <h2 className="mt-6 max-w-lg font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-            What makes it different
+            Was dieses Programm auszeichnet
           </h2>
 
           <p className="mt-5 max-w-lg text-sm leading-7 text-[#6B705C] sm:text-base">
-            More than a seven-day programme — a personal approach that
-            adapts to the season and helps you plan what comes next.
+            Mehr als ein siebentägiges Programm: ein persönlicher Ansatz,
+            der sich an die jeweilige Jahreszeit anpasst und Ihnen hilft,
+            die nächsten Schritte zu planen.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -139,37 +142,6 @@ export default function SeasonalResetDetails() {
         </div>
       </div>
 
-      {/* Closing message */}
-      <div className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20">
-        <div className="relative overflow-hidden rounded-[28px] bg-[#21452B] px-7 py-8 text-[#F8F5E8] sm:px-10 sm:py-10">
-          <div className="pointer-events-none absolute -right-12 -top-24 h-64 w-64 rounded-full border border-[#DFC24D]/20" />
-
-          <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#DFC24D]">
-                Your rhythm, your season
-              </p>
-
-              <h3 className="mt-3 font-serif text-3xl leading-tight sm:text-4xl">
-                Make space for a fresh start.
-              </h3>
-
-              <p className="mt-3 max-w-xl text-sm leading-7 text-white/75">
-                Seven days of seasonal guidance, personal support and
-                practical routines to carry forward.
-              </p>
-            </div>
-
-            <a
-              href="#booking"
-              className="inline-flex shrink-0 items-center justify-center gap-3 self-start rounded-full bg-[#DFC24D] px-7 py-4 text-sm font-semibold text-[#21452B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#EFE9C5] sm:self-center"
-            >
-              Explore the reset
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

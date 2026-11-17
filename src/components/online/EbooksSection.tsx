@@ -3,38 +3,38 @@ import Image from "next/image";
 
 const ebooks = [
   {
-    title: "Ayurveda Basic Detox at Home",
+    title: "Ayurveda: Sanfte Entgiftung für zu Hause",
     description:
-      "The 3-phase home reset, shopping list and 10 recipes.",
-    category: "DETOX & RESET",
+      "Die 3-Phasen-Kur für zu Hause, Einkaufsliste und 10 Rezepte.",
+    category: "ENTGIFTUNG & NEUSTART",
     image: "/images/ebooks/detox-at-home.jpg",
   },
   {
-    title: "Ayurveda for Spring",
+    title: "Ayurveda im Frühling",
     description:
-      "Lightness and a fresh start: routine, food and rituals.",
-    category: "SPRING EDITION",
+      "Leichtigkeit und ein frischer Start: Routinen, Ernährung und Rituale.",
+    category: "FRÜHLINGSAUSGABE",
     image: "/images/ebooks/ayurveda-spring.jpg",
   },
   {
-    title: "Ayurveda for Summer",
+    title: "Ayurveda im Sommer",
     description:
-      "Stay cool and calm: cooling food and evening rituals.",
-    category: "SUMMER EDITION",
+      "Bewahren Sie einen kühlen Kopf: kühlende Ernährung und Abendrituale.",
+    category: "SOMMERAUSGABE",
     image: "/images/ebooks/ayurveda-summer.jpg",
   },
   {
-    title: "Ayurveda for Autumn",
+    title: "Ayurveda im Herbst",
     description:
-      "Grounding and routine: warm meals and oil massage.",
-    category: "AUTUMN EDITION",
+      "Erdung und Routine: warme Mahlzeiten und Ölmassagen.",
+    category: "HERBSTAUSGABE",
     image: "/images/ebooks/ayurveda-autumn.jpg",
   },
   {
-    title: "Ayurveda for Winter",
+    title: "Ayurveda im Winter",
     description:
-      "Warmth and steady energy through the dark months.",
-    category: "WINTER EDITION",
+      "Wärme und anhaltende Energie in den dunklen Monaten.",
+    category: "WINTERAUSGABE",
     image: "/images/ebooks/ayurveda-winter.jpg",
   },
 ];
@@ -59,7 +59,7 @@ export default function EbooksSection() {
       id="ebooks"
       className="relative overflow-hidden bg-[#F8F5E8] text-[#263A2B]"
     >
-      {/* Decorative background */}
+      {/* Dekorativer Hintergrund */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-32 top-20 h-80 w-80 rounded-full border border-[#D8D0A9]/60"
@@ -74,34 +74,35 @@ export default function EbooksSection() {
       />
 
       <div className="relative mx-auto max-w-6xl px-5 py-16 sm:py-20 lg:px-8 lg:py-24">
-        {/* Heading and bundle offer */}
+        {/* Überschrift und Paketangebot */}
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-[#D8D0A9] bg-white/60 px-4 py-2">
               <span className="h-2 w-2 rounded-full bg-[#C14C38]" />
               <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#533E23] sm:text-xs">
-                The Purana reading collection
+                Die Purana-Leseedition
               </span>
             </div>
 
             <h2 className="mt-6 font-serif text-3xl leading-tight text-[#21452B] sm:text-4xl lg:text-5xl">
-              Ayurveda through the year,
+              Ayurveda durch das ganze Jahr,
               <span className="mt-1 block italic text-[#9A7821]">
-                one page at a time.
+                Seite für Seite.
               </span>
             </h2>
 
             <p className="mt-5 max-w-xl text-sm leading-7 text-[#6B705C] sm:text-base">
-              Practical digital guides for bringing Ayurveda into
-              everyday life. Explore seasonal routines, food ideas
-              and self-care rituals — and revisit them whenever you need.
+              Praktische digitale Ratgeber, die Ihnen helfen, Ayurveda in
+              Ihren Alltag zu integrieren. Entdecken Sie saisonale Routinen,
+              Ernährungsideen und Rituale zur Selbstfürsorge – und greifen
+              Sie jederzeit darauf zurück, wenn Sie sie brauchen.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
               {[
-                "Instant digital access",
-                "Practical guides",
-                "Seasonal inspiration",
+                "Sofortiger digitaler Zugriff",
+                "Praktische Ratgeber",
+                "Saisonale Inspiration",
               ].map((item) => (
                 <span
                   key={item}
@@ -113,7 +114,7 @@ export default function EbooksSection() {
             </div>
           </div>
 
-          {/* Bundle card */}
+          {/* Paketkarte */}
           <div
             id="ebook-bundle"
             className="relative w-full overflow-hidden rounded-[28px] bg-[#21452B] p-6 text-[#F8F5E8] shadow-xl shadow-[#21452B]/15 sm:p-7 lg:max-w-[390px]"
@@ -129,22 +130,23 @@ export default function EbooksSection() {
 
             <div className="relative">
               <span className="inline-flex rounded-full border border-[#DFC24D]/40 bg-[#DFC24D]/10 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-[#DFC24D]">
-                The complete collection
+                Die komplette Kollektion
               </span>
 
               <h3 className="mt-4 font-serif text-2xl sm:text-3xl">
-                A year of Ayurveda
+                Ein Jahr voller Ayurveda
               </h3>
 
               <p className="mt-2 max-w-xs text-sm leading-6 text-white/70">
-                All five e-books together, plus a printable year planner
-                to help organise your seasonal routines.
+                Alle fünf E-Books zusammen mit einem ausdruckbaren
+                Jahresplaner, der Ihnen hilft, Ihre saisonalen Routinen
+                zu organisieren.
               </p>
 
               <div className="mt-5 flex items-end justify-between gap-4">
                 <div>
                   <p className="text-[10px] uppercase tracking-[0.16em] text-white/55">
-                    Bundle price
+                    Paketpreis
                   </p>
                   <span className="mt-1 block font-serif text-4xl text-[#DFC24D]">
                     €49
@@ -160,7 +162,7 @@ export default function EbooksSection() {
                     >
                       <Image
                         src={ebook.image}
-                        alt={`${ebook.title} cover`}
+                        alt={`${ebook.title} – Titelbild`}
                         fill
                         sizes="36px"
                         className="object-cover"
@@ -174,29 +176,29 @@ export default function EbooksSection() {
                 href="#ebook-purchase"
                 className="group mt-6 flex w-full items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-5 py-3.5 text-sm font-semibold text-[#21452B] transition hover:bg-[#E9D477]"
               >
-                Get the complete bundle
+                Komplettes Paket entdecken
                 <ArrowIcon />
               </a>
 
               <p className="mt-3 text-center text-[10px] text-white/55">
-                Five guides · One printable planner
+                Fünf Ratgeber · Ein ausdruckbarer Jahresplaner
               </p>
             </div>
           </div>
         </div>
 
-        {/* E-book cards */}
+        {/* E-Book-Karten */}
         <div className="mt-12">
           <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#9A7821]">
-            Explore the collection
+            Entdecken Sie die Kollektion
           </p>
 
           <div className="mt-2 flex items-end justify-between gap-4">
             <h3 className="font-serif text-2xl text-[#21452B] sm:text-3xl">
-              Find your next guide
+              Finden Sie Ihren nächsten Ratgeber
             </h3>
             <span className="hidden text-xs text-[#6B705C] sm:block">
-              5 digital guides
+              5 digitale Ratgeber
             </span>
           </div>
         </div>
@@ -207,12 +209,12 @@ export default function EbooksSection() {
               key={ebook.title}
               className="group flex flex-col overflow-hidden rounded-[24px] border border-[#D8D0A9]/80 bg-white transition duration-300 hover:-translate-y-1 hover:border-[#2F5D39]/40 hover:shadow-xl hover:shadow-[#533E23]/10"
             >
-              {/* Real e-book cover image */}
+              {/* Originales E-Book-Titelbild */}
               <div className="relative overflow-hidden bg-[#EFE9C5]">
                 <div className="relative aspect-[3/4]">
                   <Image
                     src={ebook.image}
-                    alt={`Cover of ${ebook.title}`}
+                    alt={`Titelbild: ${ebook.title}`}
                     fill
                     sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 20vw"
                     className="object-cover transition duration-500 group-hover:scale-105"
@@ -226,7 +228,7 @@ export default function EbooksSection() {
                 </div>
               </div>
 
-              {/* E-book information */}
+              {/* E-Book-Informationen */}
               <div className="flex flex-1 flex-col p-4">
                 <h4 className="font-serif text-lg leading-6 text-[#21452B]">
                   {ebook.title}
@@ -244,7 +246,7 @@ export default function EbooksSection() {
 
                     <a
                       href="#ebook-purchase"
-                      aria-label={`Buy ${ebook.title}`}
+                      aria-label={`${ebook.title} kaufen`}
                       className="group/link inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#EFE9C5] text-[#21452B] transition hover:bg-[#21452B] hover:text-white"
                     >
                       <ArrowIcon />
@@ -255,7 +257,7 @@ export default function EbooksSection() {
                     href="#ebook-purchase"
                     className="mt-3 inline-block text-xs font-semibold text-[#533E23] underline decoration-[#DFC24D] underline-offset-4 transition hover:text-[#C14C38]"
                   >
-                    Buy e-book
+                    E-Book kaufen
                   </a>
                 </div>
               </div>
@@ -263,15 +265,15 @@ export default function EbooksSection() {
           ))}
         </div>
 
-        {/* Closing note */}
+        {/* Abschließender Hinweis */}
         <div className="mt-8 flex flex-col gap-3 rounded-2xl border border-[#D8D0A9] bg-white/50 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
           <div>
             <p className="text-sm font-semibold text-[#21452B]">
-              A little more balance, wherever you are.
+              Mehr Ausgeglichenheit – ganz gleich, wo Sie sind.
             </p>
             <p className="mt-1 text-xs leading-5 text-[#6B705C]">
-              Keep your favourite guides close and return to them
-              throughout the year.
+              Halten Sie Ihre Lieblingsratgeber griffbereit und nutzen
+              Sie sie das ganze Jahr über.
             </p>
           </div>
 
@@ -279,13 +281,13 @@ export default function EbooksSection() {
             href="#ebook-bundle"
             className="inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-full border border-[#21452B] px-5 py-3 text-xs font-semibold text-[#21452B] transition hover:bg-[#EFE9C5]/70 sm:self-center"
           >
-            Discover the bundle
+            Paket entdecken
             <ArrowIcon />
           </a>
         </div>
       </div>
 
-      {/* Brand accent */}
+      {/* Markenakzent */}
       <div className="h-1.5 bg-gradient-to-r from-[#21452B] via-[#DFC24D] to-[#C14C38]" />
     </section>
   );

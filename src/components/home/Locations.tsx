@@ -2,33 +2,33 @@
 const locations = [
   {
     name: "Steinberg am See",
-    category: "THE LAKESIDE EXPERIENCE",
+    category: "DAS ERLEBNIS AM SEE",
     description:
-      "Individual treatments, private mini retreats and restorative stays in a peaceful lakeside setting.",
+      "Individuelle Behandlungen, private Mini-Retreats und erholsame Auszeiten in einer idyllischen Umgebung direkt am See.",
     image:
       "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Steinberg/steinberg.jfif",
     number: "01",
-    tagline: "Slow down. Reconnect.",
+    tagline: "Zur Ruhe kommen. Zu sich finden.",
     features: [
-      "Personal Ayurveda treatments",
-      "Private mini retreats",
-      "A relaxing natural setting",
+      "Persönliche Ayurveda-Behandlungen",
+      "Private Mini-Retreats",
+      "Eine entspannende Naturlandschaft",
     ],
     href: "/retreats/steinberg-am-see",
   },
   {
     name: "Marktredwitz",
-    category: "PERSONAL CARE",
+    category: "INDIVIDUELLE BETREUUNG",
     description:
-      "Ayurveda treatments in partnership with a local physiotherapy practice, with personal attention at every visit.",
+      "Ayurveda-Behandlungen in Zusammenarbeit mit einer örtlichen Physiotherapiepraxis – mit persönlicher Betreuung bei jedem Besuch.",
     image:
       "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Marktredwitz/Marktredwitz.jpg",
     number: "02",
-    tagline: "Feel cared for.",
+    tagline: "In guten Händen.",
     features: [
-      "Individual appointments",
-      "Partner-led care",
-      "Convenient local treatments",
+      "Individuelle Terminvereinbarungen",
+      "Persönliche Betreuung vor Ort",
+      "Bequeme Behandlungen in Ihrer Nähe",
     ],
     href: "/retreats/marktredwitz",
   },
@@ -61,29 +61,30 @@ export default function Locations() {
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-9 bg-[#21452B]" />
               <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#21452B]">
-                Find your Purana
+                Entdecken Sie Purana
               </p>
               <span className="text-sm text-[#DFC24D]">✳</span>
             </div>
 
             <h2 className="max-w-3xl font-serif text-4xl leading-[1.12] tracking-tight text-[#21452B] sm:text-5xl lg:text-6xl">
-              Two places.
+              Zwei Standorte.
               <span className="block italic text-[#A47B25]">
-                One feeling of balance.
+                Ein Gefühl von Balance.
               </span>
             </h2>
           </div>
 
           <div className="lg:pb-2">
             <p className="max-w-md text-sm leading-7 text-[#6B705C]">
-              Discover thoughtful Ayurveda care in Germany, from peaceful
-              lakeside retreats to personalised treatments close to home.
+              Entdecken Sie wohltuende Ayurveda-Angebote in Deutschland –
+              von erholsamen Auszeiten am See bis hin zu individuellen
+              Behandlungen ganz in Ihrer Nähe.
             </p>
 
             <div className="mt-5 flex items-center gap-3">
               <span className="h-px w-10 bg-[#DFC24D]" />
               <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#533E23]/70">
-                Explore our locations
+                Unsere Standorte entdecken
               </span>
             </div>
           </div>
@@ -100,7 +101,7 @@ export default function Locations() {
               <div className="relative h-[280px] overflow-hidden sm:h-[340px]">
                 <img
                   src={location.image}
-                  alt={`${location.name} Ayurveda location`}
+                  alt={`Ayurveda-Standort in ${location.name}`}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
@@ -160,7 +161,7 @@ export default function Locations() {
                 {/* Features */}
                 <div className="my-6 border-t border-[#D8D0A9] pt-5">
                   <p className="mb-4 text-[9px] font-bold uppercase tracking-[0.2em] text-[#533E23]/65">
-                    What awaits you
+                    Das erwartet Sie
                   </p>
 
                   <ul className="grid gap-3 sm:grid-cols-2">
@@ -181,14 +182,14 @@ export default function Locations() {
                 {/* CTA */}
                 <div className="flex items-center justify-between gap-3 border-t border-[#D8D0A9]/70 pt-5">
                   <span className="text-[9px] font-semibold uppercase tracking-[0.15em] text-[#6B705C]">
-                    Discover this location
+                    Entdecken Sie diesen Standort
                   </span>
 
                   <a
                     href={location.href}
                     className="group/link inline-flex min-h-11 items-center gap-4 rounded-full bg-[#21452B] px-5 py-3 text-xs font-semibold text-[#EFE9C5] transition-all duration-300 hover:bg-[#2F5D39] hover:shadow-lg"
                   >
-                    Explore location
+                    Standort entdecken
 
                     <span className="transition-transform duration-300 group-hover/link:translate-x-1">
                       →
@@ -205,7 +206,7 @@ export default function Locations() {
           <div className="flex items-center gap-3">
             <span className="text-xl text-[#DFC24D]">✳</span>
             <p className="font-serif text-base italic text-[#533E23]">
-              Wherever you begin, make a little space for yourself.
+              Wo auch immer Sie beginnen – nehmen Sie sich einen Moment Zeit für sich.
             </p>
           </div>
 
@@ -213,7 +214,7 @@ export default function Locations() {
             href="#booking"
             className="inline-flex items-center gap-3 text-xs font-semibold text-[#21452B] transition-colors hover:text-[#A47B25]"
           >
-            Find your treatment
+            Finden Sie Ihre Behandlung
             <span>→</span>
           </a>
         </div>

@@ -54,17 +54,17 @@ export default function SignupPage() {
     setSuccess(false);
 
     if (formData.password.length < 8) {
-      setError("Password must be at least 8 characters.");
+      setError("Das Passwort muss mindestens 8 Zeichen lang sein.");
       return;
     }
 
     if (formData.password !== formData.confirmPassword) {
-      setError("Passwords do not match.");
+      setError("Die Passwörter stimmen nicht überein.");
       return;
     }
 
     if (!formData.terms) {
-      setError("Please accept the Terms & Conditions and Privacy Policy.");
+      setError("Bitte akzeptieren Sie die Allgemeinen Geschäftsbedingungen und die Datenschutzerklärung.");
       return;
     }
 
@@ -94,7 +94,7 @@ export default function SignupPage() {
             message.includes("already registered") ||
             message.includes("already exists")
         ) {
-          setError("An account with this email already exists. Please sign in instead.");
+          setError("Für diese E-Mail-Adresse existiert bereits ein Konto. Bitte melden Sie sich stattdessen an.");
         } else {
           setError(signupError.message);
         }
@@ -104,7 +104,7 @@ export default function SignupPage() {
 
 // Supabase may return an existing account with no identities.
       if (data.user?.identities?.length === 0) {
-        setError("An account with this email already exists. Please sign in instead.");
+        setError("Für diese E-Mail-Adresse existiert bereits ein Konto. Bitte melden Sie sich stattdessen an.");
         return;
       }
 
@@ -123,7 +123,7 @@ export default function SignupPage() {
       router.replace("/account");
       router.refresh();
     } catch {
-      setError("Something went wrong. Please try again.");
+      setError("Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.");
     } finally {
       setLoading(false);
     }
@@ -140,22 +140,22 @@ export default function SignupPage() {
 
   return (
       <AuthLayout
-          eyebrow="Start your journey"
-          title={success ? "Check your email" : "Create your account"}
+          eyebrow="Beginnen Sie Ihre Reise"
+          title={success ? "Prüfen Sie Ihre E-Mails" : "Konto erstellen"}
           description={
             success
-                ? "We've sent you a verification link. Please check your inbox and verify your email address to activate your account."
-                : "Become part of the Purana Ayurveda community and keep your wellness experiences connected in one place."
+                ? "Wir haben Ihnen einen Bestätigungslink gesendet. Bitte prüfen Sie Ihren Posteingang und bestätigen Sie Ihre E-Mail-Adresse, um Ihr Konto zu aktivieren."
+                : "Werden Sie Teil der Purana-Ayurveda-Community und verwalten Sie Ihre Wohlfühlerlebnisse ganz einfach an einem Ort."
           }
           image="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=85"
           footer={
             <p className="text-center text-sm text-[var(--text-muted)]">
-              Already have an account?{" "}
+              Sie haben bereits ein Konto?{" "}
               <Link
                   href="/login"
                   className="font-semibold text-[var(--forest)] transition hover:text-[var(--terracotta)]"
               >
-                Sign in
+                Anmelden
               </Link>
             </p>
           }
@@ -168,14 +168,14 @@ export default function SignupPage() {
 
               <div>
                 <h2 className="text-lg font-semibold text-[var(--forest-dark)]">
-                  Verification email sent
+                  Bestätigungs-E-Mail wurde gesendet
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-[var(--text-muted)]">
-                  We&apos;ve sent a verification link to{" "}
+                  Wir haben einen Bestätigungslink an{" "}
                   <strong className="text-[var(--forest-dark)]">
                     {formData.email}
                   </strong>
-                  . Open the email and click the link to complete registration.
+                  {" "}gesendet. Öffnen Sie die E-Mail und klicken Sie auf den Link, um Ihre Registrierung abzuschließen.
                 </p>
               </div>
 
@@ -183,7 +183,7 @@ export default function SignupPage() {
                   href="/login"
                   className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--forest-dark)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--forest)]"
               >
-                Go to sign in
+                Zur Anmeldung
               </Link>
             </div>
         ) : (
@@ -192,7 +192,7 @@ export default function SignupPage() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label htmlFor="firstName" className={labelClass}>
-                    First Name
+                    Vorname
                   </label>
 
                   <div className="relative">
@@ -205,7 +205,7 @@ export default function SignupPage() {
                         id="firstName"
                         type="text"
                         autoComplete="given-name"
-                        placeholder="First name"
+                        placeholder="Vorname"
                         value={formData.firstName}
                         onChange={(e) =>
                             updateField("firstName", e.target.value)
@@ -218,14 +218,14 @@ export default function SignupPage() {
 
                 <div>
                   <label htmlFor="lastName" className={labelClass}>
-                    Last Name
+                    Nachname
                   </label>
 
                   <input
                       id="lastName"
                       type="text"
                       autoComplete="family-name"
-                      placeholder="Last name"
+                      placeholder="Nachname"
                       value={formData.lastName}
                       onChange={(e) =>
                           updateField("lastName", e.target.value)
@@ -239,7 +239,7 @@ export default function SignupPage() {
               {/* Email */}
               <div>
                 <label htmlFor="email" className={labelClass}>
-                  Email Address
+                  E-Mail-Adresse
                 </label>
 
                 <div className="relative">
@@ -252,7 +252,7 @@ export default function SignupPage() {
                       id="email"
                       type="email"
                       autoComplete="email"
-                      placeholder="you@example.com"
+                      placeholder="sie@beispiel.de"
                       value={formData.email}
                       onChange={(e) =>
                           updateField("email", e.target.value)
@@ -266,7 +266,7 @@ export default function SignupPage() {
               {/* Phone */}
               <div>
                 <label htmlFor="phone" className={labelClass}>
-                  Phone Number
+                  Telefonnummer
                 </label>
 
                 <div className="relative">
@@ -293,7 +293,7 @@ export default function SignupPage() {
               {/* Password */}
               <div>
                 <label htmlFor="password" className={labelClass}>
-                  Password
+                  Passwort
                 </label>
 
                 <div className="relative">
@@ -306,7 +306,7 @@ export default function SignupPage() {
                       id="password"
                       type={showPassword ? "text" : "password"}
                       autoComplete="new-password"
-                      placeholder="Minimum 8 characters"
+                      placeholder="Mindestens 8 Zeichen"
                       value={formData.password}
                       onChange={(e) =>
                           updateField("password", e.target.value)
@@ -319,7 +319,7 @@ export default function SignupPage() {
                   <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      aria-label={showPassword ? "Hide password" : "Show password"}
+                      aria-label={showPassword ? "Passwort verbergen" : "Passwort anzeigen"}
                       className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--text-muted)] transition hover:text-[var(--forest)]"
                   >
                     {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
@@ -330,7 +330,7 @@ export default function SignupPage() {
               {/* Confirm password */}
               <div>
                 <label htmlFor="confirmPassword" className={labelClass}>
-                  Confirm Password
+                  Passwort bestätigen
                 </label>
 
                 <div className="relative">
@@ -343,7 +343,7 @@ export default function SignupPage() {
                       id="confirmPassword"
                       type={showConfirmPassword ? "text" : "password"}
                       autoComplete="new-password"
-                      placeholder="Repeat your password"
+                      placeholder="Passwort erneut eingeben"
                       value={formData.confirmPassword}
                       onChange={(e) =>
                           updateField("confirmPassword", e.target.value)
@@ -359,8 +359,8 @@ export default function SignupPage() {
                       }
                       aria-label={
                         showConfirmPassword
-                            ? "Hide confirm password"
-                            : "Show confirm password"
+                            ? "Passwortbestätigung verbergen"
+                            : "Passwortbestätigung anzeigen"
                       }
                       className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--text-muted)] transition hover:text-[var(--forest)]"
                   >
@@ -385,19 +385,19 @@ export default function SignupPage() {
                 />
 
                 <span className="text-xs leading-6 text-[var(--text-muted)]">
-              I agree to the{" "}
+              Ich akzeptiere die{" "}
                   <Link
                       href="/terms"
                       className="font-semibold text-[var(--forest)] hover:text-[var(--terracotta)]"
                   >
-                Terms & Conditions
+                Allgemeinen Geschäftsbedingungen
               </Link>{" "}
-                  and{" "}
+                  und die{" "}
                   <Link
                       href="/privacy"
                       className="font-semibold text-[var(--forest)] hover:text-[var(--terracotta)]"
                   >
-                Privacy Policy
+                Datenschutzerklärung
               </Link>.
             </span>
               </label>
@@ -419,7 +419,7 @@ export default function SignupPage() {
                   className="group flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-[var(--forest-dark)] px-6 py-4 text-sm font-semibold text-white shadow-lg shadow-[var(--forest-dark)]/10 transition hover:-translate-y-0.5 hover:bg-[var(--forest)] hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <Check size={18} />
-                {loading ? "Creating account..." : "Create Account"}
+                {loading ? "Konto wird erstellt..." : "Konto erstellen"}
                 {!loading && (
                     <span className="transition-transform group-hover:translate-x-1">
                 →

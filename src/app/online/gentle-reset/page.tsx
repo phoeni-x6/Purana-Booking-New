@@ -5,89 +5,89 @@ import GentleResetDetails from "@/components/online/gentle-reset/GentleResetDeta
 
 const schedule = [
   {
-    time: "After booking",
-    title: "Questionnaire and welcome pack",
+    time: "Nach der Buchung",
+    title: "Fragebogen und Willkommenspaket",
     description:
-      "A short questionnaire and the dosha quiz, then your personal shopping list and a preparation video.",
+      "Ein kurzer Fragebogen und der Dosha-Test. Anschließend erhalten Sie Ihre persönliche Einkaufsliste und ein Vorbereitungsvideo.",
   },
   {
-    time: "Day 1",
-    title: "Your consultation with Lakshani",
+    time: "Tag 1",
+    title: "Ihre Beratung mit Lakshani",
     description:
-      "45 minutes by video: your constitution, your goals and small adjustments to your plan.",
+      "45 Minuten per Video: Ihre Konstitution, Ihre Ziele und kleine Anpassungen Ihres persönlichen Plans.",
   },
   {
-    time: "Days 1–4",
-    title: "A new video every morning",
+    time: "Tag 1–4",
+    title: "Jeden Morgen ein neues Video",
     description:
-      "8–12 minutes on the day's focus, your routine and what to cook, plus a tip for your dosha.",
+      "8–12 Minuten zu den Schwerpunkten des Tages, Ihrer täglichen Routine und passenden Mahlzeiten sowie einem Tipp für Ihr Dosha.",
   },
   {
-    time: "Days 1–5",
-    title: "Your 5-day food plan",
+    time: "Tag 1–5",
+    title: "Ihr 5-Tage-Ernährungsplan",
     description:
-      "Simple warm meals with recipe cards. Day 5 eases you back into everyday food.",
+      "Einfache, warme Mahlzeiten mit passenden Rezeptkarten. Am fünften Tag gelingt Ihnen der sanfte Übergang zurück zu Ihrer gewohnten Ernährung.",
   },
   {
-    time: "Each evening",
-    title: "10-minute wind-down",
+    time: "Jeden Abend",
+    title: "10 Minuten zum Entspannen",
     description:
-      "Breathing or a short self-massage to end the day calmly.",
+      "Atemübungen oder eine kurze Selbstmassage, um den Tag in Ruhe ausklingen zu lassen.",
   },
   {
-    time: "After",
-    title: "Keep it going",
+    time: "Im Anschluss",
+    title: "Machen Sie weiter",
     description:
-      "Your everyday tips sheet, and an invitation to continue with the Seasonal Reset or the membership.",
+      "Ihr Merkblatt mit Alltagstipps und eine Einladung, mit dem Seasonal Reset oder einer Mitgliedschaft weiterzumachen.",
   },
 ];
 
 const inclusions = [
-  ["Personal consultation", "45 minutes by video with Lakshani"],
-  ["4 daily videos", "The day's focus, routine and cooking"],
-  ["5-day food plan", "For Vata, Pitta or Kapha"],
-  ["Shopping list", "Everything you need, for your type"],
-  ["Recipe cards", "12–15 simple Ayurvedic recipes"],
-  ["Evening rituals", "Breathing and self-massage audio"],
-  ["Everyday tips", "A sheet to keep the new habits"],
-  ["4 weeks access", "Watch again whenever you like"],
+  ["Persönliche Beratung", "45 Minuten per Video mit Lakshani"],
+  ["4 tägliche Videos", "Die Schwerpunkte des Tages, Routinen und Ernährung"],
+  ["5-Tage-Ernährungsplan", "Für Vata, Pitta oder Kapha"],
+  ["Einkaufsliste", "Alles, was Sie für Ihren Dosha-Typ benötigen"],
+  ["Rezeptkarten", "12–15 einfache Ayurveda-Rezepte"],
+  ["Abendrituale", "Audio-Anleitungen zu Atemübungen und Selbstmassage"],
+  ["Tipps für den Alltag", "Ein Merkblatt zur Beibehaltung Ihrer neuen Gewohnheiten"],
+  ["4 Wochen Zugriff", "Sehen Sie sich die Inhalte jederzeit erneut an"],
 ];
 
 const lessons = [
-  ["Welcome: how your reset works", "5 min"],
-  ["Preparing your kitchen and week", "6 min"],
-  ["Your dosha in daily life", "6 min"],
-  ["Day 1: arriving and slowing down", "10 min"],
-  ["Day 2: warm food and steady energy", "9 min"],
-  ["Day 3: lightness and digestion-friendly meals", "9 min"],
-  ["Day 4: rest and reflection", "8 min"],
-  ["Evening ritual: oil self-massage", "10 min"],
-  ["Back to everyday life", "6 min"],
+  ["Willkommen: So funktioniert Ihr Neustart", "5 Min."],
+  ["Vorbereitung Ihrer Küche und Ihrer Woche", "6 Min."],
+  ["Ihr Dosha im Alltag", "6 Min."],
+  ["Tag 1: Ankommen und zur Ruhe kommen", "10 Min."],
+  ["Tag 2: Warme Ernährung und ausgeglichene Energie", "9 Min."],
+  ["Tag 3: Leichtigkeit und verdauungsfreundliche Mahlzeiten", "9 Min."],
+  ["Tag 4: Ruhe und Selbstreflexion", "8 Min."],
+  ["Abendritual: Selbstmassage mit Öl", "10 Min."],
+  ["Zurück in den Alltag", "6 Min."],
 ];
 
 const faqs = [
   {
-    question: "How much time do I need each day?",
+    question: "Wie viel Zeit benötige ich täglich?",
     answer:
-      "About 30–45 minutes plus cooking. Most people do it alongside work.",
+      "Etwa 30–45 Minuten zusätzlich zur Zubereitung Ihrer Mahlzeiten. Die meisten Teilnehmer integrieren das Programm problemlos in ihren Arbeitsalltag.",
   },
   {
-    question: "Do I have to fast?",
-    answer: "No. You eat three warm, simple meals a day.",
+    question: "Muss ich fasten?",
+    answer: "Nein. Sie essen täglich drei einfache, warme Mahlzeiten.",
   },
   {
-    question: "What if I have allergies or take medication?",
+    question: "Was ist, wenn ich Allergien habe oder Medikamente einnehme?",
     answer:
-      "Tell us in the questionnaire. Lakshani adjusts your plan in the consultation. If you have a medical condition, check with your doctor first.",
+      "Informieren Sie uns darüber im Fragebogen. Lakshani passt Ihren Plan während der Beratung entsprechend an. Wenn Sie an einer Erkrankung leiden, sprechen Sie bitte vorher mit Ihrer Ärztin oder Ihrem Arzt.",
   },
   {
-    question: "When can I start?",
+    question: "Wann kann ich beginnen?",
     answer:
-      "Whenever you like. Book, fill in the questionnaire, and choose a date for your consultation.",
+      "Wann immer Sie möchten. Buchen Sie das Programm, füllen Sie den Fragebogen aus und wählen Sie einen Termin für Ihre persönliche Beratung.",
   },
   {
-    question: "Do members get a discount?",
-    answer: "Yes: 5% with Membership, 10% with Premium.",
+    question: "Erhalten Mitglieder einen Rabatt?",
+    answer: "Ja: 5 % mit der Mitgliedschaft und 10 % mit der Premium-Mitgliedschaft.",
   },
 ];
 
@@ -163,35 +163,35 @@ export default function GentleResetPage() {
               <div className="inline-flex items-center gap-2 rounded-full border border-[#D8D0A9] bg-[#EFE9C5]/50 px-4 py-2">
                 <span className="h-2 w-2 rounded-full bg-[#C14C38]" />
                 <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#533E23]">
-                  Your journey
+                  Ihre Reise
                 </span>
               </div>
 
               <h2 className="mt-6 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl lg:text-6xl">
-                A little more balance,
+                Ein wenig mehr Balance,
                 <span className="mt-2 block italic text-[#9A7821]">
-                  one day at a time.
+                  Tag für Tag.
                 </span>
               </h2>
 
               <p className="mt-6 max-w-2xl text-sm leading-7 text-[#6B705C] sm:text-base">
-                A gentle structure to guide you through each day, from
-                preparing at home to bringing your new habits into everyday
-                life.
+                Eine sanfte Struktur, die Sie durch jeden Tag begleitet –
+                von der Vorbereitung zu Hause bis zur Integration Ihrer
+                neuen Gewohnheiten in den Alltag.
               </p>
             </div>
 
             <div className="border-l-2 border-[#DFC24D] py-2 pl-6">
               <p className="font-serif text-2xl italic leading-snug text-[#533E23]">
-                Your pace.
+                Ihr Tempo.
                 <br />
-                Your routine.
+                Ihre Routine.
                 <br />
-                Your reset.
+                Ihr Neustart.
               </p>
               <p className="mt-3 text-xs leading-6 text-[#6B705C]">
-                Thoughtfully guided, without needing to step away from
-                everyday life.
+                Mit achtsamer Begleitung, ohne dass Sie Ihren Alltag
+                dafür unterbrechen müssen.
               </p>
             </div>
           </div>
@@ -227,7 +227,7 @@ export default function GentleResetPage() {
 
                 <div className="mt-6 h-px bg-[#D8D0A9]/70 transition-colors group-hover:bg-[#DFC24D]" />
                 <span className="mt-4 block text-[10px] font-semibold uppercase tracking-[0.16em] text-[#9A7821]">
-                  Step {String(index + 1).padStart(2, "0")}
+                  Schritt {String(index + 1).padStart(2, "0")}
                 </span>
               </article>
             ))}
@@ -247,20 +247,20 @@ export default function GentleResetPage() {
             <div className="inline-flex items-center gap-2 rounded-full border border-[#D8D0A9] bg-white/50 px-4 py-2">
               <span className="h-2 w-2 rounded-full bg-[#C14C38]" />
               <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#533E23]">
-                Thoughtfully prepared
+                Sorgfältig für Sie zusammengestellt
               </span>
             </div>
 
             <h2 className="mt-6 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-              Everything you need
+              Alles, was Sie brauchen,
               <span className="mt-2 block italic text-[#9A7821]">
-                to begin.
+                um zu beginnen.
               </span>
             </h2>
 
             <p className="mt-5 max-w-xl text-sm leading-7 text-[#6B705C]">
-              Practical guidance, recipes and daily resources to help
-              you follow your reset with confidence.
+              Praktische Anleitungen, Rezepte und tägliche Impulse,
+              die Ihnen helfen, Ihren Neustart mit Zuversicht umzusetzen.
             </p>
 
             <div className="mt-9 grid gap-3 sm:grid-cols-2">
@@ -289,27 +289,27 @@ export default function GentleResetPage() {
             <div className="inline-flex items-center gap-2 rounded-full border border-[#D8D0A9] bg-white/50 px-4 py-2">
               <span className="h-2 w-2 rounded-full bg-[#C14C38]" />
               <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#533E23]">
-                Inside your programme
+                Einblick in Ihr Programm
               </span>
             </div>
 
             <h2 className="mt-6 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-              Your lesson library
+              Ihre Videobibliothek
             </h2>
 
             <p className="mt-5 text-sm leading-7 text-[#6B705C]">
-              Short, practical lessons designed to fit into your day
-              and make each step feel manageable.
+              Kurze, praktische Lektionen, die sich leicht in Ihren Alltag
+              integrieren lassen und jeden Schritt überschaubar machen.
             </p>
 
             <div className="mt-9 overflow-hidden rounded-[26px] border border-[#D8D0A9] bg-[#FBF9F1] p-5 sm:p-6">
               <div className="mb-5 flex items-center justify-between">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#9A7821]">
-                    Learning at your pace
+                    Lernen in Ihrem eigenen Tempo
                   </p>
                   <p className="mt-1 font-serif text-xl text-[#21452B]">
-                    9 guided lessons
+                    9 begleitete Lektionen
                   </p>
                 </div>
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#EFE9C5] text-[#2F5D39]">
@@ -346,8 +346,9 @@ export default function GentleResetPage() {
                 ✦
               </span>
               <p className="text-xs leading-6 text-[#6B705C]">
-                Lessons unlock day by day after booking. Your food plan
-                and tips are tailored to your constitution.
+                Die Lektionen werden nach der Buchung täglich freigeschaltet.
+                Ihr Ernährungsplan und Ihre Tipps werden auf Ihre individuelle
+                Konstitution abgestimmt.
               </p>
             </div>
           </div>
@@ -382,25 +383,25 @@ export default function GentleResetPage() {
 
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#DFC24D]">
-                  Your personal guide
+                  Ihre persönliche Begleiterin
                 </p>
 
                 <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
-                  Meet Lakshani Perera
+                  Lernen Sie Lakshani Perera kennen
                 </h2>
 
                 <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base">
-                  Ayurveda-Gesundheitsberaterin and founder of Purana
-                  Ayurveda. Lakshani grew up with Ayurveda in her Sri
-                  Lankan family and guides every reset personally, in
-                  German or English.
+                  Ayurveda-Gesundheitsberaterin und Gründerin von Purana
+                  Ayurveda. Lakshani ist mit Ayurveda in ihrer sri-lankischen
+                  Familie aufgewachsen und begleitet jedes Programm persönlich
+                  auf Deutsch oder Englisch.
                 </p>
 
                 <div className="mt-7 flex flex-wrap gap-2">
                   {[
-                    "Personal guidance",
-                    "German & English",
-                    "Rooted in Sri Lankan Ayurveda",
+                    "Persönliche Begleitung",
+                    "Deutsch & Englisch",
+                    "Verwurzelt im sri-lankischen Ayurveda",
                   ].map((item) => (
                     <span
                       key={item}
@@ -422,23 +423,23 @@ export default function GentleResetPage() {
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#9A7821]">
-                Shared experiences
+                Erfahrungen teilen
               </p>
               <h2 className="mt-4 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-                Voices from the journey
+                Stimmen aus dem Programm
               </h2>
             </div>
 
             <p className="max-w-md text-sm leading-7 text-[#6B705C]">
-              Every reset is personal. Hear how small changes can become
-              meaningful everyday habits.
+              Jeder Neustart ist individuell. Erfahren Sie, wie kleine
+              Veränderungen zu wertvollen Gewohnheiten im Alltag werden können.
             </p>
           </div>
 
           <div className="mt-9 grid gap-5 md:grid-cols-2">
             {[
-              "Add a genuine testimonial from a participant after launch.",
-              "Add a second genuine participant testimonial after launch.",
+              "Fügen Sie nach dem Start des Programms eine authentische Teilnehmerstimme hinzu.",
+              "Ergänzen Sie nach dem Start eine zweite authentische Teilnehmerstimme.",
             ].map((quote, index) => (
               <blockquote
                 key={index}
@@ -455,7 +456,7 @@ export default function GentleResetPage() {
                 </p>
                 <div className="mt-7 h-px bg-[#D8D0A9]" />
                 <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#9A7821]">
-                  Participant feedback
+                  Teilnehmerstimme
                 </p>
               </blockquote>
             ))}
@@ -473,15 +474,16 @@ export default function GentleResetPage() {
         <div className="relative mx-auto max-w-4xl px-5 py-16 sm:px-8 sm:py-24">
           <div className="text-center">
             <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#9A7821]">
-              A little clarity
+              Gut zu wissen
             </p>
 
             <h2 className="mt-4 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-              Frequently asked questions
+              Häufig gestellte Fragen
             </h2>
 
             <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#6B705C]">
-              A few helpful answers before you begin your Gentle Reset.
+              Hier finden Sie hilfreiche Antworten, bevor Sie mit Ihrem
+              Gentle Reset beginnen.
             </p>
           </div>
 
@@ -511,10 +513,10 @@ export default function GentleResetPage() {
           </div>
 
           <p className="mt-8 text-xs leading-6 text-[#6B705C]">
-            Our programmes support your wellbeing with Ayurvedic food,
-            routines and self-care. They are not a medical treatment and
-            do not replace advice or treatment from your healthcare
-            professional.
+            Unsere Programme unterstützen Ihr Wohlbefinden durch ayurvedische
+            Ernährung, Routinen und Selbstfürsorge. Sie stellen keine
+            medizinische Behandlung dar und ersetzen nicht die Beratung oder
+            Behandlung durch medizinisches Fachpersonal.
           </p>
         </div>
       </section>
@@ -534,21 +536,21 @@ export default function GentleResetPage() {
           <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#DFC24D]">
-                Your next step
+                Ihr nächster Schritt
               </p>
 
               <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
-                Make space for yourself.
+                Nehmen Sie sich Zeit für sich.
               </h2>
 
               <p className="mt-4 max-w-xl text-sm leading-7 text-white/80 sm:text-base">
-                Four days of mindful routines, personal guidance and
-                simple Ayurvedic practices to bring into your everyday
-                life.
+                Vier Tage voller achtsamer Routinen, persönlicher Begleitung
+                und einfacher ayurvedischer Anwendungen, die Sie in Ihren
+                Alltag integrieren können.
               </p>
 
               <p className="mt-5 font-serif text-2xl text-[#DFC24D]">
-                Gentle Reset · €119
+                Sanfter Neustart · €119
               </p>
             </div>
 
@@ -557,7 +559,7 @@ export default function GentleResetPage() {
                 href="#booking-form"
                 className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-8 py-4 text-sm font-semibold text-[#21452B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#EFE9C5]"
               >
-                Book your reset
+                Ihren Neustart buchen
                 <ArrowIcon />
               </a>
 
@@ -565,7 +567,7 @@ export default function GentleResetPage() {
                 href="/#membership"
                 className="inline-flex items-center justify-center rounded-full border border-white/25 px-8 py-4 text-sm font-medium text-white transition-colors hover:border-[#DFC24D] hover:text-[#DFC24D]"
               >
-                Explore membership savings
+                Mitgliedschaft und Rabatte entdecken
               </Link>
             </div>
           </div>

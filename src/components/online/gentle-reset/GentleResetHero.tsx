@@ -3,17 +3,17 @@ import Link from "next/link";
 
 export default function GentleResetHero() {
   const features = [
-    "4 days",
-    "1 personal consultation",
-    "Video & text",
-    "Beginner-friendly",
-    "German or English",
+    "4 Tage",
+    "1 persönliche Beratung",
+    "Video & Text",
+    "Für Einsteiger geeignet",
+    "Auf Deutsch oder Englisch",
   ];
 
   const benefits = [
-    "1 personal consultation",
-    "Access for 4 weeks",
-    "Guidance by video and text",
+    "1 persönliche Beratung",
+    "4 Wochen Zugriff",
+    "Begleitung per Video und Text",
   ];
 
   return (
@@ -65,32 +65,33 @@ export default function GentleResetHero() {
               href="/online"
               className="transition-colors hover:text-[#2F5D39]"
             >
-              Online &amp; at home
+              Online & für zu Hause
             </Link>
             <span className="text-[#C19A35]">/</span>
             <span className="font-medium text-[#2F5D39]">
-              Gentle Reset
+              Sanfter Neustart
             </span>
           </div>
 
           <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-[#2F5D39]/15 bg-[#F8F5E8]/80 px-4 py-2.5 text-[10px] font-semibold tracking-[0.18em] text-[#2F5D39] shadow-sm backdrop-blur-sm sm:text-xs">
             <span className="h-2 w-2 rounded-full bg-[#C19A35]" />
-            YOUR GENTLE START TO AYURVEDA
+            IHR SANFTER EINSTIEG IN DEN AYURVEDA
           </div>
 
           <h1 className="max-w-2xl font-serif text-5xl leading-[1.08] tracking-tight text-[#21452B] sm:text-6xl lg:text-7xl">
-            Gentle Reset
+            Sanfter Neustart
             <span className="mt-3 block font-normal italic text-[#A47D32]">
-              Come back to balance.
+              Zurück zu mehr Balance.
             </span>
           </h1>
 
           <div className="mt-7 h-px w-20 bg-[#DFC24D]" />
 
           <p className="mt-7 max-w-xl text-base leading-8 text-[#52665C] sm:text-lg">
-            Four days of simple Ayurvedic food, daily rituals and rest —
-            adjusted to your constitution, so you feel lighter, renew your
-            energy and know how to continue at home.
+            Vier Tage mit einfacher ayurvedischer Ernährung, täglichen
+            Ritualen und wohltuender Ruhe – abgestimmt auf Ihre Konstitution.
+            So fühlen Sie sich leichter, gewinnen neue Energie und erfahren,
+            wie Sie die Impulse zu Hause weiterführen können.
           </p>
 
           {/* Programme highlights */}
@@ -114,7 +115,7 @@ export default function GentleResetHero() {
               href="#booking"
               className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#2F5D39] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#21452B]/10 transition duration-300 hover:-translate-y-1 hover:bg-[#21452B]"
             >
-              Begin your reset
+              Ihren Neustart beginnen
               <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">
                 →
               </span>
@@ -122,7 +123,7 @@ export default function GentleResetHero() {
 
             <span className="flex items-center gap-2 text-sm text-[#6B705C]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#C19A35]" />
-              A simple, supported start
+              Ein einfacher, begleiteter Einstieg
             </span>
           </div>
 
@@ -133,10 +134,10 @@ export default function GentleResetHero() {
             </div>
             <div>
               <p className="font-serif text-base text-[#21452B]">
-                Start gently. Find your rhythm.
+                Sanft beginnen. Ihren Rhythmus finden.
               </p>
               <p className="mt-1 text-xs text-[#6B705C]">
-                Ayurveda guidance designed for everyday life.
+                Ayurveda-Begleitung für Ihren Alltag.
               </p>
             </div>
           </div>

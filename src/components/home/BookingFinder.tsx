@@ -5,30 +5,30 @@ import { useState } from "react";
 
 export default function BookingFinder() {
   const [location, setLocation] = useState("Steinberg am See");
-  const [guestType, setGuestType] = useState("Chalet guest");
+  const [guestType, setGuestType] = useState("Chalet-Gast");
 
   const locations = [
     {
       name: "Steinberg am See",
-      subtitle: "Lakeside wellness",
+      subtitle: "Wellness am See",
       icon: "⌂",
     },
     {
       name: "Marktredwitz",
-      subtitle: "Personal care",
+      subtitle: "Individuelle Behandlungen",
       icon: "✳",
     },
   ];
 
   const guests = [
     {
-      name: "Chalet guest",
-      subtitle: "Staying at the resort",
+      name: "Chalet-Gast",
+      subtitle: "Gast in unserer Ferienanlage",
       icon: "⌂",
     },
     {
-      name: "External guest",
-      subtitle: "Visiting for treatment",
+      name: "Externer Gast",
+      subtitle: "Besuch für eine Behandlung",
       icon: "♡",
     },
   ];
@@ -86,18 +86,18 @@ export default function BookingFinder() {
                   <span className="h-px w-6 bg-[#21452B]" />
 
                   <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#21452B]">
-                    Your wellness journey
+                    Ihre Wellness-Reise
                   </p>
                 </div>
 
                 <h2 className="font-serif text-2xl text-[#21452B] sm:text-3xl">
-                  Where shall we take you?
+                  Wohin dürfen wir Sie begleiten?
                   <span className="ml-2 italic text-[#DFC24D]">✳</span>
                 </h2>
 
                 <p className="mt-2 max-w-lg text-xs leading-5 text-[#533E23]/80 sm:text-sm">
-                  Choose your location and guest type to find your Ayurveda
-                  experience.
+                  Wählen Sie Ihren Standort und Ihre Gästekategorie, um Ihr
+                  persönliches Ayurveda-Erlebnis zu entdecken.
                 </p>
               </div>
 
@@ -117,7 +117,7 @@ export default function BookingFinder() {
                   </span>
 
                   <h3 className="text-xs font-semibold text-[#21452B]">
-                    Choose your location
+                    Wählen Sie Ihren Standort
                   </h3>
                 </div>
 
@@ -172,7 +172,7 @@ export default function BookingFinder() {
                   </span>
 
                   <h3 className="text-xs font-semibold text-[#21452B]">
-                    Your guest category
+                    Ihre Gästekategorie
                   </h3>
                 </div>
 
@@ -237,7 +237,7 @@ export default function BookingFinder() {
                 onClick={handleFind}
                 className="group inline-flex min-h-11 items-center justify-center gap-4 rounded-full bg-[#21452B] px-6 py-3 text-xs font-semibold text-[#EFE9C5] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#2F5D39]"
               >
-                Find my experience
+                Mein Ayurveda-Erlebnis finden
 
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                   →

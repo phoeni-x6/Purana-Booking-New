@@ -1,30 +1,30 @@
 
 const footerGroups = [
   {
-    title: "Explore",
+    title: "Entdecken",
     links: [
-      ["Our locations", "#locations"],
-      ["Online consultation", "#online"],
-      ["Ayurveda retreats", "#retreats"],
-      ["Membership", "#membership"],
-      ["Learn & journal", "#learn"],
+      ["Unsere Standorte", "#locations"],
+      ["Online-Beratung", "#online"],
+      ["Ayurveda-Retreats", "#retreats"],
+      
+      ["Lernen & Journal", "#learn"],
     ],
   },
   {
-    title: "Get in touch",
+    title: "Kontakt",
     links: [
-      ["Book an experience", "#booking"],
-      ["WhatsApp us", "https://wa.me/"],
-      ["Email our team", "mailto:hello@example.com"],
+      ["Erlebnis buchen", "#booking"],
+      ["Schreiben Sie uns auf WhatsApp", "https://wa.me/"],
+      ["E-Mail an unser Team", "mailto:hello@example.com"],
     ],
   },
   {
-    title: "Information",
+    title: "Informationen",
     links: [
-      ["About Purana", "#about"],
-      ["Privacy policy", "/privacy"],
-      ["Terms & conditions", "/terms"],
-      ["Legal notice", "/legal"],
+      ["Über Purana", "#about"],
+      ["Datenschutzerklärung", "/privacy"],
+      ["Allgemeine Geschäftsbedingungen", "/terms"],
+      ["Impressum", "/legal"],
     ],
   },
 ];
@@ -76,27 +76,27 @@ export default function Footer() {
           <div className="max-w-sm">
             <Link
               href="/"
-              aria-label="Purana Ayurveda home"
+              aria-label="Purana Ayurveda Startseite"
               className="group inline-flex flex-col"
             >
               <span className="font-serif text-3xl tracking-[0.12em] text-[#F8F5E8] transition-colors group-hover:text-[#DFC24D]">
                 PURANA
               </span>
               <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.38em] text-[#DFC24D]">
-                Ayurveda & Wellness
+                Ayurveda & Wohlbefinden
               </span>
             </Link>
 
             <p className="mt-6 max-w-xs text-sm leading-7 text-[#D5DFD3]">
-              Wellness rooted in tradition. Care designed for real life.
-              Discover a more balanced way to live through the wisdom of
-              Ayurveda.
+              Wohlbefinden, verwurzelt in Tradition. Fürsorge, die sich an
+              Ihrem Alltag orientiert. Entdecken Sie mit der Weisheit des
+              Ayurveda einen ausgeglicheneren Lebensstil.
             </p>
 
             {/* Social links */}
             <div className="mt-7">
               <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#DFC24D]">
-                Follow our journey
+                Begleiten Sie uns auf unserem Weg
               </p>
 
               <div className="flex gap-3">
@@ -144,14 +144,14 @@ export default function Footer() {
         <div className="border-t border-[#F8F5E8]/15 py-7">
           <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
             <p className="font-serif text-base italic text-[#F8F5E8]/90">
-              &ldquo;A journey back to balance, naturally.&rdquo;
+              &ldquo;Ein natürlicher Weg zurück zu mehr Balance.&rdquo;
             </p>
 
             <a
               href="#top"
               className="inline-flex items-center gap-2 text-xs font-medium text-[#DFC24D] transition-colors hover:text-[#F8F5E8]"
             >
-              Back to top
+              Nach oben
               <span aria-hidden="true" className="text-base">
                 ↑
               </span>
@@ -162,7 +162,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="flex flex-col justify-between gap-3 border-t border-[#F8F5E8]/10 py-5 text-xs text-[#B9C9BD] sm:flex-row sm:items-center">
           <p>
-            © {new Date().getFullYear()} Purana Ayurveda. All rights reserved.
+            © {new Date().getFullYear()} Purana Ayurveda. Alle Rechte vorbehalten.
           </p>
 
         </div>

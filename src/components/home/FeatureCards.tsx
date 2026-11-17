@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 
 export default function FeatureCards() {
@@ -10,14 +11,14 @@ export default function FeatureCards() {
             <div className="mb-4 flex items-center gap-3">
               <span className="h-px w-9 bg-[#C14C38]" />
               <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#C14C38] sm:text-xs">
-                Thoughtful ways to experience Ayurveda
+                Besondere Wege, Ayurveda zu erleben
               </p>
             </div>
 
             <h2 className="max-w-2xl font-serif text-3xl leading-tight text-[#21452B] sm:text-4xl lg:text-5xl">
-              A little something special,
+              Etwas ganz Besonderes,
               <span className="block italic text-[#9A8050]">
-                for you or someone you love.
+                für Sie oder einen lieben Menschen.
               </span>
             </h2>
           </div>
@@ -36,7 +37,7 @@ export default function FeatureCards() {
           >
             <Image
               src="https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/img2.jfif"
-              alt="Peaceful wellness spa setting"
+              alt="Entspannende Atmosphäre in einem Wellness-Spa"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-1000 group-hover:scale-105"
@@ -60,32 +61,34 @@ export default function FeatureCards() {
               <div className="flex items-center gap-3">
                 <span className="h-px w-8 bg-[#DFC24D]" />
                 <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#DFC24D] sm:text-xs">
-                  Gift vouchers
+                  Geschenkgutscheine
                 </p>
               </div>
 
               <div className="mt-auto max-w-lg pt-24">
                 <span className="mb-4 inline-block rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[9px] uppercase tracking-[0.2em] text-white/90 backdrop-blur-sm">
-                  A gift of wellbeing
+                  Ein Geschenk für Ihr Wohlbefinden
                 </span>
 
                 <h3 className="font-serif text-4xl leading-[1.08] text-white sm:text-5xl lg:text-6xl">
-                  Give the gift
+                  Schenken Sie
                   <span className="block italic text-[#DFC24D]">
-                    of balance.
+                    innere Balance.
                   </span>
                 </h3>
 
                 <p className="mt-5 max-w-md text-sm leading-7 text-white/80 sm:text-base">
-                  Give someone special a moment of care. Choose an Ayurveda
-                  treatment, a retreat or a gift amount.
+                  Schenken Sie einem besonderen Menschen einen Moment der
+                  Entspannung und Fürsorge. Wählen Sie eine Ayurveda-
+                  Behandlung, einen Retreat-Aufenthalt oder einen Gutschein
+                  über einen Wunschbetrag.
                 </p>
 
                 <a
                   href="#booking"
                   className="group/link mt-8 inline-flex min-h-12 items-center gap-5 rounded-full bg-[#DFC24D] px-6 py-3 text-sm font-semibold text-[#21452B] transition-all duration-300 hover:-translate-y-1 hover:bg-[#EFE9C5]"
                 >
-                  Explore gift vouchers
+                  Geschenkgutscheine entdecken
                   <span className="transition-transform duration-300 group-hover/link:translate-x-1">
                     ↗
                   </span>
@@ -105,7 +108,7 @@ export default function FeatureCards() {
           >
             <Image
               src="https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/img3.jpeg"
-              alt="Natural botanical skincare and wellness products"
+              alt="Natürliche Hautpflegeprodukte und Wellness-Produkte"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-1000 group-hover:scale-105"
@@ -129,32 +132,33 @@ export default function FeatureCards() {
               <div className="flex items-center gap-3">
                 <span className="h-px w-8 bg-[#DFC24D]" />
                 <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#DFC24D] sm:text-xs">
-                  Our shop · Nivartana
+                  Unser Shop · Nivartana
                 </p>
               </div>
 
               <div className="mt-auto max-w-lg pt-24">
                 <span className="mb-4 inline-block rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[9px] uppercase tracking-[0.2em] text-white/90 backdrop-blur-sm">
-                  Rituals for everyday living
+                  Rituale für den Alltag
                 </span>
 
                 <h3 className="font-serif text-4xl leading-[1.08] text-white sm:text-5xl lg:text-6xl">
-                  Bring Ayurveda
+                  Ayurveda
                   <span className="block italic text-[#DFC24D]">
-                    into your home.
+                    für Ihr Zuhause.
                   </span>
                 </h3>
 
                 <p className="mt-5 max-w-md text-sm leading-7 text-white/80 sm:text-base">
-                  Explore spices, teas and thoughtfully selected products
-                  that bring traditional rituals into everyday life.
+                  Entdecken Sie Gewürze, Tees und sorgfältig ausgewählte
+                  Produkte, die traditionelle Ayurveda-Rituale in Ihren
+                  Alltag bringen.
                 </p>
 
                 <a
                   href="#shop"
                   className="group/link mt-8 inline-flex min-h-12 items-center gap-5 rounded-full bg-[#EFE9C5] px-6 py-3 text-sm font-semibold text-[#21452B] transition-all duration-300 hover:-translate-y-1 hover:bg-[#DFC24D]"
                 >
-                  Explore the collection
+                  Kollektion entdecken
                   <span className="transition-transform duration-300 group-hover/link:translate-x-1">
                     ↗
                   </span>

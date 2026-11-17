@@ -54,7 +54,7 @@ export default function TreatmentCard({
         <div className="relative aspect-[5/4] overflow-hidden bg-[#EFE9C5]">
           <img
             src={image}
-            alt={`${name} Ayurvedic treatment`}
+            alt={`${name} – Ayurveda-Behandlung`}
             loading="lazy"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -78,14 +78,14 @@ export default function TreatmentCard({
           <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[#D8D0A9] pt-4">
             <div>
               <p className="text-[10px] font-medium uppercase tracking-[0.12em] text-[#6B705C]">
-                Duration
+                Dauer
               </p>
               <p className="mt-1 text-sm text-[#263A2B]">{duration}</p>
             </div>
 
             <div className="text-right">
               <p className="text-[10px] font-medium uppercase tracking-[0.12em] text-[#6B705C]">
-                From
+                Ab
               </p>
               <p className="mt-1 font-[var(--font-heading)] text-2xl text-[#21452B]">
                 {price}
@@ -100,14 +100,14 @@ export default function TreatmentCard({
               aria-haspopup="dialog"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#2F5D39] px-3 py-3 text-sm font-semibold text-[#2F5D39] transition hover:bg-[#EFE9C5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DFC24D]"
             >
-              View info <span aria-hidden="true">ⓘ</span>
+              Mehr erfahren <span aria-hidden="true">ⓘ</span>
             </button>
 
             <Link
               href={bookingUrl}
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#21452B] px-3 py-3 text-sm font-semibold text-white transition hover:bg-[#2F5D39] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DFC24D]"
             >
-              Book online <span aria-hidden="true">→</span>
+              Online buchen <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function TreatmentCard({
             <div className="relative aspect-[16/7] overflow-hidden bg-[#EFE9C5]">
               <img
                 src={image}
-                alt={`${name} Ayurvedic treatment`}
+                alt={`${name} – Ayurveda-Behandlung`}
                 className="h-full w-full object-cover"
               />
 
@@ -144,7 +144,7 @@ export default function TreatmentCard({
               <button
                 type="button"
                 onClick={() => setIsInfoOpen(false)}
-                aria-label="Close treatment information"
+                aria-label="Behandlungsinformationen schließen"
                 className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/50 bg-[#21452B]/70 text-xl text-white transition hover:bg-[#2F5D39]"
               >
                 ×
@@ -153,7 +153,7 @@ export default function TreatmentCard({
 
             <div className="p-6 sm:p-9">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#533E23]">
-                Discover the treatment
+                Entdecken Sie diese Behandlung
               </p>
 
               <h2
@@ -170,7 +170,7 @@ export default function TreatmentCard({
               <div className="mt-7 grid grid-cols-2 gap-3">
                 <div className="rounded-2xl border border-[#D8D0A9] bg-[#EFE9C5] p-4">
                   <p className="text-xs uppercase tracking-[0.12em] text-[#6B705C]">
-                    Duration
+                    Dauer
                   </p>
                   <p className="mt-2 font-[var(--font-heading)] text-xl text-[#21452B]">
                     {duration}
@@ -179,7 +179,7 @@ export default function TreatmentCard({
 
                 <div className="rounded-2xl border border-[#D8D0A9] bg-[#EFE9C5] p-4">
                   <p className="text-xs uppercase tracking-[0.12em] text-[#6B705C]">
-                    Price
+                    Preis
                   </p>
                   <p className="mt-2 font-[var(--font-heading)] text-xl text-[#21452B]">
                     {price}
@@ -192,7 +192,7 @@ export default function TreatmentCard({
                   href={bookingUrl}
                   className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[#C14C38] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#A83F30]"
                 >
-                  Book this treatment <span aria-hidden="true">→</span>
+                  Diese Behandlung buchen <span aria-hidden="true">→</span>
                 </Link>
 
                 <button
@@ -200,7 +200,7 @@ export default function TreatmentCard({
                   onClick={() => setIsInfoOpen(false)}
                   className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#D8D0A9] px-6 py-3 text-sm font-semibold text-[#21452B] transition hover:bg-[#EFE9C5]"
                 >
-                  Close
+                  Schließen
                 </button>
               </div>
             </div>

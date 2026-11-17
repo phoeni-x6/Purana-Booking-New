@@ -3,17 +3,17 @@ import Link from "next/link";
 
 export default function SeasonalResetHero() {
   const features = [
-    "7 days",
-    "2 personal consultations",
-    "Chat included",
-    "4 seasonal editions",
-    "German or English",
+    "7 Tage",
+    "2 persönliche Beratungen",
+    "Chat-Begleitung inklusive",
+    "4 saisonale Ausgaben",
+    "Auf Deutsch oder Englisch",
   ];
 
   const benefits = [
-    "2 personal consultations",
-    "Personal chat support",
-    "Four seasonal editions",
+    "2 persönliche Beratungen",
+    "Persönliche Chat-Begleitung",
+    "Vier saisonale Ausgaben",
   ];
 
   return (
@@ -66,32 +66,33 @@ export default function SeasonalResetHero() {
               href="/#online"
               className="transition-colors hover:text-[#2F5D39]"
             >
-              Online &amp; at home
+              Online & für zu Hause
             </Link>
             <span className="text-[#C19A35]">/</span>
             <span className="font-medium text-[#2F5D39]">
-              Seasonal Reset
+              Saisonaler Neustart
             </span>
           </div>
 
           <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-[#2F5D39]/15 bg-[#F8F5E8]/80 px-4 py-2.5 text-[10px] font-semibold tracking-[0.18em] text-[#2F5D39] shadow-sm backdrop-blur-sm sm:text-xs">
             <span className="h-2 w-2 rounded-full bg-[#C19A35]" />
-            LIVE IN HARMONY WITH THE SEASONS
+            IM EINKLANG MIT DEN JAHRESZEITEN LEBEN
           </div>
 
           <h1 className="max-w-2xl font-serif text-5xl leading-[1.08] tracking-tight text-[#21452B] sm:text-6xl lg:text-7xl">
-            Seasonal Reset
+            Saisonaler Neustart
             <span className="mt-3 block font-normal italic text-[#A47D32]">
-              Find your natural rhythm.
+              Finden Sie Ihren natürlichen Rhythmus.
             </span>
           </h1>
 
           <div className="mt-7 h-px w-20 bg-[#DFC24D]" />
 
           <p className="mt-7 max-w-xl text-base leading-8 text-[#52665C] sm:text-lg">
-            Seven days to rebalance and renew your energy with the season —
-            with a consultation at the start and at the end, and Lakshani
-            by your side all week.
+            Sieben Tage, um Ihr Gleichgewicht wiederzufinden und neue
+            Energie im Einklang mit der Jahreszeit zu schöpfen – mit einer
+            persönlichen Beratung zu Beginn und zum Abschluss sowie
+            persönlicher Begleitung durch Lakshani während der gesamten Woche.
           </p>
 
           {/* Programme highlights */}
@@ -115,7 +116,7 @@ export default function SeasonalResetHero() {
               href="#booking"
               className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#2F5D39] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-[#21452B]/10 transition duration-300 hover:-translate-y-1 hover:bg-[#21452B]"
             >
-              Begin your seasonal reset
+              Ihren saisonalen Neustart beginnen
               <span
                 className="transition-transform group-hover:translate-x-1"
                 aria-hidden="true"
@@ -126,7 +127,7 @@ export default function SeasonalResetHero() {
 
             <span className="flex items-center gap-2 text-sm text-[#6B705C]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#C19A35]" />
-              Personal guidance, all week
+              Persönliche Begleitung die ganze Woche
             </span>
           </div>
 
@@ -137,10 +138,10 @@ export default function SeasonalResetHero() {
             </div>
             <div>
               <p className="font-serif text-base text-[#21452B]">
-                Live with the rhythm of nature.
+                Leben Sie im Rhythmus der Natur.
               </p>
               <p className="mt-1 text-xs text-[#6B705C]">
-                Small seasonal changes, supported by Ayurveda.
+                Kleine saisonale Veränderungen, begleitet durch Ayurveda.
               </p>
             </div>
           </div>
@@ -158,11 +159,11 @@ export default function SeasonalResetHero() {
             <div className="mb-6 flex items-center justify-between gap-3">
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8A8065]">
-                  Your programme
+                  Ihr Programm
                 </p>
 
                 <h2 className="mt-1 font-serif text-2xl text-[#21452B]">
-                  The Seasonal Reset
+                  Der saisonale Neustart
                 </h2>
               </div>
 
@@ -185,11 +186,11 @@ export default function SeasonalResetHero() {
                 </div>
 
                 <p className="mt-5 font-serif text-xl text-white">
-                  A welcome from Lakshani
+                  Eine Begrüßung von Lakshani
                 </p>
 
                 <p className="mt-1 text-xs tracking-wide text-white/85">
-                  Meet your guide · 2 min
+                  Lernen Sie Ihre Begleiterin kennen · 2 Min.
                 </p>
               </div>
             </div>
@@ -198,7 +199,7 @@ export default function SeasonalResetHero() {
             <div className="mt-7 flex items-end justify-between gap-4">
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#8A8065]">
-                  Programme price
+                  Programmpreis
                 </p>
 
                 <p className="mt-1 font-serif text-5xl tracking-tight text-[#21452B]">
@@ -207,7 +208,7 @@ export default function SeasonalResetHero() {
               </div>
 
               <span className="mb-1 rounded-full border border-[#D8D0A9] bg-[#EFE9C5]/70 px-3 py-2 text-xs font-medium text-[#52665C]">
-                7-day programme
+                7-Tage-Programm
               </span>
             </div>
 
@@ -233,7 +234,7 @@ export default function SeasonalResetHero() {
               href="#booking"
               className="group mt-7 flex w-full items-center justify-center gap-3 rounded-full bg-[#2F5D39] px-6 py-4 text-sm font-semibold text-white shadow-md shadow-[#21452B]/10 transition duration-300 hover:-translate-y-0.5 hover:bg-[#21452B]"
             >
-              Book your Seasonal Reset
+              Saisonalen Neustart buchen
               <span
                 className="transition-transform group-hover:translate-x-1"
                 aria-hidden="true"
@@ -243,12 +244,12 @@ export default function SeasonalResetHero() {
             </a>
 
             <p className="mt-5 text-center text-xs leading-6 text-[#6B705C]">
-              Members save 5%, Premium members 10%.{" "}
+              Mitglieder sparen 5 %, Premium-Mitglieder 10 %.{" "}
               <Link
                 href="/#membership"
                 className="font-semibold text-[#21452B] underline decoration-[#DFC24D] underline-offset-4 transition-colors hover:text-[#C14C38]"
               >
-                Explore membership
+                Mitgliedschaft entdecken
               </Link>
             </p>
           </aside>
@@ -256,10 +257,10 @@ export default function SeasonalResetHero() {
           {/* Floating detail */}
           <div className="absolute -bottom-6 -right-2 hidden rounded-2xl border border-[#DFC24D]/50 bg-[#F8F5E8] px-5 py-3 shadow-xl sm:block">
             <p className="font-serif text-lg text-[#21452B]">
-              A new season. A fresh balance.
+              Eine neue Jahreszeit. Neue Balance.
             </p>
             <p className="mt-0.5 text-[10px] uppercase tracking-[0.15em] text-[#8A8065]">
-              Your journey starts here
+              Ihre Reise beginnt hier
             </p>
           </div>
         </div>

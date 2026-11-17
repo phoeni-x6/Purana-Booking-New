@@ -1,6 +1,7 @@
 
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import SeasonalResetHero from "@/components/online/seasonal-reset/SeasonalResetHero";
@@ -8,41 +9,41 @@ import SeasonalResetDetails from "@/components/online/seasonal-reset/SeasonalRes
 
 const seasons = {
   Spring: {
-    label: "SPRING EDITION · FROM MARCH",
-    title: "Lightness and fresh beginnings",
+    label: "FRÜHLINGS-EDITION · AB MÄRZ",
+    title: "Leichtigkeit und neue Anfänge",
     description: [
-      "Fresh, lighter meals and gentle spices.",
-      "Renewed energy and room for new habits.",
+      "Frische, leichtere Mahlzeiten und milde Gewürze.",
+      "Neue Energie und Raum für neue Gewohnheiten.",
     ],
     symbol: "✿",
     accent: "#C14C38",
   },
   Summer: {
-    label: "SUMMER EDITION · FROM JUNE",
-    title: "Coolness and calm balance",
+    label: "SOMMER-EDITION · AB JUNI",
+    title: "Kühle und harmonische Balance",
     description: [
-      "Cooling foods and refreshing daily routines.",
-      "More ease, rest and mindful movement.",
+      "Kühlende Lebensmittel und erfrischende Alltagsroutinen.",
+      "Mehr Leichtigkeit, Erholung und achtsame Bewegung.",
     ],
     symbol: "☼",
     accent: "#DFC24D",
   },
   Autumn: {
-    label: "AUTUMN EDITION · FROM SEPTEMBER",
-    title: "Grounding and nourishment",
+    label: "HERBST-EDITION · AB SEPTEMBER",
+    title: "Erdung und stärkende Ernährung",
     description: [
-      "Warm meals and grounding seasonal spices.",
-      "Steady routines and calming evening rituals.",
+      "Warme Mahlzeiten und erdende saisonale Gewürze.",
+      "Beständige Routinen und beruhigende Abendrituale.",
     ],
     symbol: "❋",
     accent: "#C14C38",
   },
   Winter: {
-    label: "WINTER EDITION · FROM DECEMBER",
-    title: "Warmth and steady energy",
+    label: "WINTER-EDITION · AB DEZEMBER",
+    title: "Wärme und beständige Energie",
     description: [
-      "Nourishing stews and warming spices.",
-      "Longer rest and quiet reflection.",
+      "Nahrhafte Eintöpfe und wärmende Gewürze.",
+      "Mehr Zeit für Erholung und stille Reflexion.",
     ],
     symbol: "✳",
     accent: "#DFC24D",
@@ -53,91 +54,91 @@ type Season = keyof typeof seasons;
 
 const schedule = [
   {
-    time: "Before",
-    title: "Choose your season",
+    time: "Vor Beginn",
+    title: "Wählen Sie Ihre Jahreszeit",
     description:
-      "Season questionnaire and dosha quiz, then your shopping list for your type and the season.",
+      "Saisonaler Fragebogen und Dosha-Test. Anschließend erhalten Sie Ihre Einkaufsliste, abgestimmt auf Ihren Typ und die jeweilige Jahreszeit.",
   },
   {
-    time: "Day 1",
-    title: "Opening consultation",
+    time: "Tag 1",
+    title: "Auftaktberatung",
     description:
-      "45 minutes by video with Lakshani, and the season’s welcome video.",
+      "45 Minuten per Video mit Lakshani sowie das Begrüßungsvideo zur jeweiligen Jahreszeit.",
   },
   {
-    time: "Days 1–2",
-    title: "Preparation",
-    description: "Lighter food and setting up your daily routine.",
+    time: "Tage 1–2",
+    title: "Vorbereitung",
+    description: "Leichtere Ernährung und Vorbereitung Ihrer täglichen Routine.",
   },
   {
-    time: "Days 3–5",
-    title: "Core reset",
+    time: "Tage 3–5",
+    title: "Die eigentliche Reset-Phase",
     description:
-      "The season’s food plan, a daily video and an evening ritual.",
+      "Der saisonale Ernährungsplan, ein tägliches Video und ein Abendritual.",
   },
   {
-    time: "Days 6–7",
-    title: "Rebuild",
-    description: "Back to everyday food with your new habits.",
+    time: "Tage 6–7",
+    title: "Zurück in den Alltag",
+    description: "Kehren Sie mit Ihren neuen Gewohnheiten zu Ihrer gewohnten Ernährung zurück.",
   },
   {
-    time: "All week",
-    title: "Chat with Lakshani",
+    time: "Die ganze Woche",
+    title: "Chat mit Lakshani",
     description:
-      "Ask questions in your guest portal whenever they come up.",
+      "Stellen Sie Fragen jederzeit über Ihr persönliches Gästeportal.",
   },
   {
-    time: "Day 7",
-    title: "Closing consultation",
+    time: "Tag 7",
+    title: "Abschlussberatung",
     description:
-      "45 minutes to review your week, plus your personal plan for the next 4 weeks.",
+      "45 Minuten zur gemeinsamen Reflexion Ihrer Woche sowie Ihr persönlicher Plan für die nächsten vier Wochen.",
   },
 ];
 
 const inclusions = [
-  ["2 consultations", "45 minutes each with Lakshani"],
-  ["7 daily videos", "For your season"],
-  ["Food plan for your type", "Vata, Pitta or Kapha, for the season"],
-  ["Shopping list", "For your type and season"],
-  ["15 seasonal recipes", "Simple and warming or cooling"],
-  ["Rituals", "Morning and evening, for the season"],
-  ["Chat with Lakshani", "All week, in your portal"],
-  ["Next-4-weeks plan", "To keep your balance"],
+  ["2 Beratungen", "Jeweils 45 Minuten mit Lakshani"],
+  ["7 tägliche Videos", "Abgestimmt auf Ihre Jahreszeit"],
+  ["Ernährungsplan für Ihren Typ", "Vata, Pitta oder Kapha, passend zur Jahreszeit"],
+  ["Einkaufsliste", "Abgestimmt auf Ihren Typ und die Jahreszeit"],
+  ["15 saisonale Rezepte", "Einfache, wärmende oder kühlende Gerichte"],
+  ["Rituale", "Morgen- und Abendrituale passend zur Jahreszeit"],
+  ["Chat mit Lakshani", "Die ganze Woche über in Ihrem Gästeportal"],
+  ["Plan für die nächsten 4 Wochen", "Damit Sie Ihre Balance bewahren"],
 ];
 
 const lessons = [
-  ["Welcome to your season", "5 min"],
-  ["Preparing for the week", "6 min"],
-  ["Day 1–2: preparation", "9 min each"],
-  ["Day 3–5: core reset", "10 min each"],
-  ["Day 6–7: rebuild", "8 min each"],
-  ["Seasonal ritual", "10 min"],
-  ["Your tip for your dosha", "3 min"],
+  ["Willkommen in Ihrer Jahreszeit", "5 Min."],
+  ["Vorbereitung auf die Woche", "6 Min."],
+  ["Tag 1–2: Vorbereitung", "Je 9 Min."],
+  ["Tag 3–5: Die eigentliche Reset-Phase", "Je 10 Min."],
+  ["Tag 6–7: Zurück in den Alltag", "Je 8 Min."],
+  ["Saisonales Ritual", "10 Min."],
+  ["Ihr Tipp für Ihr Dosha", "3 Min."],
 ];
 
 const faqs = [
   {
-    question: "Which season can I book?",
+    question: "Welche Jahreszeit kann ich buchen?",
     answer:
-      "The current season’s edition opens a few weeks before the season starts. You can book each season separately.",
+      "Die Edition der jeweiligen Jahreszeit wird einige Wochen vor deren Beginn freigeschaltet. Sie können jede Jahreszeit einzeln buchen.",
   },
   {
-    question: "How much time do I need each day?",
-    answer: "About 45–60 minutes plus cooking.",
+    question: "Wie viel Zeit benötige ich täglich?",
+    answer: "Etwa 45–60 Minuten zuzüglich der Zeit zum Kochen.",
   },
   {
-    question: "Is chat by WhatsApp?",
+    question: "Findet der Chat über WhatsApp statt?",
     answer:
-      "No, chat runs in your guest portal so your details stay private.",
+      "Nein. Der Chat findet in Ihrem persönlichen Gästeportal statt, damit Ihre Angaben geschützt bleiben.",
   },
   {
-    question: "Can I add more consultations?",
+    question: "Kann ich zusätzliche Beratungen buchen?",
     answer:
-      "Yes — the Deep Reset 7 days is this programme with 4 consultations, for €349.",
+      "Ja – das Programm Deep Reset 7 Tage umfasst dieses Programm mit insgesamt 4 Beratungen und kostet €349.",
   },
   {
-    question: "Do members get a discount?",
-    answer: "Yes: 5% with Membership, 10% with Premium.",
+    question: "Erhalten Mitglieder einen Rabatt?",
+    answer: "Ja: 5 % mit der Mitgliedschaft und 10 % mit der Premium-Mitgliedschaft.",
   },
 ];
 
@@ -180,15 +181,16 @@ export default function SeasonalResetPage() {
 
         <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
           <div className="mx-auto max-w-3xl text-center">
-            <SectionEyebrow>Four seasonal editions</SectionEyebrow>
+            <SectionEyebrow>Vier saisonale Editionen</SectionEyebrow>
 
             <h2 className="mt-5 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-              Choose your season
+              Wählen Sie Ihre Jahreszeit
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-[#6B705C] sm:text-base">
-              Every season brings a different rhythm. Explore the edition
-              that speaks to your needs and discover its focus.
+              Jede Jahreszeit bringt ihren eigenen Rhythmus mit sich. Entdecken
+              Sie die Edition, die zu Ihren Bedürfnissen passt, und erfahren
+              Sie mehr über ihre Schwerpunkte.
             </p>
           </div>
 
@@ -209,7 +211,12 @@ export default function SeasonalResetPage() {
                       : "border-[#D8D0A9] bg-[#F8F5E8] text-[#52665C] hover:border-[#2F5D39] hover:text-[#21452B]"
                   }`}
                 >
-                  {season}
+                  {{
+                    Spring: "Frühling",
+                    Summer: "Sommer",
+                    Autumn: "Herbst",
+                    Winter: "Winter",
+                  }[season]}
                 </button>
               );
             })}
@@ -237,8 +244,9 @@ export default function SeasonalResetPage() {
 
               <div>
                 <p className="mb-5 text-sm leading-7 text-white/70">
-                  This edition focuses on seasonal food, supportive
-                  routines and simple rituals you can bring into daily life.
+                  Diese Edition konzentriert sich auf saisonale Ernährung,
+                  unterstützende Routinen und einfache Rituale, die Sie in
+                  Ihren Alltag integrieren können.
                 </p>
 
                 <div className="space-y-3">
@@ -258,7 +266,7 @@ export default function SeasonalResetPage() {
                   href="#booking"
                   className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#DFC24D] px-6 py-3.5 text-sm font-semibold text-[#21452B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#EFE9C5]"
                 >
-                  Explore the programme
+                  Programm entdecken
                   <span aria-hidden="true">→</span>
                 </a>
               </div>
@@ -266,7 +274,7 @@ export default function SeasonalResetPage() {
           </div>
 
           <p className="mt-5 text-center text-xs leading-6 text-[#6B705C]">
-            Seasonal availability and start dates should be confirmed when booking.
+            Die saisonale Verfügbarkeit und die Starttermine werden bei der Buchung bestätigt.
           </p>
         </div>
       </section>
@@ -275,16 +283,16 @@ export default function SeasonalResetPage() {
       <section className="relative bg-[#F8F5E8]">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
           <div className="max-w-2xl">
-            <SectionEyebrow>Your journey</SectionEyebrow>
+            <SectionEyebrow>Ihre Reise</SectionEyebrow>
 
             <h2 className="mt-5 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-              How your reset unfolds
+              So läuft Ihr Neustart ab
             </h2>
 
             <p className="mt-5 text-sm leading-7 text-[#6B705C] sm:text-base">
-              From your first questionnaire to your closing consultation,
-              each step is designed to help you follow the programme with
-              confidence.
+              Vom ersten Fragebogen bis zur Abschlussberatung ist jeder
+              Schritt darauf ausgerichtet, Sie dabei zu unterstützen,
+              das Programm sicher und in Ihrem eigenen Tempo umzusetzen.
             </p>
           </div>
 
@@ -322,15 +330,15 @@ export default function SeasonalResetPage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2 lg:gap-16">
           {/* Inclusions */}
           <div>
-            <SectionEyebrow>Thoughtfully prepared</SectionEyebrow>
+            <SectionEyebrow>Mit Sorgfalt zusammengestellt</SectionEyebrow>
 
             <h2 className="mt-5 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-              Everything included
+              Alles inklusive
             </h2>
 
             <p className="mt-5 text-sm leading-7 text-[#6B705C]">
-              Personal guidance and practical resources to support your
-              seasonal reset from beginning to end.
+              Persönliche Begleitung und praktische Materialien unterstützen
+              Sie während Ihres saisonalen Neustarts – vom Anfang bis zum Ende.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -356,15 +364,15 @@ export default function SeasonalResetPage() {
 
           {/* Lesson library */}
           <div>
-            <SectionEyebrow>Inside the programme</SectionEyebrow>
+            <SectionEyebrow>Einblick in Ihr Programm</SectionEyebrow>
 
             <h2 className="mt-5 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-              Your lesson library
+              Ihre Videobibliothek
             </h2>
 
             <p className="mt-5 text-sm leading-7 text-[#6B705C]">
-              Short lessons and seasonal practices to help you build a
-              routine that feels manageable.
+              Kurze Lektionen und saisonale Anwendungen helfen Ihnen dabei,
+              eine Routine aufzubauen, die sich gut in Ihren Alltag integrieren lässt.
             </p>
 
             <div className="mt-8 overflow-hidden rounded-[24px] border border-[#D8D0A9]/70 bg-[#F8F5E8] px-5 sm:px-6">
@@ -398,83 +406,93 @@ export default function SeasonalResetPage() {
               </span>
 
               <p className="text-xs leading-6 text-[#6B705C]">
-                Lessons unlock day by day after booking. Your food plan
-                and tips are tailored to your constitution and season.
+                Nach der Buchung werden die Lektionen täglich nach und nach
+                freigeschaltet. Ihr Ernährungsplan und die Tipps werden auf
+                Ihre Konstitution und die jeweilige Jahreszeit abgestimmt.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Guide profile */}
-      <section className="bg-[#F8F5E8]">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
-          <div className="relative overflow-hidden rounded-[28px] bg-[#21452B] p-7 text-[#F8F5E8] sm:p-10 lg:p-14">
-            <div className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full border border-[#DFC24D]/20" />
-            <div className="pointer-events-none absolute -right-10 -top-14 h-52 w-52 rounded-full border border-[#DFC24D]/20" />
+     
+{/* Guide profile */}
+<section className="bg-[#F8F5E8]">
+  <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
+    <div className="relative overflow-hidden rounded-[28px] bg-[#21452B] p-7 text-[#F8F5E8] sm:p-10 lg:p-14">
+      <div className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full border border-[#DFC24D]/20" />
+      <div className="pointer-events-none absolute -right-10 -top-14 h-52 w-52 rounded-full border border-[#DFC24D]/20" />
 
-            <div className="relative grid items-center gap-8 sm:grid-cols-[180px_1fr] sm:gap-10 lg:grid-cols-[220px_1fr]">
-              <div className="flex h-40 w-40 items-center justify-center rounded-full border border-[#DFC24D]/50 bg-[#2F5D39] sm:h-44 sm:w-44 lg:h-52 lg:w-52">
-                <div className="flex h-[calc(100%-16px)] w-[calc(100%-16px)] items-center justify-center rounded-full border border-white/20 px-5 text-center text-xs leading-5 text-[#EFE9C5]">
-                  Lakshani&apos;s portrait
-                </div>
-              </div>
+      <div className="relative grid items-center gap-8 sm:grid-cols-[180px_1fr] sm:gap-10 lg:grid-cols-[220px_1fr]">
+        {/* Lakshani's portrait */}
+        <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-[#DFC24D]/50 bg-[#2F5D39] sm:h-44 sm:w-44 lg:h-52 lg:w-52">
+          <Image
+            src="https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/founder.webp"
+            alt="Lakshani Perera – Ayurveda-Gesundheitsberaterin und Gründerin von Purana Ayurveda"
+            fill
+            priority
+            sizes="(max-width: 640px) 160px, (max-width: 1024px) 176px, 208px"
+            className="object-cover object-center"
+          />
+        </div>
 
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#DFC24D]">
-                  Your guide
-                </p>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#DFC24D]">
+            Ihre Begleiterin
+          </p>
 
-                <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
-                  Meet Lakshani Perera
-                </h2>
+          <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
+            Lernen Sie Lakshani Perera kennen
+          </h2>
 
-                <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base">
-                  Ayurveda-Gesundheitsberaterin and founder of Purana
-                  Ayurveda. Lakshani grew up with Ayurveda in her Sri
-                  Lankan family and guides every reset personally, in
-                  German or English.
-                </p>
+          <p className="mt-5 max-w-3xl text-sm leading-7 text-white/80 sm:text-base">
+            Lakshani ist Ayurveda-Gesundheitsberaterin und Gründerin
+            von Purana Ayurveda. Sie ist mit Ayurveda in ihrer
+            sri-lankischen Familie aufgewachsen und begleitet jeden
+            Neustart persönlich – auf Deutsch oder Englisch.
+          </p>
 
-                <div className="mt-6 flex flex-wrap gap-2">
-                  <span className="rounded-full border border-white/20 px-4 py-2 text-xs text-white/85">
-                    Personal guidance
-                  </span>
-                  <span className="rounded-full border border-white/20 px-4 py-2 text-xs text-white/85">
-                    German &amp; English
-                  </span>
-                  <span className="rounded-full border border-white/20 px-4 py-2 text-xs text-white/85">
-                    Sri Lankan Ayurveda
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div className="mt-6 flex flex-wrap gap-2">
+            <span className="rounded-full border border-white/20 px-4 py-2 text-xs text-white/85">
+              Persönliche Begleitung
+            </span>
+            <span className="rounded-full border border-white/20 px-4 py-2 text-xs text-white/85">
+              Deutsch und Englisch
+            </span>
+            <span className="rounded-full border border-white/20 px-4 py-2 text-xs text-white/85">
+              Sri-lankischer Ayurveda
+            </span>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Testimonials */}
       <section className="bg-[#F8F5E8]">
         <div className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-24">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <SectionEyebrow>Shared experiences</SectionEyebrow>
+              <SectionEyebrow>Geteilte Erfahrungen</SectionEyebrow>
 
               <h2 className="mt-5 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-                Voices from the journey
+                Stimmen aus dem Programm
               </h2>
             </div>
 
             <p className="max-w-md text-sm leading-7 text-[#6B705C]">
-              Real participant experiences can help future guests
-              understand what to expect from their seasonal reset.
+              Authentische Erfahrungsberichte von Teilnehmenden helfen
+              zukünftigen Gästen dabei, einen Eindruck davon zu bekommen,
+              was sie bei ihrem saisonalen Neustart erwartet.
             </p>
           </div>
 
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             {[
-              "[Add a genuine testimonial from a participant after launch.]",
-              "[Add a second genuine participant testimonial after launch.]",
+              "[Fügen Sie nach dem Start eine authentische Rückmeldung einer teilnehmenden Person hinzu.]",
+              "[Fügen Sie nach dem Start eine zweite authentische Rückmeldung einer teilnehmenden Person hinzu.]",
             ].map((testimonial, index) => (
               <blockquote
                 key={index}
@@ -494,7 +512,7 @@ export default function SeasonalResetPage() {
                 <div className="mt-6 h-px bg-[#D8D0A9]" />
 
                 <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[#21452B]">
-                  Participant feedback
+                  Rückmeldung einer teilnehmenden Person
                 </p>
               </blockquote>
             ))}
@@ -506,14 +524,15 @@ export default function SeasonalResetPage() {
       <section className="bg-[#EFE9D9]">
         <div className="mx-auto max-w-4xl px-5 py-16 sm:px-8 sm:py-24">
           <div className="text-center">
-            <SectionEyebrow>Good to know</SectionEyebrow>
+            <SectionEyebrow>Gut zu wissen</SectionEyebrow>
 
             <h2 className="mt-5 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-              Frequently asked questions
+              Häufig gestellte Fragen
             </h2>
 
             <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#6B705C]">
-              Helpful answers to make choosing your seasonal programme easier.
+              Hilfreiche Antworten, die Ihnen die Wahl Ihres saisonalen
+              Programms erleichtern.
             </p>
           </div>
 
@@ -543,10 +562,10 @@ export default function SeasonalResetPage() {
           </div>
 
           <p className="mt-8 text-xs leading-6 text-[#6B705C]">
-            Our programmes support your wellbeing with Ayurvedic food,
-            routines and self-care. They are not a medical treatment and
-            do not replace advice or treatment from your healthcare
-            professional.
+            Unsere Programme unterstützen Ihr Wohlbefinden durch ayurvedische
+            Ernährung, Routinen und Selbstfürsorge. Sie stellen keine
+            medizinische Behandlung dar und ersetzen weder eine ärztliche
+            Beratung noch eine medizinische Behandlung.
           </p>
         </div>
       </section>
@@ -563,25 +582,26 @@ export default function SeasonalResetPage() {
           <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#DFC24D]">
-                Your next step
+                Ihr nächster Schritt
               </p>
 
               <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
-                Find your seasonal balance.
+                Finden Sie Ihre saisonale Balance.
               </h2>
 
               <p className="mt-4 max-w-xl text-sm leading-7 text-white/80 sm:text-base">
-                Seven days of seasonal guidance, personal consultations
-                and practical routines to carry into everyday life.
+                Sieben Tage mit saisonaler Begleitung, persönlichen
+                Beratungen und praktischen Routinen, die Sie in Ihren
+                Alltag integrieren können.
               </p>
 
               <p className="mt-5 font-serif text-2xl text-[#DFC24D]">
-                Seasonal Reset · €229
+                Saisonaler Neustart · €229
               </p>
 
               <p className="mt-2 text-xs leading-6 text-white/65">
-                Membership discount: 5% off with Membership and 10% off
-                with Premium.
+                Mitgliederrabatt: 5 % mit der Mitgliedschaft und 10 % mit
+                der Premium-Mitgliedschaft.
               </p>
             </div>
 
@@ -590,7 +610,7 @@ export default function SeasonalResetPage() {
                 href="#booking-form"
                 className="inline-flex items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-8 py-4 text-sm font-semibold text-[#21452B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#EFE9C5]"
               >
-                Book your reset
+                Neustart buchen
                 <span aria-hidden="true">→</span>
               </a>
 
@@ -598,7 +618,7 @@ export default function SeasonalResetPage() {
                 href="/#membership"
                 className="inline-flex items-center justify-center rounded-full border border-white/25 px-8 py-4 text-sm font-medium text-white transition-colors hover:border-[#DFC24D] hover:text-[#DFC24D]"
               >
-                Explore membership
+                Mitgliedschaft entdecken
               </Link>
             </div>
           </div>

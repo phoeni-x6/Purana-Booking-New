@@ -27,7 +27,7 @@ export default function AuthLayout({
           <div className="absolute inset-0">
             <img
               src={image}
-              alt="Ayurvedic wellness experience"
+              alt="Ayurvedisches Wohlfühlerlebnis"
               className="h-full w-full object-cover opacity-30"
             />
           </div>
@@ -45,7 +45,7 @@ export default function AuthLayout({
                 PURANA AYURVEDA
               </span>
               <span className="mt-1 block text-[10px] uppercase tracking-[0.3em] text-[var(--cream)]/65">
-                Wellness · Ayurveda · Balance
+                Wohlbefinden · Ayurveda · Balance
               </span>
             </Link>
 
@@ -55,21 +55,21 @@ export default function AuthLayout({
               </div>
 
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">
-                A more mindful way of living
+                Ein bewussterer Lebensstil
               </p>
 
               <h1 className="font-[var(--font-heading)] text-5xl font-normal leading-[1.15] text-[var(--cream)] xl:text-6xl">
-                Return to your natural balance.
+                Finden Sie zurück zu Ihrem natürlichen Gleichgewicht.
               </h1>
 
               <p className="mt-7 max-w-md text-base leading-8 text-[var(--cream)]/75 xl:text-lg">
-                Your personal space for Ayurvedic wellness. Stay connected
-                with your treatments, consultations and experiences with
-                Purana Ayurveda.
+                Ihr persönlicher Bereich für ayurvedisches Wohlbefinden. Bleiben
+                Sie mit Ihren Behandlungen, Beratungen und Erlebnissen bei
+                Purana Ayurveda in Verbindung.
               </p>
 
               <div className="mt-9 flex flex-wrap gap-3">
-                {["Traditional wisdom", "Natural wellbeing", "Personal care"].map(
+                {["Traditionelles Wissen", "Natürliches Wohlbefinden", "Persönliche Betreuung"].map(
                   (item) => (
                     <span
                       key={item}
@@ -83,7 +83,7 @@ export default function AuthLayout({
             </div>
 
             <p className="text-xs tracking-wide text-[var(--cream)]/50">
-              A journey towards balance, naturally.
+              Ein natürlicher Weg zu mehr Balance.
             </p>
           </div>
         </section>
@@ -97,7 +97,7 @@ export default function AuthLayout({
                 PURANA AYURVEDA
               </span>
               <span className="mt-1 block text-[10px] uppercase tracking-[0.25em] text-[var(--brown)]/70">
-                Wellness · Ayurveda · Balance
+                Wohlbefinden · Ayurveda · Balance
               </span>
             </Link>
 
@@ -129,7 +129,7 @@ export default function AuthLayout({
               className="mt-7 inline-flex items-center gap-2 text-xs font-medium text-[var(--text-muted)] transition hover:text-[var(--forest)]"
             >
               <span aria-hidden="true">←</span>
-              Back to Purana Ayurveda
+              Zurück zu Purana Ayurveda
             </Link>
           </div>
         </section>

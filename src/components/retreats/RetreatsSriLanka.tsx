@@ -1,27 +1,27 @@
 
 const panchakarmaBenefits = [
-  "Consultation with an Ayurvedic doctor on arrival",
-  "Daily treatments according to your personal plan",
-  "Ayurvedic meals, yoga and meditation",
-  "Accommodation at the centre",
+  "Beratung durch einen Ayurveda-Arzt bei Ihrer Ankunft",
+  "Tägliche Behandlungen nach Ihrem persönlichen Therapieplan",
+  "Ayurvedische Mahlzeiten, Yoga und Meditation",
+  "Unterkunft im Ayurveda-Zentrum",
 ];
 
 const sriLankaRetreatBenefits = [
-  "Accompanied by Lakshani and the Purana team",
-  "German- and English-speaking guidance",
-  "Treatments, yoga and meditation every day",
-  "Excursions to [places]",
+  "Begleitung durch Lakshani und das Purana-Team",
+  "Betreuung auf Deutsch und Englisch",
+  "Tägliche Behandlungen, Yoga und Meditation",
+  "Ausflüge zu [Orten]",
 ];
 
 const panchakarmaDurations = [
-  { duration: "[X] days", price: "from €[PRICE]" },
-  { duration: "[X] days", price: "from €[PRICE]" },
-  { duration: "[X] days", price: "from €[PRICE]" },
+  { duration: "[X] Tage", price: "ab €[PRICE]" },
+  { duration: "[X] Tage", price: "ab €[PRICE]" },
+  { duration: "[X] Tage", price: "ab €[PRICE]" },
 ];
 
 const sriLankaRetreatOptions = [
-  { name: "[Retreat name]", dates: "[Dates]", price: "€[PRICE]" },
-  { name: "[Retreat name]", dates: "[Dates]", price: "€[PRICE]" },
+  { name: "[Retreat-Name]", dates: "[Termine]", price: "€[PRICE]" },
+  { name: "[Retreat-Name]", dates: "[Termine]", price: "€[PRICE]" },
 ];
 
 function BenefitList({ items }: { items: string[] }) {
@@ -45,7 +45,7 @@ export default function RetreatsSriLanka() {
       id="sri-lanka"
       className="relative isolate overflow-hidden bg-[#f5f0e7] text-[#263A2B]"
     >
-      {/* Decorative background */}
+      {/* Dekorativer Hintergrund */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-32 top-20 h-[480px] w-[480px] rounded-full border border-[#2F5D39]/10"
@@ -60,7 +60,7 @@ export default function RetreatsSriLanka() {
       />
 
       <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
-        {/* Section introduction */}
+        {/* Abschnittseinführung */}
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-16">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-[#2F5D39]/20 bg-[#F8F5E8]/75 px-4 py-2">
@@ -71,30 +71,32 @@ export default function RetreatsSriLanka() {
             </div>
 
             <p className="mt-8 text-xs font-semibold uppercase tracking-[0.24em] text-[#9A8050]">
-              Traditional wisdom · Personal care · Meaningful experiences
+              Traditionelles Wissen · Persönliche Betreuung · Besondere Erlebnisse
             </p>
 
             <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-[1.12] tracking-tight text-[#21452B] sm:text-5xl lg:text-6xl">
-              Discover Ayurveda
+              Entdecken Sie Ayurveda
               <span className="mt-1 block italic text-[#9A8050]">
                 in Sri Lanka.
               </span>
             </h2>
 
             <p className="mt-7 max-w-2xl text-sm leading-8 text-[#533E23]/85 sm:text-base">
-              Experience Ayurveda and the Hela Wedakama tradition where they
-              have been practised for centuries. Choose traditional Panchakarma
-              at our Ayurveda centre, or join a retreat organised and accompanied
-              by our team.
+              Erleben Sie Ayurveda und die Tradition des Hela Wedakama an
+              ihrem Ursprungsort, wo sie seit Jahrhunderten praktiziert
+              werden. Entscheiden Sie sich für eine traditionelle
+              Panchakarma-Kur in unserem Ayurveda-Zentrum oder nehmen Sie
+              an einem von unserem Team organisierten und begleiteten
+              Retreat teil.
             </p>
 
-            {/* Destination buttons */}
+            {/* Navigationsbuttons */}
             <div className="mt-9 flex flex-wrap gap-3">
               <a
                 href="#panchakarma"
                 className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#21452B] px-6 py-4 text-sm font-semibold text-[#F8F5E8] shadow-lg shadow-[#21452B]/15 transition-all hover:-translate-y-0.5 hover:bg-[#2F5D39]"
               >
-                Explore Panchakarma
+                Panchakarma entdecken
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
@@ -104,13 +106,13 @@ export default function RetreatsSriLanka() {
                 href="#sri-lanka-group-retreats"
                 className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full border border-[#21452B]/30 bg-[#F8F5E8]/65 px-6 py-4 text-sm font-semibold text-[#21452B] backdrop-blur-sm transition hover:border-[#21452B] hover:bg-[#EFE9C5]"
               >
-                Explore our retreats
+                Unsere Retreats entdecken
                 <span aria-hidden="true">↘</span>
               </a>
             </div>
           </div>
 
-          {/* Intro feature card */}
+          {/* Einführungskarte */}
           <div className="relative overflow-hidden rounded-[28px] border border-[#D8D0A9] bg-[#EFE9C5]/55 p-6 sm:p-8">
             <div
               aria-hidden="true"
@@ -129,11 +131,11 @@ export default function RetreatsSriLanka() {
 
                 <div>
                   <p className="font-serif text-xl text-[#21452B] sm:text-2xl">
-                    A journey back to balance
+                    Eine Reise zurück ins Gleichgewicht
                   </p>
                   <p className="mt-2 text-sm leading-6 text-[#6B705C]">
-                    Traditional Ayurvedic care, mindful movement and
-                    meaningful experiences in the heart of Sri Lanka.
+                    Traditionelle ayurvedische Anwendungen, achtsame
+                    Bewegung und besondere Erlebnisse im Herzen Sri Lankas.
                   </p>
                 </div>
               </div>
@@ -144,13 +146,13 @@ export default function RetreatsSriLanka() {
                 <div>
                   <p className="font-serif text-3xl text-[#21452B]">01</p>
                   <p className="mt-1 text-xs text-[#6B705C]">
-                    Traditional Panchakarma
+                    Traditionelles Panchakarma
                   </p>
                 </div>
                 <div>
                   <p className="font-serif text-3xl text-[#21452B]">02</p>
                   <p className="mt-1 text-xs text-[#6B705C]">
-                    Organised group retreats
+                    Organisierte Gruppen-Retreats
                   </p>
                 </div>
               </div>
@@ -158,29 +160,29 @@ export default function RetreatsSriLanka() {
           </div>
         </div>
 
-        {/* Retreat options */}
+        {/* Retreat-Angebote */}
         <div className="mt-20 sm:mt-24">
           <div className="mb-8">
             <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#C14C38]">
-              Choose your experience
+              Wählen Sie Ihr Erlebnis
             </p>
             <h3 className="mt-3 font-serif text-3xl text-[#21452B] sm:text-4xl">
-              Two ways to experience Sri Lanka
+              Zwei Wege, Sri Lanka zu erleben
             </h3>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-[#6B705C]">
-              Whether you are looking for a traditional Ayurveda programme
-              or a fully organised retreat, discover an experience that
-              suits your journey.
+              Ob Sie ein traditionelles Ayurveda-Programm oder ein
+              vollständig organisiertes Retreat suchen – entdecken Sie
+              ein Erlebnis, das zu Ihren persönlichen Bedürfnissen passt.
             </p>
           </div>
 
           <div className="grid gap-7 lg:grid-cols-2">
-            {/* Panchakarma card */}
+            {/* Panchakarma-Karte */}
             <article
               id="panchakarma"
               className="group overflow-hidden rounded-[28px] border border-[#D8D0A9] bg-[#F8F5E8] shadow-[0_12px_40px_rgba(38,58,43,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(38,58,43,0.12)]"
             >
-              {/* Image header */}
+              {/* Bildbereich */}
               <div className="relative isolate flex min-h-[280px] flex-col justify-between overflow-hidden bg-[#21452B] p-6 sm:p-8">
                 <div
                   aria-hidden="true"
@@ -197,7 +199,7 @@ export default function RetreatsSriLanka() {
 
                 <div className="flex items-start justify-between gap-4">
                   <span className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#F8F5E8] backdrop-blur-md">
-                    At our Ayurveda centre
+                    In unserem Ayurveda-Zentrum
                   </span>
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#DFC24D]/50 bg-[#21452B]/20 text-xl text-[#DFC24D] backdrop-blur-sm">
                     ✳
@@ -206,38 +208,38 @@ export default function RetreatsSriLanka() {
 
                 <div>
                   <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#DFC24D]">
-                    Traditional Ayurvedic programme
+                    Traditionelles Ayurveda-Programm
                   </p>
                   <h3 className="font-serif text-3xl text-[#F8F5E8] sm:text-4xl">
                     Panchakarma
                   </h3>
                   <p className="mt-3 max-w-md text-sm leading-6 text-[#F8F5E8]/80">
-                    A personalised Ayurvedic experience guided by experienced
-                    practitioners.
+                    Eine individuell abgestimmte Ayurveda-Erfahrung,
+                    begleitet von erfahrenen Fachkräften.
                   </p>
                 </div>
               </div>
 
-              {/* Card content */}
+              {/* Karteninhalt */}
               <div className="p-6 sm:p-8">
                 <p className="text-sm leading-7 text-[#6B705C]">
-                  The traditional Ayurvedic Panchakarma programme, carried
-                  out by experienced Ayurvedic doctors (BAMS) and therapists
-                  at our centre in [location], Sri Lanka.
+                  Das traditionelle ayurvedische Panchakarma-Programm wird
+                  von erfahrenen Ayurveda-Ärzten (BAMS) und Therapeuten in
+                  unserem Zentrum in [Ort], Sri Lanka, durchgeführt.
                 </p>
 
                 <div className="my-6 h-px bg-[#D8D0A9]" />
 
                 <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#2F5D39]">
-                  Your programme includes
+                  Das erwartet Sie
                 </p>
 
                 <BenefitList items={panchakarmaBenefits} />
 
-                {/* Duration and pricing */}
+                {/* Dauer und Preise */}
                 <div className="mt-8 rounded-2xl border border-[#D8D0A9] bg-[#EFE9C5]/45 p-5">
                   <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#6B705C]">
-                    Choose your duration
+                    Wählen Sie Ihre Aufenthaltsdauer
                   </p>
 
                   <div className="space-y-3">
@@ -261,7 +263,7 @@ export default function RetreatsSriLanka() {
                   href="#contact"
                   className="group/button mt-6 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#21452B] px-5 py-4 text-center text-sm font-semibold text-[#F8F5E8] transition duration-300 hover:bg-[#2F5D39]"
                 >
-                  Book Panchakarma in Sri Lanka
+                  Panchakarma in Sri Lanka buchen
                   <span className="transition-transform duration-300 group-hover/button:translate-x-1">
                     →
                   </span>
@@ -269,12 +271,12 @@ export default function RetreatsSriLanka() {
               </div>
             </article>
 
-            {/* Organised retreats card */}
+            {/* Karte für organisierte Retreats */}
             <article
               id="sri-lanka-group-retreats"
               className="group overflow-hidden rounded-[28px] border border-[#D8D0A9] bg-[#F8F5E8] shadow-[0_12px_40px_rgba(38,58,43,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(38,58,43,0.12)]"
             >
-              {/* Image header */}
+              {/* Bildbereich */}
               <div className="relative isolate flex min-h-[280px] flex-col justify-between overflow-hidden bg-[#21452B] p-6 sm:p-8">
                 <div
                   aria-hidden="true"
@@ -291,7 +293,7 @@ export default function RetreatsSriLanka() {
 
                 <div className="flex items-start justify-between gap-4">
                   <span className="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#F8F5E8] backdrop-blur-md">
-                    Organised by our team
+                    Von unserem Team organisiert
                   </span>
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#DFC24D]/50 bg-[#21452B]/20 text-xl text-[#DFC24D] backdrop-blur-sm">
                     ✦
@@ -300,38 +302,38 @@ export default function RetreatsSriLanka() {
 
                 <div>
                   <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#DFC24D]">
-                    Small-group journeys
+                    Reisen in kleinen Gruppen
                   </p>
                   <h3 className="font-serif text-3xl text-[#F8F5E8] sm:text-4xl">
                     Retreats in Sri Lanka
                   </h3>
                   <p className="mt-3 max-w-md text-sm leading-6 text-[#F8F5E8]/80">
-                    Discover Ayurveda, culture and nature with the support
-                    of our team.
+                    Entdecken Sie Ayurveda, Kultur und Natur – begleitet
+                    von unserem Team.
                   </p>
                 </div>
               </div>
 
-              {/* Card content */}
+              {/* Karteninhalt */}
               <div className="p-6 sm:p-8">
                 <p className="text-sm leading-7 text-[#6B705C]">
-                  Small-group journeys accompanied by our team — Ayurveda
-                  treatments, yoga, cooking, culture and nature, all organised
-                  for you.
+                  Begleitete Reisen in kleinen Gruppen mit Ayurveda-Behandlungen,
+                  Yoga, Kochkursen sowie kulturellen und naturnahen Erlebnissen –
+                  von unserem Team für Sie organisiert.
                 </p>
 
                 <div className="my-6 h-px bg-[#D8D0A9]" />
 
                 <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#2F5D39]">
-                  Your retreat experience
+                  Ihr Retreat-Erlebnis
                 </p>
 
                 <BenefitList items={sriLankaRetreatBenefits} />
 
-                {/* Retreat dates and pricing */}
+                {/* Retreat-Termine und Preise */}
                 <div className="mt-8 rounded-2xl border border-[#D8D0A9] bg-[#EFE9C5]/45 p-5">
                   <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#6B705C]">
-                    Upcoming retreats
+                    Kommende Retreats
                   </p>
 
                   <div className="space-y-4">
@@ -360,7 +362,7 @@ export default function RetreatsSriLanka() {
                   href="#contact"
                   className="group/button mt-6 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-5 py-4 text-center text-sm font-semibold text-[#21452B] transition duration-300 hover:bg-[#E8D58A]"
                 >
-                  See dates & register
+                  Termine ansehen & anmelden
                   <span className="transition-transform duration-300 group-hover/button:translate-x-1">
                     →
                   </span>
@@ -370,7 +372,7 @@ export default function RetreatsSriLanka() {
           </div>
         </div>
 
-        {/* Membership note */}
+        {/* Hinweis zur Mitgliedschaft */}
         <div className="relative mt-10 overflow-hidden rounded-[24px] border border-[#D8D0A9] bg-[#EFE9C5]/55 p-6 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:px-8">
           <div
             aria-hidden="true"
@@ -384,11 +386,11 @@ export default function RetreatsSriLanka() {
 
             <div>
               <p className="font-serif text-xl text-[#21452B]">
-                A little extra for our members
+                Ein besonderer Vorteil für unsere Mitglieder
               </p>
               <p className="mt-2 max-w-xl text-xs leading-6 text-[#6B705C]">
-                Members save 5% with Membership or 10% with Premium on
-                retreats in Sri Lanka.
+                Mitglieder erhalten 5 % Rabatt mit der Membership und
+                10 % mit der Premium-Mitgliedschaft auf Retreats in Sri Lanka.
               </p>
             </div>
           </div>
@@ -397,13 +399,13 @@ export default function RetreatsSriLanka() {
             href="#membership"
             className="relative mt-5 inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#2F5D39] transition hover:text-[#C14C38] sm:mt-0"
           >
-            Explore membership
+            Mitgliedschaft entdecken
             <span aria-hidden="true">→</span>
           </a>
         </div>
       </div>
 
-      {/* Bottom brand accent */}
+      {/* Dekorativer Markenabschluss */}
       <div className="relative h-1 bg-gradient-to-r from-[#533E23] via-[#DFC24D] to-[#C14C38]" />
     </section>
   );

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function OnlineHero() {
   return (
     <section className="relative isolate overflow-hidden bg-[#f5f0e7] text-[#263A2B]">
-      {/* Background photography */}
+      {/* Hintergrundbild */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-30 bg-cover bg-center"
@@ -14,7 +14,7 @@ export default function OnlineHero() {
         }}
       />
 
-      {/* Warm cream overlay */}
+      {/* Warme, cremefarbene Überlagerung */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,#f5f0e7_0%,rgba(245,240,231,0.98)_22%,rgba(245,240,231,0.94)_40%,rgba(245,240,231,0.76)_58%,rgba(245,240,231,0.25)_82%,rgba(245,240,231,0.08)_100%)]"
@@ -24,7 +24,7 @@ export default function OnlineHero() {
         className="absolute inset-0 -z-20 bg-gradient-to-t from-[#f5f0e7] via-transparent to-[#f5f0e7]/20"
       />
 
-      {/* Decorative details */}
+      {/* Dekorative Details */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-32 top-10 -z-10 h-[480px] w-[480px] rounded-full border border-[#2F5D39]/10"
@@ -38,42 +38,43 @@ export default function OnlineHero() {
         className="pointer-events-none absolute -bottom-40 -left-28 -z-10 h-[400px] w-[400px] rounded-full bg-[#EFE9C5]/70 blur-3xl"
       />
 
-      {/* Hero content */}
+      {/* Hero-Inhalt */}
       <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24 lg:py-28">
         <div className="max-w-4xl">
-          {/* Eyebrow */}
+          {/* Überzeile */}
           <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-[#2F5D39]/15 bg-[#F8F5E8]/70 px-4 py-2 backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-[#C14C38]" />
             <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#2F5D39] sm:text-xs">
-              Online, wherever you are
+              Online – ganz gleich, wo Sie sind
             </p>
           </div>
 
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#9A8050]">
-            Personal guidance · Flexible support · At-home wellness
+            Persönliche Beratung · Flexible Begleitung · Wohlbefinden zu Hause
           </p>
 
-          {/* Heading */}
+          {/* Hauptüberschrift */}
           <h1 className="max-w-4xl font-serif text-4xl leading-[1.12] tracking-tight text-[#21452B] sm:text-5xl lg:text-7xl">
-            Your Ayurveda journey,
+            Ihre Ayurveda-Reise,
             <span className="mt-2 block italic text-[#9A8050]">
-              wherever life takes you.
+              wohin das Leben Sie auch führt.
             </span>
           </h1>
 
           <p className="mt-7 max-w-2xl text-sm leading-8 text-[#533E23]/85 sm:text-base">
-            Start with a 45-minute online consultation, or follow a guided
-            Reset at Home programme with Lakshani — with videos, food plans
-            and personal support to help bring Ayurveda into your everyday
-            routine.
+            Beginnen Sie mit einer 45-minütigen Online-Beratung oder
+            entscheiden Sie sich für ein begleitetes „Neustart zu Hause“-
+            Programm mit Lakshani – mit Videos, Ernährungsplänen und
+            persönlicher Unterstützung, die Ihnen dabei helfen, Ayurveda
+            in Ihren Alltag zu integrieren.
           </p>
 
-          {/* Service highlights */}
+          {/* Vorteile des Angebots */}
           <div className="mt-8 flex flex-wrap gap-3">
             {[
-              "45-minute consultation",
-              "Guided home programmes",
-              "Personal support",
+              "45-minütige Beratung",
+              "Begleitete Programme für zu Hause",
+              "Persönliche Unterstützung",
             ].map((item) => (
               <span
                 key={item}
@@ -85,54 +86,11 @@ export default function OnlineHero() {
             ))}
           </div>
 
-          {/* Membership savings */}
-          <div className="mt-10 max-w-3xl border-t border-[#2F5D39]/15 pt-7">
-            <div className="flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:items-center">
-              {/* Standard membership */}
-              <div className="flex items-center gap-3 rounded-2xl border border-[#D8D0A9] bg-[#F8F5E8]/85 px-4 py-3 shadow-sm backdrop-blur-sm">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EFE9C5] text-lg text-[#2F5D39]">
-                  ✳
-                </span>
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#6B705C]">
-                    Membership
-                  </p>
-                  <p className="mt-1 font-serif text-xl text-[#21452B]">
-                    Save 5%
-                  </p>
-                </div>
-              </div>
-
-              {/* Premium membership */}
-              <div className="flex items-center gap-3 rounded-2xl border border-[#DFC24D]/60 bg-[#EFE9C5]/80 px-4 py-3 shadow-sm backdrop-blur-sm">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#DFC24D] text-lg text-[#21452B]">
-                  ✦
-                </span>
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#6B705C]">
-                    Premium membership
-                  </p>
-                  <p className="mt-1 font-serif text-xl text-[#21452B]">
-                    Save 10%
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <Link
-              href="/#membership"
-              className="group mt-6 inline-flex items-center gap-3 text-sm font-semibold text-[#2F5D39] transition-colors hover:text-[#C14C38]"
-            >
-              Become a member or upgrade
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-            </Link>
-          </div>
+          
         </div>
       </div>
 
-      {/* Bottom accent */}
+      {/* Akzent am unteren Rand */}
       <div className="relative h-1 bg-gradient-to-r from-[#533E23] via-[#DFC24D] to-[#C14C38]" />
     </section>
   );

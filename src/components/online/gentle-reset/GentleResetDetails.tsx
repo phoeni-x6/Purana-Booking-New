@@ -1,17 +1,17 @@
 
 const suitability = [
-  "You are new to Ayurveda and want a gentle, guided start",
-  "You feel tired or heavy after busy weeks, holidays or a change of season",
-  "You want to try a reset at home without fasting",
-  "You can take 30–45 minutes a day, alongside work",
-  "You would like personal guidance, not just a PDF",
+  "Sie sind neu im Ayurveda und wünschen sich einen sanften, begleiteten Einstieg",
+  "Sie fühlen sich nach arbeitsreichen Wochen, Urlaub oder einem Jahreszeitenwechsel müde oder belastet",
+  "Sie möchten eine sanfte Auszeit zu Hause ausprobieren – ganz ohne Fasten",
+  "Sie können sich täglich 30–45 Minuten Zeit nehmen, auch neben dem Beruf",
+  "Sie wünschen sich persönliche Begleitung und nicht nur ein PDF",
 ];
 
 const benefits = [
   {
-    title: "No fasting",
+    title: "Kein Fasten",
     description:
-      "Three warm, simple meals a day — a reset that fits a normal week.",
+      "Drei warme, einfache Mahlzeiten am Tag – ein Neustart, der sich in eine normale Woche integrieren lässt.",
     number: "01",
     icon: (
       <svg
@@ -26,9 +26,9 @@ const benefits = [
     ),
   },
   {
-    title: "Made for your type",
+    title: "Auf Ihren Konstitutionstyp abgestimmt",
     description:
-      "Food plan, shopping list and tips match your constitution.",
+      "Ernährungsplan, Einkaufsliste und Tipps werden auf Ihre Konstitution abgestimmt.",
     number: "02",
     icon: (
       <svg
@@ -44,9 +44,9 @@ const benefits = [
     ),
   },
   {
-    title: "Personally guided",
+    title: "Persönlich begleitet",
     description:
-      "You start with a 45-minute call with Lakshani.",
+      "Sie beginnen mit einem 45-minütigen Gespräch mit Lakshani.",
     number: "03",
     icon: (
       <svg
@@ -62,9 +62,9 @@ const benefits = [
     ),
   },
   {
-    title: "Habits that stay",
+    title: "Gewohnheiten, die bleiben",
     description:
-      "Small daily rituals you can keep after the four days.",
+      "Kleine tägliche Rituale, die Sie auch nach den vier Tagen beibehalten können.",
     number: "04",
     icon: (
       <svg
@@ -121,26 +121,26 @@ export default function GentleResetDetails() {
             <div className="inline-flex items-center gap-2 rounded-full border border-[#D8D0A9] bg-white/60 px-4 py-2">
               <span className="h-2 w-2 rounded-full bg-[#C14C38]" />
               <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#533E23] sm:text-xs">
-                Is it right for you?
+                Ist das Richtige für Sie?
               </span>
             </div>
 
             <h2 className="mt-6 font-serif text-3xl leading-tight text-[#21452B] sm:text-4xl">
-              A gentle beginning,
+              Ein sanfter Anfang,
               <span className="mt-1 block italic text-[#9A7821]">
-                at your own pace.
+                in Ihrem eigenen Tempo.
               </span>
             </h2>
 
             <p className="mt-4 max-w-lg text-sm leading-7 text-[#6B705C]">
-              The Gentle Reset is designed to make starting with Ayurveda
-              feel approachable, practical and manageable alongside
-              everyday life.
+              Das Programm „Sanfter Neustart“ erleichtert Ihnen den Einstieg
+              in den Ayurveda – auf eine zugängliche, praktische Weise und
+              passend zu Ihrem Alltag.
             </p>
 
             <div className="mt-7 rounded-[28px] border border-[#D8D0A9] bg-white/75 p-5 sm:p-7">
               <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#9A7821]">
-                This programme may suit you if…
+                Dieses Programm könnte zu Ihnen passen, wenn …
               </p>
 
               <ul className="mt-5 space-y-5">
@@ -171,8 +171,9 @@ export default function GentleResetDetails() {
                   </svg>
                 </span>
                 <p className="text-xs leading-5 text-[#6B705C]">
-                  You don&apos;t need to change everything at once. The focus
-                  is on small, guided steps that fit into your routine.
+                  Sie müssen nicht alles auf einmal verändern. Im Mittelpunkt
+                  stehen kleine, begleitete Schritte, die sich in Ihren
+                  Alltag integrieren lassen.
                 </p>
               </div>
             </div>
@@ -183,20 +184,21 @@ export default function GentleResetDetails() {
             <div className="inline-flex items-center gap-2 rounded-full border border-[#D8D0A9] bg-white/60 px-4 py-2">
               <span className="h-2 w-2 rounded-full bg-[#DFC24D]" />
               <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#533E23] sm:text-xs">
-                The Gentle Reset difference
+                Was den sanften Neustart auszeichnet
               </span>
             </div>
 
             <h2 className="mt-6 font-serif text-3xl leading-tight text-[#21452B] sm:text-4xl">
-              Simple by design.
+              Einfach gestaltet.
               <span className="mt-1 block italic text-[#9A7821]">
-                Personal by nature.
+                Persönlich begleitet.
               </span>
             </h2>
 
             <p className="mt-4 max-w-lg text-sm leading-7 text-[#6B705C]">
-              Practical resources and personal guidance help you bring
-              your programme into daily life, one step at a time.
+              Praktische Materialien und persönliche Begleitung helfen
+              Ihnen dabei, das Programm Schritt für Schritt in Ihren
+              Alltag zu integrieren.
             </p>
 
             <div className="mt-7 grid gap-4 sm:grid-cols-2">
@@ -251,18 +253,19 @@ export default function GentleResetDetails() {
 
                 <div>
                   <h3 className="font-serif text-xl sm:text-2xl">
-                    Four days. Small steps. A fresh perspective.
+                    Vier Tage. Kleine Schritte. Neue Perspektiven.
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-white/70">
-                    Begin with personal guidance and explore simple
-                    routines you can continue beyond the programme.
+                    Beginnen Sie mit persönlicher Begleitung und entdecken
+                    Sie einfache Routinen, die Sie auch nach dem Programm
+                    weiterführen können.
                   </p>
 
                   <a
                     href="#programmes"
                     className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#DFC24D] transition hover:text-[#E9D477]"
                   >
-                    Explore the Gentle Reset
+                    Den sanften Neustart entdecken
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"

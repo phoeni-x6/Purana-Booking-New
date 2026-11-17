@@ -2,15 +2,15 @@
 const retreatCategories = [
   {
     number: "01",
-    title: "Retreats in Germany",
-    description: "Chalet mini retreats · retreats across Germany",
+    title: "Retreats in Deutschland",
+    description: "Mini-Retreats im Chalet · Retreats in ganz Deutschland",
     href: "#germany",
-    accent: "Germany",
+    accent: "Deutschland",
   },
   {
     number: "02",
     title: "Retreats & Panchakarma in Sri Lanka",
-    description: "Panchakarma · retreats organised by us",
+    description: "Panchakarma · von uns organisierte Retreats",
     href: "#sri-lanka",
     accent: "Sri Lanka",
   },
@@ -19,7 +19,7 @@ const retreatCategories = [
 export default function RetreatsHero() {
   return (
     <section className="relative isolate overflow-hidden bg-[#f5f0e7] text-[#21452B]">
-      {/* Background image */}
+      {/* Hintergrundbild */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-30 bg-cover bg-center"
@@ -29,7 +29,7 @@ export default function RetreatsHero() {
         }}
       />
 
-      {/* Warm cream fade */}
+      {/* Warmer cremefarbener Farbverlauf */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-20"
@@ -39,13 +39,13 @@ export default function RetreatsHero() {
         }}
       />
 
-      {/* Bottom cream fade */}
+      {/* Cremefarbener Verlauf am unteren Rand */}
       <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-t from-[#f5f0e7] via-[#f5f0e7]/80 to-transparent"
       />
 
-      {/* Decorative details */}
+      {/* Dekorative Details */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-32 -top-40 -z-10 h-[520px] w-[520px] rounded-full border border-[#2F5D39]/15"
@@ -59,12 +59,12 @@ export default function RetreatsHero() {
         className="pointer-events-none absolute -bottom-36 -left-28 -z-10 h-[400px] w-[400px] rounded-full bg-[#DFC24D]/10 blur-3xl"
       />
 
-      {/* Hero content */}
+      {/* Hero-Inhalt */}
       <div className="relative mx-auto max-w-7xl px-5 pb-12 pt-16 sm:px-8 sm:pt-24 lg:pb-16 lg:pt-28">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          {/* Main content */}
+          {/* Hauptinhalt */}
           <div className="relative z-10">
-            {/* Eyebrow */}
+            {/* Kleine Überschrift */}
             <div className="inline-flex items-center gap-2 rounded-full border border-[#2F5D39]/20 bg-[#F8F5E8]/75 px-4 py-2 backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-[#C14C38]" />
               <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#2F5D39]">
@@ -73,25 +73,26 @@ export default function RetreatsHero() {
             </div>
 
             <p className="mt-8 text-xs font-semibold uppercase tracking-[0.24em] text-[#9A8050]">
-              Germany · Sri Lanka
+              Deutschland · Sri Lanka
             </p>
 
-            {/* Heading */}
+            {/* Hauptüberschrift */}
             <h1 className="mt-4 max-w-3xl font-serif text-5xl font-normal leading-[1.08] tracking-tight text-[#21452B] sm:text-6xl lg:text-7xl">
-              Time away for
+              Eine Auszeit für
               <span className="mt-1 block italic text-[#9A8050]">
-                body and mind.
+                Körper und Geist.
               </span>
             </h1>
 
             <p className="mt-7 max-w-xl text-sm leading-7 text-[#533E23]/85 sm:text-base sm:leading-8">
-              Choose a retreat close to home in Germany, or travel to Sri Lanka
-              for traditional Panchakarma or one of our carefully organised
-              retreats. Discover space to slow down, reconnect, and restore
-              your inner balance.
+              Wählen Sie ein Retreat ganz in Ihrer Nähe in Deutschland oder
+              reisen Sie nach Sri Lanka, um traditionelles Panchakarma oder
+              eines unserer sorgfältig organisierten Retreats zu erleben.
+              Entdecken Sie Raum, um zur Ruhe zu kommen, neue Kraft zu schöpfen
+              und Ihr inneres Gleichgewicht wiederzufinden.
             </p>
 
-            {/* Retreat highlight */}
+            {/* Retreat-Highlight */}
             <div className="mt-8 flex items-center gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#DFC24D]/60 bg-[#DFC24D]/15">
                 <span className="text-xl text-[#9A8050]">✳</span>
@@ -99,21 +100,21 @@ export default function RetreatsHero() {
 
               <div>
                 <p className="font-serif text-xl text-[#21452B] sm:text-2xl">
-                  Two destinations
+                  Zwei Reiseziele
                 </p>
                 <p className="mt-1 text-xs text-[#6B705C]">
-                  One journey towards wellbeing.
+                  Ein Weg zu mehr Wohlbefinden.
                 </p>
               </div>
             </div>
 
-            {/* Destination buttons */}
+            {/* Schaltflächen zu den Reisezielen */}
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href="#germany"
                 className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#21452B] px-7 py-4 text-sm font-semibold text-[#F8F5E8] shadow-lg shadow-[#21452B]/15 transition-all hover:-translate-y-0.5 hover:bg-[#2F5D39]"
               >
-                Explore Germany
+                Deutschland entdecken
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
@@ -123,13 +124,13 @@ export default function RetreatsHero() {
                 href="#sri-lanka"
                 className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full border border-[#21452B]/30 bg-[#F8F5E8]/65 px-7 py-4 text-sm font-semibold text-[#21452B] backdrop-blur-sm transition-all hover:border-[#21452B] hover:bg-[#EFE9C5]"
               >
-                Discover Sri Lanka
+                Sri Lanka entdecken
                 <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>
 
-          {/* Destination feature card */}
+          {/* Infokarte zu den Reisezielen */}
           <div className="relative hidden lg:block">
             <div className="relative ml-auto max-w-[390px] overflow-hidden rounded-[28px] border border-white/50 bg-[#21452B]/85 p-8 text-[#F8F5E8] shadow-[0_20px_70px_rgba(38,58,43,0.16)] backdrop-blur-md">
               <div
@@ -143,17 +144,17 @@ export default function RetreatsHero() {
 
               <div className="relative">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#DFC24D]">
-                  Find your retreat
+                  Finden Sie Ihr Retreat
                 </p>
 
                 <h2 className="mt-5 max-w-xs font-serif text-3xl font-normal leading-tight sm:text-4xl">
-                  A different way to reconnect.
+                  Ein neuer Weg, zu sich selbst zu finden.
                 </h2>
 
                 <p className="mt-4 text-sm leading-7 text-[#F8F5E8]/75">
-                  From peaceful escapes in Germany to traditional Ayurveda
-                  experiences in Sri Lanka, find the setting that feels right
-                  for you.
+                  Von erholsamen Auszeiten in Deutschland bis hin zu
+                  traditionellen Ayurveda-Erlebnissen in Sri Lanka – finden Sie
+                  den Ort, der sich für Sie richtig anfühlt.
                 </p>
 
                 <div className="my-7 h-px bg-[#F8F5E8]/20" />
@@ -165,10 +166,10 @@ export default function RetreatsHero() {
                   >
                     <div>
                       <p className="text-[10px] uppercase tracking-[0.2em] text-[#DFC24D]">
-                        01 · Germany
+                        01 · Deutschland
                       </p>
                       <p className="mt-1 font-serif text-xl">
-                        Retreats close to home
+                        Retreats ganz in Ihrer Nähe
                       </p>
                     </div>
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#DFC24D]/40 text-[#DFC24D] transition-all group-hover:bg-[#DFC24D] group-hover:text-[#21452B]">
@@ -187,7 +188,7 @@ export default function RetreatsHero() {
                         02 · Sri Lanka
                       </p>
                       <p className="mt-1 font-serif text-xl">
-                        Panchakarma & retreats
+                        Panchakarma & Retreats
                       </p>
                     </div>
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#DFC24D]/40 text-[#DFC24D] transition-all group-hover:bg-[#DFC24D] group-hover:text-[#21452B]">
@@ -199,13 +200,13 @@ export default function RetreatsHero() {
                 <div className="mt-8 flex items-center gap-3 border-t border-[#F8F5E8]/20 pt-6">
                   <span className="text-xl text-[#DFC24D]">✳</span>
                   <p className="text-xs tracking-wide text-[#F8F5E8]/65">
-                    Tradition · Care · Wellbeing
+                    Tradition · Achtsamkeit · Wohlbefinden
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Decorative accent */}
+            {/* Dekorativer Akzent */}
             <div
               aria-hidden="true"
               className="absolute -bottom-6 -left-6 -z-10 h-28 w-28 rounded-bl-[60px] border-b border-l border-[#C14C38]/50"
@@ -213,7 +214,7 @@ export default function RetreatsHero() {
           </div>
         </div>
 
-        {/* Destination links */}
+        {/* Links zu den Reisezielen */}
         <div className="relative z-10 mt-16 grid gap-4 border-t border-[#21452B]/15 pt-8 sm:mt-20 sm:grid-cols-2 sm:pt-10">
           {retreatCategories.map((category) => (
             <a
@@ -245,7 +246,7 @@ export default function RetreatsHero() {
         </div>
       </div>
 
-      {/* Bottom accent */}
+      {/* Akzent am unteren Rand */}
       <div className="relative h-1 bg-gradient-to-r from-[#533E23] via-[#DFC24D] to-[#C14C38]" />
     </section>
   );

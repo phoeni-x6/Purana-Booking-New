@@ -248,42 +248,7 @@ export default function BlogSection() {
           ))}
         </div>
 
-        {/* Membership banner */}
-        <div className="relative mt-12 overflow-hidden rounded-[28px] bg-[#21452B] p-6 text-white sm:p-8 lg:p-10">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-12 -top-20 h-56 w-56 rounded-full border border-white/10"
-          />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-2 -top-8 h-40 w-40 rounded-full border border-[#DFC24D]/20"
-          />
-
-          <div className="relative flex flex-col justify-between gap-7 md:flex-row md:items-center">
-            <div className="max-w-2xl">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#DFC24D]">
-                A little more for members
-              </p>
-
-              <h3 className="mt-3 font-serif text-2xl leading-tight sm:text-3xl">
-                Go deeper with your Ayurveda practice.
-              </h3>
-
-              <p className="mt-3 text-sm leading-7 text-white/75">
-                Members can explore the full guides, videos and 40+ recipes
-                in the content library.
-              </p>
-            </div>
-
-            <a
-              href="/membership"
-              className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-6 py-4 text-sm font-semibold text-[#21452B] transition-all hover:-translate-y-0.5 hover:bg-[#EFE9C5]"
-            >
-              Discover membership
-              <ArrowIcon />
-            </a>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

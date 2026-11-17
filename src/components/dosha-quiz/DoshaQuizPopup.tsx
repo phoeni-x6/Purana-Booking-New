@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
@@ -95,7 +96,7 @@ export default function DoshaQuizPopup() {
         <button
           type="button"
           onClick={closePopup}
-          aria-label="Close dosha quiz invitation"
+          aria-label="Einladung zum Dosha-Quiz schließen"
           className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--forest-dark)] transition hover:rotate-90 hover:bg-[var(--cream)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--terracotta)] sm:right-4 sm:top-4"
         >
           <svg
@@ -163,16 +164,16 @@ export default function DoshaQuizPopup() {
             </p>
 
             <h2 className="mt-3 max-w-[260px] font-[var(--font-heading)] text-3xl font-normal leading-[1.12] text-[var(--cream)] sm:text-4xl">
-              A little closer to your nature.
+              Entdecken Sie Ihre innere Natur.
             </h2>
 
             <p className="mt-3 max-w-[260px] text-sm leading-6 text-[var(--cream)]/75">
-              A moment of self-discovery, inspired by Ayurveda.
+              Ein Moment der Selbsterkenntnis, inspiriert vom Ayurveda.
             </p>
           </div>
 
           <span className="relative mt-6 hidden text-[10px] uppercase tracking-[0.18em] text-[var(--cream)]/55 sm:block">
-            Your wellness journey starts here
+            Ihre Reise zu mehr Wohlbefinden beginnt hier
           </span>
         </div>
 
@@ -181,7 +182,7 @@ export default function DoshaQuizPopup() {
           <div className="mb-5 flex items-center gap-2">
             <span className="h-px w-6 bg-[var(--terracotta)]" />
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--brown)]">
-              Free · 2 minutes · No sign-up
+              Kostenlos · 2 Minuten · Ohne Anmeldung
             </p>
           </div>
 
@@ -189,15 +190,16 @@ export default function DoshaQuizPopup() {
             id="dosha-popup-title"
             className="max-w-sm font-[var(--font-heading)] text-3xl font-normal leading-[1.15] text-[var(--forest-dark)] sm:text-[2.55rem]"
           >
-            Discover your Ayurvedic constitution
+            Entdecken Sie Ihre ayurvedische Konstitution
           </h2>
 
           <p
             id="dosha-popup-description"
             className="mt-4 text-sm leading-7 text-[var(--text-muted)]"
           >
-            Answer 8 short questions and receive a first, rough idea of your
-            Ayurvedic type — no email or account needed.
+            Beantworten Sie 8 kurze Fragen und erhalten Sie eine erste
+            Einschätzung Ihres ayurvedischen Konstitutionstyps – ganz ohne
+            E-Mail-Adresse oder Benutzerkonto.
           </p>
 
           <div className="mt-5 flex flex-wrap gap-2">
@@ -226,7 +228,7 @@ export default function DoshaQuizPopup() {
             }}
             className="mt-7 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-[var(--forest-dark)] px-6 py-4 text-center text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[var(--forest)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)] focus-visible:ring-offset-2"
           >
-            Start the free quiz
+            Kostenloses Quiz starten
             <span aria-hidden="true">→</span>
           </a>
 
@@ -235,11 +237,12 @@ export default function DoshaQuizPopup() {
             onClick={closePopup}
             className="mx-auto mt-5 rounded-sm border-b border-transparent pb-0.5 text-xs text-[var(--text-muted)] transition hover:border-[var(--terracotta)] hover:text-[var(--terracotta)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--terracotta)]"
           >
-            Maybe later
+            Vielleicht später
           </button>
 
           <p className="mt-5 text-center text-[10px] leading-5 text-[var(--text-muted)]">
-            A gentle introduction to self-awareness, not a medical diagnosis.
+            Ein sanfter Einstieg in die Selbsterkenntnis – keine medizinische
+            Diagnose.
           </p>
         </div>
       </section>

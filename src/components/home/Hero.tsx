@@ -1,3 +1,4 @@
+
 export default function Hero() {
   return (
     <section className="relative isolate min-h-[720px] overflow-hidden bg-[#f5f0e7] lg:min-h-[780px]">
@@ -52,17 +53,17 @@ export default function Hero() {
 
           {/* Heading */}
           <h1 className="max-w-4xl font-serif text-5xl font-normal leading-[1.08] tracking-[-0.045em] text-[#21452B] sm:text-6xl md:text-7xl lg:text-[88px]">
-            Restore your natural
+            Finden Sie zurück zu
             <span className="mt-2 block italic text-[#9A8050]">
-              balance.
+              Ihrer inneren Balance.
             </span>
           </h1>
 
           {/* Description */}
           <p className="mt-8 max-w-xl text-sm leading-8 text-[#533E23]/85 sm:text-base sm:leading-9">
-            Renew your energy with traditional Ayurveda treatments, personal
-            consultations and restorative retreats. Discover simple rituals
-            that bring balance into your everyday life.
+            Tanken Sie neue Energie mit traditionellen Ayurveda-Behandlungen,
+            persönlichen Beratungen und erholsamen Retreats. Entdecken Sie
+            wohltuende Rituale, die mehr Ausgeglichenheit in Ihren Alltag bringen.
           </p>
 
           {/* Actions */}
@@ -71,7 +72,7 @@ export default function Hero() {
               href="#learn"
               className="group inline-flex min-h-14 items-center justify-center gap-5 rounded-full bg-[#2F5D39] px-8 py-4 text-sm font-semibold text-[#EFE9C5] shadow-xl shadow-[#21452B]/15 transition duration-300 hover:-translate-y-1 hover:bg-[#21452B]"
             >
-              Take the free dosha quiz
+              Kostenlosen Dosha-Test machen
               <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
                 ↗
               </span>
@@ -81,7 +82,7 @@ export default function Hero() {
               href="#booking"
               className="inline-flex min-h-14 items-center justify-center gap-4 rounded-full border border-[#2F5D39]/40 bg-[#f5f0e7]/60 px-8 py-4 text-sm font-medium text-[#21452B] backdrop-blur-sm transition duration-300 hover:border-[#2F5D39] hover:bg-[#EFE9C5]"
             >
-              Book a treatment
+              Behandlung buchen
               <span className="text-[#C14C38]">→</span>
             </a>
           </div>
@@ -90,26 +91,26 @@ export default function Hero() {
           <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-4 border-t border-[#2F5D39]/20 pt-7 text-[10px] uppercase tracking-[0.18em] text-[#533E23]/75 sm:text-xs">
             <span className="flex items-center gap-2">
               <span className="text-[#C14C38]">✳</span>
-              Traditional wisdom
+              Traditionelles Wissen
             </span>
 
             <span className="hidden h-1 w-1 rounded-full bg-[#C14C38] sm:block" />
 
-            <span>Personal care</span>
+            <span>Individuelle Betreuung</span>
 
             <span className="hidden h-1 w-1 rounded-full bg-[#C14C38] sm:block" />
 
-            <span>Everyday balance</span>
+            <span>Balance im Alltag</span>
           </div>
         </div>
 
         {/* Floating image caption */}
         <div className="absolute bottom-20 right-10 hidden max-w-[260px] border-l border-[#C14C38] pl-5 lg:block xl:right-16">
           <p className="font-serif text-2xl italic text-[#21452B]">
-            Reconnect with yourself.
+            Finden Sie zurück zu sich selbst.
           </p>
           <p className="mt-2 text-[9px] uppercase tracking-[0.22em] text-[#533E23]/75">
-            The art of Ayurvedic living
+            Die Kunst des ayurvedischen Lebens
           </p>
         </div>
 

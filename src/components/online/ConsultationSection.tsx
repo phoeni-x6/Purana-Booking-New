@@ -2,34 +2,34 @@
 const practitioners = [
   {
     name: "Lakshani Perera",
-    role: "Ayurveda-Gesundheitsberaterin · Founder of Purana Ayurveda",
+    role: "Ayurveda-Gesundheitsberaterin · Gründerin von Purana Ayurveda",
     description:
-      "Certified Ayurvedic nutrition consultant, rooted in her family's Sri Lankan Ayurveda tradition. Languages: German & English.",
+      "Zertifizierte Ayurveda-Ernährungsberaterin mit Wurzeln in der traditionellen Ayurveda-Lehre ihrer srilankischen Familie. Sprachen: Deutsch und Englisch.",
     price: "€45",
-    button: "Book with Lakshani",
+    button: "Termin mit Lakshani buchen",
     initials: "LP",
     photoColor: "bg-[#D8E1D2]",
     featured: true,
-    language: "German & English",
+    language: "Deutsch und Englisch",
   },
   {
-    name: "Dr. Ishanka [surname]",
-    role: "Ayurvedic Doctor (BAMS) · Ayurveda Centre, Sri Lanka",
+    name: "Dr. Ishanka [Nachname]",
+    role: "Ayurveda-Arzt (BAMS) · Ayurveda-Zentrum, Sri Lanka",
     description:
-      "Ayurveda wellness advice in English from a doctor trained in classical Ayurveda (Bachelor of Ayurvedic Medicine and Surgery).",
+      "Ayurvedische Gesundheitsberatung auf Englisch durch einen Arzt mit einer fundierten Ausbildung in der klassischen Ayurveda-Medizin (Bachelor of Ayurvedic Medicine and Surgery).",
     price: "€[PRICE]",
-    button: "Book with Dr. Ishanka",
+    button: "Termin mit Dr. Ishanka buchen",
     initials: "DI",
     photoColor: "bg-[#E6D8BD]",
     featured: false,
-    language: "English",
+    language: "Englisch",
   },
 ];
 
 const topics = [
-  "Your Ayurvedic constitution",
-  "Prevention & wellbeing",
-  "Food & daily routines",
+  "Ihre ayurvedische Konstitution",
+  "Prävention und Wohlbefinden",
+  "Ernährung und tägliche Routinen",
 ];
 
 export default function ConsultationSection() {
@@ -38,7 +38,7 @@ export default function ConsultationSection() {
       id="consultation"
       className="relative isolate overflow-hidden bg-[#f5f0e7] text-[#263A2B]"
     >
-      {/* Decorative background */}
+      {/* Dekorativer Hintergrund */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-40 top-10 h-[520px] w-[520px] rounded-full border border-[#2F5D39]/10"
@@ -53,35 +53,36 @@ export default function ConsultationSection() {
       />
 
       <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
-        {/* Section heading */}
+        {/* Abschnittsüberschrift */}
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-16">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-3 rounded-full border border-[#2F5D39]/15 bg-[#F8F5E8]/75 px-4 py-2 backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-[#C14C38]" />
               <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#2F5D39] sm:text-xs">
-                Personal online consultations
+                Persönliche Online-Beratungen
               </span>
             </div>
 
             <p className="mt-8 text-xs font-semibold uppercase tracking-[0.2em] text-[#9A8050]">
-              Traditional wisdom · Personal attention · Everyday wellbeing
+              Traditionelles Wissen · Individuelle Betreuung · Wohlbefinden im Alltag
             </p>
 
             <h2 className="mt-4 font-serif text-4xl leading-[1.12] tracking-tight text-[#21452B] sm:text-5xl lg:text-6xl">
-              Understand what your body needs.
+              Verstehen Sie, was Ihr Körper braucht.
               <span className="mt-2 block italic text-[#9A8050]">
-                Begin with a conversation.
+                Beginnen Sie mit einem Gespräch.
               </span>
             </h2>
 
             <p className="mt-7 max-w-2xl text-sm leading-8 text-[#533E23]/85 sm:text-base">
-              Discover an approach to wellbeing inspired by Ayurveda.
-              In a personal video consultation, explore your constitution,
-              food choices and daily routines — and leave with practical
-              first steps that fit your life.
+              Entdecken Sie einen vom Ayurveda inspirierten Weg zu mehr
+              Wohlbefinden. In einer persönlichen Videoberatung erfahren
+              Sie mehr über Ihre Konstitution, Ihre Ernährung und Ihre
+              täglichen Gewohnheiten – und erhalten praktische erste
+              Schritte, die sich gut in Ihren Alltag integrieren lassen.
             </p>
 
-            {/* Topics */}
+            {/* Beratungsthemen */}
             <div className="mt-8 flex flex-wrap gap-2.5">
               {topics.map((item) => (
                 <span
@@ -95,7 +96,7 @@ export default function ConsultationSection() {
             </div>
           </div>
 
-          {/* Consultation information panel */}
+          {/* Informationsbereich zur Beratung */}
           <div className="relative overflow-hidden rounded-[26px] border border-[#D8D0A9] bg-[#EFE9C5]/55 p-6 sm:p-8">
             <div
               aria-hidden="true"
@@ -113,10 +114,10 @@ export default function ConsultationSection() {
                 </div>
                 <div>
                   <p className="font-serif text-xl text-[#21452B]">
-                    A personal approach
+                    Individuell auf Sie abgestimmt
                   </p>
                   <p className="mt-1 text-xs text-[#6B705C]">
-                    Support shaped around your everyday life.
+                    Unterstützung, die zu Ihrem Alltag passt.
                   </p>
                 </div>
               </div>
@@ -139,10 +140,10 @@ export default function ConsultationSection() {
                   </span>
                   <div>
                     <p className="text-sm font-semibold text-[#21452B]">
-                      45-minute session
+                      45-minütige Beratung
                     </p>
                     <p className="text-xs text-[#6B705C]">
-                      Time to discuss your needs.
+                      Ausreichend Zeit, um Ihre Anliegen zu besprechen.
                     </p>
                   </div>
                 </div>
@@ -162,10 +163,10 @@ export default function ConsultationSection() {
                   </span>
                   <div>
                     <p className="text-sm font-semibold text-[#21452B]">
-                      Online video call
+                      Online-Videogespräch
                     </p>
                     <p className="text-xs text-[#6B705C]">
-                      Connect from wherever you are.
+                      Nehmen Sie von überall aus teil.
                     </p>
                   </div>
                 </div>
@@ -185,10 +186,10 @@ export default function ConsultationSection() {
                   </span>
                   <div>
                     <p className="text-sm font-semibold text-[#21452B]">
-                      Personal guidance
+                      Persönliche Begleitung
                     </p>
                     <p className="text-xs text-[#6B705C]">
-                      Practical steps for your routine.
+                      Praktische Empfehlungen für Ihren Alltag.
                     </p>
                   </div>
                 </div>
@@ -197,18 +198,18 @@ export default function ConsultationSection() {
           </div>
         </div>
 
-        {/* Practitioner introduction */}
+        {/* Vorstellung der Berater */}
         <div className="mb-8 mt-20 flex flex-col justify-between gap-4 sm:flex-row sm:items-end lg:mt-24">
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C14C38]">
-              Meet your practitioners
+              Lernen Sie unsere Berater kennen
             </p>
             <h3 className="mt-3 font-serif text-3xl text-[#21452B] sm:text-4xl">
-              Guidance from people who care.
+              Persönliche Beratung mit Herz und Erfahrung.
             </h3>
             <p className="mt-3 max-w-xl text-sm leading-7 text-[#6B705C]">
-              Choose the practitioner and consultation language that
-              feel right for you.
+              Wählen Sie die Fachperson und die Beratungssprache,
+              mit denen Sie sich am wohlsten fühlen.
             </p>
           </div>
 
@@ -217,7 +218,7 @@ export default function ConsultationSection() {
           </span>
         </div>
 
-        {/* Practitioner cards */}
+        {/* Beraterkarten */}
         <div className="grid gap-7 md:grid-cols-2">
           {practitioners.map((person, index) => (
             <article
@@ -228,7 +229,7 @@ export default function ConsultationSection() {
                   : "border-[#D8D0A9]"
               }`}
             >
-              {/* Top accent */}
+              {/* Oberer Akzent */}
               <div
                 className={`h-1.5 w-full ${
                   person.featured
@@ -237,7 +238,7 @@ export default function ConsultationSection() {
                 }`}
               />
 
-              {/* Profile header */}
+              {/* Profilbereich */}
               <div
                 className={`relative overflow-hidden p-6 sm:p-8 ${
                   person.featured
@@ -255,7 +256,7 @@ export default function ConsultationSection() {
                 />
 
                 <div className="relative flex items-center gap-5">
-                  {/* Profile placeholder */}
+                  {/* Profilbild-Platzhalter */}
                   <div
                     className={`relative flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-[24px] border border-white/70 shadow-sm sm:h-28 sm:w-28 ${person.photoColor}`}
                   >
@@ -270,12 +271,12 @@ export default function ConsultationSection() {
                     {person.featured ? (
                       <span className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-[#DFC24D]/20 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.15em] text-[#80621A]">
                         <span className="h-1.5 w-1.5 rounded-full bg-[#DFC24D]" />
-                        Founder & consultant
+                        Gründerin & Beraterin
                       </span>
                     ) : (
                       <span className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-[#2F5D39]/10 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.15em] text-[#2F5D39]">
                         <span className="h-1.5 w-1.5 rounded-full bg-[#2F5D39]" />
-                        Ayurveda practitioner
+                        Ayurveda-Fachperson
                       </span>
                     )}
 
@@ -290,13 +291,13 @@ export default function ConsultationSection() {
                 </div>
               </div>
 
-              {/* Card content */}
+              {/* Karteninhalt */}
               <div className="flex flex-1 flex-col p-6 sm:p-8">
                 <p className="text-sm leading-7 text-[#52634F]">
                   {person.description}
                 </p>
 
-                {/* Language */}
+                {/* Beratungssprache */}
                 <div className="mt-6 flex flex-wrap items-center gap-2 rounded-xl border border-[#D8D0A9]/70 bg-white/50 px-4 py-3">
                   <svg
                     viewBox="0 0 24 24"
@@ -309,26 +310,26 @@ export default function ConsultationSection() {
                     <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
                   </svg>
                   <span className="text-xs text-[#6B705C]">
-                    Consultation language:
+                    Beratungssprache:
                   </span>
                   <span className="text-xs font-semibold text-[#21452B]">
                     {person.language}
                   </span>
                 </div>
 
-                {/* Price */}
+                {/* Preis */}
                 <div className="mt-auto pt-8">
                   <div className="mb-5 flex items-end justify-between gap-3">
                     <div>
                       <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8A8C73]">
-                        Your session
+                        Ihre Beratung
                       </p>
                       <div className="mt-1 flex items-baseline gap-2">
                         <span className="font-serif text-4xl text-[#21452B]">
                           {person.price}
                         </span>
                         <span className="text-xs text-[#6B705C]">
-                          / 45 min
+                          / 45 Min.
                         </span>
                       </div>
                     </div>
@@ -337,7 +338,7 @@ export default function ConsultationSection() {
                       href="#booking"
                       className="mb-1 text-xs font-semibold text-[#533E23] underline decoration-[#DFC24D] underline-offset-4 transition hover:text-[#C14C38]"
                     >
-                      View profile
+                      Profil ansehen
                     </a>
                   </div>
 
@@ -366,7 +367,7 @@ export default function ConsultationSection() {
           ))}
         </div>
 
-        {/* Disclaimer */}
+        {/* Rechtlicher Hinweis */}
         <div className="relative mt-10 overflow-hidden rounded-[24px] border border-[#D8D0A9] bg-[#EFE9C5]/50 p-6 sm:p-7">
           <div
             aria-hidden="true"
@@ -389,20 +390,21 @@ export default function ConsultationSection() {
 
             <div>
               <h4 className="text-sm font-semibold text-[#21452B]">
-                A note about your consultation
+                Ein wichtiger Hinweis zu Ihrer Beratung
               </h4>
               <p className="mt-2 max-w-4xl text-xs leading-7 text-[#6B705C] sm:text-sm">
-                These sessions provide Ayurveda wellness guidance relating
-                to prevention, food and daily routines. They are not a
-                medical diagnosis or treatment and do not replace
-                consultation with your doctor.
+                Diese Beratungen bieten ayurvedische Empfehlungen zu
+                Gesundheitsvorsorge, Ernährung und täglichen Routinen.
+                Sie stellen keine medizinische Diagnose oder Behandlung
+                dar und ersetzen nicht die Beratung durch Ihre Ärztin
+                oder Ihren Arzt.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom brand accent */}
+      {/* Dekorativer Markenabschluss */}
       <div className="relative h-1.5 bg-gradient-to-r from-[#533E23] via-[#DFC24D] to-[#C14C38]" />
     </section>
   );

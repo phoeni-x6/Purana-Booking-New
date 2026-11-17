@@ -1,31 +1,32 @@
+
 "use client";
 
 import { useState } from "react";
 
 const learningItems = [
   {
-    title: "Free dosha quiz",
-    text: "Discover your constitution in just 2 minutes.",
+    title: "Kostenloser Dosha-Test",
+    text: "Entdecken Sie Ihre Konstitution in nur 2 Minuten.",
     href: "#booking",
-    tag: "START HERE",
+    tag: "JETZT STARTEN",
   },
   {
-    title: "Monthly member seminar",
-    text: "Live with Lakshani · for Premium members.",
+    title: "Monatliches Mitgliederseminar",
+    text: "Live mit Lakshani · für Premium-Mitglieder.",
     href: "#membership",
     tag: "LIVE",
   },
   {
-    title: "Podcast: Talk with Lakshani",
-    text: "Listen every 2 weeks on ayurvedatalks.de.",
+    title: "Podcast: Im Gespräch mit Lakshani",
+    text: "Alle zwei Wochen auf ayurvedatalks.de.",
     href: "#learn",
-    tag: "LISTEN",
+    tag: "ANHÖREN",
   },
   {
     title: "Blog",
-    text: "Articles, recipes and everyday rituals.",
+    text: "Beiträge, Rezepte und Rituale für den Alltag.",
     href: "#learn",
-    tag: "READ",
+    tag: "LESEN",
   },
 ];
 
@@ -38,22 +39,22 @@ export default function Membership() {
     e.preventDefault();
 
     if (!email.trim()) {
-      setMessage("Please enter your email address.");
+      setMessage("Bitte geben Sie Ihre E-Mail-Adresse ein.");
       setSubmitted(false);
       return;
     }
 
     setMessage(
-      "Thank you for your interest! The waiting list is not connected to an email service yet, so your registration has not been saved."
+      "Vielen Dank für Ihr Interesse! Unsere Warteliste ist noch nicht mit einem E-Mail-Dienst verbunden. Ihre Anmeldung wurde daher noch nicht gespeichert."
     );
     setSubmitted(false);
   }
 
   return (
     <>
-      {/* App and learning section */}
+      {/* App- und Wissensbereich */}
       <section className="relative overflow-hidden bg-[#f5f0e7] px-5 py-16 sm:py-20 lg:py-24">
-        {/* Background decoration */}
+        {/* Hintergrunddekoration */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full border border-[#DFC24D]/20"
@@ -64,27 +65,27 @@ export default function Membership() {
         />
 
         <div className="relative mx-auto max-w-7xl">
-          {/* Section heading */}
+          {/* Abschnittsüberschrift */}
           <div className="mb-10 max-w-2xl">
             <div className="mb-4 flex items-center gap-3">
               <span className="h-px w-9 bg-[#C14C38]" />
               <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C14C38] sm:text-xs">
-                Stay connected with Purana
+                Bleiben Sie mit Purana verbunden
               </p>
             </div>
 
             <h2 className="font-serif text-3xl leading-tight text-[#21452B] sm:text-4xl lg:text-5xl">
-              Your journey towards balance
+              Ihr Weg zu mehr innerer Balance
               <span className="block italic text-[#9A8050]">
-                continues beyond the treatment room.
+                geht weit über den Behandlungsraum hinaus.
               </span>
             </h2>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
-            {/* Purana app */}
+            {/* Purana App */}
             <div className="group relative isolate flex min-h-[580px] flex-col overflow-hidden rounded-[28px] bg-[#21452B] p-7 text-[#EFE9C5] sm:p-10 lg:p-12">
-              {/* Decorative circles */}
+              {/* Dekorative Kreise */}
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute -right-24 -top-24 -z-10 h-96 w-96 rounded-full border border-[#EFE9C5]/10 transition-transform duration-1000 group-hover:scale-110"
@@ -98,7 +99,7 @@ export default function Membership() {
                 className="pointer-events-none absolute -bottom-28 -left-20 -z-10 h-80 w-80 rounded-full bg-[#2F5D39] blur-3xl"
               />
 
-              {/* Top label */}
+              {/* Obere Beschriftung */}
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#DFC24D]/30 bg-[#DFC24D]/10 text-xl text-[#DFC24D]">
@@ -110,38 +111,39 @@ export default function Membership() {
                       Purana
                     </p>
                     <p className="text-[9px] uppercase tracking-[0.2em] text-[#EFE9C5]/50">
-                      Wellness app
+                      Wellness-App
                     </p>
                   </div>
                 </div>
 
                 <span className="rounded-full border border-[#DFC24D]/40 bg-[#DFC24D]/10 px-4 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-[#DFC24D]">
-                  Coming 1 March 2027
+                  Start am 1. März 2027
                 </span>
               </div>
 
-              {/* App content */}
+              {/* App-Inhalt */}
               <div className="relative z-10 mt-auto grid items-end gap-8 pt-14 sm:grid-cols-[1fr_170px] lg:grid-cols-[1fr_190px]">
                 <div>
                   <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#DFC24D]">
-                    Wellbeing, within reach
+                    Wohlbefinden immer griffbereit
                   </p>
 
                   <h2 className="font-serif text-4xl leading-[1.1] text-[#EFE9C5] sm:text-5xl lg:text-6xl">
-                    A healthier
+                    Gesünder
                     <span className="block italic text-[#DFC24D]">
-                      everyday.
+                      leben. Jeden Tag.
                     </span>
                   </h2>
 
                   <p className="mt-5 max-w-md text-sm leading-7 text-[#EFE9C5]/75">
-                    Book treatments, follow your programmes, chat with us
-                    and receive reminders — all in one place. Your personal
-                    Ayurveda companion is coming soon.
+                    Buchen Sie Behandlungen, begleiten Sie Ihre Programme,
+                    schreiben Sie uns und erhalten Sie Erinnerungen – alles
+                    an einem Ort. Ihr persönlicher Ayurveda-Begleiter kommt
+                    schon bald.
                   </p>
                 </div>
 
-                {/* Phone-inspired visual */}
+                {/* Smartphone-inspirierte Darstellung */}
                 <div className="relative mx-auto hidden w-[155px] rotate-3 transition-transform duration-700 group-hover:rotate-0 sm:block lg:w-[180px]">
                   <div className="rounded-[30px] border-[5px] border-[#EFE9C5]/30 bg-[#F5F0E7] p-2 shadow-2xl shadow-black/30">
                     <div className="overflow-hidden rounded-[21px] bg-[#EFE9C5]">
@@ -155,31 +157,31 @@ export default function Membership() {
                       <div className="p-3">
                         <div className="mb-3 h-20 rounded-xl bg-[#DCE3D2] p-2">
                           <p className="text-[7px] uppercase tracking-wider text-[#2F5D39]/70">
-                            Your daily balance
+                            Ihre tägliche Balance
                           </p>
                           <p className="mt-2 font-serif text-sm text-[#21452B]">
-                            Find your calm.
+                            Finden Sie Ihre Ruhe.
                           </p>
                         </div>
 
                         <p className="mb-2 text-[8px] font-semibold text-[#21452B]">
-                          Explore
+                          Entdecken
                         </p>
 
                         <div className="space-y-2">
                           <div className="rounded-lg bg-white p-2 text-[8px] text-[#533E23]">
-                            Ayurveda treatments
+                            Ayurveda-Behandlungen
                           </div>
                           <div className="rounded-lg bg-white p-2 text-[8px] text-[#533E23]">
-                            Your programmes
+                            Ihre Programme
                           </div>
                           <div className="rounded-lg bg-white p-2 text-[8px] text-[#533E23]">
-                            Online consultation
+                            Online-Beratung
                           </div>
                         </div>
 
                         <div className="mt-4 rounded-full bg-[#DFC24D] py-2 text-center text-[8px] font-semibold text-[#21452B]">
-                          Book a treatment
+                          Behandlung buchen
                         </div>
                       </div>
                     </div>
@@ -191,14 +193,14 @@ export default function Membership() {
                 </div>
               </div>
 
-              {/* Form */}
+              {/* Anmeldeformular */}
               <div className="relative z-10 mt-10 border-t border-[#EFE9C5]/15 pt-7">
                 <form onSubmit={handleSubmit}>
                   <label
                     htmlFor="app-email"
                     className="mb-3 block text-xs font-semibold text-[#EFE9C5]"
                   >
-                    Be the first to know when we launch
+                    Erfahren Sie als Erste, wenn wir starten
                   </label>
 
                   <div className="flex flex-col gap-3 sm:flex-row">
@@ -214,7 +216,7 @@ export default function Membership() {
                         setMessage("");
                         setSubmitted(false);
                       }}
-                      placeholder="Your email address"
+                      placeholder="Ihre E-Mail-Adresse"
                       className="h-12 min-w-0 flex-1 rounded-full border border-white/20 bg-white/10 px-5 text-sm text-white outline-none transition placeholder:text-white/50 focus:border-[#DFC24D] focus:ring-2 focus:ring-[#DFC24D]/20"
                     />
 
@@ -222,7 +224,7 @@ export default function Membership() {
                       type="submit"
                       className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-6 py-3 text-sm font-semibold text-[#21452B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#EFE9C5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                     >
-                      Join the list
+                      Auf die Warteliste
                       <span aria-hidden="true">↗</span>
                     </button>
                   </div>
@@ -235,19 +237,19 @@ export default function Membership() {
                   </p>
 
                   <p className="mt-2 text-[10px] leading-5 text-[#EFE9C5]/45">
-                    Your registration will only be saved once the form is
-                    connected to a secure email service.
+                    Ihre Anmeldung wird erst gespeichert, sobald das Formular
+                    mit einem sicheren E-Mail-Dienst verbunden ist.
                   </p>
                 </form>
               </div>
             </div>
 
-            {/* Learning resources */}
+            {/* Wissensangebote */}
             <div
               id="learn"
               className="relative flex scroll-mt-24 flex-col overflow-hidden rounded-[28px] border border-[#D8D0A9] bg-[#F8F5E8] p-7 sm:p-10 lg:p-11"
             >
-              {/* Decorative detail */}
+              {/* Dekorative Details */}
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#EFE9C5]/80"
@@ -265,7 +267,7 @@ export default function Membership() {
                     </span>
 
                     <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C14C38]">
-                      The Ayurveda journal
+                      Das Ayurveda-Journal
                     </span>
                   </div>
 
@@ -275,15 +277,16 @@ export default function Membership() {
                 </div>
 
                 <h2 className="font-serif text-4xl leading-[1.12] text-[#21452B] sm:text-5xl">
-                  Learn a little.
+                  Jeden Tag etwas lernen.
                   <span className="block italic text-[#9A8050]">
-                    Live a little better.
+                    Jeden Tag bewusster leben.
                   </span>
                 </h2>
 
                 <p className="mt-5 max-w-md text-sm leading-7 text-[#6B705C]">
-                  Explore practical knowledge, personal guidance and
-                  inspiration to bring Ayurveda into your everyday routine.
+                  Entdecken Sie praktisches Wissen, persönliche Begleitung
+                  und inspirierende Impulse, um Ayurveda in Ihren Alltag
+                  zu integrieren.
                 </p>
 
                 <div className="mt-9">
@@ -325,7 +328,7 @@ export default function Membership() {
               <div className="relative z-10 mt-auto flex items-center gap-3 pt-7">
                 <span className="h-px w-8 bg-[#DFC24D]" />
                 <p className="font-serif text-sm italic text-[#6B705C]">
-                  Knowledge is the beginning of balance.
+                  Wissen ist der erste Schritt zu innerer Balance.
                 </p>
               </div>
             </div>
@@ -333,12 +336,12 @@ export default function Membership() {
         </div>
       </section>
 
-      {/* Membership banner */}
+      {/* Mitgliedschafts-Banner */}
       <section
         id="membership"
         className="relative isolate mx-5 mb-20 overflow-hidden rounded-[30px] bg-[#21452B] text-[#EFE9C5] sm:mx-auto sm:max-w-7xl"
       >
-        {/* Decorative background */}
+        {/* Dekorativer Hintergrund */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -right-24 -top-40 -z-10 h-[520px] w-[520px] rounded-full border border-[#EFE9C5]/10"
@@ -353,39 +356,40 @@ export default function Membership() {
         />
 
         <div className="relative z-10 grid gap-10 px-7 py-12 sm:px-10 sm:py-14 lg:grid-cols-[1fr_auto] lg:items-center lg:px-16 lg:py-16">
-          {/* Membership details */}
+          {/* Mitgliedschaftsdetails */}
           <div className="max-w-3xl">
             <div className="mb-6 flex items-center gap-3">
               <span className="h-px w-9 bg-[#DFC24D]" />
               <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#DFC24D] sm:text-xs">
-                The Purana membership
+                Die Purana-Mitgliedschaft
               </p>
             </div>
 
             <p className="mb-4 text-xs text-[#EFE9C5]/55">
-              Planned launch: 1 January 2027
+              Geplanter Start: 1. Januar 2027
             </p>
 
             <h2 className="font-serif text-4xl leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl">
-              Make wellbeing
+              Wohlbefinden als
               <span className="block italic text-[#DFC24D]">
-                part of your life.
+                Teil Ihres Lebens.
               </span>
             </h2>
 
             <p className="mt-6 max-w-2xl text-sm leading-7 text-[#EFE9C5]/75 sm:text-base">
-              Enjoy podcasts, monthly Ayurveda tips and planned savings of
-              5–10% on eligible treatments, consultations, online packages,
-              Nivartana products and chalet stays. Cancel any time.
+              Freuen Sie sich auf Podcasts, monatliche Ayurveda-Tipps und
+              geplante Preisvorteile von 5–10 % auf ausgewählte Behandlungen,
+              Beratungen, Online-Pakete, Nivartana-Produkte und Chalet-Aufenthalte.
+              Jederzeit kündbar.
             </p>
 
-            {/* Benefits */}
+            {/* Vorteile */}
             <div className="mt-8 flex flex-wrap gap-3">
               {[
-                "Monthly Ayurveda tips",
-                "Member seminars",
-                "5–10% planned savings",
-                "Exclusive content",
+                "Monatliche Ayurveda-Tipps",
+                "Mitgliederseminare",
+                "Geplante Preisvorteile von 5–10 %",
+                "Exklusive Inhalte",
               ].map((benefit) => (
                 <span
                   key={benefit}
@@ -398,34 +402,34 @@ export default function Membership() {
             </div>
           </div>
 
-          {/* Price and CTA */}
+          {/* Preis und CTA */}
           <div className="relative flex w-full flex-col rounded-[24px] border border-[#DFC24D]/30 bg-[#EFE9C5]/[0.07] p-7 backdrop-blur-sm sm:p-8 lg:w-[280px]">
             <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#DFC24D]">
-              Membership plans
+              Mitgliedschaft
             </p>
 
             <div className="mt-5 flex items-baseline gap-2">
               <span className="font-serif text-5xl text-[#EFE9C5]">
-                €9.99
+                9,99 €
               </span>
-              <span className="text-xs text-[#EFE9C5]/60">/ month</span>
+              <span className="text-xs text-[#EFE9C5]/60">/ Monat</span>
             </div>
 
             <p className="mt-3 text-xs leading-6 text-[#EFE9C5]/60">
-              Start enjoying more ways to bring balance into your everyday
-              life.
+              Entdecken Sie neue Möglichkeiten, mehr Balance und Wohlbefinden
+              in Ihren Alltag zu bringen.
             </p>
 
             <a
               href="#app-email"
               className="mt-7 inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-6 py-3 text-sm font-semibold text-[#21452B] transition duration-300 hover:-translate-y-1 hover:bg-[#EFE9C5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
-              Join the waiting list
+              Auf die Warteliste
               <span aria-hidden="true">↗</span>
             </a>
 
             <p className="mt-4 text-center text-[10px] text-[#EFE9C5]/45">
-              Planned launch · January 2027
+              Geplanter Start · Januar 2027
             </p>
           </div>
         </div>

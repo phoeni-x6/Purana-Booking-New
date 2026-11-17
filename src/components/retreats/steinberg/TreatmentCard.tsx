@@ -9,18 +9,18 @@ type TreatmentCardProps = {
   category: string;
   duration: string;
   price: string;
-  image: string;
+  image: string | null;
   description: string;
 };
 
 export default function TreatmentCard({
-  name,
-  category,
-  duration,
-  price,
-  image,
-  description,
-}: TreatmentCardProps) {
+                                        name,
+                                        category,
+                                        duration,
+                                        price,
+                                        image,
+                                        description,
+                                      }: TreatmentCardProps) {
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
   const bookingUrl = `/booking?${new URLSearchParams({
@@ -48,165 +48,192 @@ export default function TreatmentCard({
   }, [isInfoOpen]);
 
   return (
-    <>
-      <article className="group flex h-full flex-col overflow-hidden rounded-[24px] border border-[#D8D0A9] bg-[#F8F5E8] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#21452B]/10">
+      <>
+        <article className="group flex h-full flex-col overflow-hidden rounded-[24px] border border-[#D8D0A9] bg-[#F8F5E8] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#21452B]/10">
+          {/* Treatment image */}
+          <div className="relative aspect-[5/4] overflow-hidden bg-[#EFE9C5]">
+            {image ? (
+                <img
+                    src={image}
+                    alt={`${name} – Ayurveda-Behandlung`}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+            ) : (
+                <div className="flex h-full w-full items-center justify-center">
+              <span className="font-serif text-lg italic text-[#9A8050]">
+                Purana Ayurveda
+              </span>
+                </div>
+            )}
 
-        <div className="relative aspect-[5/4] overflow-hidden bg-[#EFE9C5]">
-          <img
-            src={image}
-            alt={`${name} – Ayurveda-Behandlung`}
-            loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-
-          <span className="absolute left-4 top-4 rounded-full border border-white/60 bg-[#F8F5E8]/95 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.15em] text-[#21452B]">
+            {/* Category badge */}
+            <span className="absolute left-3 top-3 z-10 inline-block max-w-[calc(100%-24px)] whitespace-normal break-words rounded-full border border-white/60 bg-[#F8F5E8]/95 px-3 py-2 text-[9px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-[#21452B]">
             {category}
           </span>
 
-          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#21452B]/35 to-transparent" />
-        </div>
-
-        <div className="flex flex-1 flex-col p-5">
-          <h3 className="font-[var(--font-heading)] text-xl leading-snug text-[#21452B] sm:text-2xl">
-            {name}
-          </h3>
-
-          <p className="mt-3 flex-1 text-sm leading-6 text-[#6B705C]">
-            {description}
-          </p>
-
-          <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[#D8D0A9] pt-4">
-            <div>
-              <p className="text-[10px] font-medium uppercase tracking-[0.12em] text-[#6B705C]">
-                Dauer
-              </p>
-              <p className="mt-1 text-sm text-[#263A2B]">{duration}</p>
-            </div>
-
-            <div className="text-right">
-              <p className="text-[10px] font-medium uppercase tracking-[0.12em] text-[#6B705C]">
-                Ab
-              </p>
-              <p className="mt-1 font-[var(--font-heading)] text-2xl text-[#21452B]">
-                {price}
-              </p>
-            </div>
+            <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#21452B]/35 to-transparent" />
           </div>
 
-          <div className="mt-5 grid grid-cols-2 gap-2">
-            <button
-              type="button"
-              onClick={() => setIsInfoOpen(true)}
-              aria-haspopup="dialog"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#2F5D39] px-3 py-3 text-sm font-semibold text-[#2F5D39] transition hover:bg-[#EFE9C5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DFC24D]"
-            >
-              Mehr erfahren <span aria-hidden="true">ⓘ</span>
-            </button>
+          {/* Treatment details */}
+          <div className="flex flex-1 flex-col p-5">
+            <h3 className="font-[var(--font-heading)] text-xl leading-snug text-[#21452B] sm:text-2xl">
+              {name}
+            </h3>
 
-            <Link
-              href={bookingUrl}
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#21452B] px-3 py-3 text-sm font-semibold text-white transition hover:bg-[#2F5D39] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DFC24D]"
-            >
-              Online buchen <span aria-hidden="true">→</span>
-            </Link>
+            {/* Shortened description */}
+            <p className="mt-3 line-clamp-3 min-h-[72px] text-sm leading-6 text-[#6B705C]">
+              {description}
+            </p>
+
+            {/* Duration and price */}
+            <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[#D8D0A9] pt-4">
+              <div>
+                <p className="text-[10px] font-medium uppercase tracking-[0.12em] text-[#6B705C]">
+                  Dauer
+                </p>
+                <p className="mt-1 text-sm text-[#263A2B]">{duration}</p>
+              </div>
+
+              <div className="text-right">
+                <p className="text-[10px] font-medium uppercase tracking-[0.12em] text-[#6B705C]">
+                  Ab
+                </p>
+                <p className="mt-1 font-[var(--font-heading)] text-2xl text-[#21452B]">
+                  {price}
+                </p>
+              </div>
+            </div>
+
+            {/* Actions */}
+            <div className="mt-5 grid grid-cols-2 gap-2">
+              <button
+                  type="button"
+                  onClick={() => setIsInfoOpen(true)}
+                  aria-haspopup="dialog"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#2F5D39] px-3 py-3 text-sm font-semibold text-[#2F5D39] transition hover:bg-[#EFE9C5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DFC24D]"
+              >
+                Mehr erfahren <span aria-hidden="true">ⓘ</span>
+              </button>
+
+              <Link
+                  href={bookingUrl}
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#21452B] px-3 py-3 text-sm font-semibold text-white transition hover:bg-[#2F5D39] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DFC24D]"
+              >
+                Online buchen <span aria-hidden="true">→</span>
+              </Link>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      {isInfoOpen && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-[#21452B]/75 p-4 backdrop-blur-sm sm:p-6"
-          onMouseDown={(event) => {
-            if (event.target === event.currentTarget) {
-              setIsInfoOpen(false);
-            }
-          }}
-        >
-          <section
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="treatment-modal-title"
-            className="relative my-auto max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-[24px] border border-[#D8D0A9] bg-[#F8F5E8] shadow-2xl"
-          >
-            <div className="relative aspect-[16/7] overflow-hidden bg-[#EFE9C5]">
-              <img
-                src={image}
-                alt={`${name} – Ayurveda-Behandlung`}
-                className="h-full w-full object-cover"
-              />
+        {/* Treatment information modal */}
+        {isInfoOpen && (
+            <div
+                className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-[#21452B]/75 p-4 backdrop-blur-sm sm:p-6"
+                onMouseDown={(event) => {
+                  if (event.target === event.currentTarget) {
+                    setIsInfoOpen(false);
+                  }
+                }}
+            >
+              <section
+                  role="dialog"
+                  aria-modal="true"
+                  aria-labelledby="treatment-modal-title"
+                  className="relative my-auto max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-[24px] border border-[#D8D0A9] bg-[#F8F5E8] shadow-2xl"
+              >
+                {/* Modal image */}
+                <div className="relative aspect-[16/7] overflow-hidden bg-[#EFE9C5]">
+                  {image ? (
+                      <img
+                          src={image}
+                          alt={`${name} – Ayurveda-Behandlung`}
+                          className="h-full w-full object-cover"
+                      />
+                  ) : (
+                      <div className="flex h-full w-full items-center justify-center">
+                  <span className="font-serif text-xl italic text-[#9A8050]">
+                    Purana Ayurveda
+                  </span>
+                      </div>
+                  )}
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#21452B]/65 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#21452B]/65 to-transparent" />
 
-              <span className="absolute bottom-5 left-6 rounded-full border border-white/40 bg-[#21452B]/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-[#EFE9C5] backdrop-blur-sm">
+                  <span className="absolute bottom-5 left-6 max-w-[calc(100%-80px)] whitespace-normal break-words rounded-full border border-white/40 bg-[#21452B]/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-[#EFE9C5] backdrop-blur-sm">
                 {category}
               </span>
 
-              <button
-                type="button"
-                onClick={() => setIsInfoOpen(false)}
-                aria-label="Behandlungsinformationen schließen"
-                className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/50 bg-[#21452B]/70 text-xl text-white transition hover:bg-[#2F5D39]"
-              >
-                ×
-              </button>
-            </div>
-
-            <div className="p-6 sm:p-9">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#533E23]">
-                Entdecken Sie diese Behandlung
-              </p>
-
-              <h2
-                id="treatment-modal-title"
-                className="mt-3 font-[var(--font-heading)] text-3xl font-normal leading-tight text-[#21452B] sm:text-4xl"
-              >
-                {name}
-              </h2>
-
-              <p className="mt-5 whitespace-pre-line text-sm leading-7 text-[#6B705C] sm:text-base">
-                {description}
-              </p>
-
-              <div className="mt-7 grid grid-cols-2 gap-3">
-                <div className="rounded-2xl border border-[#D8D0A9] bg-[#EFE9C5] p-4">
-                  <p className="text-xs uppercase tracking-[0.12em] text-[#6B705C]">
-                    Dauer
-                  </p>
-                  <p className="mt-2 font-[var(--font-heading)] text-xl text-[#21452B]">
-                    {duration}
-                  </p>
+                  <button
+                      type="button"
+                      onClick={() => setIsInfoOpen(false)}
+                      aria-label="Behandlungsinformationen schließen"
+                      className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/50 bg-[#21452B]/70 text-xl text-white transition hover:bg-[#2F5D39]"
+                  >
+                    ×
+                  </button>
                 </div>
 
-                <div className="rounded-2xl border border-[#D8D0A9] bg-[#EFE9C5] p-4">
-                  <p className="text-xs uppercase tracking-[0.12em] text-[#6B705C]">
-                    Preis
+                {/* Modal content */}
+                <div className="p-6 sm:p-9">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#533E23]">
+                    Entdecken Sie diese Behandlung
                   </p>
-                  <p className="mt-2 font-[var(--font-heading)] text-xl text-[#21452B]">
-                    {price}
+
+                  <h2
+                      id="treatment-modal-title"
+                      className="mt-3 font-[var(--font-heading)] text-3xl font-normal leading-tight text-[#21452B] sm:text-4xl"
+                  >
+                    {name}
+                  </h2>
+
+                  {/* Full description */}
+                  <p className="mt-5 whitespace-pre-line text-sm leading-7 text-[#6B705C] sm:text-base">
+                    {description}
                   </p>
+
+                  {/* Duration and price */}
+                  <div className="mt-7 grid grid-cols-2 gap-3">
+                    <div className="rounded-2xl border border-[#D8D0A9] bg-[#EFE9C5] p-4">
+                      <p className="text-xs uppercase tracking-[0.12em] text-[#6B705C]">
+                        Dauer
+                      </p>
+                      <p className="mt-2 font-[var(--font-heading)] text-xl text-[#21452B]">
+                        {duration}
+                      </p>
+                    </div>
+
+                    <div className="rounded-2xl border border-[#D8D0A9] bg-[#EFE9C5] p-4">
+                      <p className="text-xs uppercase tracking-[0.12em] text-[#6B705C]">
+                        Preis
+                      </p>
+                      <p className="mt-2 font-[var(--font-heading)] text-xl text-[#21452B]">
+                        {price}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Modal actions */}
+                  <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                    <Link
+                        href={bookingUrl}
+                        className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[#C14C38] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#A83F30]"
+                    >
+                      Diese Behandlung buchen <span aria-hidden="true">→</span>
+                    </Link>
+
+                    <button
+                        type="button"
+                        onClick={() => setIsInfoOpen(false)}
+                        className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#D8D0A9] px-6 py-3 text-sm font-semibold text-[#21452B] transition hover:bg-[#EFE9C5]"
+                    >
+                      Schließen
+                    </button>
+                  </div>
                 </div>
-              </div>
-
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href={bookingUrl}
-                  className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[#C14C38] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#A83F30]"
-                >
-                  Diese Behandlung buchen <span aria-hidden="true">→</span>
-                </Link>
-
-                <button
-                  type="button"
-                  onClick={() => setIsInfoOpen(false)}
-                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#D8D0A9] px-6 py-3 text-sm font-semibold text-[#21452B] transition hover:bg-[#EFE9C5]"
-                >
-                  Schließen
-                </button>
-              </div>
+              </section>
             </div>
-          </section>
-        </div>
-      )}
-    </>
+        )}
+      </>
   );
 }

@@ -83,7 +83,7 @@ const miniRetreats = [
       },
     ],
     price: "€[PRICE]",
-    image: "/images/steinberg/mini-retreat-3-days.jpg",
+    image: "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/img1.jfif",
   },
   {
     duration: "4 TAGE · 3 ÜBERNACHTUNGEN",
@@ -116,7 +116,7 @@ const miniRetreats = [
       },
     ],
     price: "€[PRICE]",
-    image: "/images/steinberg/mini-retreat-4-days.jpg",
+    image: "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Marktredwitz/IMG_5624.jpeg",
   },
 ];
 

@@ -2,7 +2,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { createClient } from "@/lib/supabase/client";
 import TreatmentCard from "@/components/retreats/steinberg/TreatmentCard";
 
 type Treatment = {
@@ -32,27 +31,39 @@ export default function SteinbergTreatments() {
     let isMounted = true;
 
     async function fetchTreatments() {
-      const supabase = createClient();
+      try {
+        const response = await fetch("/api/booking/treatments", {
+          cache: "no-store",
+        });
 
-      const { data, error } = await supabase
-          .from("treatments")
-          .select("*")
-          .eq("active", true)
-          .eq("available_for_booking", true)
-          .order("category", { ascending: true })
-          .order("name", { ascending: true });
+        if (!response.ok) {
+          throw new Error(`Failed to fetch treatments: ${response.status}`);
+        }
 
-      if (!isMounted) return;
+        const result = await response.json();
 
-      if (error) {
-        console.error("Error fetching treatments:", error);
-        setError("Die Behandlungen konnten momentan nicht geladen werden.");
-        setLoading(false);
-        return;
+        // Support either a direct array or an object containing treatments.
+        const data: Treatment[] = Array.isArray(result)
+            ? result
+            : result.treatments ?? result.data ?? [];
+
+        if (!isMounted) return;
+
+        setTreatments(data);
+        setError("");
+      } catch (err) {
+        console.error("Error fetching treatments:", err);
+
+        if (!isMounted) return;
+
+        setError(
+            "Die Behandlungen konnten momentan nicht geladen werden."
+        );
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
       }
-
-      setTreatments((data ?? []) as unknown as Treatment[]);
-      setLoading(false);
     }
 
     fetchTreatments();
@@ -172,7 +183,10 @@ export default function SteinbergTreatments() {
                             name={treatment.name}
                             category={treatment.category}
                             duration={`${treatment.duration_minutes} Min.`}
-                            price={formatPrice(treatment.price, treatment.currency)}
+                            price={formatPrice(
+                                treatment.price,
+                                treatment.currency
+                            )}
                             image={treatment.image}
                             description={treatment.description ?? ""}
                         />
@@ -256,4 +270,3 @@ export default function SteinbergTreatments() {
       </section>
   );
 }
-// Test

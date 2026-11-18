@@ -207,55 +207,6 @@ export default function SteinbergTreatments() {
             </p>
           </div>
 
-          {/* Contact section */}
-          <div className="relative mt-20 overflow-hidden rounded-[28px] bg-[#21452B] px-6 py-10 text-[#F8F5E8] sm:px-10 sm:py-12 lg:px-14">
-            <div
-                aria-hidden="true"
-                className="pointer-events-none absolute -right-20 -top-36 h-[380px] w-[380px] rounded-full border border-[#DFC24D]/20"
-            />
-            <div
-                aria-hidden="true"
-                className="pointer-events-none absolute -right-5 -top-20 h-[260px] w-[260px] rounded-full border border-[#DFC24D]/15"
-            />
-            <div
-                aria-hidden="true"
-                className="pointer-events-none absolute -bottom-28 left-[45%] h-64 w-64 rounded-full bg-[#2F5D39] blur-3xl"
-            />
-
-            <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
-              <div className="max-w-2xl">
-                <div className="flex items-center gap-3">
-                  <span className="h-px w-8 bg-[#DFC24D]" />
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.23em] text-[#DFC24D]">
-                    Ihr Wohlbefinden steht an erster Stelle
-                  </p>
-                </div>
-
-                <h3 className="mt-5 font-serif text-3xl leading-tight sm:text-4xl">
-                  Sie wissen nicht, womit Sie beginnen sollen?
-                  <span className="block italic text-[#DFC24D]">
-                  Wir finden die passende Behandlung.
-                </span>
-                </h3>
-
-                <p className="mt-4 max-w-xl text-sm leading-7 text-white/75">
-                  Jeder Mensch ist einzigartig. Kontaktieren Sie unser Team,
-                  um Ihre Wünsche und Bedürfnisse zu besprechen und gemeinsam
-                  die Behandlung zu finden, die zu Ihnen passt.
-                </p>
-              </div>
-
-              <a
-                  href="#contact"
-                  className="group inline-flex shrink-0 items-center justify-center gap-4 rounded-full bg-[#DFC24D] px-7 py-4 text-sm font-semibold text-[#21452B] transition-all hover:-translate-y-1 hover:bg-[#EFE9C5]"
-              >
-                Kontaktieren Sie unser Team
-                <span className="transition-transform group-hover:translate-x-1">
-                →
-              </span>
-              </a>
-            </div>
-          </div>
 
           {/* Closing detail */}
           <div className="mt-10 flex flex-wrap items-center justify-between gap-4">

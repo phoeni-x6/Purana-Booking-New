@@ -53,7 +53,6 @@ const inputClass =
 
 const labelClass = "mb-2 block text-sm font-medium text-[#533E23]";
 
-const MIN_BOOKING_DATE = "2027-01-01";
 
 function getBookingType(category: string): BookingType {
   const value = category.toLowerCase();
@@ -95,6 +94,13 @@ function formatDuration(minutes: number) {
 }
 
 export default function BookingPage() {
+  const minimumBookingDate = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Berlin",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+
   const [step, setStep] = useState(1);
 
   // Database treatments
@@ -113,7 +119,7 @@ export default function BookingPage() {
   const [allSlots, setAllSlots] = useState<AvailableSlot[]>([]);
   const [loadingSlots, setLoadingSlots] = useState(false);
 
-  const [therapistId, setTherapistId] = useState("any");
+  const [therapistId, setTherapistId] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
 
   // Terms
@@ -174,25 +180,21 @@ export default function BookingPage() {
 
   // Filter slots according to selected therapist.
   const visibleSlots = useMemo(() => {
-    const filtered =
-        therapistId === "any"
-            ? allSlots
-            : allSlots.filter((slot) => slot.therapist_id === therapistId);
+    if (!therapistId) return [];
 
-    // Display each time only once when no therapist is selected.
-    return Array.from(
-        new Map(filtered.map((slot) => [slot.slot_time, slot])).values(),
-    ).sort((a, b) => a.slot_time.localeCompare(b.slot_time));
+    return allSlots
+        .filter((slot) => slot.therapist_id === therapistId)
+        .sort((a, b) => a.slot_time.localeCompare(b.slot_time));
   }, [allSlots, therapistId]);
 
   const selectedSlot = useMemo(() => {
-    if (!selectedTime) return null;
+    if (!selectedTime || !therapistId) return null;
 
     return allSlots.find(
         (slot) =>
             slot.slot_time === selectedTime &&
-            (therapistId === "any" || slot.therapist_id === therapistId),
-    );
+            slot.therapist_id === therapistId,
+    ) ?? null;
   }, [allSlots, selectedTime, therapistId]);
 
   const updateDetail = (field: keyof BookingDetails, value: string) => {
@@ -236,8 +238,6 @@ export default function BookingPage() {
                   item.name.toLowerCase() === requestedService?.toLowerCase(),
           );
 
-          // Only use the URL to identify a treatment.
-          // Price and duration always come from the database.
           setTreatmentId(matching?.treatment_id ?? loaded[0].treatment_id);
         }
       } catch (err) {
@@ -311,11 +311,15 @@ export default function BookingPage() {
   // --------------------------------------------------
 
   useEffect(() => {
-    if (!treatmentId || !date) return;
+    if (!treatmentId || !date) {
+      return;
+    }
 
     let active = true;
 
     async function fetchAvailability() {
+      setLoadingSlots(true);
+
       try {
         const params = new URLSearchParams({
           treatmentId,
@@ -369,7 +373,7 @@ export default function BookingPage() {
     setDate("");
     setAllSlots([]);
     setSelectedTime("");
-    setTherapistId("any");
+    setTherapistId("");
     setLoadingSlots(false);
     setError("");
   };
@@ -392,7 +396,7 @@ export default function BookingPage() {
     setDate(value);
     setAllSlots([]);
     setSelectedTime("");
-    setTherapistId("any");
+    setTherapistId("");
     setError("");
     setLoadingSlots(Boolean(value && treatmentId));
   };
@@ -453,6 +457,7 @@ export default function BookingPage() {
   // CREATE BOOKING
   // --------------------------------------------------
 
+
   const handleSubmit = async () => {
     if (!canContinue() || !selectedTreatment || !selectedSlot) return;
 
@@ -485,13 +490,10 @@ export default function BookingPage() {
 
       const result = await response.json();
 
-      console.log("Booking API response:", result);
-
       if (!response.ok) {
         throw new Error(result.error || "Unable to create booking.");
       }
 
-      // Validate and store the reference returned by the API.
       const reference = result.bookingReference;
 
       if (typeof reference !== "string" || !reference.trim()) {
@@ -500,6 +502,27 @@ export default function BookingPage() {
         );
       }
 
+      // Send booking emails separately.
+      try {
+        const emailResponse = await fetch("/api/booking/email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            bookingReference: reference.trim(),
+          }),
+        });
+
+        if (!emailResponse.ok) {
+          const emailResult = await emailResponse.json();
+          console.error("Booking email error:", emailResult.error);
+        }
+      } catch (emailError) {
+        console.error("Unable to send booking emails:", emailError);
+      }
+
+      // Booking is successful even if email delivery fails.
       setBookingId(reference.trim());
       setSubmitted(true);
 
@@ -513,10 +536,6 @@ export default function BookingPage() {
               ? err.message
               : "Something went wrong. Please try again.",
       );
-
-      // Clear the selected slot so the customer can re-check availability.
-      setAllSlots([]);
-      setSelectedTime("");
     } finally {
       setSubmitting(false);
     }
@@ -972,8 +991,8 @@ export default function BookingPage() {
                           className={inputClass}
                           disabled={!date || loadingSlots}
                       >
-                        <option value="any">No preference</option>
-
+                        <option value="">Select a therapist</option>
+                        
                         {availableTherapists.map((item) => (
                             <option key={item.id} value={item.id}>
                               {item.name}
@@ -996,7 +1015,7 @@ export default function BookingPage() {
                         <input
                             id="date"
                             type="date"
-                            min={MIN_BOOKING_DATE}
+                            min={minimumBookingDate}
                             value={date}
                             onChange={(event) =>
                                 handleDateChange(event.target.value)
@@ -1009,6 +1028,12 @@ export default function BookingPage() {
                     <div>
                       <label className={labelClass}>Available times</label>
 
+                      {date && !therapistId && (
+                          <p className="rounded-xl bg-[#EFE9C5]/50 p-4 text-sm text-[#8B8778]">
+                            Please select a therapist to view available appointment times.
+                          </p>
+                      )}
+
                       {!date && (
                           <p className="rounded-xl bg-[#EFE9C5]/50 p-4 text-sm text-[#8B8778]">
                             Please select a date to view available appointment
@@ -1016,20 +1041,20 @@ export default function BookingPage() {
                           </p>
                       )}
 
-                      {date && loadingSlots && (
+                      {date && therapistId && loadingSlots && (
                           <p className="rounded-xl bg-[#EFE9C5]/50 p-4 text-sm text-[#8B8778]">
                             Checking therapist availability...
                           </p>
                       )}
 
-                      {date && !loadingSlots && visibleSlots.length === 0 && (
+                      {date && therapistId && !loadingSlots && visibleSlots.length === 0 && (
                           <p className="rounded-xl bg-[#EFE9C5]/50 p-4 text-sm text-[#8B8778]">
                             No available appointments for this date. Please try
                             another date or therapist.
                           </p>
                       )}
 
-                      {!loadingSlots && visibleSlots.length > 0 && (
+                      {date && therapistId && !loadingSlots && visibleSlots.length > 0 && (
                           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
                             {visibleSlots.map((slot) => (
                                 <button

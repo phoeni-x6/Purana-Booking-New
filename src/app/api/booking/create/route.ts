@@ -43,8 +43,7 @@ export async function POST(request: NextRequest) {
         // Validate date and time formats.
         if (
             !/^\d{4}-\d{2}-\d{2}$/.test(body.date) ||
-            !/^\d{2}:\d{2}$/.test(body.time) ||
-            body.date < "2027-01-01"
+            !/^\d{2}:\d{2}$/.test(body.time)
         ) {
             return NextResponse.json(
                 { error: "Please select a valid booking date and time." },
@@ -70,7 +69,12 @@ export async function POST(request: NextRequest) {
         // Validate time.
         const [hours, minutes] = body.time.split(":").map(Number);
 
-        if (hours > 23 || minutes > 59) {
+        if (
+            !Number.isInteger(hours) ||
+            !Number.isInteger(minutes) ||
+            hours > 23 ||
+            minutes > 59
+        ) {
             return NextResponse.json(
                 { error: "Please select a valid booking time." },
                 { status: 400 },
@@ -88,8 +92,6 @@ export async function POST(request: NextRequest) {
         const supabase = await createClient();
 
         // Create the booking through the database function.
-        // The function handles treatment validation, therapist validation,
-        // working hours, booking conflicts, blocked periods and guest creation.
         const { data, error } = await supabase.rpc(
             "create_booking_request_with_reference",
             {
@@ -114,7 +116,7 @@ export async function POST(request: NextRequest) {
             console.error("Booking creation error:", error);
 
             const isConflict =
-                /booked|overlap|unavailable|blocked|time slot|working hours/i.test(
+                /booked|overlap|unavailable|blocked|time slot|working hours|future appointment|therapist break/i.test(
                     error.message,
                 );
 

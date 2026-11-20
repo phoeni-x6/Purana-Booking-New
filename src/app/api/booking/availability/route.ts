@@ -21,13 +21,7 @@ export async function GET(request: NextRequest) {
             );
         }
 
-        if (date < "2027-01-01") {
-            return NextResponse.json(
-                { error: "Bookings are available from January 1, 2027." },
-                { status: 400 },
-            );
-        }
-
+        // Validate that the date actually exists.
         const [year, month, day] = date.split("-").map(Number);
         const parsedDate = new Date(Date.UTC(year, month - 1, day));
 

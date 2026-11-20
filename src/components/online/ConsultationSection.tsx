@@ -220,151 +220,157 @@ export default function ConsultationSection() {
 
         {/* Beraterkarten */}
         <div className="grid gap-7 md:grid-cols-2">
-          {practitioners.map((person, index) => (
-            <article
-              key={person.name}
-              className={`group relative flex flex-col overflow-hidden rounded-[28px] border bg-[#F8F5E8] shadow-[0_12px_40px_rgba(38,58,43,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(38,58,43,0.12)] ${
-                person.featured
-                  ? "border-[#2F5D39]/40"
-                  : "border-[#D8D0A9]"
-              }`}
-            >
-              {/* Oberer Akzent */}
-              <div
-                className={`h-1.5 w-full ${
-                  person.featured
-                    ? "bg-gradient-to-r from-[#21452B] via-[#2F5D39] to-[#DFC24D]"
-                    : "bg-gradient-to-r from-[#D8D0A9] via-[#DFC24D] to-[#C14C38]"
-                }`}
-              />
+          {practitioners.map((person) => {
+            const contactUrl = `/contact?package=${encodeURIComponent(
+              `Online-Beratung mit ${person.name}`
+            )}`;
 
-              {/* Profilbereich */}
-              <div
-                className={`relative overflow-hidden p-6 sm:p-8 ${
+            return (
+              <article
+                key={person.name}
+                className={`group relative flex flex-col overflow-hidden rounded-[28px] border bg-[#F8F5E8] shadow-[0_12px_40px_rgba(38,58,43,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(38,58,43,0.12)] ${
                   person.featured
-                    ? "bg-[#EFE9C5]/55"
-                    : "bg-[#E9E3D1]/65"
+                    ? "border-[#2F5D39]/40"
+                    : "border-[#D8D0A9]"
                 }`}
               >
+                {/* Oberer Akzent */}
                 <div
-                  aria-hidden="true"
-                  className="absolute -right-12 -top-16 h-48 w-48 rounded-full border border-[#2F5D39]/10"
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute -right-3 -top-7 h-32 w-32 rounded-full border border-dashed border-[#DFC24D]/30"
+                  className={`h-1.5 w-full ${
+                    person.featured
+                      ? "bg-gradient-to-r from-[#21452B] via-[#2F5D39] to-[#DFC24D]"
+                      : "bg-gradient-to-r from-[#D8D0A9] via-[#DFC24D] to-[#C14C38]"
+                  }`}
                 />
 
-                <div className="relative flex items-center gap-5">
-                  {/* Profilbild-Platzhalter */}
+                {/* Profilbereich */}
+                <div
+                  className={`relative overflow-hidden p-6 sm:p-8 ${
+                    person.featured
+                      ? "bg-[#EFE9C5]/55"
+                      : "bg-[#E9E3D1]/65"
+                  }`}
+                >
                   <div
-                    className={`relative flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-[24px] border border-white/70 shadow-sm sm:h-28 sm:w-28 ${person.photoColor}`}
-                  >
-                    <div className="absolute inset-2 rounded-[18px] border border-white/60" />
-                    <span className="font-serif text-3xl text-[#21452B]/80">
-                      {person.initials}
-                    </span>
-                    <span className="absolute bottom-3 right-3 h-3 w-3 rounded-full border-2 border-white bg-[#2F5D39]" />
-                  </div>
+                    aria-hidden="true"
+                    className="absolute -right-12 -top-16 h-48 w-48 rounded-full border border-[#2F5D39]/10"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="absolute -right-3 -top-7 h-32 w-32 rounded-full border border-dashed border-[#DFC24D]/30"
+                  />
 
-                  <div className="min-w-0 flex-1">
-                    {person.featured ? (
-                      <span className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-[#DFC24D]/20 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.15em] text-[#80621A]">
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#DFC24D]" />
-                        Gründerin & Beraterin
+                  <div className="relative flex items-center gap-5">
+                    {/* Profilbild-Platzhalter */}
+                    <div
+                      className={`relative flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-[24px] border border-white/70 shadow-sm sm:h-28 sm:w-28 ${person.photoColor}`}
+                    >
+                      <div className="absolute inset-2 rounded-[18px] border border-white/60" />
+                      <span className="font-serif text-3xl text-[#21452B]/80">
+                        {person.initials}
                       </span>
-                    ) : (
-                      <span className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-[#2F5D39]/10 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.15em] text-[#2F5D39]">
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#2F5D39]" />
-                        Ayurveda-Fachperson
-                      </span>
-                    )}
-
-                    <h4 className="font-serif text-xl leading-tight text-[#21452B] sm:text-2xl">
-                      {person.name}
-                    </h4>
-
-                    <p className="mt-2 text-xs leading-5 text-[#6B705C]">
-                      {person.role}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Karteninhalt */}
-              <div className="flex flex-1 flex-col p-6 sm:p-8">
-                <p className="text-sm leading-7 text-[#52634F]">
-                  {person.description}
-                </p>
-
-                {/* Beratungssprache */}
-                <div className="mt-6 flex flex-wrap items-center gap-2 rounded-xl border border-[#D8D0A9]/70 bg-white/50 px-4 py-3">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className="h-4 w-4 shrink-0 text-[#9A8050]"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                  >
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
-                  </svg>
-                  <span className="text-xs text-[#6B705C]">
-                    Beratungssprache:
-                  </span>
-                  <span className="text-xs font-semibold text-[#21452B]">
-                    {person.language}
-                  </span>
-                </div>
-
-                {/* Preis */}
-                <div className="mt-auto pt-8">
-                  <div className="mb-5 flex items-end justify-between gap-3">
-                    <div>
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8A8C73]">
-                        Ihre Beratung
-                      </p>
-                      <div className="mt-1 flex items-baseline gap-2">
-                        <span className="font-serif text-4xl text-[#21452B]">
-                          {person.price}
-                        </span>
-                        <span className="text-xs text-[#6B705C]">
-                          / 45 Min.
-                        </span>
-                      </div>
+                      <span className="absolute bottom-3 right-3 h-3 w-3 rounded-full border-2 border-white bg-[#2F5D39]" />
                     </div>
 
-                    <a
-                      href="#booking"
-                      className="mb-1 text-xs font-semibold text-[#533E23] underline decoration-[#DFC24D] underline-offset-4 transition hover:text-[#C14C38]"
-                    >
-                      Profil ansehen
-                    </a>
-                  </div>
+                    <div className="min-w-0 flex-1">
+                      {person.featured ? (
+                        <span className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-[#DFC24D]/20 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.15em] text-[#80621A]">
+                          <span className="h-1.5 w-1.5 rounded-full bg-[#DFC24D]" />
+                          Gründerin & Beraterin
+                        </span>
+                      ) : (
+                        <span className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-[#2F5D39]/10 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.15em] text-[#2F5D39]">
+                          <span className="h-1.5 w-1.5 rounded-full bg-[#2F5D39]" />
+                          Ayurveda-Fachperson
+                        </span>
+                      )}
 
-                  <a
-                    href="#booking"
-                    className={`group/button flex w-full items-center justify-center gap-3 rounded-full px-5 py-4 text-center text-sm font-semibold transition duration-300 ${
-                      person.featured
-                        ? "bg-[#21452B] text-[#F8F5E8] hover:bg-[#2F5D39]"
-                        : "border border-[#21452B]/30 bg-transparent text-[#21452B] hover:border-[#21452B] hover:bg-[#EFE9C5]/60"
-                    }`}
-                  >
-                    {person.button}
+                      <h4 className="font-serif text-xl leading-tight text-[#21452B] sm:text-2xl">
+                        {person.name}
+                      </h4>
+
+                      <p className="mt-2 text-xs leading-5 text-[#6B705C]">
+                        {person.role}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Karteninhalt */}
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
+                  <p className="text-sm leading-7 text-[#52634F]">
+                    {person.description}
+                  </p>
+
+                  {/* Beratungssprache */}
+                  <div className="mt-6 flex flex-wrap items-center gap-2 rounded-xl border border-[#D8D0A9]/70 bg-white/50 px-4 py-3">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
-                      className="h-4 w-4 transition-transform duration-300 group-hover/button:translate-x-1"
+                      className="h-4 w-4 shrink-0 text-[#9A8050]"
                       stroke="currentColor"
-                      strokeWidth="1.8"
+                      strokeWidth="1.6"
                     >
-                      <path d="M5 12h14M13 6l6 6-6 6" />
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
                     </svg>
-                  </a>
+                    <span className="text-xs text-[#6B705C]">
+                      Beratungssprache:
+                    </span>
+                    <span className="text-xs font-semibold text-[#21452B]">
+                      {person.language}
+                    </span>
+                  </div>
+
+                  {/* Preis */}
+                  <div className="mt-auto pt-8">
+                    <div className="mb-5 flex items-end justify-between gap-3">
+                      <div>
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8A8C73]">
+                          Ihre Beratung
+                        </p>
+                        <div className="mt-1 flex items-baseline gap-2">
+                          <span className="font-serif text-4xl text-[#21452B]">
+                            {person.price}
+                          </span>
+                          <span className="text-xs text-[#6B705C]">
+                            / 45 Min.
+                          </span>
+                        </div>
+                      </div>
+
+                      <a
+                        href={contactUrl}
+                        className="mb-1 text-xs font-semibold text-[#533E23] underline decoration-[#DFC24D] underline-offset-4 transition hover:text-[#C14C38]"
+                      >
+                        Profil ansehen
+                      </a>
+                    </div>
+
+                    <a
+                      href={contactUrl}
+                      className={`group/button flex w-full items-center justify-center gap-3 rounded-full px-5 py-4 text-center text-sm font-semibold transition duration-300 ${
+                        person.featured
+                          ? "bg-[#21452B] text-[#F8F5E8] hover:bg-[#2F5D39]"
+                          : "border border-[#21452B]/30 bg-transparent text-[#21452B] hover:border-[#21452B] hover:bg-[#EFE9C5]/60"
+                      }`}
+                    >
+                      {person.button}
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className="h-4 w-4 transition-transform duration-300 group-hover/button:translate-x-1"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                      >
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
 
         {/* Rechtlicher Hinweis */}

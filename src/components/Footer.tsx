@@ -19,18 +19,18 @@ const footerGroups = [
   {
     title: "Kontakt",
     links: [
-      ["Erlebnis buchen", "#booking"],
+      
       ["Schreiben Sie uns auf WhatsApp", "https://wa.me/+491759479619"],
-      ["E-Mail an unser Team", "mailto:hello@example.com"],
+      ["Info@purana-ayurveda.de", "mailto:info@purana-ayurveda.de"],
     ],
   },
   {
     title: "Informationen",
     links: [
-      ["Über Purana", "#about"],
+      ["Über Purana", "/about"],
       ["Datenschutzerklärung", "/privacy"],
       ["Allgemeine Geschäftsbedingungen", "/terms"],
-      ["Impressum", "/legal"],
+      
     ],
   },
 ];

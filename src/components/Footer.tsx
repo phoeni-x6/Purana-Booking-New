@@ -43,13 +43,8 @@ const socialLinks = [
   },
   {
     label: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/share/19YdnrdkwP/",
     icon: FaFacebookF,
-  },
-  {
-    label: "YouTube",
-    href: "#",
-    icon: FaYoutube,
   },
 ];
 

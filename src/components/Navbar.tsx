@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -10,67 +9,66 @@ const menus = {
   treatments: [
     {
       title: "Steinberg am See",
-      description: "Treatments, day retreats and private chalet retreats",
+      description: "Behandlungen, Tages-Retreats und private Chalet-Retreats",
       href: "/retreats/steinberg-am-see",
     },
     {
       title: "Marktredwitz",
-      description: "Personal Ayurveda care",
+      description: "Persönliche Ayurveda-Betreuung",
       href: "/retreats/marktredwitz",
     },
     {
-      title: "Retreats in Germany",
-      description: "Private and group retreats",
+      title: "Retreats in Deutschland",
+      description: "Private Retreats und Gruppen-Retreats",
       href: "/retreats/germany",
     },
-    
   ],
   online: [
     {
-      title: "Online consultation",
-      description: "Personalised online sessions",
+      title: "Online-Beratung",
+      description: "Individuelle Online-Sitzungen",
       href: "/online",
     },
     {
-      title: "Gentle Reset",
-      description: "Four-day programme · €119",
+      title: "Sanfter Neustart",
+      description: "Viertägiges Programm · 119 €",
       href: "/online/gentle-reset",
     },
     {
-      title: "Seasonal Reset",
-      description: "Seven-day seasonal programme",
+      title: "Saisonaler Neustart",
+      description: "Siebentägiges saisonales Programm",
       href: "/online/seasonal-reset",
     },
     {
-      title: "Deep Reset",
-      description: "Extended personal guidance",
+      title: "Tiefgehender Neustart",
+      description: "Umfassende persönliche Begleitung",
       href: "/online",
     },
     {
-      title: "E-books",
-      description: "Detox and seasonal guides",
+      title: "E-Books",
+      description: "Detox- und saisonale Ratgeber",
       href: "/online/ebooks",
     },
   ],
   learn: [
     {
       title: "Blog",
-      description: "Articles, recipes and rituals",
+      description: "Artikel, Rezepte und Rituale",
       href: "/learn/blog",
     },
     {
-      title: "Free dosha quiz",
-      description: "Discover your constitution",
+      title: "Kostenloser Dosha-Test",
+      description: "Entdecke deine Konstitution",
       href: "/en/dosha-quiz",
     },
     {
       title: "Podcast",
-      description: "Talk with Lakshani",
+      description: "Gespräche mit Lakshani",
       href: "/learn/podcast",
     },
     {
-      title: "Member seminars",
-      description: "Live online sessions",
+      title: "Mitglieder-Seminare",
+      description: "Live-Online-Sitzungen",
       href: "/learn/member-seminars",
     },
   ],
@@ -79,9 +77,9 @@ const menus = {
 type MenuName = keyof typeof menus;
 
 const menuLabels: Record<MenuName, string> = {
-  treatments: "Treatments & retreats",
-  online: "Online wellness",
-  learn: "Discover Ayurveda",
+  treatments: "Behandlungen & Retreats",
+  online: "Online-Wohlbefinden",
+  learn: "Ayurveda entdecken",
 };
 
 export default function Navbar() {
@@ -89,7 +87,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const router = useRouter();
 
-  // Authentication state
+  // Authentifizierungsstatus
   const [userName, setUserName] = useState<string | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [signingOut, setSigningOut] = useState(false);
@@ -100,7 +98,7 @@ export default function Navbar() {
     setMobileOpen(false);
   }
 
-  // Fetch the customer's first name from the profiles table
+  // Vorname des Kunden aus der Tabelle „profiles“ abrufen
   useEffect(() => {
     const supabase = createClient();
     let active = true;
@@ -112,10 +110,10 @@ export default function Navbar() {
       }
 
       const { data, error } = await supabase
-          .from("profiles")
-          .select("first_name")
-          .eq("id", userId)
-          .single();
+        .from("profiles")
+        .select("first_name")
+        .eq("id", userId)
+        .single();
 
       if (!active) return;
 
@@ -137,7 +135,7 @@ export default function Navbar() {
         return;
       }
 
-      // Defer the profile query until after the auth callback.
+      // Profilabfrage bis nach dem Auth-Callback zurückstellen.
       setTimeout(() => {
         if (active) {
           loadUserName(userId);
@@ -169,7 +167,7 @@ export default function Navbar() {
     };
   }, []);
 
-  // Sign out
+  // Abmelden
   async function handleSignOut() {
     if (signingOut) return;
 
@@ -181,7 +179,7 @@ export default function Navbar() {
     const { error } = await supabase.auth.signOut();
 
     if (error) {
-      setAuthError("Unable to sign out. Please try again.");
+      setAuthError("Abmelden nicht möglich. Bitte versuche es erneut.");
       setSigningOut(false);
       return;
     }
@@ -194,8 +192,8 @@ export default function Navbar() {
   }
 
   return (
-      <>
-        <style>{`
+    <>
+      <style>{`
         .purana-sticky-wrapper {
           position: sticky;
           top: 0;
@@ -643,190 +641,197 @@ export default function Navbar() {
         }
       `}</style>
 
-        <div className="purana-sticky-wrapper">
-          {/* Utility bar */}
-          <div className="purana-utility-bar">
-            <div className="purana-utility-inner">
-              <p>
+      <div className="purana-sticky-wrapper">
+        {/* Obere Leiste */}
+        <div className="purana-utility-bar">
+          <div className="purana-utility-inner">
+            <p>
               <span style={{ color: "var(--gold)", marginRight: 8 }}>
                 ✳
               </span>
-                Traditional wisdom. Personal wellbeing.
-              </p>
+              Traditionelles Wissen. Persönliches Wohlbefinden.
+            </p>
 
-              <div className="purana-utility-links">
-                <Link href="/#vouchers">Gift vouchers</Link>
-                <Link href="/#shop">Nivartana shop</Link>
-                <a href="https://wa.me/">WhatsApp ↗</a>
-              </div>
+            <div className="purana-utility-links">
+              <Link href="/#vouchers">Geschenkgutscheine</Link>
+              <Link href="/#shop">Nivartana-Shop</Link>
+              <a href="https://wa.me/">WhatsApp ↗</a>
             </div>
           </div>
+        </div>
 
-        {/* Main navigation */}
+        {/* Hauptnavigation */}
         <header className="purana-nav-shell">
           <div className="purana-nav-inner">
             {/* Logo */}
             <Link
               href="/"
               className="purana-logo"
-              aria-label="Purana Ayurveda home"
+              aria-label="Purana Ayurveda Startseite"
               onClick={closeMenus}
             >
-              <img src="https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/purana_logo.webp" alt="Purana Ayurveda" />
+              <img
+                src="https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/purana_logo.webp"
+                alt="Purana Ayurveda"
+              />
             </Link>
 
-              {/* Mobile menu button */}
-              <button
-                  type="button"
-                  className="purana-menu-toggle"
-                  aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
-                  aria-expanded={mobileOpen}
-                  aria-controls="purana-navigation"
-                  onClick={() => {
-                    setMobileOpen((current) => !current);
-                    setOpenMenu(null);
-                  }}
-              >
-                {mobileOpen ? "×" : "☰"}
-              </button>
+            {/* Mobile-Menü-Schaltfläche */}
+            <button
+              type="button"
+              className="purana-menu-toggle"
+              aria-label={
+                mobileOpen ? "Navigation schließen" : "Navigation öffnen"
+              }
+              aria-expanded={mobileOpen}
+              aria-controls="purana-navigation"
+              onClick={() => {
+                setMobileOpen((current) => !current);
+                setOpenMenu(null);
+              }}
+            >
+              {mobileOpen ? "×" : "☰"}
+            </button>
 
-              <nav
-                  id="purana-navigation"
-                  className={`purana-navigation ${
-                      mobileOpen ? "is-mobile-open" : ""
-                  }`}
+            <nav
+              id="purana-navigation"
+              className={`purana-navigation ${
+                mobileOpen ? "is-mobile-open" : ""
+              }`}
+            >
+              <Link
+                href="/"
+                className="purana-nav-link"
+                onClick={closeMenus}
               >
-                <Link
-                    href="/"
-                    className="purana-nav-link"
-                    onClick={closeMenus}
-                >
-                  Home
-                </Link>
+                Startseite
+              </Link>
 
-                {/* Dropdown menus */}
-                {(Object.keys(menus) as MenuName[]).map((name) => (
-                    <div className="purana-dropdown" key={name}>
-                      <button
-                          type="button"
-                          className={`purana-dropdown-trigger ${
-                              openMenu === name ? "is-open" : ""
-                          }`}
-                          aria-expanded={openMenu === name}
-                          onClick={() =>
-                              setOpenMenu((current) =>
-                                  current === name ? null : name,
-                              )
-                          }
-                      >
-                        {menuLabels[name]}
-                        <span aria-hidden="true">
+              {/* Dropdown-Menüs */}
+              {(Object.keys(menus) as MenuName[]).map((name) => (
+                <div className="purana-dropdown" key={name}>
+                  <button
+                    type="button"
+                    className={`purana-dropdown-trigger ${
+                      openMenu === name ? "is-open" : ""
+                    }`}
+                    aria-expanded={openMenu === name}
+                    onClick={() =>
+                      setOpenMenu((current) =>
+                        current === name ? null : name,
+                      )
+                    }
+                  >
+                    {menuLabels[name]}
+                    <span aria-hidden="true">
                       {openMenu === name ? "⌃" : "⌄"}
                     </span>
-                      </button>
+                  </button>
 
-                      {openMenu === name && (
-                          <div className="purana-dropdown-panel">
-                            <div className="purana-dropdown-heading">
-                              {menuLabels[name]}
-                            </div>
+                  {openMenu === name && (
+                    <div className="purana-dropdown-panel">
+                      <div className="purana-dropdown-heading">
+                        {menuLabels[name]}
+                      </div>
 
-                            {menus[name].map((item) => (
-                                <Link
-                                    href={item.href}
-                                    key={item.title}
-                                    className="purana-dropdown-item"
-                                    onClick={closeMenus}
-                                >
-                                  <strong>{item.title}</strong>
-                                  <span>{item.description}</span>
-                                </Link>
-                            ))}
-                          </div>
-                      )}
+                      {menus[name].map((item) => (
+                        <Link
+                          href={item.href}
+                          key={item.title}
+                          className="purana-dropdown-item"
+                          onClick={closeMenus}
+                        >
+                          <strong>{item.title}</strong>
+                          <span>{item.description}</span>
+                        </Link>
+                      ))}
                     </div>
-                ))}
-
-              { /* <Link
-                    href="/membership"
-                    className="purana-nav-link"
-                    onClick={closeMenus}
-                >
-                  Membership
-                </Link> */ }
-
-                <Link
-                    href="/about"
-                    className="purana-nav-link"
-                    onClick={closeMenus}
-                >
-                  About
-                </Link>
-
-                {/* Language */}
-                <div className="purana-language">
-                  <strong>EN</strong>
-                  <span style={{ color: "var(--border)" }}>|</span>
-                  <Link href="/de" onClick={closeMenus}>
-                    DE
-                  </Link>
-                </div>
-
-                {/* Authentication */}
-                <div className="purana-auth-links">
-                  {authLoading ? (
-                      <span className="purana-login-button">
-                    Loading...
-                  </span>
-                  ) : userName ? (
-                      <>
-                    <span
-                        className="purana-login-button"
-                        style={{ cursor: "default" }}
-                    >
-                      Hi, {userName}
-                    </span>
-
-                        <button
-                            type="button"
-                            className="purana-signup-button"
-                            onClick={handleSignOut}
-                            disabled={signingOut}
-                        >
-                          {signingOut ? "Signing out..." : "Sign out"}
-                        </button>
-                      </>
-                  ) : (
-                      <>
-                        <Link
-                            href="/login"
-                            className="purana-login-button"
-                            onClick={closeMenus}
-                        >
-                          Login
-                        </Link>
-
-                        <Link
-                            href="/signup"
-                            className="purana-signup-button"
-                            onClick={closeMenus}
-                        >
-                          Sign up
-                          <span aria-hidden="true">→</span>
-                        </Link>
-                      </>
                   )}
                 </div>
+              ))}
 
-                {authError && (
-                    <p className="purana-auth-error" role="alert">
-                      {authError}
-                    </p>
+              {/*
+              <Link
+                href="/membership"
+                className="purana-nav-link"
+                onClick={closeMenus}
+              >
+                Mitgliedschaft
+              </Link>
+              */}
+
+              <Link
+                href="/about"
+                className="purana-nav-link"
+                onClick={closeMenus}
+              >
+                Über uns
+              </Link>
+
+              {/* Sprachauswahl */}
+              <div className="purana-language">
+                <strong>EN</strong>
+                <span style={{ color: "var(--border)" }}>|</span>
+                <Link href="/de" onClick={closeMenus}>
+                  DE
+                </Link>
+              </div>
+
+              {/* Authentifizierung */}
+              <div className="purana-auth-links">
+                {authLoading ? (
+                  <span className="purana-login-button">
+                    Wird geladen...
+                  </span>
+                ) : userName ? (
+                  <>
+                    <span
+                      className="purana-login-button"
+                      style={{ cursor: "default" }}
+                    >
+                      Hallo, {userName}
+                    </span>
+
+                    <button
+                      type="button"
+                      className="purana-signup-button"
+                      onClick={handleSignOut}
+                      disabled={signingOut}
+                    >
+                      {signingOut ? "Abmeldung läuft..." : "Abmelden"}
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      href="/login"
+                      className="purana-login-button"
+                      onClick={closeMenus}
+                    >
+                      Anmelden
+                    </Link>
+
+                    <Link
+                      href="/signup"
+                      className="purana-signup-button"
+                      onClick={closeMenus}
+                    >
+                      Registrieren
+                      <span aria-hidden="true">→</span>
+                    </Link>
+                  </>
                 )}
-              </nav>
-            </div>
-          </header>
-        </div>
-      </>
+              </div>
+
+              {authError && (
+                <p className="purana-auth-error" role="alert">
+                  {authError}
+                </p>
+              )}
+            </nav>
+          </div>
+        </header>
+      </div>
+    </>
   );
 }

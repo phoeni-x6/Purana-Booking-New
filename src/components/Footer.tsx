@@ -1,4 +1,11 @@
 
+import Link from "next/link";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaYoutube,
+} from "react-icons/fa";
+
 const footerGroups = [
   {
     title: "Entdecken",
@@ -6,25 +13,24 @@ const footerGroups = [
       ["Unsere Standorte", "#locations"],
       ["Online-Beratung", "#online"],
       ["Ayurveda-Retreats", "#retreats"],
-      
       ["Lernen & Journal", "#learn"],
     ],
   },
   {
     title: "Kontakt",
     links: [
-      ["Erlebnis buchen", "#booking"],
-      ["Schreiben Sie uns auf WhatsApp", "https://wa.me/"],
-      ["E-Mail an unser Team", "mailto:hello@example.com"],
+      
+      ["Schreiben Sie uns auf WhatsApp", "https://wa.me/+491759479619"],
+      ["Info@purana-ayurveda.de", "mailto:info@purana-ayurveda.de"],
     ],
   },
   {
     title: "Informationen",
     links: [
-      ["Über Purana", "#about"],
+      ["Über Purana", "/about"],
       ["Datenschutzerklärung", "/privacy"],
       ["Allgemeine Geschäftsbedingungen", "/terms"],
-      ["Impressum", "/legal"],
+      
     ],
   },
 ];
@@ -32,22 +38,20 @@ const footerGroups = [
 const socialLinks = [
   {
     label: "Instagram",
-    short: "ig",
-    href: "#",
+    href: "https://www.instagram.com/purana_ayurveda.de/",
+    icon: FaInstagram,
   },
   {
     label: "Facebook",
-    short: "f",
     href: "#",
+    icon: FaFacebookF,
   },
   {
     label: "YouTube",
-    short: "▶",
     href: "#",
+    icon: FaYoutube,
   },
 ];
-
-import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -72,6 +76,7 @@ export default function Footer() {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         {/* Main footer */}
         <div className="grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-10 lg:py-20">
+
           {/* Brand column */}
           <div className="max-w-sm">
             <Link
@@ -100,16 +105,22 @@ export default function Footer() {
               </p>
 
               <div className="flex gap-3">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="grid h-10 w-10 place-items-center rounded-full border border-[#F8F5E8]/20 bg-[#F8F5E8]/5 text-sm text-[#F8F5E8] transition-all duration-300 hover:-translate-y-1 hover:border-[#DFC24D] hover:bg-[#DFC24D] hover:text-[#21452B]"
-                  >
-                    {social.short}
-                  </a>
-                ))}
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      className="grid h-10 w-10 place-items-center rounded-full border border-[#F8F5E8]/20 bg-[#F8F5E8]/5 text-lg text-[#F8F5E8] transition-all duration-300 hover:-translate-y-1 hover:border-[#DFC24D] hover:bg-[#DFC24D] hover:text-[#21452B]"
+                    >
+                      <Icon />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -164,7 +175,6 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} Purana Ayurveda. Alle Rechte vorbehalten.
           </p>
-
         </div>
       </div>
     </footer>

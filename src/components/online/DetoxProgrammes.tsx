@@ -1,4 +1,3 @@
-
 const programmes = [
   {
     duration: "4 TAGE · 1 BERATUNG",
@@ -354,7 +353,9 @@ export default function DetoxProgrammes() {
                   </div>
 
                   <a
-                    href="#booking"
+                    href={`/contact?package=${encodeURIComponent(
+                      `${programme.title} – ${programme.price}`
+                    )}`}
                     className={`group mt-6 flex w-full items-center justify-center gap-3 rounded-full px-5 py-4 text-sm font-semibold transition-all duration-300 ${
                       programme.featured
                         ? "bg-[#DFC24D] text-[#21452B] hover:bg-[#E9D477]"
@@ -363,17 +364,6 @@ export default function DetoxProgrammes() {
                   >
                     {programme.title} buchen
                     <ArrowIcon />
-                  </a>
-
-                  <a
-                    href="#how-it-works"
-                    className={`mt-5 flex items-center justify-center text-xs underline decoration-current/40 underline-offset-4 transition hover:opacity-70 ${
-                      programme.featured
-                        ? "text-white/70"
-                        : "text-[#6B705C]"
-                    }`}
-                  >
-                    Weitere Informationen
                   </a>
                 </div>
               </div>
@@ -451,25 +441,30 @@ export default function DetoxProgrammes() {
                     <p className="mt-2 text-xs leading-5 text-[#6B705C]">
                       {option.description}
                     </p>
+
+                    <a
+                      href={`/contact?package=${encodeURIComponent(
+                        `Deep Reset – ${option.duration} – ${option.price}`
+                      )}`}
+                      className="group mt-4 inline-flex items-center gap-2 text-xs font-semibold text-[#2F5D39] underline underline-offset-4 transition hover:text-[#C14C38]"
+                    >
+                      Dieses Paket auswählen
+                      <ArrowIcon />
+                    </a>
                   </div>
                 ))}
               </div>
 
               <div className="mt-auto pt-8">
                 <a
-                  href="#booking"
+                  href={`/contact?package=${encodeURIComponent("Deep Reset")}`}
                   className="group flex w-full items-center justify-center gap-3 rounded-full bg-[#21452B] px-4 py-4 text-sm font-semibold text-white transition hover:bg-[#2F5D39]"
                 >
                   Deep Reset auswählen
                   <ArrowIcon />
                 </a>
 
-                <a
-                  href="#how-it-works"
-                  className="mt-5 flex justify-center text-xs text-[#6B705C] underline decoration-[#D8D0A9] underline-offset-4 transition hover:text-[#21452B]"
-                >
-                  Weitere Informationen
-                </a>
+                
               </div>
             </div>
           </article>

@@ -155,7 +155,7 @@ export default function FeatureCards() {
                 </p>
 
                 <a
-                  href="#shop"
+                  href="https://nivartana.com/"
                   className="group/link mt-8 inline-flex min-h-12 items-center gap-5 rounded-full bg-[#EFE9C5] px-6 py-3 text-sm font-semibold text-[#21452B] transition-all duration-300 hover:-translate-y-1 hover:bg-[#DFC24D]"
                 >
                   Kollektion entdecken

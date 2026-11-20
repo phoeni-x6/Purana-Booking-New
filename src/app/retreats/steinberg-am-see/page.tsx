@@ -1,4 +1,3 @@
-
 import type { ReactNode } from "react";
 import SteinbergHero from "@/components/retreats/steinberg/SteinbergHero";
 import SteinbergTreatments from "@/components/retreats/steinberg/SteinbergTreatments";
@@ -67,7 +66,8 @@ const miniRetreats = [
       {
         label: "TAG 01",
         title: "Ankommen & entspannen",
-        description: "Persönliches Beratungsgespräch und eine 30-minütige Behandlung.",
+        description:
+          "Persönliches Beratungsgespräch und eine 30-minütige Behandlung.",
       },
       {
         label: "TAG 02",
@@ -83,18 +83,21 @@ const miniRetreats = [
       },
     ],
     price: "€[PRICE]",
-    image: "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/img1.jfif",
+    image:
+      "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/img1.jfif",
   },
   {
     duration: "4 TAGE · 3 ÜBERNACHTUNGEN",
     tag: "EINE INTENSIVERE AUSZEIT",
     title: "Die ausgedehnte Auszeit",
-    subtitle: "Ein zusätzlicher Tag, um ganz in Ihrem eigenen Rhythmus anzukommen.",
+    subtitle:
+      "Ein zusätzlicher Tag, um ganz in Ihrem eigenen Rhythmus anzukommen.",
     days: [
       {
         label: "TAG 01",
         title: "Ankommen & entspannen",
-        description: "Persönliches Beratungsgespräch und eine 30-minütige Behandlung.",
+        description:
+          "Persönliches Beratungsgespräch und eine 30-minütige Behandlung.",
       },
       {
         label: "TAG 02",
@@ -116,7 +119,8 @@ const miniRetreats = [
       },
     ],
     price: "€[PRICE]",
-    image: "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Marktredwitz/IMG_5624.jpeg",
+    image:
+      "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Marktredwitz/IMG_5624.jpeg",
   },
 ];
 
@@ -132,21 +136,24 @@ const onlineOffers = [
   {
     label: "4-TAGE-PROGRAMM",
     title: "Sanfter Neustart",
-    description: "Videos, ein Ernährungsplan und praktische Rituale für den Alltag.",
+    description:
+      "Videos, ein Ernährungsplan und praktische Rituale für den Alltag.",
     href: "/online/gentle-reset",
     number: "02",
   },
   {
     label: "7-TAGE-PROGRAMM",
     title: "Saisonaler Neustart",
-    description: "Saisonale Begleitung, zwei Beratungen und Unterstützung per Chat.",
+    description:
+      "Saisonale Begleitung, zwei Beratungen und Unterstützung per Chat.",
     href: "/online/seasonal-reset",
     number: "03",
   },
   {
     label: "INDIVIDUELLE BEGLEITUNG",
     title: "Intensiver Neustart",
-    description: "Ein begleitetes Programm mit zusätzlicher persönlicher Einzelbetreuung.",
+    description:
+      "Ein begleitetes Programm mit zusätzlicher persönlicher Einzelbetreuung.",
     href: "/online/deep-reset",
     number: "04",
   },
@@ -217,6 +224,314 @@ export default function SteinbergAmSeePage() {
       <SteinbergHero />
 
       <SteinbergTreatments />
+
+      {/* AYURVEDA-BERATUNG */}
+      <section
+        id="consultation"
+        className="relative overflow-hidden bg-[#F7F3EA] px-5 py-20 sm:px-8 sm:py-24 lg:py-28"
+      >
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-28 top-10 h-96 w-96 rounded-full border border-[#C9B88F]/30"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-10 top-28 h-56 w-56 rounded-full border border-[#C9B88F]/25"
+        />
+
+        <div className="relative mx-auto max-w-7xl">
+          <div className="grid gap-8 lg:grid-cols-[1fr_0.7fr] lg:items-end">
+            <SectionHeading
+              eyebrow="Persönliche Ayurveda-Beratung"
+              title="Alles beginnt"
+              accent="mit Verständnis."
+            />
+
+            <div>
+              <p className="text-sm leading-7 text-[#6B705C] sm:text-base">
+                Im Ayurveda beginnt die richtige Behandlung immer damit,
+                den Menschen als Ganzes zu verstehen. Eine persönliche
+                Beratung bildet die Grundlage für die Auswahl Ihrer Öle,
+                Behandlungen, Ernährung und täglichen Routinen.
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-4 text-xs font-medium text-[#68735D]">
+                <span>✳ Individuelle Beratung</span>
+                <span>✳ Konstitutionsbestimmung</span>
+                <span>✳ Persönliche Empfehlungen</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Consultation packages */}
+          <div className="mt-12 grid gap-6 lg:grid-cols-2 lg:gap-7">
+            {/* Constitution Test */}
+            <article className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-[#E3D9C6] bg-[#FBF9F2] p-6 shadow-[0_8px_30px_rgba(75,71,52,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#C7B58D] hover:shadow-xl sm:p-8 lg:p-9">
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-2 -top-8 font-serif text-[150px] leading-none text-[#A66C4E]/[0.07]"
+              >
+                01
+              </span>
+
+              <div className="relative flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#A66C4E]">
+                    KONSTITUTIONSBESTIMMUNG
+                  </p>
+
+                  <h3 className="mt-3 font-serif text-2xl text-[#354B38] sm:text-3xl">
+                    Konstitutionstest
+                  </h3>
+
+                  <p className="mt-2 text-sm text-[#8A806C]">
+                    Entdecken Sie Ihren Dosha-Typ.
+                  </p>
+                </div>
+
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#D8C9A7] bg-[#F2EBDD] font-serif text-lg text-[#A66C4E]">
+                  01
+                </span>
+              </div>
+
+              <div className="relative mt-7 flex items-end justify-between border-y border-[#E8E0D1] py-5">
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#8A806C]">
+                    Preis pro Beratung
+                  </p>
+                  <p className="mt-1 font-serif text-4xl text-[#354B38]">
+                    €30
+                  </p>
+                </div>
+
+                <span className="rounded-full border border-[#D8C9A7] bg-[#F2EBDD] px-4 py-2 text-xs font-semibold text-[#596B55]">
+                  30 Minuten
+                </span>
+              </div>
+
+              <div className="relative mt-7">
+                <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#A66C4E]">
+                  WAS SIE ERWARTET
+                </p>
+
+                <p className="mt-3 text-sm leading-7 text-[#6B705C]">
+                  Eine persönliche Beratung zur Bestimmung Ihrer ayurvedischen
+                  Konstitution – Ihres individuellen Gleichgewichts der drei
+                  Doshas Vata, Pitta und Kapha.
+                </p>
+              </div>
+
+              <div className="relative mt-6">
+                <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#A66C4E]">
+                  SO LÄUFT DIE BERATUNG AB
+                </p>
+
+                <p className="mt-3 text-sm leading-7 text-[#6B705C]">
+                  Wir sprechen über Ihren Körper, Ihre Verdauung, Ihren Schlaf,
+                  Ihr Energielevel und Ihre täglichen Gewohnheiten. Gemeinsam
+                  betrachten wir Ihre Konstitution. Anschließend erklären wir
+                  Ihnen Ihren Dosha-Typ und was dieser für Sie bedeutet.
+                </p>
+              </div>
+
+              <div className="relative mt-6 rounded-2xl border border-[#E6DDCB] bg-[#F1EBDD] p-5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#A66C4E]">
+                  VORTEILE AUS AYURVEDISCHER SICHT
+                </p>
+
+                <ul className="mt-4 space-y-3">
+                  {[
+                    "Ihren Körper und seine natürlichen Eigenschaften besser verstehen",
+                    "Persönliche Tipps für Ernährung und tägliche Routinen",
+                    "Empfehlungen zu Behandlungen und Ölen, die am besten zu Ihnen passen",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-3 text-sm leading-6 text-[#596B55]"
+                    >
+                      <span className="font-bold text-[#8A9A71]">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="relative mt-5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#A66C4E]">
+                  GEEIGNET FÜR
+                </p>
+
+                <p className="mt-2 text-sm leading-6 text-[#6B705C]">
+                  Ayurveda-Neulinge, neugierige Interessierte und alle, die
+                  zukünftige Behandlungen gezielt planen möchten.
+                </p>
+              </div>
+
+              <div className="relative mt-auto pt-8">
+                <a
+                  href="/contact?package=Konstitutionstest"
+                  className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#3F6048] px-6 py-4 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#526F57]"
+                >
+                  Beratung anfragen
+                  <ArrowIcon />
+                </a>
+              </div>
+            </article>
+
+            {/* Ayurveda Special Package */}
+            <article className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-[#D8CFB9] bg-[#F3EEE3] p-6 shadow-[0_8px_30px_rgba(75,71,52,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-[#B8A77F] hover:shadow-xl sm:p-8 lg:p-9">
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-2 -top-8 font-serif text-[150px] leading-none text-[#A66C4E]/[0.07]"
+              >
+                02
+              </span>
+
+              <div className="relative flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#A66C4E]">
+                    BERATUNG & BEHANDLUNGEN
+                  </p>
+
+                  <h3 className="mt-3 font-serif text-2xl text-[#354B38] sm:text-3xl">
+                    Ayurveda-Spezialpaket
+                  </h3>
+
+                  <p className="mt-2 text-sm text-[#8A806C]">
+                    Beratung und individuell abgestimmte Therapien.
+                  </p>
+                </div>
+
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#D8C9A7] bg-[#E9E4D5] font-serif text-lg text-[#A66C4E]">
+                  02
+                </span>
+              </div>
+
+              <div className="relative mt-7 flex items-end justify-between border-y border-[#E1D8C6] py-5">
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#8A806C]">
+                    Preis pro Paket
+                  </p>
+                  <p className="mt-1 font-serif text-4xl text-[#354B38]">
+                    €130
+                  </p>
+                </div>
+
+                <span className="rounded-full border border-[#D8C9A7] bg-[#E9E4D5] px-4 py-2 text-xs font-semibold text-[#596B55]">
+                  90 Minuten
+                </span>
+              </div>
+
+              <div className="relative mt-7">
+                <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#A66C4E]">
+                  WAS SIE ERWARTET
+                </p>
+
+                <p className="mt-3 text-sm leading-7 text-[#6B705C]">
+                  Eine Kombination aus persönlicher Beratung und
+                  Konstitutionstest, ergänzt durch einen individuellen
+                  Behandlungsplan und gezielte Therapien, die auf Ihren
+                  persönlichen Konstitutionstyp abgestimmt sind.
+                </p>
+              </div>
+
+              <div className="relative mt-6">
+                <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#A66C4E]">
+                  SO LÄUFT DAS PAKET AB
+                </p>
+
+                <p className="mt-3 text-sm leading-7 text-[#6B705C]">
+                  Im Anschluss an die Beratung erstellen wir einen individuellen
+                  Plan, der auf Ihre persönlichen Anliegen abgestimmt ist.
+                  Danach beginnen wir direkt mit geeigneten Behandlungen und
+                  verwenden Öle, die zu Ihrer Konstitution passen.
+                </p>
+              </div>
+
+              <div className="relative mt-6 rounded-2xl border border-[#E1D8C6] bg-[#E9E4D5] p-5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#A66C4E]">
+                  VORTEILE AUS AYURVEDISCHER SICHT
+                </p>
+
+                <ul className="mt-4 space-y-3">
+                  {[
+                    "Betrachtet die möglichen Ursachen eines Ungleichgewichts, nicht nur die Symptome",
+                    "Individuell auf Ihren Dosha-Typ abgestimmte Behandlungen",
+                    "Ein klarer Behandlungsplan, den Sie zu Hause fortsetzen können",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-3 text-sm leading-6 text-[#596B55]"
+                    >
+                      <span className="font-bold text-[#8A9A71]">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="relative mt-5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#A66C4E]">
+                  GEEIGNET BEI
+                </p>
+
+                <p className="mt-2 text-sm leading-6 text-[#6B705C]">
+                  Individuellen Anliegen wie Gelenkschmerzen, Migräne,
+                  Erschöpfung oder hormonellen Ungleichgewichten.
+                </p>
+              </div>
+
+              <div className="relative mt-auto pt-8">
+                <a
+                  href="/contact?package=Ayurveda-Spezialpaket"
+                  className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#3F6048] px-6 py-4 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#526F57]"
+                >
+                  Spezialpaket anfragen
+                  <ArrowIcon />
+                </a>
+              </div>
+            </article>
+          </div>
+
+          {/* Medical notice */}
+          <div className="mt-8 flex gap-4 rounded-[22px] border border-[#E3D9C6] bg-[#F1EBDD] p-5 sm:p-6">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E2E7D9] text-[#3F6048]">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                className="h-5 w-5"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="9"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="M12 11v5m0-8h.01"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
+
+            <div>
+              <p className="text-sm font-semibold text-[#354B38]">
+                Wichtiger Hinweis vor Ihrer Buchung
+              </p>
+              <p className="mt-1 text-xs leading-6 text-[#6B705C] sm:text-sm">
+                Bitte informieren Sie uns bei der Buchung über bestehende
+                gesundheitliche Beschwerden, Erkrankungen oder die Einnahme
+                von Medikamenten. So können wir Ihre Beratung und Behandlungen
+                bestmöglich auf Ihre persönliche Situation abstimmen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CHALET-INFORMATIONEN */}
       <section className="bg-[#F1EBDD] px-5 py-16 sm:px-8 sm:py-20">
@@ -323,7 +638,6 @@ export default function SteinbergAmSeePage() {
                 key={retreat.title}
                 className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-[#E3D9C6] bg-[#FBF9F2] p-6 shadow-[0_8px_30px_rgba(75,71,52,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#C7B58D] hover:shadow-xl sm:p-8 lg:p-9"
               >
-                {/* Dezente dekorative Nummer */}
                 <span
                   aria-hidden="true"
                   className="pointer-events-none absolute -right-2 -top-8 font-serif text-[150px] leading-none text-[#A66C4E]/[0.07]"
@@ -346,7 +660,6 @@ export default function SteinbergAmSeePage() {
                   </span>
                 </div>
 
-                {/* Ablauf der Termine */}
                 <div className="relative mt-8 border-t border-[#E8E0D1]">
                   {retreat.steps.map((step, stepIndex) => (
                     <div
@@ -375,7 +688,6 @@ export default function SteinbergAmSeePage() {
                   ))}
                 </div>
 
-                {/* Inklusive Leistungen */}
                 {retreat.features.length > 0 && (
                   <div className="relative mt-5 rounded-2xl border border-[#E6DDCB] bg-[#F1EBDD] p-5">
                     <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#A66C4E]">
@@ -396,8 +708,7 @@ export default function SteinbergAmSeePage() {
                   </div>
                 )}
 
-                {/* Preis und Anfrage */}
-                <div className="relative mt-auto flex flex-wrap items-end justify-between gap-4 border-t border-[#E8E0D1] pt-7 mt-7">
+                <div className="relative mt-auto mt-7 flex flex-wrap items-end justify-between gap-4 border-t border-[#E8E0D1] pt-7">
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#8A806C]">
                       Preis des Programms
@@ -413,7 +724,7 @@ export default function SteinbergAmSeePage() {
                   </div>
 
                   <a
-                    href="#contact"
+                    href={`/contact?package=${encodeURIComponent(retreat.title)}`}
                     className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#3F6048] px-5 py-3.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#526F57]"
                   >
                     Jetzt anfragen
@@ -436,7 +747,7 @@ export default function SteinbergAmSeePage() {
             </div>
 
             <a
-              href="#contact"
+              href="/contact"
               className="group inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#3F6048] underline decoration-[#C7A96B] underline-offset-4 hover:text-[#A66C4E]"
             >
               Sprechen Sie mit unserem Team
@@ -542,7 +853,6 @@ export default function SteinbergAmSeePage() {
                 key={retreat.title}
                 className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-[#E1D8C6] bg-[#FBF9F3] shadow-[0_8px_30px_rgba(75,71,52,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                {/* Bildbereich */}
                 <div className="relative h-60 overflow-hidden bg-[#DCD5C1] sm:h-72">
                   <img
                     src={retreat.image}
@@ -623,12 +933,13 @@ export default function SteinbergAmSeePage() {
                           {retreat.price}
                         </p>
                         <p className="mt-1 text-[10px] leading-4 text-[#8A806C]">
-                          Endpreis und enthaltene Leistungen werden noch bestätigt
+                          Endpreis und enthaltene Leistungen werden noch
+                          bestätigt
                         </p>
                       </div>
 
                       <a
-                        href="#contact"
+                        href={`/contact?package=${encodeURIComponent(`${retreat.title} – ${retreat.duration}`)}`}
                         className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#3F6048] px-5 py-3.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#526F57]"
                       >
                         Aufenthalt anfragen
@@ -929,7 +1240,7 @@ export default function SteinbergAmSeePage() {
               </a>
 
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-full border border-[#9EAD91] bg-[#F8F5EC]/70 px-6 py-4 text-sm font-semibold text-[#455B45] transition-colors hover:bg-white"
               >
                 Kontakt aufnehmen
@@ -940,4 +1251,4 @@ export default function SteinbergAmSeePage() {
       </section>
     </main>
   );
-}
+}6

@@ -441,7 +441,7 @@ export default function SeasonalResetPage() {
             Ihre Begleiterin
           </p>
 
-          <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
+          <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl text-[#DFC24D]">
             Lernen Sie Lakshani Perera kennen
           </h2>
 
@@ -470,55 +470,7 @@ export default function SeasonalResetPage() {
 </section>
 
 
-      {/* Testimonials */}
-      <section className="bg-[#F8F5E8]">
-        <div className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-24">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <SectionEyebrow>Geteilte Erfahrungen</SectionEyebrow>
-
-              <h2 className="mt-5 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-                Stimmen aus dem Programm
-              </h2>
-            </div>
-
-            <p className="max-w-md text-sm leading-7 text-[#6B705C]">
-              Authentische Erfahrungsberichte von Teilnehmenden helfen
-              zukünftigen Gästen dabei, einen Eindruck davon zu bekommen,
-              was sie bei ihrem saisonalen Neustart erwartet.
-            </p>
-          </div>
-
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
-            {[
-              "[Fügen Sie nach dem Start eine authentische Rückmeldung einer teilnehmenden Person hinzu.]",
-              "[Fügen Sie nach dem Start eine zweite authentische Rückmeldung einer teilnehmenden Person hinzu.]",
-            ].map((testimonial, index) => (
-              <blockquote
-                key={index}
-                className="rounded-[24px] border border-[#D8D0A9]/70 bg-white p-7 sm:p-8"
-              >
-                <span
-                  className="font-serif text-4xl text-[#DFC24D]"
-                  aria-hidden="true"
-                >
-                  “
-                </span>
-
-                <p className="mt-2 text-sm leading-7 text-[#6B705C]">
-                  {testimonial}
-                </p>
-
-                <div className="mt-6 h-px bg-[#D8D0A9]" />
-
-                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[#21452B]">
-                  Rückmeldung einer teilnehmenden Person
-                </p>
-              </blockquote>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Frequently asked questions */}
       <section className="bg-[#EFE9D9]">
@@ -585,7 +537,7 @@ export default function SeasonalResetPage() {
                 Ihr nächster Schritt
               </p>
 
-              <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
+              <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl text-[#DFC24D]">
                 Finden Sie Ihre saisonale Balance.
               </h2>
 
@@ -607,19 +559,14 @@ export default function SeasonalResetPage() {
 
             <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col">
               <a
-                href="#booking-form"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-8 py-4 text-sm font-semibold text-[#21452B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#EFE9C5]"
               >
                 Neustart buchen
                 <span aria-hidden="true">→</span>
               </a>
 
-              <Link
-                href="/#membership"
-                className="inline-flex items-center justify-center rounded-full border border-white/25 px-8 py-4 text-sm font-medium text-white transition-colors hover:border-[#DFC24D] hover:text-[#DFC24D]"
-              >
-                Mitgliedschaft entdecken
-              </Link>
+           
             </div>
           </div>
         </div>

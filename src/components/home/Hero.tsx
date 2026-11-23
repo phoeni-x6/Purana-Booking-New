@@ -69,7 +69,7 @@ export default function Hero() {
           {/* Actions */}
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <a
-              href="#learn"
+              href="/en/dosha-quiz"
               className="group inline-flex min-h-14 items-center justify-center gap-5 rounded-full bg-[#2F5D39] px-8 py-4 text-sm font-semibold text-[#EFE9C5] shadow-xl shadow-[#21452B]/15 transition duration-300 hover:-translate-y-1 hover:bg-[#21452B]"
             >
               Kostenlosen Dosha-Test machen

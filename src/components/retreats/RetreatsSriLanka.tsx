@@ -260,7 +260,7 @@ export default function RetreatsSriLanka() {
                 </div>
 
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="group/button mt-6 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#21452B] px-5 py-4 text-center text-sm font-semibold text-[#F8F5E8] transition duration-300 hover:bg-[#2F5D39]"
                 >
                   Panchakarma in Sri Lanka buchen
@@ -283,7 +283,7 @@ export default function RetreatsSriLanka() {
                   className="absolute inset-0 -z-20 bg-cover bg-center transition duration-700 group-hover:scale-105"
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1400&q=90')",
+                      "url('https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Retreats/SriLanka/retreat_srilanka.jpg')",
                   }}
                 />
                 <div
@@ -359,7 +359,7 @@ export default function RetreatsSriLanka() {
                 </div>
 
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="group/button mt-6 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-5 py-4 text-center text-sm font-semibold text-[#21452B] transition duration-300 hover:bg-[#E8D58A]"
                 >
                   Termine ansehen & anmelden
@@ -372,37 +372,7 @@ export default function RetreatsSriLanka() {
           </div>
         </div>
 
-        {/* Hinweis zur Mitgliedschaft */}
-        <div className="relative mt-10 overflow-hidden rounded-[24px] border border-[#D8D0A9] bg-[#EFE9C5]/55 p-6 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:px-8">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-10 -top-16 h-40 w-40 rounded-full border border-[#2F5D39]/10"
-          />
-
-          <div className="relative flex items-start gap-4">
-            <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#21452B] text-lg text-[#DFC24D]">
-              ✳
-            </span>
-
-            <div>
-              <p className="font-serif text-xl text-[#21452B]">
-                Ein besonderer Vorteil für unsere Mitglieder
-              </p>
-              <p className="mt-2 max-w-xl text-xs leading-6 text-[#6B705C]">
-                Mitglieder erhalten 5 % Rabatt mit der Membership und
-                10 % mit der Premium-Mitgliedschaft auf Retreats in Sri Lanka.
-              </p>
-            </div>
-          </div>
-
-          <a
-            href="#membership"
-            className="relative mt-5 inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#2F5D39] transition hover:text-[#C14C38] sm:mt-0"
-          >
-            Mitgliedschaft entdecken
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
+        
       </div>
 
       {/* Dekorativer Markenabschluss */}

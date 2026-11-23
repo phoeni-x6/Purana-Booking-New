@@ -25,7 +25,7 @@ const retreats = [
     image:
       "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Retreats/SriLanka/retreat_srilanka.jpg",
     imageText: "Traditionelles Ayurveda in Sri Lanka",
-    href: "/retreats/sri-lanka",
+    href: "/retreats/germany",
     linkText: "Sri Lanka entdecken",
     tag: "TRADITION & ERNEUERUNG",
   },

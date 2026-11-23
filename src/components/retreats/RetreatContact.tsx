@@ -111,7 +111,7 @@ export default function RetreatContact() {
 
               <div className="space-y-3">
                 <a
-                  href="https://wa.me/"
+                  href="https://wa.me/+491759479619"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex min-h-12 w-full items-center justify-between gap-3 rounded-full bg-[#21452B] px-5 py-4 text-sm font-semibold text-[#F8F5E8] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#2F5D39] hover:shadow-lg"
@@ -123,7 +123,7 @@ export default function RetreatContact() {
                 </a>
 
                 <a
-                  href="mailto:info@example.com"
+                  href="/contact"
                   className="group flex min-h-12 w-full items-center justify-between gap-3 rounded-full border border-[#21452B]/20 px-5 py-4 text-sm font-semibold text-[#21452B] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#DFC24D] hover:bg-[#EFE9C5]/60"
                 >
                   <span>E-Mail senden</span>

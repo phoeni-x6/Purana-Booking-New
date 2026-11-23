@@ -386,7 +386,7 @@ export default function GentleResetPage() {
                   Ihre persönliche Begleiterin
                 </p>
 
-                <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
+                <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl text-white/80">
                   Lernen Sie Lakshani Perera kennen
                 </h2>
 
@@ -417,52 +417,8 @@ export default function GentleResetPage() {
         </div>
       </section>
 
-      {/* Participant feedback */}
-      <section className="bg-[#f5f0e7]">
-        <div className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-24 lg:px-10">
-          <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-            <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#9A7821]">
-                Erfahrungen teilen
-              </p>
-              <h2 className="mt-4 font-serif text-4xl leading-tight text-[#21452B] sm:text-5xl">
-                Stimmen aus dem Programm
-              </h2>
-            </div>
-
-            <p className="max-w-md text-sm leading-7 text-[#6B705C]">
-              Jeder Neustart ist individuell. Erfahren Sie, wie kleine
-              Veränderungen zu wertvollen Gewohnheiten im Alltag werden können.
-            </p>
-          </div>
-
-          <div className="mt-9 grid gap-5 md:grid-cols-2">
-            {[
-              "Fügen Sie nach dem Start des Programms eine authentische Teilnehmerstimme hinzu.",
-              "Ergänzen Sie nach dem Start eine zweite authentische Teilnehmerstimme.",
-            ].map((quote, index) => (
-              <blockquote
-                key={index}
-                className="relative overflow-hidden rounded-[26px] border border-[#D8D0A9] bg-[#FBF9F1] p-7 sm:p-9"
-              >
-                <span
-                  className="absolute right-6 top-0 font-serif text-8xl leading-none text-[#DFC24D]/40"
-                  aria-hidden="true"
-                >
-                  “
-                </span>
-                <p className="relative mt-5 max-w-lg font-serif text-xl leading-relaxed text-[#405640]">
-                  {quote}
-                </p>
-                <div className="mt-7 h-px bg-[#D8D0A9]" />
-                <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#9A7821]">
-                  Teilnehmerstimme
-                </p>
-              </blockquote>
-            ))}
-          </div>
-        </div>
-      </section>
+      
+      
 
       {/* FAQ */}
       <section className="relative overflow-hidden bg-[#EFE9D9]">
@@ -539,7 +495,7 @@ export default function GentleResetPage() {
                 Ihr nächster Schritt
               </p>
 
-              <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
+              <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl text-white/80">
                 Nehmen Sie sich Zeit für sich.
               </h2>
 
@@ -556,19 +512,14 @@ export default function GentleResetPage() {
 
             <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col">
               <a
-                href="#booking-form"
+                href="/contact"
                 className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-8 py-4 text-sm font-semibold text-[#21452B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#EFE9C5]"
               >
                 Ihren Neustart buchen
                 <ArrowIcon />
               </a>
 
-              <Link
-                href="/#membership"
-                className="inline-flex items-center justify-center rounded-full border border-white/25 px-8 py-4 text-sm font-medium text-white transition-colors hover:border-[#DFC24D] hover:text-[#DFC24D]"
-              >
-                Mitgliedschaft und Rabatte entdecken
-              </Link>
+             
             </div>
           </div>
         </div>

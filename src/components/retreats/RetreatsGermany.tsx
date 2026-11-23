@@ -214,7 +214,7 @@ export default function RetreatsGermany() {
                     </div>
 
                     <a
-                      href="#contact"
+                      href="/contact"
                       className="group/button inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-6 py-3 text-sm font-semibold text-[#21452B] transition duration-300 hover:bg-[#F8F5E8]"
                     >
                       Tagesablauf entdecken
@@ -231,106 +231,20 @@ export default function RetreatsGermany() {
           {/* Chalet-Informationen und Kontakt */}
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <a
-              href="#contact"
+              href="/chalets"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#21452B]/25 bg-[#F8F5E8]/60 px-6 py-3 text-sm font-semibold text-[#21452B] transition hover:border-[#21452B] hover:bg-[#EFE9C5]"
             >
               Informationen zum Chalet Resort
               <span aria-hidden="true">↗</span>
             </a>
 
-            <a
-              href="#contact"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#21452B] px-6 py-3 text-sm font-semibold text-[#F8F5E8] transition hover:bg-[#2F5D39]"
-            >
-              Kontaktieren Sie uns zur Buchung
-              <span aria-hidden="true">→</span>
-            </a>
+           
           </div>
         </div>
 
-        {/* Weitere Retreats */}
-        <div className="mt-24 border-t border-[#D8D0A9] pt-14 sm:mt-28 sm:pt-16">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-            {/* Einführung */}
-            <div>
-              <div className="inline-flex items-center gap-3">
-                <span className="h-px w-8 bg-[#C14C38]" />
-                <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C14C38]">
-                  Über das Chalet hinaus
-                </p>
-              </div>
-
-              <h3 className="mt-6 font-serif text-3xl leading-tight text-[#21452B] sm:text-4xl">
-                Retreats in ganz
-                <span className="block italic text-[#9A8050]">
-                  Deutschland.
-                </span>
-              </h3>
-
-              <p className="mt-5 text-sm leading-7 text-[#6B705C]">
-                Gruppen-Retreats an ausgewählten Veranstaltungsorten –
-                Rasayana-, Detox- und Erneuerungs-Retreats inmitten der Natur,
-                an Seen und in den Bergen. Neue Termine finden Sie hier und
-                in unserem Newsletter.
-              </p>
-
-              <div className="mt-7 inline-flex items-center gap-3 text-xs font-medium text-[#2F5D39]">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D8D0A9] text-[#C14C38]">
-                  ✳
-                </span>
-                <span>Natur · Erneuerung · Wohlbefinden</span>
-              </div>
-            </div>
-
-            {/* Weitere Retreat-Angebote */}
-            <div className="space-y-4">
-              {otherRetreats.map((name, index) => (
-                <article
-                  key={`${name}-${index}`}
-                  className="group relative overflow-hidden rounded-[24px] border border-[#D8D0A9] bg-[#F8F5E8]/80 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#9A8050]/50 hover:shadow-[0_15px_40px_rgba(38,58,43,0.08)] sm:p-7"
-                >
-                  <div
-                    aria-hidden="true"
-                    className="absolute -right-12 -top-12 h-40 w-40 rounded-full border border-[#2F5D39]/10 transition-transform duration-500 group-hover:scale-110"
-                  />
-
-                  <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-                    <div className="flex items-start gap-4">
-                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#EFE9C5] font-serif text-sm text-[#2F5D39]">
-                        0{index + 1}
-                      </span>
-
-                      <div>
-                        <h4 className="font-serif text-xl text-[#21452B] transition-colors group-hover:text-[#9A8050] sm:text-2xl">
-                          {name}
-                        </h4>
-                        <p className="mt-2 text-xs leading-6 text-[#6B705C]">
-                          [Ort] · [Termine] · [X] Tage
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center justify-between gap-4 sm:justify-end">
-                      <span className="whitespace-nowrap font-serif text-2xl text-[#21452B]">
-                        €[PRICE]
-                      </span>
-
-                      <a
-                        href="#contact"
-                        className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#21452B] px-5 py-3 text-sm font-semibold text-[#F8F5E8] transition hover:bg-[#2F5D39]"
-                      >
-                        Mehr erfahren & anmelden
-                        <span aria-hidden="true">→</span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
+        
         </div>
-      </div>
-
+      
       {/* Unterer Markenakzent */}
       <div className="relative h-1 bg-gradient-to-r from-[#533E23] via-[#DFC24D] to-[#C14C38]" />
     </section>

@@ -655,7 +655,7 @@ export default function Navbar() {
             <div className="purana-utility-links">
               <Link href="/#vouchers">Geschenkgutscheine</Link>
               <Link href="/#shop">Nivartana-Shop</Link>
-              <a href="https://wa.me/">WhatsApp ↗</a>
+              <a href="https://wa.me/+491759479619">WhatsApp ↗</a>
             </div>
           </div>
         </div>

@@ -138,7 +138,7 @@ export default function OnlineWellness() {
           {/* Call to Action */}
           <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <a
-              href="#booking"
+              href="/online"
               className="group inline-flex min-h-12 items-center justify-center gap-4 rounded-full bg-[#2F5D39] px-6 py-3 text-xs font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#21452B] hover:shadow-lg"
             >
               Online-Angebote entdecken

@@ -260,7 +260,7 @@ export default function RetreatsSriLanka() {
                 </div>
 
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="group/button mt-6 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#21452B] px-5 py-4 text-center text-sm font-semibold text-[#F8F5E8] transition duration-300 hover:bg-[#2F5D39]"
                 >
                   Panchakarma in Sri Lanka buchen
@@ -283,7 +283,7 @@ export default function RetreatsSriLanka() {
                   className="absolute inset-0 -z-20 bg-cover bg-center transition duration-700 group-hover:scale-105"
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1400&q=90')",
+                      "url('https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Retreats/SriLanka/retreat_srilanka.jpg')",
                   }}
                 />
                 <div
@@ -359,7 +359,7 @@ export default function RetreatsSriLanka() {
                 </div>
 
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="group/button mt-6 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-5 py-4 text-center text-sm font-semibold text-[#21452B] transition duration-300 hover:bg-[#E8D58A]"
                 >
                   Termine ansehen & anmelden

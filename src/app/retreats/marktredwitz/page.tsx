@@ -395,7 +395,7 @@ export default function MarktredwitzPage() {
                 Alle Behandlungen ansehen <span>↗</span>
               </a>
               <a
-                href={`mailto:${partnerEmail}?subject=Ayurveda%20in%20Marktredwitz`}
+                href='/contact'
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#AEB99F] px-7 py-3 text-sm font-medium text-[#533E23] transition hover:bg-[#FBF8F0]"
               >
                 Frage stellen
@@ -571,12 +571,7 @@ export default function MarktredwitzPage() {
             >
               Ayurveda-Behandlungen entdecken ↗
             </a>
-            <a
-              href={`tel:${partnerPhone}`}
-              className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#AEB99F] px-7 py-3 text-sm font-semibold text-[#2F5D39] transition hover:bg-[#E2E8D9]"
-            >
-              Praxis kontaktieren
-            </a>
+           
           </div>
         </div>
       </section>

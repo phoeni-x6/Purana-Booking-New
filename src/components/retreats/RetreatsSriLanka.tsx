@@ -372,37 +372,7 @@ export default function RetreatsSriLanka() {
           </div>
         </div>
 
-        {/* Hinweis zur Mitgliedschaft */}
-        <div className="relative mt-10 overflow-hidden rounded-[24px] border border-[#D8D0A9] bg-[#EFE9C5]/55 p-6 sm:flex sm:items-center sm:justify-between sm:gap-6 sm:px-8">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-10 -top-16 h-40 w-40 rounded-full border border-[#2F5D39]/10"
-          />
-
-          <div className="relative flex items-start gap-4">
-            <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#21452B] text-lg text-[#DFC24D]">
-              ✳
-            </span>
-
-            <div>
-              <p className="font-serif text-xl text-[#21452B]">
-                Ein besonderer Vorteil für unsere Mitglieder
-              </p>
-              <p className="mt-2 max-w-xl text-xs leading-6 text-[#6B705C]">
-                Mitglieder erhalten 5 % Rabatt mit der Membership und
-                10 % mit der Premium-Mitgliedschaft auf Retreats in Sri Lanka.
-              </p>
-            </div>
-          </div>
-
-          <a
-            href="#membership"
-            className="relative mt-5 inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#2F5D39] transition hover:text-[#C14C38] sm:mt-0"
-          >
-            Mitgliedschaft entdecken
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
+        
       </div>
 
       {/* Dekorativer Markenabschluss */}

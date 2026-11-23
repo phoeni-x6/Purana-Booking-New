@@ -51,11 +51,11 @@ const menus = {
     },
   ],
   learn: [
-    {
-      title: "Blog",
-      description: "Artikel, Rezepte und Rituale",
-      href: "/learn/blog",
-    },
+    // {
+    //   title: "Blog",
+    //   description: "Artikel, Rezepte und Rituale",
+      // href: "/learn/blog",
+     //},
     {
       title: "Kostenloser Dosha-Test",
       description: "Entdecke deine Konstitution",

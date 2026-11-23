@@ -85,7 +85,7 @@ export default function FeatureCards() {
                 </p>
 
                 <a
-                  href="#booking"
+                  href="https://www-2561o.bookeo.com/bookeo/b_purana-ayurveda_start.html?buyvoucher=true&ctlsrc2=DMN%2FyXIEBKjegsIxEeYZTMdTMnhAADaJ%2B%2Bi16V%2BSXVQ%3D&src=02j&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAacNP3B0yxx75XnARss6yViC6kuYDE077wnP4J7genivS47bDhDjK_xGQbOxLA_aem_BkNiGKDUCzm4bx1opuYOTQ"
                   className="group/link mt-8 inline-flex min-h-12 items-center gap-5 rounded-full bg-[#DFC24D] px-6 py-3 text-sm font-semibold text-[#21452B] transition-all duration-300 hover:-translate-y-1 hover:bg-[#EFE9C5]"
                 >
                   Geschenkgutscheine entdecken

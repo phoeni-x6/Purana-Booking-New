@@ -25,7 +25,7 @@ export default function RetreatsHero() {
         className="absolute inset-0 -z-30 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2200&q=90')",
+            "url('https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/chalets.webp')",
         }}
       />
 

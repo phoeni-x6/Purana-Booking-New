@@ -8,7 +8,7 @@ const miniRetreats = [
     price: "€[PRICE]",
     number: "01",
     image:
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=90",
+      "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Retreats/Germany/germany_retreats.webp",
     imageAlt: "Ruhige Umgebung für ein erholsames Wellness-Retreat",
     highlight: "Ein sanfter Einstieg",
   },
@@ -20,7 +20,7 @@ const miniRetreats = [
     price: "€[PRICE]",
     number: "02",
     image:
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1400&q=90",
+      "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Steinberg/DSC_7270_auswahl.jpg",
     imageAlt: "Entspannendes Spa- und Wellness-Erlebnis",
     highlight: "Mehr Zeit, um zu sich zu finden",
   },

@@ -189,7 +189,7 @@ export default function HowItWorks() {
           </div>
 
           <a
-            href="#consultation"
+            href="/contact"
             className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-6 py-3.5 text-sm font-semibold text-[#21452B] transition hover:bg-[#E9D477]"
           >
             Beratungen entdecken

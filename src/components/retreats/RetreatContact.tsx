@@ -13,7 +13,7 @@ export default function RetreatContact() {
             className="absolute inset-0 -z-20 bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=90')",
+                "url('https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Steinberg/DSC_7209_auswahl.jpg')",
             }}
           />
 

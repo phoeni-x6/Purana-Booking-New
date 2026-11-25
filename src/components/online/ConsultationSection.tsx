@@ -7,22 +7,10 @@ const practitioners = [
       "Zertifizierte Ayurveda-Ernährungsberaterin mit Wurzeln in der traditionellen Ayurveda-Lehre ihrer srilankischen Familie. Sprachen: Deutsch und Englisch.",
     price: "€45",
     button: "Termin mit Lakshani buchen",
-    initials: "LP",
+    image: "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/founder.webp",
     photoColor: "bg-[#D8E1D2]",
     featured: true,
     language: "Deutsch und Englisch",
-  },
-  {
-    name: "Dr. Ishanka [Nachname]",
-    role: "Ayurveda-Arzt (BAMS) · Ayurveda-Zentrum, Sri Lanka",
-    description:
-      "Ayurvedische Gesundheitsberatung auf Englisch durch einen Arzt mit einer fundierten Ausbildung in der klassischen Ayurveda-Medizin (Bachelor of Ayurvedic Medicine and Surgery).",
-    price: "€[PRICE]",
-    button: "Termin mit Dr. Ishanka buchen",
-    initials: "DI",
-    photoColor: "bg-[#E6D8BD]",
-    featured: false,
-    language: "Englisch",
   },
 ];
 
@@ -261,14 +249,19 @@ export default function ConsultationSection() {
                   />
 
                   <div className="relative flex items-center gap-5">
-                    {/* Profilbild-Platzhalter */}
+                    {/* Profilbild */}
                     <div
-                      className={`relative flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-[24px] border border-white/70 shadow-sm sm:h-28 sm:w-28 ${person.photoColor}`}
+                      className={`relative h-24 w-24 shrink-0 overflow-hidden rounded-[24px] border border-white/70 shadow-sm sm:h-28 sm:w-28 ${person.photoColor}`}
                     >
-                      <div className="absolute inset-2 rounded-[18px] border border-white/60" />
-                      <span className="font-serif text-3xl text-[#21452B]/80">
-                        {person.initials}
-                      </span>
+                      <img
+                        src={person.image}
+                        alt={person.name}
+                        className="h-full w-full object-cover object-center"
+                        loading="lazy"
+                      />
+
+                      <div className="pointer-events-none absolute inset-2 rounded-[18px] border border-white/60" />
+
                       <span className="absolute bottom-3 right-3 h-3 w-3 rounded-full border-2 border-white bg-[#2F5D39]" />
                     </div>
 

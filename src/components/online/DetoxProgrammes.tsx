@@ -6,7 +6,6 @@ const programmes = [
       "Bringen Sie mehr Ayurveda in Ihren Alltag – ideal für Ihren ersten bewussten Neustart.",
     features: [
       "1 persönliche Beratung mit Lakshani",
-      "Begleitetes Programm mit Videos und Texten",
       "5-tägiger Ernährungsplan",
       "Einfache Ayurveda-Tipps für den Alltag",
     ],
@@ -470,49 +469,7 @@ export default function DetoxProgrammes() {
           </article>
         </div>
 
-        {/* Abschließender Bereich zur persönlichen Begleitung */}
-        <div className="relative mt-10 overflow-hidden rounded-[26px] border border-[#D8D0A9] bg-[#EFE9C5]/60 p-6 sm:p-8">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-10 -top-24 h-64 w-64 rounded-full border border-[#D8D0A9]/70"
-          />
-
-          <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-start gap-4">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#2F5D39] text-[#EFE9C5]">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="h-5 w-5"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path d="M12 21s-7-4.4-7-11V5l7-2 7 2v5c0 6.6-7 11-7 11Z" />
-                  <path d="M9 12h6M12 9v6" />
-                </svg>
-              </span>
-
-              <div className="max-w-xl">
-                <p className="font-serif text-xl text-[#21452B] sm:text-2xl">
-                  Persönliche Begleitung in Ihrem eigenen Tempo.
-                </p>
-                <p className="mt-2 text-sm leading-6 text-[#6B705C]">
-                  Sie sind sich nicht sicher, welches Programm zu Ihnen
-                  passt? Beginnen Sie mit einer persönlichen Beratung,
-                  um Ihre Ziele und Möglichkeiten gemeinsam zu besprechen.
-                </p>
-              </div>
-            </div>
-
-            <a
-              href="#consultation"
-              className="group inline-flex shrink-0 items-center justify-center gap-3 self-start rounded-full border border-[#2F5D39] bg-[#FBF9F1]/70 px-6 py-3.5 text-sm font-semibold text-[#21452B] transition duration-300 hover:bg-[#2F5D39] hover:text-white sm:self-center"
-            >
-              Beratungsangebote entdecken
-              <ArrowIcon />
-            </a>
-          </div>
-        </div>
+       
       </div>
 
       {/* Markenakzent */}

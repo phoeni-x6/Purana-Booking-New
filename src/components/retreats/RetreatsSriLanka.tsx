@@ -13,15 +13,9 @@ const sriLankaRetreatBenefits = [
   "Ausflüge zu [Orten]",
 ];
 
-const panchakarmaDurations = [
-  { duration: "[X] Tage", price: "ab €[PRICE]" },
-  { duration: "[X] Tage", price: "ab €[PRICE]" },
-  { duration: "[X] Tage", price: "ab €[PRICE]" },
-];
-
 const sriLankaRetreatOptions = [
-  { name: "[Retreat-Name]", dates: "[Termine]", price: "€[PRICE]" },
-  { name: "[Retreat-Name]", dates: "[Termine]", price: "€[PRICE]" },
+  { name: "[Retreat-Name]", dates: "[Termine]" },
+  { name: "[Retreat-Name]", dates: "[Termine]" },
 ];
 
 function BenefitList({ items }: { items: string[] }) {
@@ -225,7 +219,7 @@ export default function RetreatsSriLanka() {
                 <p className="text-sm leading-7 text-[#6B705C]">
                   Das traditionelle ayurvedische Panchakarma-Programm wird
                   von erfahrenen Ayurveda-Ärzten (BAMS) und Therapeuten in
-                  unserem Zentrum in [Ort], Sri Lanka, durchgeführt.
+                  unserem Zentrum in Bentota, Sri Lanka, durchgeführt.
                 </p>
 
                 <div className="my-6 h-px bg-[#D8D0A9]" />
@@ -235,29 +229,6 @@ export default function RetreatsSriLanka() {
                 </p>
 
                 <BenefitList items={panchakarmaBenefits} />
-
-                {/* Dauer und Preise */}
-                <div className="mt-8 rounded-2xl border border-[#D8D0A9] bg-[#EFE9C5]/45 p-5">
-                  <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#6B705C]">
-                    Wählen Sie Ihre Aufenthaltsdauer
-                  </p>
-
-                  <div className="space-y-3">
-                    {panchakarmaDurations.map((option, index) => (
-                      <div
-                        key={`${option.duration}-${index}`}
-                        className="flex items-center justify-between gap-3 border-b border-[#D8D0A9]/70 pb-3 last:border-0 last:pb-0"
-                      >
-                        <span className="text-sm text-[#263A2B]">
-                          {option.duration}
-                        </span>
-                        <strong className="whitespace-nowrap font-serif text-lg text-[#21452B]">
-                          {option.price}
-                        </strong>
-                      </div>
-                    ))}
-                  </div>
-                </div>
 
                 <a
                   href="/contact"
@@ -330,36 +301,9 @@ export default function RetreatsSriLanka() {
 
                 <BenefitList items={sriLankaRetreatBenefits} />
 
-                {/* Retreat-Termine und Preise */}
-                <div className="mt-8 rounded-2xl border border-[#D8D0A9] bg-[#EFE9C5]/45 p-5">
-                  <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#6B705C]">
-                    Kommende Retreats
-                  </p>
-
-                  <div className="space-y-4">
-                    {sriLankaRetreatOptions.map((retreat, index) => (
-                      <div
-                        key={`${retreat.name}-${index}`}
-                        className="flex items-center justify-between gap-3 border-b border-[#D8D0A9]/70 pb-4 last:border-0 last:pb-0"
-                      >
-                        <div>
-                          <p className="text-sm font-semibold text-[#21452B]">
-                            {retreat.name}
-                          </p>
-                          <p className="mt-1 text-xs text-[#6B705C]">
-                            {retreat.dates}
-                          </p>
-                        </div>
-                        <strong className="whitespace-nowrap font-serif text-lg text-[#21452B]">
-                          {retreat.price}
-                        </strong>
-                      </div>
-                    ))}
-                  </div>
-                </div>
 
                 <a
-                  href="/contact"
+                  href="https://urlaub-srilanka.com/packages/retreattours/round"
                   className="group/button mt-6 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#DFC24D] px-5 py-4 text-center text-sm font-semibold text-[#21452B] transition duration-300 hover:bg-[#E8D58A]"
                 >
                   Termine ansehen & anmelden
@@ -371,8 +315,6 @@ export default function RetreatsSriLanka() {
             </article>
           </div>
         </div>
-
-        
       </div>
 
       {/* Dekorativer Markenabschluss */}

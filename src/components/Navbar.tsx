@@ -31,7 +31,7 @@ const menus = {
     },
     {
       title: "Sanfter Neustart",
-      description: "Viertägiges Programm · 119 €",
+      description: "Viertägiges Programm",
       href: "/online/gentle-reset",
     },
     {
@@ -67,7 +67,7 @@ const menus = {
       href: "/learn/podcast",
     },
     {
-      title: "Mitglieder-Seminare",
+      title: "Veranstaltungen und Seminare",
       description: "Live-Online-Sitzungen",
       href: "/learn/member-seminars",
     },
@@ -79,7 +79,7 @@ type MenuName = keyof typeof menus;
 const menuLabels: Record<MenuName, string> = {
   treatments: "Behandlungen & Retreats",
   online: "Online-Wohlbefinden",
-  learn: "Ayurveda entdecken",
+  learn: "Weitere Dienstleistungen",
 };
 
 export default function Navbar() {
@@ -653,7 +653,7 @@ export default function Navbar() {
             </p>
 
             <div className="purana-utility-links">
-              <Link href="/#vouchers">Geschenkgutscheine</Link>
+              <Link href="https://www-2561o.bookeo.com/bookeo/b_purana-ayurveda_start.html?buyvoucher=true&ctlsrc2=qxehGSIu%2FChOxA1M%2FdT7V6cGbtaVFCju8k017ND4JV8%3D&src=03b&buyvoucher=true&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAadG50njVIBBgKYvozuLhyCd1lQLWrkw4g1o5JoZUK0vbN8bXdBxvIrmSecQkQ_aem_t-s9mezMrdZnOF_t6VziTQ">Geschenkgutscheine</Link>
               <Link href="/#shop">Nivartana-Shop</Link>
               <a href="https://wa.me/+491759479619">WhatsApp ↗</a>
             </div>

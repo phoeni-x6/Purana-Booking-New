@@ -238,7 +238,7 @@ export default function AboutPage() {
                 className="aspect-[4/5] bg-cover bg-center"
                 style={{
                   backgroundImage:
-                    "url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=85')",
+                    "url('https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Retreats/SriLanka/retreat_srilanka.jpg')",
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#21452B]/35 to-transparent" />
@@ -473,7 +473,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* TEAM */}
+      {/* TEAM 
       <section
         id="unser-team"
         className="scroll-mt-24 border-y border-[#D8D0A9]/70 bg-[#EFE9C5]/35 px-5 py-20 sm:px-8 lg:py-28"
@@ -502,7 +502,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* VISION & MISSION */}
       <section className="relative isolate overflow-hidden px-5 py-20 sm:px-8 lg:py-28">

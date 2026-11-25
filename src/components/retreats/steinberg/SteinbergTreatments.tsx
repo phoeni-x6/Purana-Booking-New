@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import TreatmentCard from "@/components/retreats/steinberg/TreatmentCard";
 
 type Treatment = {
-  id: string;
+  treatment_id: string;
   name: string;
   category: string;
   duration_minutes: number;
@@ -13,6 +13,7 @@ type Treatment = {
   currency: string;
   description: string | null;
   image: string | null;
+  bookeo_url: string | null;
 };
 
 const categories = [
@@ -222,7 +223,7 @@ export default function SteinbergTreatments() {
                   <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {group.treatments.map((treatment, index) => (
                       <div
-                        key={treatment.id}
+                          key={treatment.treatment_id}
                         className="group relative"
                       >
                         <div className="absolute -inset-2 rounded-[26px] border border-[#DFC24D]/0 transition-colors duration-300 group-hover:border-[#DFC24D]/60" />
@@ -233,15 +234,16 @@ export default function SteinbergTreatments() {
                           </div>
 
                           <TreatmentCard
-                            name={treatment.name}
-                            category={treatment.category}
-                            duration={`${treatment.duration_minutes} Min.`}
-                            price={formatPrice(
-                              treatment.price,
-                              treatment.currency
-                            )}
-                            image={treatment.image}
-                            description={treatment.description ?? ""}
+                              name={treatment.name}
+                              category={treatment.category}
+                              duration={`${treatment.duration_minutes} Min.`}
+                              price={formatPrice(
+                                  treatment.price,
+                                  treatment.currency
+                              )}
+                              image={treatment.image}
+                              description={treatment.description ?? ""}
+                              bookeo_url={treatment.bookeo_url}
                           />
                         </div>
                       </div>

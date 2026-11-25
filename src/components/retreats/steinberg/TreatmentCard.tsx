@@ -11,6 +11,7 @@ type TreatmentCardProps = {
   price: string;
   image: string | null;
   description: string;
+  bookeo_url: string | null;
 };
 
 export default function TreatmentCard({
@@ -20,10 +21,11 @@ export default function TreatmentCard({
                                         price,
                                         image,
                                         description,
+                                        bookeo_url,
                                       }: TreatmentCardProps) {
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
-  const bookingUrl = `https://bookeo.com/purana-ayurveda/`;
+
 
   useEffect(() => {
     if (!isInfoOpen) return;
@@ -110,12 +112,24 @@ export default function TreatmentCard({
                 Mehr erfahren <span aria-hidden="true">ⓘ</span>
               </button>
 
-              <Link
-                  href={bookingUrl}
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#21452B] px-3 py-3 text-sm font-semibold text-white transition hover:bg-[#2F5D39] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DFC24D]"
-              >
-                Online buchen <span aria-hidden="true">→</span>
-              </Link>
+              {bookeo_url ? (
+                  <a
+                      href={bookeo_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#21452B] px-3 py-3 text-sm font-semibold text-white transition hover:bg-[#2F5D39] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DFC24D]"
+                  >
+                    Online buchen <span aria-hidden="true">→</span>
+                  </a>
+              ) : (
+                  <button
+                      type="button"
+                      disabled
+                      className="inline-flex min-h-12 cursor-not-allowed items-center justify-center rounded-full bg-[#21452B]/40 px-3 py-3 text-sm font-semibold text-white"
+                  >
+                    Nicht verfügbar
+                  </button>
+              )}
             </div>
           </div>
         </article>
@@ -209,12 +223,24 @@ export default function TreatmentCard({
 
                   {/* Modal actions */}
                   <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                    <Link
-                        href={bookingUrl}
-                        className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[#C14C38] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#A83F30]"
-                    >
-                      Diese Behandlung buchen <span aria-hidden="true">→</span>
-                    </Link>
+                    {bookeo_url ? (
+                        <a
+                            href={bookeo_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[#C14C38] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#A83F30]"
+                        >
+                          Diese Behandlung buchen <span aria-hidden="true">→</span>
+                        </a>
+                    ) : (
+                        <button
+                            type="button"
+                            disabled
+                            className="inline-flex min-h-12 flex-1 cursor-not-allowed items-center justify-center rounded-full bg-[#C14C38]/40 px-6 py-3 text-sm font-semibold text-white"
+                        >
+                          Nicht verfügbar
+                        </button>
+                    )}
 
                     <button
                         type="button"

@@ -5,7 +5,7 @@ import SteinbergTreatments from "@/components/retreats/steinberg/SteinbergTreatm
 const retreatPackages = [
   {
     visits: "3 TERMINE",
-    title: "Ayurveda-Retreat – 3 Termine",
+    title: "Ayurveda für Anfänger – 3 Termine",
     price: "€300",
     oldPrice: "€330",
     steps: [
@@ -27,7 +27,7 @@ const retreatPackages = [
   },
   {
     visits: "4 TERMINE · BEGLEITETE DETOX-KUR FÜR ZU HAUSE",
-    title: "Ayurveda-Retreat – 4 Termine",
+    title: "Ayurveda für Anfänger – 4 Termine",
     price: "€455",
     oldPrice: "€515",
     steps: [
@@ -470,16 +470,7 @@ export default function SteinbergAmSeePage() {
                 </ul>
               </div>
 
-              <div className="relative mt-5">
-                <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#A66C4E]">
-                  GEEIGNET BEI
-                </p>
-
-                <p className="mt-2 text-sm leading-6 text-[#6B705C]">
-                  Individuellen Anliegen wie Gelenkschmerzen, Migräne,
-                  Erschöpfung oder hormonellen Ungleichgewichten.
-                </p>
-              </div>
+             
 
               <div className="relative mt-auto pt-8">
                 <a
@@ -532,68 +523,6 @@ export default function SteinbergAmSeePage() {
           </div>
         </div>
       </section>
-
-      {/* CHALET-INFORMATIONEN */}
-      <section className="bg-[#F1EBDD] px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden rounded-[30px] border border-[#E1D7C4] bg-[#E9E4D5]">
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -right-20 -top-28 h-80 w-80 rounded-full border border-[#B99B61]/30"
-            />
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -right-8 -top-16 h-56 w-56 rounded-full border border-[#B99B61]/20"
-            />
-
-            <div className="relative grid items-center gap-10 p-7 sm:p-10 lg:grid-cols-[1fr_auto] lg:p-14">
-              <div className="max-w-2xl">
-                <Eyebrow>Erweitern Sie Ihr Ayurveda-Erlebnis</Eyebrow>
-
-                <h2 className="mt-4 font-serif text-3xl leading-tight text-[#354B38] sm:text-4xl lg:text-5xl">
-                  Entdecken Sie Ihren
-                  <span className="block italic text-[#A66C4E]">
-                    Ort zum Entspannen.
-                  </span>
-                </h2>
-
-                <p className="mt-5 max-w-xl text-sm leading-7 text-[#6B705C] sm:text-base">
-                  Sie suchen einen ruhigen Ort für Ihren Aufenthalt während
-                  Ihrer Ayurveda-Auszeit? Entdecken Sie unser Chalet, erfahren
-                  Sie mehr über die Unterkunft und informieren Sie sich über
-                  die Ausstattung und Ihren Aufenthalt.
-                </p>
-
-                <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-xs font-medium text-[#596B55] sm:text-sm">
-                  <span className="flex items-center gap-2">
-                    <span className="text-[#B18A4D]">✳</span>
-                    Entspannung
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <span className="text-[#B18A4D]">✳</span>
-                    Komfortable Unterkunft
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <span className="text-[#B18A4D]">✳</span>
-                    Weitere Informationen zu Ihrem Aufenthalt
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-3 sm:flex-row lg:min-w-52 lg:flex-col">
-                <a
-                  href="/chalets"
-                  className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#3F6048] px-7 py-3 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#526F57]"
-                >
-                  Chalet-Informationen ansehen
-                  <ArrowIcon />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* AYURVEDA-RETREATS */}
       <section
         id="retreats"
@@ -757,208 +686,260 @@ export default function SteinbergAmSeePage() {
         </div>
       </section>
 
-      {/* PRIVATE MINI-RETREATS */}
-      <section
-        id="mini-retreats"
-        className="relative scroll-mt-20 overflow-hidden bg-[#EFE9DC] px-5 py-20 sm:px-8 sm:py-24 lg:py-28"
-      >
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -left-28 top-24 h-96 w-96 rounded-full border border-[#C9B88F]/30"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -left-10 top-48 h-52 w-52 rounded-full border border-[#C9B88F]/25"
-        />
+      {/* CHALET-INFORMATIONEN */}
+      <section className="bg-[#F1EBDD] px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="relative overflow-hidden rounded-[30px] border border-[#E1D7C4] bg-[#E9E4D5]">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-20 -top-28 h-80 w-80 rounded-full border border-[#B99B61]/30"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-8 -top-16 h-56 w-56 rounded-full border border-[#B99B61]/20"
+            />
 
-        <div className="relative mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[1fr_0.7fr] lg:items-end">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#D8C9A7] bg-[#F8F5EC] px-4 py-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#A66C4E]" />
-                <Eyebrow>Option 03 · Privates Retreat mit Übernachtung</Eyebrow>
+            <div className="relative grid items-center gap-10 p-7 sm:p-10 lg:grid-cols-[1fr_auto] lg:p-14">
+              <div className="max-w-2xl">
+                <Eyebrow>Erweitern Sie Ihr Ayurveda-Erlebnis</Eyebrow>
+
+                <h2 className="mt-4 font-serif text-3xl leading-tight text-[#354B38] sm:text-4xl lg:text-5xl">
+                  Entdecken Sie Ihren
+                  <span className="block italic text-[#A66C4E]">
+                    Ort zum Entspannen.
+                  </span>
+                </h2>
+
+                <p className="mt-5 max-w-xl text-sm leading-7 text-[#6B705C] sm:text-base">
+                  Sie suchen einen ruhigen Ort für Ihren Aufenthalt während
+                  Ihrer Ayurveda-Auszeit? Entdecken Sie unser Chalet, erfahren
+                  Sie mehr über die Unterkunft und informieren Sie sich über
+                  die Ausstattung und Ihren Aufenthalt.
+                </p>
+
+                <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-xs font-medium text-[#596B55] sm:text-sm">
+                  <span className="flex items-center gap-2">
+                    <span className="text-[#B18A4D]">✳</span>
+                    Entspannung
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <span className="text-[#B18A4D]">✳</span>
+                    Komfortable Unterkunft
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <span className="text-[#B18A4D]">✳</span>
+                    Weitere Informationen zu Ihrem Aufenthalt
+                  </span>
+                </div>
               </div>
 
-              <h2 className="mt-6 font-serif text-4xl leading-[1.12] text-[#354B38] sm:text-5xl lg:text-6xl">
-                Lassen Sie den
-                <span className="block italic text-[#A66C4E]">
-                  Alltag hinter sich.
-                </span>
-              </h2>
-            </div>
-
-            <div>
-              <p className="text-sm leading-7 text-[#6B705C] sm:text-base">
-                Wohnen Sie in Ihrem privaten Chalet in Steinberg am See.
-                Nehmen Sie sich Zeit für wohltuende Behandlungen, optionales
-                Yoga, entspannende Rituale und das schöne Gefühl, einmal
-                nirgendwo anders sein zu müssen.
-              </p>
-
-              <a
-                href="/chalets"
-                className="group mt-5 inline-flex items-center gap-3 rounded-full border border-[#9EAD91] bg-[#F8F5EC]/70 px-5 py-3.5 text-sm font-semibold text-[#3F6048] transition-all hover:bg-white"
-              >
-                Chalet Resort entdecken
-                <ArrowIcon />
-              </a>
-            </div>
-          </div>
-
-          {/* Höhepunkte Ihres Aufenthalts */}
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {[
-              {
-                number: "01",
-                title: "Privates Chalet",
-                text: "Ihr persönlicher Rückzugsort",
-              },
-              {
-                number: "02",
-                title: "Ayurveda-Betreuung",
-                text: "Individuelle Behandlungen",
-              },
-              {
-                number: "03",
-                title: "Sanfte Bewegung",
-                text: "Optionales privates Yoga",
-              },
-              {
-                number: "04",
-                title: "Ruhige Momente",
-                text: "Zeit zum Innehalten",
-              },
-            ].map((item) => (
-              <div
-                key={item.number}
-                className="rounded-2xl border border-[#E2D8C5] bg-[#F8F5EC] p-4 transition-transform hover:-translate-y-1 sm:p-5"
-              >
-                <p className="font-serif text-2xl text-[#B18A4D]">
-                  {item.number}
-                </p>
-                <h3 className="mt-3 text-sm font-semibold text-[#455B45]">
-                  {item.title}
-                </h3>
-                <p className="mt-1 text-xs leading-5 text-[#777765]">
-                  {item.text}
-                </p>
+              <div className="flex flex-col gap-3 sm:flex-row lg:min-w-52 lg:flex-col">
+                <a
+                  href="/chalets"
+                  className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#3F6048] px-7 py-3 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#526F57]"
+                >
+                  Chalet-Informationen ansehen
+                  <ArrowIcon />
+                </a>
               </div>
-            ))}
+            </div>
           </div>
-
-          {/* Mini-Retreat-Karten */}
-          <div className="mt-9 grid gap-7 lg:grid-cols-2">
-            {miniRetreats.map((retreat, index) => (
-              <article
-                key={retreat.title}
-                className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-[#E1D8C6] bg-[#FBF9F3] shadow-[0_8px_30px_rgba(75,71,52,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="relative h-60 overflow-hidden bg-[#DCD5C1] sm:h-72">
-                  <img
-                    src={retreat.image}
-                    alt={`${retreat.title} – privates Ayurveda-Retreat`}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#26372B]/65 via-[#26372B]/5 to-transparent" />
-
-                  <div className="absolute left-5 top-5 rounded-full border border-white/50 bg-[#F8F5EC]/90 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.16em] text-[#455B45] backdrop-blur-sm">
-                    {retreat.tag}
-                  </div>
-
-                  <div className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/20 font-serif text-sm text-white backdrop-blur-sm">
-                    0{index + 1}
-                  </div>
-
-                  <div className="absolute inset-x-5 bottom-6 sm:inset-x-7 sm:bottom-7">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#F0D99D]">
-                      {retreat.duration}
-                    </p>
-                    <h3 className="mt-2 font-serif text-3xl text-white sm:text-4xl">
-                      {retreat.title}
-                    </h3>
-                    <p className="mt-1 text-sm text-white/90">
-                      {retreat.subtitle}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Tagesablauf */}
-                <div className="flex flex-1 flex-col p-5 sm:p-7">
-                  <div className="relative">
-                    {retreat.days.map((day, dayIndex) => (
-                      <div
-                        key={day.label}
-                        className={`grid grid-cols-[58px_1fr] gap-3 sm:grid-cols-[68px_1fr] sm:gap-4 ${
-                          dayIndex !== retreat.days.length - 1 ? "pb-7" : ""
-                        }`}
-                      >
-                        <div className="relative flex justify-center">
-                          {dayIndex !== retreat.days.length - 1 && (
-                            <span className="absolute top-8 h-full w-px bg-[#D8C9A7]" />
-                          )}
-
-                          <span
-                            className={`relative z-10 flex h-8 w-12 items-center justify-center rounded-full text-[9px] font-bold tracking-wide sm:w-14 ${
-                              dayIndex === 0
-                                ? "bg-[#E5E9DD] text-[#3F6048]"
-                                : "border border-[#DED4C1] bg-[#F3EEE3] text-[#8A806C]"
-                            }`}
-                          >
-                            {day.label}
-                          </span>
-                        </div>
-
-                        <div className="pt-1">
-                          <h4 className="text-sm font-semibold text-[#455B45]">
-                            {day.title}
-                          </h4>
-                          <p className="mt-2 text-sm leading-6 text-[#777765]">
-                            {day.description}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Preis des Pakets */}
-                  <div className="mt-auto pt-6">
-                    <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-[#E6DDCB] bg-[#F1EBDD] p-4 sm:p-5">
-                      <div>
-                        <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#8A806C]">
-                          Preis für Ihre Auszeit
-                        </p>
-                        <p className="mt-1 font-serif text-3xl text-[#455B45]">
-                          {retreat.price}
-                        </p>
-                        <p className="mt-1 text-[10px] leading-4 text-[#8A806C]">
-                          Endpreis und enthaltene Leistungen werden noch
-                          bestätigt
-                        </p>
-                      </div>
-
-                      <a
-                        href={`/contact?package=${encodeURIComponent(`${retreat.title} – ${retreat.duration}`)}`}
-                        className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#3F6048] px-5 py-3.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#526F57]"
-                      >
-                        Aufenthalt anfragen
-                        <ArrowIcon />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <p className="mt-5 text-xs leading-5 text-[#85816F]">
-            Bitte informieren Sie sich vor Beginn der Buchungen über die
-            bestätigten Retreat-Preise, enthaltenen Unterkunftsleistungen,
-            Verfügbarkeiten und optionalen Aktivitäten.
-          </p>
         </div>
       </section>
+
+      
+
+        {/* PRIVATE MINI-RETREATS */}
+        <section
+          id="mini-retreats"
+          className="relative scroll-mt-20 overflow-hidden bg-[#EFE9DC] px-5 py-20 sm:px-8 sm:py-24 lg:py-28"
+        >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-28 top-24 h-96 w-96 rounded-full border border-[#C9B88F]/30"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-10 top-48 h-52 w-52 rounded-full border border-[#C9B88F]/25"
+          />
+
+          <div className="relative mx-auto max-w-7xl">
+            <div className="grid gap-8 lg:grid-cols-[1fr_0.7fr] lg:items-end">
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#D8C9A7] bg-[#F8F5EC] px-4 py-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#A66C4E]" />
+                  <Eyebrow>Option 03 · Privates Retreat mit Übernachtung</Eyebrow>
+                </div>
+
+                <h2 className="mt-6 font-serif text-4xl leading-[1.12] text-[#354B38] sm:text-5xl lg:text-6xl">
+                  Lassen Sie den
+                  <span className="block italic text-[#A66C4E]">
+                    Alltag hinter sich.
+                  </span>
+                </h2>
+              </div>
+
+              <div>
+                <p className="text-sm leading-7 text-[#6B705C] sm:text-base">
+                  Wohnen Sie in Ihrem privaten Chalet in Steinberg am See.
+                  Nehmen Sie sich Zeit für wohltuende Behandlungen, optionales
+                  Yoga, entspannende Rituale und das schöne Gefühl, einmal
+                  nirgendwo anders sein zu müssen.
+                </p>
+
+                <a
+                  href="/chalets"
+                  className="group mt-5 inline-flex items-center gap-3 rounded-full border border-[#9EAD91] bg-[#F8F5EC]/70 px-5 py-3.5 text-sm font-semibold text-[#3F6048] transition-all hover:bg-white"
+                >
+                  Chalet Resort entdecken
+                  <ArrowIcon />
+                </a>
+              </div>
+            </div>
+
+            {/* Höhepunkte Ihres Aufenthalts */}
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {[
+                {
+                  number: "01",
+                  title: "Privates Chalet",
+                  text: "Ihr persönlicher Rückzugsort",
+                },
+                {
+                  number: "02",
+                  title: "Ayurveda-Betreuung",
+                  text: "Individuelle Behandlungen",
+                },
+                {
+                  number: "03",
+                  title: "Sanfte Bewegung",
+                  text: "Optionales privates Yoga",
+                },
+                {
+                  number: "04",
+                  title: "Ruhige Momente",
+                  text: "Zeit zum Innehalten",
+                },
+              ].map((item) => (
+                <div
+                  key={item.number}
+                  className="rounded-2xl border border-[#E2D8C5] bg-[#F8F5EC] p-4 transition-transform hover:-translate-y-1 sm:p-5"
+                >
+                  <p className="font-serif text-2xl text-[#B18A4D]">
+                    {item.number}
+                  </p>
+                  <h3 className="mt-3 text-sm font-semibold text-[#455B45]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-xs leading-5 text-[#777765]">
+                    {item.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Mini-Retreat-Karten */}
+            <div className="mt-9 grid gap-7 lg:grid-cols-2">
+              {miniRetreats.map((retreat, index) => (
+                <article
+                  key={retreat.title}
+                  className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-[#E1D8C6] bg-[#FBF9F3] shadow-[0_8px_30px_rgba(75,71,52,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="relative h-60 overflow-hidden bg-[#DCD5C1] sm:h-72">
+                    <img
+                      src={retreat.image}
+                      alt={`${retreat.title} – privates Ayurveda-Retreat`}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#26372B]/65 via-[#26372B]/5 to-transparent" />
+
+                    <div className="absolute left-5 top-5 rounded-full border border-white/50 bg-[#F8F5EC]/90 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.16em] text-[#455B45] backdrop-blur-sm">
+                      {retreat.tag}
+                    </div>
+
+                    <div className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/20 font-serif text-sm text-white backdrop-blur-sm">
+                      0{index + 1}
+                    </div>
+
+                    <div className="absolute inset-x-5 bottom-6 sm:inset-x-7 sm:bottom-7">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#F0D99D]">
+                        {retreat.duration}
+                      </p>
+                      <h3 className="mt-2 font-serif text-3xl text-white sm:text-4xl">
+                        {retreat.title}
+                      </h3>
+                      <p className="mt-1 text-sm text-white/90">
+                        {retreat.subtitle}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Tagesablauf */}
+                  <div className="flex flex-1 flex-col p-5 sm:p-7">
+                    <div className="relative">
+                      {retreat.days.map((day, dayIndex) => (
+                        <div
+                          key={day.label}
+                          className={`grid grid-cols-[58px_1fr] gap-3 sm:grid-cols-[68px_1fr] sm:gap-4 ${
+                            dayIndex !== retreat.days.length - 1 ? "pb-7" : ""
+                          }`}
+                        >
+                          <div className="relative flex justify-center">
+                            {dayIndex !== retreat.days.length - 1 && (
+                              <span className="absolute top-8 h-full w-px bg-[#D8C9A7]" />
+                            )}
+
+                            <span
+                              className={`relative z-10 flex h-8 w-12 items-center justify-center rounded-full text-[9px] font-bold tracking-wide sm:w-14 ${
+                                dayIndex === 0
+                                  ? "bg-[#E5E9DD] text-[#3F6048]"
+                                  : "border border-[#DED4C1] bg-[#F3EEE3] text-[#8A806C]"
+                              }`}
+                            >
+                              {day.label}
+                            </span>
+                          </div>
+
+                          <div className="pt-1">
+                            <h4 className="text-sm font-semibold text-[#455B45]">
+                              {day.title}
+                            </h4>
+                            <p className="mt-2 text-sm leading-6 text-[#777765]">
+                              {day.description}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Preis des Pakets */}
+                    <div className="mt-auto pt-6">
+                      <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-[#E6DDCB] bg-[#F1EBDD] p-4 sm:p-5">
+                      
+
+                        <a
+                          href={`/contact?package=${encodeURIComponent(`${retreat.title} – ${retreat.duration}`)}`}
+                          className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#3F6048] px-5 py-3.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#526F57]"
+                        >
+                          Aufenthalt anfragen
+                          <ArrowIcon />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <p className="mt-5 text-xs leading-5 text-[#85816F]">
+              Bitte informieren Sie sich vor Beginn der Buchungen über die
+              bestätigten Retreat-Preise, enthaltenen Unterkunftsleistungen,
+              Verfügbarkeiten und optionalen Aktivitäten.
+            </p>
+          </div>
+        </section>
 
       {/* AYURVEDA ONLINE */}
       <section

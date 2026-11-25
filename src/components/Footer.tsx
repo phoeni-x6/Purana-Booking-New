@@ -11,8 +11,8 @@ const footerGroups = [
     title: "Entdecken",
     links: [
       ["Unsere Standorte", "#locations"],
-      ["Online-Beratung", "#online"],
-      ["Ayurveda-Retreats", "#retreats"],
+      ["Online-Beratung", "/online"],
+      ["Ayurveda-Retreats", "/retreats/germany"],
       ["Lernen & Journal", "#learn"],
     ],
   },
@@ -22,6 +22,7 @@ const footerGroups = [
       
       ["Schreiben Sie uns auf WhatsApp", "https://wa.me/+491759479619"],
       ["Info@purana-ayurveda.de", "mailto:info@purana-ayurveda.de"],
+      ["Kontakt", "/contact"],
     ],
   },
   {

@@ -17,11 +17,11 @@ type Treatment = {
 };
 
 const categories = [
-  "Abhyanga Massages",
-  "Aroma Rituals",
-  "Day Packages",
-  "Facial Treatments",
-  "Special Therapies",
+  "Abhyanga-Massagen",
+  "Aroma-Rituale",
+  "Tagespakete",
+  "Gesichtsbehandlungen",
+  "Spezialtherapien",
 ];
 
 function formatPrice(price: number | string, currency: string) {

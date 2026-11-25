@@ -15,7 +15,7 @@ export default function SteinbergHero() {
         aria-hidden="true"
         className="absolute inset-0 -z-30 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/images/steinberg_hero.webp')",
+          backgroundImage: "url('https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Steinberg/DSC_7378_auswahl.jpg')",
         }}
       />
 

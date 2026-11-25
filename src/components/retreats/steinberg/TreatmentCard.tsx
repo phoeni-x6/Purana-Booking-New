@@ -23,13 +23,7 @@ export default function TreatmentCard({
                                       }: TreatmentCardProps) {
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
-  const bookingUrl = `/booking?${new URLSearchParams({
-    service: name,
-    category,
-    duration,
-    price,
-    type: "treatment",
-  }).toString()}`;
+  const bookingUrl = `https://bookeo.com/purana-ayurveda/`;
 
   useEffect(() => {
     if (!isInfoOpen) return;

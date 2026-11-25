@@ -226,8 +226,6 @@ export default function TreatmentCard({
                     {bookeo_url ? (
                         <a
                             href={bookeo_url}
-                            target="_blank"
-                            rel="noopener noreferrer"
                             className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[#C14C38] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#A83F30]"
                         >
                           Diese Behandlung buchen <span aria-hidden="true">→</span>

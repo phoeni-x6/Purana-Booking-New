@@ -653,7 +653,7 @@ export default function Navbar() {
             </p>
 
             <div className="purana-utility-links">
-              <Link href="https://www-2561o.bookeo.com/bookeo/b_purana-ayurveda_start.html?buyvoucher=true&ctlsrc2=qxehGSIu%2FChOxA1M%2FdT7V6cGbtaVFCju8k017ND4JV8%3D&src=03b&buyvoucher=true&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAadG50njVIBBgKYvozuLhyCd1lQLWrkw4g1o5JoZUK0vbN8bXdBxvIrmSecQkQ_aem_t-s9mezMrdZnOF_t6VziTQ">Geschenkgutscheine</Link>
+              <Link href="https://bookeo.com/purana-ayurveda/buyvoucher">Geschenkgutscheine</Link>
               <Link href="/#shop">Nivartana-Shop</Link>
               <a href="https://wa.me/+491759479619">WhatsApp ↗</a>
             </div>

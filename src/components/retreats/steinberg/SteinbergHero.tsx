@@ -5,184 +5,127 @@ import { useState } from "react";
 
 export default function SteinbergHero() {
   const [guestType, setGuestType] = useState<"external" | "chalet">(
-    "external",
+    "external"
   );
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#f5f0e7] text-[#21452B]">
-      {/* Hintergrundbild */}
+    <section className="group relative isolate min-h-[850px] overflow-hidden bg-[#21452B] text-[#F8F5E8]">
+
+      {/* Full background image with hover zoom */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-30 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Steinberg/DSC_7378_auswahl.jpg')",
-        }}
+        className="absolute inset-0 -z-30 overflow-hidden"
+      >
+        <div
+          className="absolute inset-0 scale-100 transition-transform duration-[2000ms] ease-out group-hover:scale-110"
+          style={{
+            backgroundImage:
+              "url('https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Steinberg/DSC_7378_auswahl.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      </div>
+
+      {/* Image overlays */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-20 bg-[#14271A]/65"
       />
 
-      {/* Warmer cremefarbener Farbverlauf */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-20"
+        className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(90deg, #f5f0e7 0%, rgba(245,240,231,0.98) 22%, rgba(245,240,231,0.94) 40%, rgba(245,240,231,0.76) 55%, rgba(245,240,231,0.25) 78%, rgba(245,240,231,0.08) 100%)",
+            "linear-gradient(180deg, rgba(20,39,26,0.45) 0%, rgba(20,39,26,0.28) 40%, rgba(20,39,26,0.78) 100%)",
         }}
       />
 
-      {/* Cremefarbener Verlauf am unteren Rand */}
+      {/* Decorative frame */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[#f5f0e7]/90 via-[#f5f0e7]/30 to-transparent"
+        className="pointer-events-none absolute inset-4 border border-[#F8F5E8]/25 sm:inset-7 lg:inset-10"
       />
 
-      {/* Dekorative Elemente */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-32 -top-32 -z-10 h-[420px] w-[420px] rounded-full border border-[#2F5D39]/15"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-16 -top-16 -z-10 h-[300px] w-[300px] rounded-full border border-[#DFC24D]/30"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-40 -left-32 -z-10 h-[420px] w-[420px] rounded-full bg-[#DFC24D]/10 blur-3xl"
-      />
+      {/* Decorative corner details */}
+      <div className="pointer-events-none absolute left-4 top-4 h-12 w-12 border-l border-t border-[#DFC24D] sm:left-7 sm:top-7 lg:left-10 lg:top-10" />
+      <div className="pointer-events-none absolute right-4 top-4 h-12 w-12 border-r border-t border-[#DFC24D] sm:right-7 sm:top-7 lg:right-10 lg:top-10" />
+      <div className="pointer-events-none absolute bottom-4 left-4 h-12 w-12 border-b border-l border-[#DFC24D] sm:bottom-7 sm:left-7 lg:bottom-10 lg:left-10" />
+      <div className="pointer-events-none absolute bottom-4 right-4 h-12 w-12 border-b border-r border-[#DFC24D] sm:bottom-7 sm:right-7 lg:bottom-10 lg:right-10" />
 
-      <div className="relative mx-auto max-w-7xl px-5 pb-12 pt-16 sm:px-8 sm:pt-24 lg:pb-16 lg:pt-28">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
-          {/* Hauptinhalt */}
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#2F5D39]/20 bg-[#F8F5E8]/75 px-4 py-2 backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#C14C38]" />
-              <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#2F5D39]">
-                Ihr Ayurveda-Ort zum Wohlfühlen
-              </span>
-            </div>
+      {/* Main content */}
+      <div className="relative mx-auto flex min-h-[850px] max-w-[1400px] flex-col items-center justify-center px-8 pb-28 pt-28 text-center sm:px-12">
 
-            <p className="mt-8 text-xs font-semibold uppercase tracking-[0.24em] text-[#9A8050]">
-              Standort · Bayern, Deutschland
-            </p>
+        {/* Eyebrow */}
+        <div className="flex items-center justify-center gap-4">
+          <span className="h-px w-10 bg-[#DFC24D]" />
+          <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-[#EFE9C5] sm:text-xs">
+            Ihr Ayurveda-Ort zum Wohlfühlen
+          </p>
+          <span className="h-px w-10 bg-[#DFC24D]" />
+        </div>
 
-            <h1 className="mt-4 max-w-3xl font-serif text-4xl leading-[1.12] tracking-tight text-[#21452B] sm:text-5xl lg:text-6xl xl:text-7xl">
-              Ayurveda in
-              <span className="mt-1 block text-[#9A8050]">
-                Steinberg am See.
-              </span>
-            </h1>
+        <p className="mt-9 text-[10px] font-medium uppercase tracking-[0.35em] text-[#DFC24D] sm:text-xs">
+          Bayern · Deutschland
+        </p>
 
-            <p className="mt-6 max-w-xl text-sm leading-7 text-[#533E23]/85 sm:text-base sm:leading-8">
-              Wählen Sie eine individuelle Behandlung, ein Ayurveda-Retreat
-              mit mehreren Terminen oder ein privates Mini-Retreat mit
-              Übernachtung in unserem Chalet Resort. Finden Sie Ihren
-              persönlichen Weg, zur Ruhe zu kommen, neue Kraft zu schöpfen
-              und sich bewusst Zeit für sich selbst zu nehmen.
-            </p>
+        {/* Main heading */}
+        <h1 className="mt-7 max-w-5xl font-serif text-5xl leading-[1.08] tracking-tight text-[#F8F5E8] sm:text-7xl lg:text-[6.5rem]">
+          Ayurveda in
+          <span className="mt-2 block font-normal italic text-[#DFC24D]">
+            Steinberg am See.
+          </span>
+        </h1>
 
-            {/* Auswahl des Gästetyps */}
-            <div className="mt-8">
-              <p className="text-xs font-semibold text-[#533E23]">
-                Ich bin ...
-              </p>
+        {/* Decorative ornament */}
+        <div className="mt-8 flex items-center justify-center gap-3">
+          <span className="h-px w-12 bg-[#F8F5E8]/45" />
+          <span className="text-lg text-[#DFC24D]">✳</span>
+          <span className="h-px w-12 bg-[#F8F5E8]/45" />
+        </div>
 
-              <div
-                className="mt-3 flex flex-wrap gap-3"
-                aria-label="Wählen Sie Ihren Gästetyp"
-              >
-                <button
-                  type="button"
-                  aria-pressed={guestType === "external"}
-                  onClick={() => setGuestType("external")}
-                  className={`rounded-full border px-5 py-3 text-sm font-semibold transition-all ${
-                    guestType === "external"
-                      ? "border-[#21452B] bg-[#21452B] text-[#F8F5E8] shadow-[0_5px_18px_rgba(33,69,43,0.15)]"
-                      : "border-[#21452B]/25 bg-[#F8F5E8]/65 text-[#21452B] hover:border-[#21452B] hover:bg-[#EFE9C5]"
-                  }`}
-                >
-                  Externer Gast
-                </button>
+        {/* Description */}
+        <p className="mt-7 max-w-2xl text-sm leading-8 text-[#F8F5E8]/90 sm:text-base sm:leading-9">
+          Wählen Sie eine individuelle Behandlung, ein Ayurveda-Retreat
+          mit mehreren Terminen oder ein privates Mini-Retreat mit
+          Übernachtung in unserem Chalet Resort. Finden Sie Ihren
+          persönlichen Weg, zur Ruhe zu kommen, neue Kraft zu schöpfen
+          und sich bewusst Zeit für sich selbst zu nehmen.
+        </p>
 
-                <button
-                  type="button"
-                  aria-pressed={guestType === "chalet"}
-                  onClick={() => setGuestType("chalet")}
-                  className={`rounded-full border px-5 py-3 text-sm font-semibold transition-all ${
-                    guestType === "chalet"
-                      ? "border-[#21452B] bg-[#21452B] text-[#F8F5E8] shadow-[0_5px_18px_rgba(33,69,43,0.15)]"
-                      : "border-[#21452B]/25 bg-[#F8F5E8]/65 text-[#21452B] hover:border-[#21452B] hover:bg-[#EFE9C5]"
-                  }`}
-                >
-                  Chalet-Gast
-                </button>
-              </div>
-
-              <p className="mt-3 max-w-lg text-xs leading-5 text-[#533E23]/70">
-                {guestType === "external"
-                  ? "Entdecken Sie unsere Behandlungen und Retreats – offen für alle Gäste."
-                  : "Sie übernachten im Chalet Resort? Entdecken Sie wohltuende Behandlungen und private Retreats während Ihres Aufenthalts."}
-              </p>
-            </div>
-
-            {/* Aktionsbuttons */}
-            <div className="mt-9 flex flex-wrap gap-3">
-              <a
-                href="#individual-treatments"
-                className="group inline-flex items-center gap-3 rounded-full bg-[#21452B] px-6 py-4 text-sm font-semibold text-[#F8F5E8] shadow-lg shadow-[#21452B]/15 transition-all hover:-translate-y-0.5 hover:bg-[#2F5D39]"
-              >
-                Behandlungen entdecken
-                <span className="transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </a>
-
-              <a
-                href="#retreats"
-                className="inline-flex items-center rounded-full border border-[#21452B]/30 bg-[#F8F5E8]/50 px-6 py-4 text-sm font-semibold text-[#21452B] backdrop-blur-sm transition-colors hover:border-[#21452B] hover:bg-[#EFE9C5]"
-              >
-                Retreats entdecken
-              </a>
-            </div>
-          </div>
+        {/* Bottom caption */}
+        <div className="absolute bottom-10 left-0 right-0 flex flex-col items-center gap-2">
+          <p className="text-[9px] uppercase tracking-[0.3em] text-[#F8F5E8]/65">
+            PURANA AYURVEDA · STEINBERG AM SEE
+          </p>
+          <span className="h-7 w-px bg-[#DFC24D]/70" />
         </div>
       </div>
 
-      {/* Abschnittsnavigation */}
-      <div className="relative mt-12 border-t border-[#21452B]/15 bg-[#f5f0e7]/70 backdrop-blur-sm">
+      {/* Bottom navigation */}
+      <div className="relative border-t border-white/20 bg-[#172B1C]/80 backdrop-blur-md">
         <nav
           aria-label="Ayurveda-Angebote in Steinberg entdecken"
-          className="mx-auto flex max-w-7xl gap-6 overflow-x-auto px-5 py-5 text-xs sm:px-8 sm:text-sm"
+          className="mx-auto flex max-w-[1400px] gap-8 overflow-x-auto px-6 py-5 sm:px-12"
         >
-          <a
-            href="#individual-treatments"
-            className="shrink-0 text-[#533E23]/80 transition-colors hover:text-[#21452B]"
-          >
-            <span className="mr-2 text-[#C14C38]">01</span>
-            Individuelle Behandlungen
-          </a>
-
-          <a
-            href="#retreats"
-            className="shrink-0 text-[#533E23]/80 transition-colors hover:text-[#21452B]"
-          >
-            <span className="mr-2 text-[#C14C38]">02</span>
-            Ayurveda-Retreats
-          </a>
-
-          <a
-            href="#mini-retreats"
-            className="shrink-0 text-[#533E23]/80 transition-colors hover:text-[#21452B]"
-          >
-            <span className="mr-2 text-[#C14C38]">03</span>
-            Mini-Retreats mit Übernachtung
-          </a>
-
-          <a
-            href="#online-at-home"
-            className="shrink-0 text-[#533E23]/80 transition-colors hover:text-[#21452B]"
-          >
-            <span className="mr-2 text-[#C14C38]">04</span>
-            Online & für zu Hause
-          </a>
+          {[
+            ["01", "Individuelle Behandlungen", "#individual-treatments"],
+            ["02", "Ayurveda-Retreats", "#retreats"],
+            ["03", "Mini-Retreats mit Übernachtung", "#mini-retreats"],
+            ["04", "Online & für zu Hause", "#online-at-home"],
+          ].map(([number, label, href]) => (
+            <a
+              key={number}
+              href={href}
+              className="flex shrink-0 items-center gap-3 text-xs text-[#F8F5E8]/80 transition-colors hover:text-[#DFC24D] sm:text-sm"
+            >
+              <span className="font-serif italic text-[#DFC24D]">
+                {number}
+              </span>
+              {label}
+            </a>
+          ))}
         </nav>
       </div>
     </section>

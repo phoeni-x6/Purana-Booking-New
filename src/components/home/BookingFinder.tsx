@@ -2,8 +2,11 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function BookingFinder() {
+  const router = useRouter();
+
   const [location, setLocation] = useState("Steinberg am See");
   const [guestType, setGuestType] = useState("Chalet-Gast");
 
@@ -33,11 +36,14 @@ export default function BookingFinder() {
     },
   ];
 
+  const isSteinberg = location === "Steinberg am See";
+
   function handleFind() {
-    document.getElementById("locations")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    if (isSteinberg) {
+      router.push("/retreats/steinberg-am-see");
+    } else {
+      router.push("/retreats/marktredwitz");
+    }
   }
 
   const optionClass = (selected: boolean) =>
@@ -107,8 +113,13 @@ export default function BookingFinder() {
             </div>
 
             {/* Selection area */}
-            <div className="mt-6 grid gap-6 md:grid-cols-2">
-
+            <div
+              className={`mt-6 grid gap-6 ${
+                isSteinberg
+                  ? "md:grid-cols-2"
+                  : "md:grid-cols-1"
+              }`}
+            >
               {/* Location */}
               <div>
                 <div className="mb-3 flex items-center gap-2">
@@ -164,60 +175,62 @@ export default function BookingFinder() {
                 </div>
               </div>
 
-              {/* Guest type */}
-              <div>
-                <div className="mb-3 flex items-center gap-2">
-                  <span className="grid h-6 w-6 place-items-center rounded-full bg-[#21452B] text-[10px] font-semibold text-[#EFE9C5]">
-                    02
-                  </span>
+              {/* Guest type - Only visible for Steinberg am See */}
+              {isSteinberg && (
+                <div>
+                  <div className="mb-3 flex items-center gap-2">
+                    <span className="grid h-6 w-6 place-items-center rounded-full bg-[#21452B] text-[10px] font-semibold text-[#EFE9C5]">
+                      02
+                    </span>
 
-                  <h3 className="text-xs font-semibold text-[#21452B]">
-                    Ihre Gästekategorie
-                  </h3>
-                </div>
+                    <h3 className="text-xs font-semibold text-[#21452B]">
+                      Ihre Gästekategorie
+                    </h3>
+                  </div>
 
-                <div className="grid grid-cols-2 gap-2">
-                  {guests.map((guest) => {
-                    const selected = guestType === guest.name;
+                  <div className="grid grid-cols-2 gap-2">
+                    {guests.map((guest) => {
+                      const selected = guestType === guest.name;
 
-                    return (
-                      <button
-                        key={guest.name}
-                        type="button"
-                        aria-pressed={selected}
-                        onClick={() => setGuestType(guest.name)}
-                        className={optionClass(selected)}
-                      >
-                        <span
-                          className={`grid h-9 w-9 shrink-0 place-items-center rounded-lg font-serif text-xl ${
-                            selected
-                              ? "bg-[#21452B]/10 text-[#21452B]"
-                              : "bg-[#DFC24D]/30 text-[#533E23]"
-                          }`}
+                      return (
+                        <button
+                          key={guest.name}
+                          type="button"
+                          aria-pressed={selected}
+                          onClick={() => setGuestType(guest.name)}
+                          className={optionClass(selected)}
                         >
-                          {guest.icon}
-                        </span>
-
-                        <span className="min-w-0">
-                          <span className="block text-xs font-semibold text-[#21452B]">
-                            {guest.name}
+                          <span
+                            className={`grid h-9 w-9 shrink-0 place-items-center rounded-lg font-serif text-xl ${
+                              selected
+                                ? "bg-[#21452B]/10 text-[#21452B]"
+                                : "bg-[#DFC24D]/30 text-[#533E23]"
+                            }`}
+                          >
+                            {guest.icon}
                           </span>
 
-                          <span className="mt-1 block text-[10px] text-[#6B705C]">
-                            {guest.subtitle}
-                          </span>
-                        </span>
+                          <span className="min-w-0">
+                            <span className="block text-xs font-semibold text-[#21452B]">
+                              {guest.name}
+                            </span>
 
-                        {selected && (
-                          <span className="absolute right-2 top-2 text-[10px] text-[#21452B]">
-                            ✓
+                            <span className="mt-1 block text-[10px] text-[#6B705C]">
+                              {guest.subtitle}
+                            </span>
                           </span>
-                        )}
-                      </button>
-                    );
-                  })}
+
+                          {selected && (
+                            <span className="absolute right-2 top-2 text-[10px] text-[#21452B]">
+                              ✓
+                            </span>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Bottom action */}
@@ -227,9 +240,12 @@ export default function BookingFinder() {
                   {location}
                 </span>
 
-                <span className="mx-2 text-[#DFC24D]">✳</span>
-
-                {guestType}
+                {isSteinberg && (
+                  <>
+                    <span className="mx-2 text-[#DFC24D]">✳</span>
+                    {guestType}
+                  </>
+                )}
               </p>
 
               <button

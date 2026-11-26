@@ -1,3 +1,4 @@
+
 const programmes = [
   {
     duration: "4 TAGE · 1 BERATUNG",
@@ -351,19 +352,37 @@ export default function DetoxProgrammes() {
                     )}
                   </div>
 
-                  <a
-                    href={`/contact?package=${encodeURIComponent(
-                      `${programme.title} – ${programme.price}`
-                    )}`}
-                    className={`group mt-6 flex w-full items-center justify-center gap-3 rounded-full px-5 py-4 text-sm font-semibold transition-all duration-300 ${
-                      programme.featured
-                        ? "bg-[#DFC24D] text-[#21452B] hover:bg-[#E9D477]"
-                        : "bg-[#21452B] text-white hover:bg-[#2F5D39]"
-                    }`}
-                  >
-                    {programme.title} buchen
-                    <ArrowIcon />
-                  </a>
+                  {/* Action Buttons */}
+                  <div className="mt-6 grid grid-cols-2 gap-3">
+                    <a
+  href={
+    programme.title === "Sanfter Neustart"
+      ? "/online/gentle-reset"
+      : "/online/seasonal-reset"
+  }
+  className={`flex items-center justify-center rounded-full border px-3 py-3.5 text-xs font-semibold transition-all duration-300 ${
+    programme.featured
+      ? "border-white/40 text-white hover:bg-white/10"
+      : "border-[#2F5D39] text-[#21452B] hover:bg-[#EFE9C5]"
+  }`}
+>
+  Mehr erfahren
+</a>
+
+                    <a
+                      href={`/contact?package=${encodeURIComponent(
+                        `${programme.title} – ${programme.price}`
+                      )}`}
+                      className={`group flex items-center justify-center gap-2 rounded-full px-3 py-3.5 text-xs font-semibold transition-all duration-300 ${
+                        programme.featured
+                          ? "bg-[#DFC24D] text-[#21452B] hover:bg-[#E9D477]"
+                          : "bg-[#21452B] text-white hover:bg-[#2F5D39]"
+                      }`}
+                    >
+                      Jetzt buchen
+                      <ArrowIcon />
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
@@ -454,22 +473,26 @@ export default function DetoxProgrammes() {
                 ))}
               </div>
 
-              <div className="mt-auto pt-8">
+              {/* Deep Reset Buttons */}
+              <div className="mt-auto pt-8 grid grid-cols-2 gap-3">
                 <a
-                  href={`/contact?package=${encodeURIComponent("Deep Reset")}`}
-                  className="group flex w-full items-center justify-center gap-3 rounded-full bg-[#21452B] px-4 py-4 text-sm font-semibold text-white transition hover:bg-[#2F5D39]"
+                  href={`/online`}
+                  className="flex items-center justify-center rounded-full border border-[#2F5D39] px-3 py-3.5 text-xs font-semibold text-[#21452B] transition hover:bg-[#EFE9C5]"
                 >
-                  Deep Reset auswählen
-                  <ArrowIcon />
+                  Mehr erfahren
                 </a>
 
-                
+                <a
+                  href={`/contact?package=${encodeURIComponent("Deep Reset")}`}
+                  className="group flex items-center justify-center gap-2 rounded-full bg-[#21452B] px-3 py-3.5 text-xs font-semibold text-white transition hover:bg-[#2F5D39]"
+                >
+                  Jetzt buchen
+                  <ArrowIcon />
+                </a>
               </div>
             </div>
           </article>
         </div>
-
-       
       </div>
 
       {/* Markenakzent */}

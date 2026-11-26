@@ -25,25 +25,11 @@ const menus = {
   ],
   online: [
     {
-      title: "Online-Beratung",
+      title: "Online-Beratung & Wellness",
       description: "Individuelle Online-Sitzungen",
       href: "/online",
     },
-    {
-      title: "Sanfter Neustart",
-      description: "Viertägiges Programm",
-      href: "/online/gentle-reset",
-    },
-    {
-      title: "Saisonaler Neustart",
-      description: "Siebentägiges saisonales Programm",
-      href: "/online/seasonal-reset",
-    },
-    {
-      title: "Tiefgehender Neustart",
-      description: "Umfassende persönliche Begleitung",
-      href: "/online",
-    },
+    
     {
       title: "E-Books",
       description: "Detox- und saisonale Ratgeber",

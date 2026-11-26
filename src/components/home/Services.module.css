@@ -1,0 +1,28 @@
+.track {
+  animation: services-scroll 48s linear infinite;
+  will-change: transform;
+}
+
+.marquee:hover .track {
+  animation-play-state: paused;
+}
+
+.card {
+  flex-shrink: 0;
+}
+
+@keyframes services-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}

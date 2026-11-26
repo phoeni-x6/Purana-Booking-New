@@ -1,4 +1,6 @@
 
+import styles from "./Services.module.css";
+
 const services = [
   {
     number: "01",
@@ -6,7 +8,7 @@ const services = [
     text: "Traditionelle Ayurveda-Therapien und individuelle Betreuung in Deutschland.",
     href: "/retreats/steinberg-am-see",
     image:
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85",
+      "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/DSC_7259_auswahl.jpg",
   },
   {
     number: "02",
@@ -14,7 +16,7 @@ const services = [
     text: "Persönliche Beratung und Begleitung durch erfahrene Ayurveda-Praktiker.",
     href: "/online",
     image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85",
+      "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/pic.jfif",
   },
   {
     number: "03",
@@ -30,7 +32,7 @@ const services = [
     text: "Gönnen Sie sich eine bewusste Auszeit in Deutschland oder Sri Lanka.",
     href: "/retreats/germany",
     image:
-      "https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?auto=format&fit=crop&w=900&q=85",
+      "https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/DSC_7207_auswahl.jpg",
   },
   {
     number: "05",
@@ -52,110 +54,221 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="relative overflow-hidden bg-[#EFE9C5] px-5 py-20 md:py-28">
+    <section className="relative overflow-hidden bg-[#EFE9C5] py-24 md:py-28">
 
-      {/* Dekorativer Hintergrund */}
+      {/* Background decorations */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-32 top-10 h-96 w-96 rounded-full border border-[#DFC24D]/30"
       />
 
-      <div className="relative mx-auto max-w-7xl">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-32 bottom-0 h-96 w-96 rounded-full border border-[#DFC24D]/30"
+      />
 
-        {/* Abschnittsüberschrift */}
-        <div className="mb-12 max-w-2xl">
-          <div className="mb-4 flex items-center gap-3">
-            <span className="h-px w-10 bg-[#C14C38]" />
-            <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#C14C38] sm:text-xs">
-              Ayurveda an einem Ort entdecken
-            </p>
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+
+        {/* Section heading */}
+        <div className="mb-14 grid items-end gap-8 lg:grid-cols-[1fr_0.65fr]">
+
+          <div>
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-10 bg-[#C14C38]" />
+
+              <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#C14C38] sm:text-xs">
+                Ayurveda an einem Ort entdecken
+              </p>
+            </div>
+
+            <h2 className="max-w-3xl font-serif text-4xl leading-tight tracking-tight text-[#533E23] sm:text-5xl md:text-6xl">
+              Ein wenig mehr Balance,
+              <span className="mt-2 block italic text-[#A47B25]">
+                in jedem Lebensbereich.
+              </span>
+            </h2>
           </div>
 
-          <h2 className="font-serif text-4xl leading-tight tracking-tight text-[#533E23] sm:text-5xl md:text-6xl">
-            Ein wenig mehr Balance,
-            <span className="block italic text-[#A47B25]">
-              in jedem Lebensbereich.
-            </span>
-          </h2>
+          <div className="relative pb-2 lg:pl-8">
+            <div className="absolute left-0 top-0 hidden h-full w-px bg-gradient-to-b from-[#DFC24D] to-transparent lg:block" />
 
-          <p className="mt-5 max-w-xl text-sm leading-7 text-[#6B705C]">
-            Finden Sie Ihren persönlichen Weg zu mehr Wohlbefinden – mit
-            achtsamer Betreuung, traditionellem Wissen und Angeboten, die
-            ganz auf Sie abgestimmt sind.
-          </p>
+            <p className="max-w-md text-sm leading-8 text-[#6B705C] sm:text-base">
+              Finden Sie Ihren persönlichen Weg zu mehr Wohlbefinden – mit
+              achtsamer Betreuung, traditionellem Wissen und Angeboten, die
+              ganz auf Sie abgestimmt sind.
+            </p>
+
+            <div className="mt-5 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#9A8050]">
+              <span className="h-px w-8 bg-[#C14C38]" />
+              Entdecken Sie unsere Angebote
+            </div>
+          </div>
         </div>
+      </div>
 
-        {/* Bildkarten */}
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <a
-              href={service.href}
-              key={service.number}
-              className="group relative isolate flex min-h-[360px] flex-col justify-between overflow-hidden rounded-2xl border border-[#533E23]/15 bg-[#533E23] p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sm:min-h-[390px]"
-            >
-              {/* Hintergrundbild */}
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 -z-20 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110"
-                style={{
-                  backgroundImage: `url('${service.image}')`,
-                }}
-              />
+      {/* Infinite services slider */}
+      <div className="relative">
 
-              {/* Warmer Gold- und Braunton */}
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 -z-10 transition-opacity duration-500 group-hover:opacity-90"
-                style={{
-                  background:
-                    "linear-gradient(180deg, rgba(83,62,35,0.25) 0%, rgba(83,62,35,0.58) 40%, rgba(83,62,35,0.94) 100%)",
-                }}
-              />
+        {/* Left fade */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#EFE9C5] to-transparent sm:w-24 lg:w-36" />
 
-              {/* Sanfte goldene Lichtakzente */}
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 -z-10 bg-gradient-to-br from-[#DFC24D]/20 via-transparent to-[#533E23]/30"
-              />
+        {/* Right fade */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#EFE9C5] to-transparent sm:w-24 lg:w-36" />
 
-              {/* Obere Zeile */}
-              <div className="flex items-center justify-between">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[#DFC24D]/60 bg-[#DFC24D]/20 font-serif text-lg italic text-[#DFC24D] backdrop-blur-sm">
-                  ✳
-                </span>
+        <div className={`${styles.marquee} overflow-hidden`}>
 
-                <span className="text-xs tracking-[0.2em] text-[#EFE9C5]/80">
-                  {service.number}
-                </span>
-              </div>
+          <div className={`${styles.track} flex w-max gap-5 px-3`}>
 
-              {/* Unterer Inhalt */}
-              <div>
-                <div className="mb-4 h-px w-10 bg-[#DFC24D] transition-all duration-500 group-hover:w-16" />
+            {/* First set */}
+            {services.map((service) => (
+              <a
+                href={service.href}
+                key={service.number}
+                className={`${styles.card} group relative isolate flex h-[400px] w-[285px] flex-col justify-between overflow-hidden rounded-2xl border border-[#533E23]/15 bg-[#533E23] p-7 shadow-md transition-all duration-500 hover:shadow-2xl sm:h-[430px] sm:w-[340px] sm:p-8`}
+              >
+                {/* Background image */}
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 -z-20 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                  style={{
+                    backgroundImage: `url('${service.image}')`,
+                  }}
+                />
 
-                <h3 className="max-w-xs font-serif text-3xl leading-tight text-[#EFE9C5] sm:text-[32px]">
-                  {service.title}
-                </h3>
+                {/* Image overlay */}
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 -z-10 bg-gradient-to-b from-[#533E23]/25 via-[#533E23]/50 to-[#533E23]/95"
+                />
 
-                <p className="mt-3 max-w-sm text-sm leading-6 text-[#EFE9C5]/80">
-                  {service.text}
-                </p>
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 -z-10 bg-gradient-to-br from-[#DFC24D]/15 via-transparent to-[#533E23]/30"
+                />
 
-                <div className="mt-7 flex items-center justify-between border-t border-[#EFE9C5]/25 pt-5">
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#DFC24D]">
-                    Angebot entdecken
+                {/* Top content */}
+                <div className="flex items-center justify-between">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#DFC24D]/60 bg-[#DFC24D]/20 font-serif text-xl italic text-[#DFC24D] backdrop-blur-sm transition duration-500 group-hover:rotate-12 group-hover:bg-[#DFC24D]/30">
+                    ✳
                   </span>
 
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[#DFC24D]/60 text-lg text-[#DFC24D] transition-all duration-300 group-hover:border-[#DFC24D] group-hover:bg-[#DFC24D] group-hover:text-[#533E23]">
-                    ↗
+                  <span className="font-serif text-3xl italic text-[#EFE9C5]/70">
+                    {service.number}
                   </span>
                 </div>
-              </div>
-            </a>
-          ))}
+
+                {/* Bottom content */}
+                <div>
+                  <div className="mb-5 h-px w-10 bg-[#DFC24D] transition-all duration-500 group-hover:w-20" />
+
+                  <h3 className="max-w-xs font-serif text-3xl leading-tight text-[#EFE9C5]">
+                    {service.title}
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-7 text-[#EFE9C5]/80">
+                    {service.text}
+                  </p>
+
+                  <div className="mt-7 flex items-center justify-between border-t border-[#EFE9C5]/25 pt-5">
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#DFC24D]">
+                      Angebot entdecken
+                    </span>
+
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#DFC24D]/60 text-lg text-[#DFC24D] transition-all duration-300 group-hover:border-[#DFC24D] group-hover:bg-[#DFC24D] group-hover:text-[#533E23]">
+                      ↗
+                    </span>
+                  </div>
+                </div>
+              </a>
+            ))}
+
+            {/* Duplicate set for seamless looping */}
+            {services.map((service) => (
+              <a
+                href={service.href}
+                key={`duplicate-${service.number}`}
+                aria-hidden="true"
+                tabIndex={-1}
+                className={`${styles.card} group relative isolate flex h-[400px] w-[285px] flex-col justify-between overflow-hidden rounded-2xl border border-[#533E23]/15 bg-[#533E23] p-7 shadow-md transition-all duration-500 hover:shadow-2xl sm:h-[430px] sm:w-[340px] sm:p-8`}
+              >
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 -z-20 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                  style={{
+                    backgroundImage: `url('${service.image}')`,
+                  }}
+                />
+
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 -z-10 bg-gradient-to-b from-[#533E23]/25 via-[#533E23]/50 to-[#533E23]/95"
+                />
+
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 -z-10 bg-gradient-to-br from-[#DFC24D]/15 via-transparent to-[#533E23]/30"
+                />
+
+                <div className="flex items-center justify-between">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#DFC24D]/60 bg-[#DFC24D]/20 font-serif text-xl italic text-[#DFC24D]">
+                    ✳
+                  </span>
+
+                  <span className="font-serif text-3xl italic text-[#EFE9C5]/70">
+                    {service.number}
+                  </span>
+                </div>
+
+                <div>
+                  <div className="mb-5 h-px w-10 bg-[#DFC24D]" />
+
+                  <h3 className="max-w-xs font-serif text-3xl leading-tight text-[#EFE9C5]">
+                    {service.title}
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-7 text-[#EFE9C5]/80">
+                    {service.text}
+                  </p>
+
+                  <div className="mt-7 flex items-center justify-between border-t border-[#EFE9C5]/25 pt-5">
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#DFC24D]">
+                      Angebot entdecken
+                    </span>
+
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#DFC24D]/60 text-lg text-[#DFC24D]">
+                      ↗
+                    </span>
+                  </div>
+                </div>
+              </a>
+            ))}
+
+          </div>
+        </div>
+      </div>
+
+      {/* Slider footer */}
+      <div className="relative mx-auto mt-12 flex max-w-7xl items-center justify-between gap-5 px-5 sm:px-8">
+
+        <div className="flex items-center gap-3">
+          <span className="h-px w-8 bg-[#C14C38]" />
+          <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#6B705C] sm:text-[10px]">
+            Unsere Angebote
+          </span>
         </div>
 
+        <span className="font-serif text-lg italic text-[#9A8050]">
+          Tradition · Natur · Balance
+        </span>
+
+        <div className="flex items-center gap-2">
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#C14C38]" />
+          <span className="text-[9px] uppercase tracking-[0.18em] text-[#6B705C]">
+            Entdecken
+          </span>
+        </div>
       </div>
+
     </section>
   );
 }

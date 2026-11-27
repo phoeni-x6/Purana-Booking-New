@@ -1,4 +1,6 @@
 
+"use client";
+
 import Image from "next/image";
 
 const ayurvedaUrl = "https://zentrum-fuer-therapie.de/ayurveda/";
@@ -45,166 +47,166 @@ const experiences = [
 export default function MarktredwitzPage() {
   return (
     <main className="overflow-hidden bg-[#F5F0E7] text-[#263A2B]">
+
       {/* HERO */}
-      <section className="relative isolate overflow-hidden bg-[#f5f0e7] text-[#21452B]">
-        {/* Hintergrundbild */}
+      <section className="group relative isolate min-h-[850px] overflow-hidden bg-[#F5F0E7] text-[#21452B]">
+
+        {/* Full background image with hover zoom */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-30 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('",
-          }}
-        />
+          className="absolute inset-0 -z-30 overflow-hidden"
+        >
+          <div
+            className="absolute inset-0 scale-100 transition-transform duration-[2000ms] ease-out group-hover:scale-110"
+            style={{
+              backgroundImage:
+                "url('https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/Marktredwitz/IMG_5622.jpeg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+        </div>
 
-        {/* Warmer cremefarbener Farbverlauf */}
+        {/* Soft cream overlay */}
         <div
           aria-hidden="true"
           className="absolute inset-0 -z-20"
           style={{
             background:
-              "linear-gradient(90deg, #f5f0e7 0%, rgba(245,240,231,0.98) 22%, rgba(245,240,231,0.94) 40%, rgba(245,240,231,0.76) 55%, rgba(245,240,231,0.25) 78%, rgba(245,240,231,0.08) 100%)",
+              "linear-gradient(180deg, rgba(245,240,231,0.35) 0%, rgba(245,240,231,0.48) 35%, rgba(245,240,231,0.65) 70%, rgba(245,240,231,0.92) 100%)",
           }}
         />
 
-        {/* Cremefarbener Verlauf am unteren Rand */}
+        {/* Central cream glow */}
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[#f5f0e7]/95 via-[#f5f0e7]/35 to-transparent"
+          className="absolute inset-0 -z-10"
+          style={{
+            background:
+              "radial-gradient(ellipse at 50% 42%, rgba(248,245,232,0.42) 0%, rgba(248,245,232,0.12) 48%, transparent 78%)",
+          }}
         />
 
-        {/* Dekorative Elemente */}
+        {/* Bottom cream fade */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-32 -top-32 -z-10 h-[420px] w-[420px] rounded-full border border-[#2F5D39]/15"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -right-16 -top-16 -z-10 h-[300px] w-[300px] rounded-full border border-[#DFC24D]/30"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -bottom-40 -left-32 -z-10 h-[420px] w-[420px] rounded-full bg-[#DFC24D]/10 blur-3xl"
+          className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[#F5F0E7]/95 via-[#F5F0E7]/40 to-transparent"
         />
 
-        <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-16 sm:px-8 sm:pb-20 sm:pt-24 lg:pb-24 lg:pt-28">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
-            {/* Hauptinhalt */}
-            <div>
-              {/* Kennzeichnung */}
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#2F5D39]/20 bg-[#F8F5E8]/75 px-4 py-2 backdrop-blur-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#C14C38]" />
-                <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#2F5D39]">
-                  Purana Ayurveda × Zentrum für Therapie
-                </span>
-              </div>
+        {/* Decorative frame */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-4 border border-[#9A8050]/45 sm:inset-7 lg:inset-10"
+        />
 
-              <p className="mt-8 text-xs font-semibold uppercase tracking-[0.24em] text-[#9A8050]">
-                Standort · Marktredwitz, Deutschland
+        {/* Decorative corners */}
+        <div className="pointer-events-none absolute left-4 top-4 h-12 w-12 border-l border-t border-[#DFC24D] sm:left-7 sm:top-7 lg:left-10 lg:top-10" />
+        <div className="pointer-events-none absolute right-4 top-4 h-12 w-12 border-r border-t border-[#DFC24D] sm:right-7 sm:top-7 lg:right-10 lg:top-10" />
+        <div className="pointer-events-none absolute bottom-4 left-4 h-12 w-12 border-b border-l border-[#DFC24D] sm:bottom-7 sm:left-7 lg:bottom-10 lg:left-10" />
+        <div className="pointer-events-none absolute bottom-4 right-4 h-12 w-12 border-b border-r border-[#DFC24D] sm:bottom-7 sm:right-7 lg:bottom-10 lg:right-10" />
+
+        {/* Main content */}
+        <div className="relative mx-auto flex min-h-[850px] max-w-[1400px] flex-col items-center justify-center px-8 pb-32 pt-28 text-center sm:px-12">
+
+          {/* Eyebrow */}
+          <div className="inline-flex items-center justify-center gap-4 rounded-full border border-[#9A8050]/30 bg-[#F8F5E8]/55 px-5 py-3 backdrop-blur-sm">
+            <span className="h-px w-8 bg-[#C14C38]" />
+            <p className="text-[9px] font-semibold uppercase tracking-[0.28em] text-[#533E23] sm:text-xs">
+              Purana Ayurveda × Zentrum für Therapie
+            </p>
+            <span className="h-px w-8 bg-[#C14C38]" />
+          </div>
+
+          <p className="mt-9 text-[10px] font-semibold uppercase tracking-[0.35em] text-[#8A6845] sm:text-xs">
+            Standort · Marktredwitz, Deutschland
+          </p>
+
+          {/* Main heading */}
+          <h1 className="mt-7 max-w-5xl font-[var(--font-heading)] text-5xl font-normal leading-[1.08] tracking-tight text-[#263A2B] sm:text-7xl lg:text-[6.5rem]">
+            Ein Moment des
+            <span className="mt-2 block italic text-[#9A8050]">
+              Wohlbefindens
+            </span>
+            <span className="mt-2 block text-4xl sm:text-5xl lg:text-6xl">
+              in Marktredwitz.
+            </span>
+          </h1>
+
+          {/* Ornament */}
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <span className="h-px w-12 bg-[#9A8050]/60" />
+            <span className="text-xl text-[#C14C38]">✳</span>
+            <span className="h-px w-12 bg-[#9A8050]/60" />
+          </div>
+
+          {/* Description */}
+          <p className="mt-7 max-w-2xl text-sm leading-8 text-[#533E23] sm:text-base sm:leading-9">
+            Traditionelle Anwendungen. Wohltuende Wärme. Sanfte
+            Berührungen. Zeit für sich selbst. Entdecken Sie unser
+            Ayurveda-Angebot in Zusammenarbeit mit dem Zentrum für
+            Therapie Bogisch in Marktredwitz.
+          </p>
+
+          {/* Action buttons */}
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              href={ayurvedaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/btn inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#21452B] px-7 py-4 text-sm font-semibold text-[#F8F5E8] shadow-lg shadow-[#21452B]/15 transition-all duration-300 hover:-translate-y-1 hover:bg-[#2F5D39]"
+            >
+              Ayurveda-Behandlungen entdecken
+              <span className="transition-transform group-hover/btn:translate-x-1">
+                ↗
+              </span>
+            </a>
+
+            <a
+              href="#our-partnership"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#21452B]/30 bg-[#F8F5E8]/65 px-7 py-4 text-sm font-semibold text-[#21452B] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#21452B] hover:bg-[#EFE9C5]"
+            >
+              Unsere Zusammenarbeit entdecken
+            </a>
+          </div>
+
+          {/* Partner information */}
+          <div className="mt-10 flex flex-col items-center gap-3 rounded-2xl border border-[#D8D0A9]/70 bg-[#F8F5E8]/65 px-7 py-5 shadow-sm backdrop-blur-md sm:flex-row sm:gap-8">
+            <div className="text-center sm:text-left">
+              <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#9A8050]">
+                Unser Partner vor Ort
               </p>
-
-              <h1 className="mt-4 max-w-3xl font-[var(--font-heading)] text-5xl font-normal leading-[1.08] tracking-tight text-[#21452B] sm:text-6xl lg:text-[76px]">
-                Ein Moment des
-                <span className="mt-1 block italic text-[#9A8050]">
-                  Wohlbefindens
-                </span>
-                in Marktredwitz.
-              </h1>
-
-              <p className="mt-7 max-w-xl text-sm leading-7 text-[#533E23]/85 sm:text-base sm:leading-8">
-                Traditionelle Anwendungen. Wohltuende Wärme. Sanfte
-                Berührungen. Zeit für sich selbst. Entdecken Sie unser
-                Ayurveda-Angebot in Zusammenarbeit mit dem Zentrum für
-                Therapie Bogisch in Marktredwitz.
+              <p className="mt-1 font-[var(--font-heading)] text-xl text-[#21452B]">
+                Zentrum für Therapie Bogisch
               </p>
-
-              {/* Aktionsbuttons */}
-              <div className="mt-9 flex flex-wrap gap-3">
-                <a
-                  href={ayurvedaUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 rounded-full bg-[#21452B] px-6 py-4 text-sm font-semibold text-[#F8F5E8] shadow-lg shadow-[#21452B]/15 transition-all hover:-translate-y-0.5 hover:bg-[#2F5D39]"
-                >
-                  Ayurveda-Behandlungen entdecken
-                  <span className="transition-transform group-hover:translate-x-1">
-                    ↗
-                  </span>
-                </a>
-
-                <a
-                  href="#our-partnership"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#21452B]/30 bg-[#F8F5E8]/60 px-6 py-4 text-sm font-semibold text-[#21452B] backdrop-blur-sm transition-colors hover:border-[#21452B] hover:bg-[#EFE9C5]"
-                >
-                  Unsere Zusammenarbeit entdecken
-                </a>
-              </div>
-
-              {/* Partnerinformationen */}
-              <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 border-t border-[#21452B]/15 pt-6 text-xs text-[#533E23]/75">
-                <span className="flex items-center gap-2">
-                  <span className="text-[#C14C38]">✳</span>
-                  In Zusammenarbeit mit Purana Ayurveda
-                </span>
-
-                <span className="flex items-center gap-2">
-                  <span className="text-[#C14C38]">✳</span>
-                  Marktredwitz, Deutschland
-                </span>
-              </div>
             </div>
 
-            {/* Partner-Infokarte */}
-            <div className="relative hidden lg:block">
-              <div className="ml-auto max-w-[390px] rounded-[28px] border border-[#D8D0A9]/70 bg-[#F8F5E8]/65 p-8 shadow-[0_20px_70px_rgba(38,58,43,0.08)] backdrop-blur-md">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#9A8050]">
-                  Unser Partner vor Ort
-                </p>
+            <span className="hidden h-10 w-px bg-[#D8D0A9] sm:block" />
 
-                <div className="my-6 h-px bg-[#D8D0A9]" />
-
-                <h2 className="font-[var(--font-heading)] text-3xl font-normal leading-tight text-[#21452B]">
-                  Zentrum für Therapie Bogisch
-                </h2>
-
-                <p className="mt-4 text-sm leading-7 text-[#533E23]/80">
-                  Lindenstraße 3
-                  <br />
-                  Marktredwitz, Deutschland
-                </p>
-
-                <a
-                  href={partnerWebsite}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#2F5D39] transition-colors hover:text-[#C14C38]"
-                >
-                  Partner-Website besuchen
-                  <span className="transition-transform group-hover:translate-x-1">
-                    ↗
-                  </span>
-                </a>
-
-                <div className="mt-8 flex items-center gap-3 border-t border-[#D8D0A9] pt-6">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2F5D39]/10 text-lg text-[#2F5D39]">
-                    ✳
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-[#21452B]">
-                      Ein gemeinsamer Ansatz
-                    </p>
-                    <p className="mt-1 text-xs text-[#6B705C]">
-                      Tradition · Achtsamkeit · Wohlbefinden
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Dekorativer Kreis */}
-              <div
-                aria-hidden="true"
-                className="absolute -right-8 -top-8 -z-10 h-32 w-32 rounded-full border border-[#C14C38]/30"
-              />
+            <div className="text-center sm:text-left">
+              <p className="text-xs text-[#533E23]/75">
+                Lindenstraße 3
+              </p>
+              <p className="text-xs text-[#533E23]/75">
+                Marktredwitz, Deutschland
+              </p>
             </div>
+
+            <a
+              href={partnerWebsite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-semibold text-[#2F5D39] transition-colors hover:text-[#C14C38]"
+            >
+              Partner-Website ↗
+            </a>
+          </div>
+
+          {/* Bottom caption */}
+          <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-2">
+            <p className="text-[9px] font-semibold uppercase tracking-[0.3em] text-[#533E23]/65">
+              PURANA AYURVEDA · MARKTREDWITZ
+            </p>
+            <span className="h-7 w-px bg-[#9A8050]/70" />
           </div>
         </div>
       </section>
@@ -226,7 +228,9 @@ export default function MarktredwitzPage() {
             <h2 className="font-[var(--font-heading)] text-4xl font-normal leading-tight tracking-tight text-[#263A2B] sm:text-5xl lg:text-6xl">
               Zwei Namen.
               <br />
-              <span className="italic text-[#8A9A78]">Ein gemeinsamer</span>{" "}
+              <span className="italic text-[#8A9A78]">
+                Ein gemeinsamer
+              </span>{" "}
               Ort des Wohlbefindens.
             </h2>
 
@@ -245,12 +249,14 @@ export default function MarktredwitzPage() {
                 traditionelle Ayurveda-Anwendungen an diesem Standort
                 zugänglich machen.
               </p>
+
               <p>
                 Mit warmen Ölen, sanften Massagetechniken und traditionellen
                 ayurvedischen Anwendungen stehen Entspannung, ein bewusstes
                 Körpergefühl und eine achtsame Auszeit vom Alltag im
                 Mittelpunkt.
               </p>
+
               <p>
                 Das Ayurveda-Angebot wird in Zusammenarbeit mit Purana
                 Ayurveda präsentiert. Besuchen Sie die spezielle
@@ -279,10 +285,12 @@ export default function MarktredwitzPage() {
             <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#8A6845]">
               Ihr Ayurveda-Erlebnis
             </p>
+
             <h2 className="font-[var(--font-heading)] text-4xl font-normal leading-tight text-[#263A2B] sm:text-5xl lg:text-6xl">
               Ein Moment zum{" "}
               <span className="italic text-[#8A9A78]">Innehalten.</span>
             </h2>
+
             <p className="mt-5 text-base leading-8 text-[#6B705C]">
               Entdecken Sie einen traditionellen Ansatz, bei dem Wärme,
               Berührung und bewusste Zeit für sich selbst im Mittelpunkt
@@ -374,9 +382,11 @@ export default function MarktredwitzPage() {
                 <span className="h-px w-8 bg-[#C14C38]" />
                 Entdecken Sie unsere Anwendungen
               </p>
+
               <h2 className="font-[var(--font-heading)] text-4xl font-normal leading-tight text-[#263A2B] sm:text-5xl lg:text-6xl">
                 Finden Sie das Ayurveda-Erlebnis, das zu Ihnen passt.
               </h2>
+
               <p className="mt-5 max-w-xl text-base leading-8 text-[#6B705C]">
                 Auf der Ayurveda-Seite unseres Partners finden Sie
                 ausführliche Behandlungsbeschreibungen, verfügbare
@@ -394,8 +404,9 @@ export default function MarktredwitzPage() {
               >
                 Alle Behandlungen ansehen <span>↗</span>
               </a>
+
               <a
-                href='/contact'
+                href="/contact"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#AEB99F] px-7 py-3 text-sm font-medium text-[#533E23] transition hover:bg-[#FBF8F0]"
               >
                 Frage stellen
@@ -443,6 +454,7 @@ export default function MarktredwitzPage() {
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#DDE4D3] text-lg text-[#2F5D39]">
                   ⌖
                 </span>
+
                 <div>
                   <p className="font-semibold text-[#263A2B]">Adresse</p>
                   <p className="mt-1 text-sm leading-6 text-[#6B705C]">
@@ -459,6 +471,7 @@ export default function MarktredwitzPage() {
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#E9DFC5] text-lg text-[#533E23]">
                   ☎
                 </span>
+
                 <div>
                   <p className="font-semibold text-[#263A2B]">Telefon</p>
                   <a
@@ -474,6 +487,7 @@ export default function MarktredwitzPage() {
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#F0DFD6] text-lg text-[#C14C38]">
                   @
                 </span>
+
                 <div>
                   <p className="font-semibold text-[#263A2B]">E-Mail</p>
                   <a
@@ -495,6 +509,7 @@ export default function MarktredwitzPage() {
               >
                 Route planen ↗
               </a>
+
               <a
                 href={partnerWebsite}
                 target="_blank"
@@ -525,6 +540,7 @@ export default function MarktredwitzPage() {
                   Marktredwitz · Bayern, Deutschland
                 </p>
               </div>
+
               <a
                 href={ayurvedaUrl}
                 target="_blank"
@@ -571,7 +587,6 @@ export default function MarktredwitzPage() {
             >
               Ayurveda-Behandlungen entdecken ↗
             </a>
-           
           </div>
         </div>
       </section>

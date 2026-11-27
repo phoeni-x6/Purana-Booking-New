@@ -5,19 +5,6 @@ import { Resend } from "resend";
 
 export const dynamic = "force-dynamic";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-const admin = createAdminClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SECRET_KEY!,
-    {
-        auth: {
-            autoRefreshToken: false,
-            persistSession: false,
-        },
-    },
-);
-
 const escapeHtml = (value: string) =>
     value.replace(/[&<>"']/g, (character) => {
         const entities: Record<string, string> = {
@@ -44,6 +31,24 @@ export async function POST(request: NextRequest) {
                 { status: 400 },
             );
         }
+
+        const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+        const supabaseSecretKey = process.env.SUPABASE_SECRET_KEY;
+
+        if (!supabaseUrl || !supabaseSecretKey) {
+            console.error("Missing Supabase environment variables.");
+            return NextResponse.json(
+                { error: "Booking service is not configured." },
+                { status: 500 },
+            );
+        }
+
+        const admin = createAdminClient(supabaseUrl, supabaseSecretKey, {
+            auth: {
+                autoRefreshToken: false,
+                persistSession: false,
+            },
+        });
 
         const { data: booking, error: bookingError } = await admin
             .from("bookings")
@@ -440,6 +445,8 @@ export async function POST(request: NextRequest) {
                 { status: 500 },
             );
         }
+
+        const resend = new Resend(process.env.RESEND_API_KEY);
 
         const [customerResult, internalResult] = await Promise.all([
             resend.emails.send({

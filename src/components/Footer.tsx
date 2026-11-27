@@ -1,9 +1,7 @@
-
 import Link from "next/link";
 import {
   FaInstagram,
   FaFacebookF,
-  FaYoutube,
 } from "react-icons/fa";
 
 const footerGroups = [
@@ -19,7 +17,6 @@ const footerGroups = [
   {
     title: "Kontakt",
     links: [
-      
       ["Schreiben Sie uns auf WhatsApp", "https://wa.me/+491759479619"],
       ["Info@purana-ayurveda.de", "mailto:info@purana-ayurveda.de"],
       ["Kontakt", "/contact"],
@@ -31,7 +28,6 @@ const footerGroups = [
       ["Über Purana", "/about"],
       ["Datenschutzerklärung", "/privacy"],
       ["Allgemeine Geschäftsbedingungen", "/terms"],
-      
     ],
   },
 ];
@@ -53,23 +49,56 @@ export default function Footer() {
   return (
     <footer
       id="about"
-      className="relative overflow-hidden bg-[#21452B] text-[#F8F5E8]"
+      className="relative isolate overflow-hidden bg-[#21452B] text-[#F8F5E8]"
     >
+      {/* Background image */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-30 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/footer-bg.jpeg')",
+        }}
+      />
+
+      {/* Dark green gradient overlay */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-20"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(25,55,34,0.91) 0%, rgba(33,69,43,0.94) 35%, rgba(33,69,43,0.96) 70%, rgba(25,55,34,0.98) 100%)",
+        }}
+      />
+
+      {/* Soft central green glow */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse at 50% 30%, rgba(67,105,65,0.18) 0%, transparent 70%)",
+        }}
+      />
+
       {/* Decorative background details */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full border border-[#DFC24D]/10"
       />
+
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full border border-[#DFC24D]/10"
       />
+
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-[#2F5D39]/40 blur-3xl"
       />
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
+
         {/* Main footer */}
         <div className="grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-10 lg:py-20">
 
@@ -83,12 +112,13 @@ export default function Footer() {
               <span className="font-serif text-3xl tracking-[0.12em] text-[#F8F5E8] transition-colors group-hover:text-[#DFC24D]">
                 PURANA
               </span>
+
               <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.38em] text-[#DFC24D]">
                 Ayurveda & Wohlbefinden
               </span>
             </Link>
 
-            <p className="mt-6 max-w-xs text-sm leading-7 text-[#D5DFD3]">
+            <p className="mt-6 max-w-xs text-sm leading-7 text-[#E2E8DC]">
               Wohlbefinden, verwurzelt in Tradition. Fürsorge, die sich an
               Ihrem Alltag orientiert. Entdecken Sie mit der Weisheit des
               Ayurveda einen ausgeglicheneren Lebensstil.
@@ -111,7 +141,7 @@ export default function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                      className="grid h-10 w-10 place-items-center rounded-full border border-[#F8F5E8]/20 bg-[#F8F5E8]/5 text-lg text-[#F8F5E8] transition-all duration-300 hover:-translate-y-1 hover:border-[#DFC24D] hover:bg-[#DFC24D] hover:text-[#21452B]"
+                      className="grid h-10 w-10 place-items-center rounded-full border border-[#F8F5E8]/30 bg-[#F8F5E8]/10 text-lg text-[#F8F5E8] transition-all duration-300 hover:-translate-y-1 hover:border-[#DFC24D] hover:bg-[#DFC24D] hover:text-[#21452B]"
                     >
                       <Icon />
                     </a>
@@ -135,9 +165,10 @@ export default function Footer() {
                   <li key={label}>
                     <a
                       href={href}
-                      className="group inline-flex items-center gap-2 text-sm text-[#D5DFD3] transition-colors duration-200 hover:text-[#DFC24D]"
+                      className="group inline-flex items-center gap-2 text-sm text-[#E2E8DC] transition-colors duration-200 hover:text-[#DFC24D]"
                     >
-                      <span className="h-1 w-1 rounded-full bg-[#DFC24D]/60 transition-all duration-200 group-hover:scale-150 group-hover:bg-[#DFC24D]" />
+                      <span className="h-1 w-1 rounded-full bg-[#DFC24D]/80 transition-all duration-200 group-hover:scale-150 group-hover:bg-[#DFC24D]" />
+
                       <span>{label}</span>
                     </a>
                   </li>
@@ -148,17 +179,18 @@ export default function Footer() {
         </div>
 
         {/* Wellness statement */}
-        <div className="border-t border-[#F8F5E8]/15 py-7">
+        <div className="border-t border-[#F8F5E8]/20 py-7">
           <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
-            <p className="font-serif text-base italic text-[#F8F5E8]/90">
+            <p className="font-serif text-base italic text-[#F8F5E8]">
               &ldquo;Ein natürlicher Weg zurück zu mehr Balance.&rdquo;
             </p>
 
             <a
               href="#top"
-              className="inline-flex items-center gap-2 text-xs font-medium text-[#DFC24D] transition-colors hover:text-[#F8F5E8]"
+              className="inline-flex items-center gap-2 text-xs font-semibold text-[#DFC24D] transition-colors hover:text-[#F8F5E8]"
             >
               Nach oben
+
               <span aria-hidden="true" className="text-base">
                 ↑
               </span>
@@ -167,7 +199,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col justify-between gap-3 border-t border-[#F8F5E8]/10 py-5 text-xs text-[#B9C9BD] sm:flex-row sm:items-center">
+        <div className="flex flex-col justify-between gap-3 border-t border-[#F8F5E8]/15 py-5 text-xs text-[#D5DFD3] sm:flex-row sm:items-center">
           <p>
             © {new Date().getFullYear()} Purana Ayurveda. Alle Rechte vorbehalten.
           </p>

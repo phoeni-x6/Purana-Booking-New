@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -29,7 +30,6 @@ const menus = {
       description: "Individuelle Online-Sitzungen",
       href: "/online",
     },
-    
     {
       title: "E-Books",
       description: "Detox- und saisonale Ratgeber",
@@ -37,11 +37,6 @@ const menus = {
     },
   ],
   learn: [
-    // {
-    //   title: "Blog",
-    //   description: "Artikel, Rezepte und Rituale",
-      // href: "/learn/blog",
-     //},
     {
       title: "Kostenloser Dosha-Test",
       description: "Entdecke deine Konstitution",
@@ -639,7 +634,9 @@ export default function Navbar() {
             </p>
 
             <div className="purana-utility-links">
-              <Link href="https://bookeo.com/purana-ayurveda/buyvoucher">Geschenkgutscheine</Link>
+              <Link href="https://bookeo.com/purana-ayurveda/buyvoucher">
+                Geschenkgutscheine
+              </Link>
               <Link href="/#shop">Nivartana-Shop</Link>
               <a href="https://wa.me/+491759479619">WhatsApp ↗</a>
             </div>
@@ -736,22 +733,22 @@ export default function Navbar() {
                 </div>
               ))}
 
-              {/*
-              <Link
-                href="/membership"
-                className="purana-nav-link"
-                onClick={closeMenus}
-              >
-                Mitgliedschaft
-              </Link>
-              */}
-
+              {/* Über uns */}
               <Link
                 href="/about"
                 className="purana-nav-link"
                 onClick={closeMenus}
               >
                 Über uns
+              </Link>
+
+              {/* Über Ayurveda */}
+              <Link
+                href="/about-ayurveda"
+                className="purana-nav-link"
+                onClick={closeMenus}
+              >
+                Über Ayurveda
               </Link>
 
               {/* Sprachauswahl */}

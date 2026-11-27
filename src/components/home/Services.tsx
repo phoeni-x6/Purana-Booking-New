@@ -1,4 +1,3 @@
-
 import styles from "./Services.module.css";
 
 const services = [
@@ -54,7 +53,37 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="relative overflow-hidden bg-[#EFE9C5] py-24 md:py-28">
+    <section className="relative isolate overflow-hidden bg-[#EFE9C5] py-24 md:py-28">
+
+      {/* Full section background image */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-30 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://okdasvnzxootmbzyicrq.supabase.co/storage/v1/object/public/Booking-Images/IMages/footer-bg.jpeg')",
+        }}
+      />
+
+      {/* Warm cream fade overlay */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-20"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(239,233,197,0.88) 0%, rgba(239,233,197,0.91) 30%, rgba(239,233,197,0.94) 65%, rgba(239,233,197,0.97) 100%)",
+        }}
+      />
+
+      {/* Soft central glow */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse at 50% 35%, rgba(255,250,226,0.35) 0%, transparent 70%)",
+        }}
+      />
 
       {/* Background decorations */}
       <div
